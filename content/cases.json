@@ -1,67 +1,47 @@
 {
-  "title": "導入事例（参考）",
-  "description": "実際の数値は面談時に開示します。以下はイメージです。",
+  "title": "LIFE X の特徴（図解）",
+  "description": "商品力・性能・サポートを図解でわかりやすく説明します。",
   "cases": [
     {
       "id": "case-01",
-      "area": "関西エリア A社",
-      "image": "/cases/case-00.jpg",
+      "area": "高性能住宅",
+      "image": "/cases/case-20.jpg",
       "stats": {
-        "period": "開業6ヶ月",
-        "contracts": "8棟"
+        "period": "C値 0.24",
+        "contracts": "UA値 0.46"
       },
-      "comment": "設計・積算の型があるため、少人数でも回せています。Web広告の運用支援が心強いです。"
+      "comment": "全棟ZEH基準以上。気密性C値0.24、断熱性UA値0.46を実現。快適で省エネな住まいを提供します。"
     },
     {
       "id": "case-02",
-      "area": "中部エリア B社",
-      "image": "/cases/case-01.jpg",
+      "area": "スマートホーム標準装備",
+      "image": "/cases/case-06.jpg",
       "stats": {
-        "period": "開業1年",
-        "contracts": "15棟"
+        "period": "IoT対応",
+        "contracts": "音声操作"
       },
-      "comment": "モデルハウスを核に、見学会とSNSで集客。商品力があるので提案がスムーズでした。"
+      "comment": "Alexa対応のスマートホーム機能を標準装備。照明・エアコン・カーテンなど音声で一括制御できます。"
     },
     {
       "id": "case-03",
-      "area": "九州エリア C社",
-      "image": "/cases/case-02.jpg",
+      "area": "太陽光発電",
+      "image": "/cases/case-07.jpg",
       "stats": {
-        "period": "開業9ヶ月",
-        "contracts": "10棟"
+        "period": "搭載可能",
+        "contracts": "ZEH対応"
       },
-      "comment": "他FCと比較しましたが、性能と価格のバランスが最も良く、決めました。"
+      "comment": "太陽光パネル搭載で光熱費を大幅削減。ZEH住宅として環境にも家計にも優しい住まいを実現。"
     },
     {
       "id": "case-04",
-      "area": "関東エリア D社",
-      "image": "/cases/case-73.jpg",
+      "area": "紹介キャンペーン",
+      "image": "/cases/case-30.jpg",
       "stats": {
-        "period": "開業1年3ヶ月",
-        "contracts": "20棟"
+        "period": "紹介制度",
+        "contracts": "特典あり"
       },
-      "comment": "本部の集客支援と商品の信頼性が高く、顧客からの評価も上々です。2年目で黒字化達成しました。"
-    },
-    {
-      "id": "case-05",
-      "area": "中国エリア E社",
-      "image": "/cases/case-74.jpg",
-      "stats": {
-        "period": "開業8ヶ月",
-        "contracts": "12棟"
-      },
-      "comment": "ZEH基準をクリアした商品なので、お客様への説明が非常にしやすいです。差別化できています。"
-    },
-    {
-      "id": "case-06",
-      "area": "東北エリア F社",
-      "image": "/cases/case-75.jpg",
-      "stats": {
-        "period": "開業5ヶ月",
-        "contracts": "6棟"
-      },
-      "comment": "少人数でスタート。本部の研修とマニュアルが充実しているので、安心して事業を進められています。"
+      "comment": "お客様からのご紹介で特典をご用意。満足度の高さが口コミを生み、集客を後押しします。"
     }
   ],
-  "note": "※事例の数値は参考値です。エリア・時期により成果は異なります。"
+  "note": "※詳細は個別面談にてご説明します。地域・プランにより仕様が異なる場合があります。"
 }

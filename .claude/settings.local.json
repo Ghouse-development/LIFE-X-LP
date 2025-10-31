@@ -19,7 +19,16 @@
       "WebFetch(domain:pg-house.jp)",
       "Bash(git add:*)",
       "Bash(git push)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(npm run build:*)",
+      "Bash(npx next build)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(vercel --version:*)",
+      "Bash(vercel --prod)",
+      "Bash(vercel:*)",
+      "WebFetch(domain:life-x-dzfzik87t-ghouse-developments-projects.vercel.app)",
+      "Bash(for i in 11 12 13 14 15)"
     ],
     "deny": [],
     "ask": []

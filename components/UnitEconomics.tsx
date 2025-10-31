@@ -33,32 +33,32 @@ export function UnitEconomics() {
           {financeData.disclaimer}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {financeData.models.map((model, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 + 0.1 * index }}
-              className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white p-8 rounded shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               {/* Icon */}
-              <div className="w-16 h-16 mb-4 mx-auto">
+              <div className="w-16 h-16 mb-6 mx-auto">
                 <Image src={`/icons/${model.icon}.svg`} alt={model.title} width={64} height={64} />
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold mb-4 text-center text-gray-700">{model.title}</h3>
+              <h3 className="text-lg font-bold mb-6 text-center text-gray-700">{model.title}</h3>
 
               {/* Main Value - HUGE */}
-              <div className="mb-2 text-center">
+              <div className="mb-3 text-center">
                 <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   {model.mainValue}
                 </div>
               </div>
 
               {/* Sub Value */}
-              <div className="text-lg font-medium text-gray-600 mb-4 text-center">
+              <div className="text-lg font-medium text-gray-600 mb-6 text-center">
                 {model.subValue}
               </div>
 

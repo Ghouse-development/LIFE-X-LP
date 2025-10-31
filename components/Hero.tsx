@@ -48,6 +48,23 @@ export function Hero() {
           {hero.description}
         </p>
 
+        {/* Problem Statement - PG HOUSE Style */}
+        {hero.problems && (
+          <div className="mb-pg-5 max-w-3xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg p-pg-4">
+              <h3 className="text-pg-base font-semibold mb-pg-3">こんな課題、ありませんか？</h3>
+              <ul className="space-y-pg-2 text-pg-sm text-left">
+                {hero.problems.map((problem, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="text-red-400 mt-1">✗</span>
+                    <span>{problem}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {hero.cta.map((cta, index) => (
             <Link

@@ -74,17 +74,17 @@ export function ValueProps() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-pg">
           {values.map((value, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              className="bg-white rounded p-pg-4 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
             >
               {/* Icon */}
-              <div className="w-20 h-20 mb-4 mx-auto">
+              <div className="w-20 h-20 mb-6 mx-auto">
                 <Image
                   src={value.icon}
                   alt={value.title}
@@ -95,17 +95,17 @@ export function ValueProps() {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold mb-4 text-center text-gray-700">{value.title}</h3>
+              <h3 className="text-lg font-bold mb-6 text-center text-gray-700">{value.title}</h3>
 
               {/* Main Value - HUGE */}
-              <div className="mb-2 text-center">
+              <div className="mb-3 text-center">
                 <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   {value.mainValue}
                 </div>
               </div>
 
               {/* Sub Value */}
-              <div className="text-lg font-medium text-gray-600 mb-4 text-center">
+              <div className="text-lg font-medium text-gray-600 mb-6 text-center">
                 {value.subValue}
               </div>
 

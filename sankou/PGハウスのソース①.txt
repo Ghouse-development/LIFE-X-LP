@@ -1,0 +1,827 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html lang="ja" class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html lang="ja" class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html lang="ja" class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ja" class="">
+<!--<![endif]-->
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P6CMDNKC');</script>
+<!-- End Google Tag Manager -->	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!--[if lt IE 9]>
+    <script src="/js/ie9.js"></script>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+		
+
+<meta name="description" content="耐震等級3・ZEH基準超えの高性能住宅を最強コスパでご提案。自由設計で、あなたの理想の住まいを実現します。注文住宅をお考えなら、まずはご相談ください。">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="/js/prefixfree.min.js"></script>
+  <link href="/css/boilerplate.css" rel="stylesheet" type="text/css">
+  <link href="/css/base.css" rel="stylesheet" type="text/css">	
+  <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+  <link href="/css/form.css" rel="stylesheet" type="text/css">
+  <link href="/css/calender.css" rel="stylesheet" type="text/css">
+
+	
+	
+	
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write( '<script src="js/libs/jquery-1.7.min.js">\x3C/script>' )
+  </script>
+
+	
+	
+  <!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+<!-- sofia -->
+<link rel="stylesheet" href="https://use.typekit.net/nsd6xmi.css">
+
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset=”UTF-8″></script>
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v26.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>ピージーハウスだからできる家づくり | 注文住宅なら『超耐震×自由設計』を最強コスパで。PG HOUSEネットワーク</title>
+	<link rel="canonical" href="https://pg-house.jp/concept/" />
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="ピージーハウスだからできる家づくり | 注文住宅なら『超耐震×自由設計』を最強コスパで。PG HOUSEネットワーク" />
+	<meta property="og:url" content="https://pg-house.jp/concept/" />
+	<meta property="og:site_name" content="注文住宅なら『超耐震×自由設計』を最強コスパで。PG HOUSEネットワーク" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://pg-house.jp/concept/","url":"https://pg-house.jp/concept/","name":"ピージーハウスだからできる家づくり | 注文住宅なら『超耐震×自由設計』を最強コスパで。PG HOUSEネットワーク","isPartOf":{"@id":"https://pg-house.jp/#website"},"datePublished":"2025-04-10T03:59:43+00:00","breadcrumb":{"@id":"https://pg-house.jp/concept/#breadcrumb"},"inLanguage":"ja","potentialAction":[{"@type":"ReadAction","target":["https://pg-house.jp/concept/"]}]},{"@type":"BreadcrumbList","@id":"https://pg-house.jp/concept/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://pg-house.jp/"},{"@type":"ListItem","position":2,"name":"ピージーハウスだからできる家づくり"}]},{"@type":"WebSite","@id":"https://pg-house.jp/#website","url":"https://pg-house.jp/","name":"注文住宅なら『超耐震×自由設計』を最強コスパで。PG HOUSEネットワーク","description":"耐震等級3・ZEH基準超えの高性能住宅を最強コスパでご提案。自由設計で、あなたの理想の住まいを実現します。注文住宅をお考えなら、まずはご相談ください。","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://pg-house.jp/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"ja"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/pg-house.jp\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='wp-block-library-css' href='https://pg-house.jp/wp/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://pg-house.jp/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='https://pg-house.jp/wp/wp-content/themes/pg-house/style.css?ver=6.8.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://pg-house.jp/wp-includes/js/jquery/jquery.min.js?ver=6.8.3" id="jquery-js"></script>
+<link rel="https://api.w.org/" href="https://pg-house.jp/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://pg-house.jp/wp-json/wp/v2/pages/292" /><link rel='shortlink' href='https://pg-house.jp/?p=292' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://pg-house.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpg-house.jp%2Fconcept%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://pg-house.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpg-house.jp%2Fconcept%2F&#038;format=xml" />
+	
+
+</head>
+
+<body class="page_body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6CMDNKC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	
+<!-- ローディングオーバーレイ -->
+<div class="loading-overlay">
+    <div class="loading-container">
+        <!-- 中央の画像 -->
+        <img src="/img/loading_logo.png" alt="Loading" class="loading-image">
+        <!-- スピナー -->
+        <div class="loading-spinner"></div>
+    </div>
+</div>	
+<div id="pagetop" class="">
+	<!-- header -->
+	<header class="header">
+		<div class="head">
+			<div class="head_flex">
+								<h1 class="logo">
+				  <a href="https://pg-house.jp/">
+					<img class="logo_img" src="/img/logo.webp" alt="PG HOUSEネットワーク" title="PG HOUSEネットワーク">
+				  </a>
+				</h1>
+								<div class="font_go head_l01_flex">
+					<div class="nav_link_box">
+						<div class="pc1200 nab_link_mini">｜　<!--<a href="https://pg-house.jp/gallery/" class="nav_mini_txt">フォトギャラリー</a>　｜　--><a href="https://pg-house.jp/question/" class="nav_mini_txt">よくあるご質問</a>　｜ 　<a href="https://pg-house.jp/shop_contact/" class="nav_mini_txt">お問合せ</a>　｜　<a href="https://pg-house.jp/company/" class="nav_mini_txt">運営会社</a>　|</div>
+						
+						<div class="pc1000 nav_link_flex">
+							<a href="https://pg-house.jp/concept/" class="nav_link_txt nav_link01">コンセプト</a><!--<a href="https://pg-house.jp/works/" class="nav_link_txt nav_link01">施工実例</a>--><a href="https://pg-house.jp/event/" class="nav_link_txt nav_link01">お近くのモデル・イベント</a><a href="https://pg-house.jp/shop/" class="nav_link_txt nav_link01">お近くのPG HOUSE</a>
+						</div>
+					</div>
+					
+					<div class="openbtn_box"><div class="openbtn1"><span></span><span></span><span></span></div></div>
+				</div>
+							</div>
+		</div>	
+	</header>
+	<!--/ header -->
+	
+		<!-- nav -->
+	<nav id="g-nav">
+		<img src="/img/nav_bk.webp" alt="エリア最大規模の住宅展示場" class="nav_bk" loading="lazy">
+		
+		<div id="g-nav-list">
+			<div class="gnav01">
+				<a href="/event/" class="color_white link_orange gnav01_btn"><img src="/img/nav_cv_icon01.webp" class="gnav_icon"><div class="gnav01_txt">お近くのイベント・モデルを探す</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				<a href="/contact/" class="color_white link_blue gnav01_btn"><img src="/img/nav_cv_icon02.webp" class="gnav_icon"><div class="gnav01_txt">資料請求をする</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				<a href="/sodan/" class="link_white gnav01_btn"><img src="/img/nav_cv_icon03.webp" class="gnav_icon"><div class="gnav01_txt">無料相談する</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></a>		
+			</div>
+			<div class="g-navin">
+				<div class="g-nav_flex">
+					<div class="gnav02">
+						<div class="link_menu">
+							<div class="link_m_ttl"><div class="link_m_txt">PG HOUSEの家づくり</div> <div class="link_m_icon"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+							<div class="link_m_smenu">
+								<a href="/concept/" class="link_m_a01">PG HOUSEの家づくり <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/concept/earthquake/" class="link_m_a01">耐震等級3を取得した地震に強い家 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/concept/zeh/" class="link_m_a01">全棟ZEH基準超えのG2基準 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/concept/design/" class="link_m_a01">完全自由設計 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/concept/cost/" class="link_m_a01">最強コスパの家計に優しい家 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/concept/after/" class="link_m_a01">充実保証・アフターサポート <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/hiraya/" class="link_m_a01">PGハウスの平屋 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/2ndfloor/" class="link_m_a01">PGハウスの2階建て <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>	
+							</div>
+						</div>
+									
+						<!--<div class="link_menu">
+							<div class="link_m_ttl"><div class="link_m_txt">施工事例</div> <div class="link_m_icon"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+							<div class="link_m_smenu link_m_smenu02">
+								<a href="/fav/" class="link_m_a01">お気に入り <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<a href="/works/" class="link_m_a01">施工事例一覧 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>	
+								<div class="link_m_ac">
+																	</div>
+							</div>
+						</div>-->
+							
+						<div class="link_menu">
+							<div class="link_m_ttl"><div class="link_m_txt">お近くのPG HOUSEを探す</div> <div class="link_m_icon"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+							<div class="link_m_smenu link_m_smenu02">
+								<a href="https://pg-house.jp/shop/" class="link_m_a01">PG HOUSE一覧 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<div class="link_m_subttl">北海道・東北エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=hokkaido" class="link_m_a02 disable">北海道</a><a href="https://pg-house.jp/shop/?shop_area=aomori" class="link_m_a02 disable">青森</a><a href="https://pg-house.jp/shop/?shop_area=iwate" class="link_m_a02 disable">岩手</a><a href="https://pg-house.jp/shop/?shop_area=miyagi" class="link_m_a02 disable">宮城</a><a href="https://pg-house.jp/shop/?shop_area=akita" class="link_m_a02 disable">秋田</a><a href="https://pg-house.jp/shop/?shop_area=yamagata" class="link_m_a02 ">山形</a><a href="https://pg-house.jp/shop/?shop_area=fukushima" class="link_m_a02 disable">福島</a>								</div>
+								<div class="pd10 link_m_subttl">関東エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=tokyo" class="link_m_a02 disable">東京都</a><a href="https://pg-house.jp/shop/?shop_area=kanagawa" class="link_m_a02 disable">神奈川</a><a href="https://pg-house.jp/shop/?shop_area=saitama" class="link_m_a02 disable">埼玉</a><a href="https://pg-house.jp/shop/?shop_area=chiba" class="link_m_a02 disable">千葉</a><a href="https://pg-house.jp/shop/?shop_area=ibaraki" class="link_m_a02 disable">茨城</a><a href="https://pg-house.jp/shop/?shop_area=tochigi" class="link_m_a02 disable">栃木</a><a href="https://pg-house.jp/shop/?shop_area=gunma" class="link_m_a02 disable">群馬</a>								</div>
+								<div class="pd10 link_m_subttl">甲信越・北陸エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=niigata" class="link_m_a02 disable">新潟</a><a href="https://pg-house.jp/shop/?shop_area=toyama" class="link_m_a02 disable">富山</a><a href="https://pg-house.jp/shop/?shop_area=ishikawa" class="link_m_a02 disable">石川</a><a href="https://pg-house.jp/shop/?shop_area=fukui" class="link_m_a02 ">福井</a><a href="https://pg-house.jp/shop/?shop_area=yamanashi" class="link_m_a02 ">山梨</a><a href="https://pg-house.jp/shop/?shop_area=nagano" class="link_m_a02 disable">長野</a>								</div>
+								<div class="pd10 link_m_subttl">東海エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=aichi" class="link_m_a02 ">愛知</a><a href="https://pg-house.jp/shop/?shop_area=gifu" class="link_m_a02 disable">岐阜</a><a href="https://pg-house.jp/shop/?shop_area=shizuoka" class="link_m_a02 ">静岡</a><a href="https://pg-house.jp/shop/?shop_area=mie" class="link_m_a02 ">三重</a>								</div>
+								<div class="pd10 link_m_subttl">関西エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=osaka" class="link_m_a02 disable">大阪府</a><a href="https://pg-house.jp/shop/?shop_area=hyogo" class="link_m_a02 ">兵庫</a><a href="https://pg-house.jp/shop/?shop_area=kyoto" class="link_m_a02 disable">京都府</a><a href="https://pg-house.jp/shop/?shop_area=shiga" class="link_m_a02 disable">滋賀</a><a href="https://pg-house.jp/shop/?shop_area=nara" class="link_m_a02 disable">奈良</a><a href="https://pg-house.jp/shop/?shop_area=wakayama" class="link_m_a02 disable">和歌山</a>								</div>
+								<div class="pd10 link_m_subttl">中国エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=hiroshima" class="link_m_a02 disable">広島</a><a href="https://pg-house.jp/shop/?shop_area=okayama" class="link_m_a02 disable">岡山</a><a href="https://pg-house.jp/shop/?shop_area=tottori" class="link_m_a02 disable">鳥取</a><a href="https://pg-house.jp/shop/?shop_area=shimane" class="link_m_a02 disable">島根</a><a href="https://pg-house.jp/shop/?shop_area=yamaguchi" class="link_m_a02 disable">山口</a>								</div>
+								<div class="pd10 link_m_subttl">四国エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=kagawa" class="link_m_a02 disable">香川</a><a href="https://pg-house.jp/shop/?shop_area=tokushima" class="link_m_a02 disable">徳島</a><a href="https://pg-house.jp/shop/?shop_area=ehime" class="link_m_a02 disable">愛媛</a><a href="https://pg-house.jp/shop/?shop_area=kochi" class="link_m_a02 disable">高知</a>								</div>
+								<div class="pd10 link_m_subttl">九州・沖縄エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/shop/?shop_area=fukuoka" class="link_m_a02 disable">福岡</a><a href="https://pg-house.jp/shop/?shop_area=saga" class="link_m_a02 disable">佐賀</a><a href="https://pg-house.jp/shop/?shop_area=nagasaki" class="link_m_a02 disable">長崎</a><a href="https://pg-house.jp/shop/?shop_area=kumamoto" class="link_m_a02 disable">熊本</a><a href="https://pg-house.jp/shop/?shop_area=oita" class="link_m_a02 disable">大分</a><a href="https://pg-house.jp/shop/?shop_area=miyazaki" class="link_m_a02 ">宮崎</a><a href="https://pg-house.jp/shop/?shop_area=kagoshima" class="link_m_a02 disable">鹿児島</a><a href="https://pg-house.jp/shop/?shop_area=okinawa" class="link_m_a02 disable">沖縄</a>								</div>
+							</div>
+						</div>	
+									
+						<!--<div class="link_menu">
+							<div class="link_m_ttl"><div class="link_m_txt">フォトギャラリー</div> <div class="link_m_icon"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+							<div class="link_m_smenu link_m_smenu02">
+								<a href="https://pg-house.jp/gallery/" class="link_m_a01">フォトギャラリー一覧 <svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								<div class="link_m_ac">
+																	</div>
+							</div>
+						</div>-->
+							
+						<div class="link_menu">
+							<div class="link_m_ttl"><div class="link_m_txt">地域別の注文住宅</div> <div class="link_m_icon"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+							<div class="link_m_smenu link_m_smenu02">
+								<div class="link_m_subttl">北海道・東北エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/hokkaido/" class="link_m_a02 ">北海道</a><a href="https://pg-house.jp/area/aomori/" class="link_m_a02 ">青森</a><a href="https://pg-house.jp/area/iwate/" class="link_m_a02 ">岩手</a><a href="https://pg-house.jp/area/miyagi/" class="link_m_a02 ">宮城</a><a href="https://pg-house.jp/area/akita/" class="link_m_a02 ">秋田</a><a href="https://pg-house.jp/area/yamagata/" class="link_m_a02 ">山形</a><a href="https://pg-house.jp/area/fukushima/" class="link_m_a02 ">福島</a>								</div>
+								<div class="pd10 link_m_subttl">関東エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/tokyo/" class="link_m_a02 ">東京都</a><a href="https://pg-house.jp/area/kanagawa/" class="link_m_a02 ">神奈川</a><a href="https://pg-house.jp/area/saitama/" class="link_m_a02 ">埼玉</a><a href="https://pg-house.jp/area/chiba/" class="link_m_a02 ">千葉</a><a href="https://pg-house.jp/area/ibaraki/" class="link_m_a02 ">茨城</a><a href="https://pg-house.jp/area/tochigi/" class="link_m_a02 ">栃木</a><a href="https://pg-house.jp/area/gunma/" class="link_m_a02 ">群馬</a>								</div>
+								<div class="pd10 link_m_subttl">甲信越・北陸エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/niigata/" class="link_m_a02 ">新潟</a><a href="https://pg-house.jp/area/toyama/" class="link_m_a02 ">富山</a><a href="https://pg-house.jp/area/ishikawa/" class="link_m_a02 ">石川</a><a href="https://pg-house.jp/area/fukui/" class="link_m_a02 ">福井</a><a href="https://pg-house.jp/area/yamanashi/" class="link_m_a02 ">山梨</a><a href="https://pg-house.jp/area/nagano/" class="link_m_a02 ">長野</a>								</div>
+								<div class="pd10 link_m_subttl">東海エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/aichi/" class="link_m_a02 ">愛知</a><a href="https://pg-house.jp/area/gifu/" class="link_m_a02 ">岐阜</a><a href="https://pg-house.jp/area/shizuoka/" class="link_m_a02 ">静岡</a><a href="https://pg-house.jp/area/mie/" class="link_m_a02 ">三重</a>								</div>
+								<div class="pd10 link_m_subttl">関西エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/osaka/" class="link_m_a02 ">大阪府</a><a href="https://pg-house.jp/area/hyogo/" class="link_m_a02 ">兵庫</a><a href="https://pg-house.jp/area/kyoto/" class="link_m_a02 ">京都府</a><a href="https://pg-house.jp/area/shiga/" class="link_m_a02 ">滋賀</a><a href="https://pg-house.jp/area/nara/" class="link_m_a02 ">奈良</a><a href="https://pg-house.jp/area/wakayama/" class="link_m_a02 ">和歌山</a>								</div>
+								<div class="pd10 link_m_subttl">中国エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/hiroshima/" class="link_m_a02 ">広島</a><a href="https://pg-house.jp/area/okayama/" class="link_m_a02 ">岡山</a><a href="https://pg-house.jp/area/tottori/" class="link_m_a02 ">鳥取</a><a href="https://pg-house.jp/area/shimane/" class="link_m_a02 ">島根</a><a href="https://pg-house.jp/area/yamaguchi/" class="link_m_a02 ">山口</a>								</div>
+								<div class="pd10 link_m_subttl">四国エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/kagawa/" class="link_m_a02 ">香川</a><a href="https://pg-house.jp/area/tokushima/" class="link_m_a02 ">徳島</a><a href="https://pg-house.jp/area/ehime/" class="link_m_a02 ">愛媛</a><a href="https://pg-house.jp/area/kochi/" class="link_m_a02 ">高知</a>								</div>
+								<div class="pd10 link_m_subttl">九州・沖縄エリア</div>
+								<div class="link_m_ac">
+									<a href="https://pg-house.jp/area/fukuoka/" class="link_m_a02 ">福岡</a><a href="https://pg-house.jp/area/saga/" class="link_m_a02 ">佐賀</a><a href="https://pg-house.jp/area/nagasaki/" class="link_m_a02 ">長崎</a><a href="https://pg-house.jp/area/kumamoto/" class="link_m_a02 ">熊本</a><a href="https://pg-house.jp/area/oita/" class="link_m_a02 ">大分</a><a href="https://pg-house.jp/area/miyazaki/" class="link_m_a02 ">宮崎</a><a href="https://pg-house.jp/area/kagoshima/" class="link_m_a02 ">鹿児島</a><a href="https://pg-house.jp/area/okinawa/" class="link_m_a02 ">沖縄</a>								</div>
+							</div>
+						</div>		
+					</div>		
+				</div>
+		  </div>
+		</div>
+	</nav>
+	<!--/ nav -->								
+	
+
+	<!-- cnt mv -->	
+	<div class="cnt_mv">
+		<div class="cnt_head_abs">
+			<h1 class="cnt_mv_ttl">
+				<div class="Trigger_top fadeIn font_sofia color_gold cnt_mv_ttl01">CONCEPT</div>
+				<div class="Trigger_top fadeDown color_black cnt_mv_ttl02">PG HOUSEの家づくり</div>
+			</h1>
+		</div>
+		<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cnt_v_concept.jpg" class="cnt_mv_img">
+		<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cnt_v_concept.jpg" class="cnt_mv_img02">
+	</div>
+	<script>
+	$(document).ready(function() {
+		// 最初
+		$(".cnt_mv_ttl01").addClass("fade_active");
+
+		// 一定時間後に
+		setTimeout(function() {
+			$(".cnt_mv_ttl02").addClass("fade_active");
+		}, 500); // 500ms後に実行
+
+	});
+	</script>								
+	<!--/ cnt mv -->
+									
+	
+	<div class="cnt">
+		<div class="cp_box01">
+			<div class="cp_comi_flex">
+				<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_line_left.gif" alt="エリア最大規模の住宅展示場" class="Trigger fadeUp cp_line_img">
+			  <div class="cp_comi_ttl"><span class="color_blue">多くの</span><br>子育て家族が<br>「コスパの高さに驚いた！」</div>
+				<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_line_right.gif" alt="完全自由設計の注文住宅" class="Trigger fadeUp cp_line_img">
+			</div>
+
+			<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_ttl01.webp" alt="平屋モデルハウス" class="Trigger fadeUp cp_ttl01">
+
+			<div class="cp_flex">
+				<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_img01.webp" alt="断熱性と耐震性の高い家" class="Trigger fadeLeft cp_img01">
+				<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_ttl02.gif" alt="新築住宅ならPGハウス" class="Trigger fadeIn cp_ttl02">
+				<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_img02.webp" alt="完全自由設計の注文住宅" class="Trigger fadeRight cp_img01">
+			</div>
+
+			<div class="cp_bk">
+				<div class="cp_box02">
+					<div class="cp_no1_flex">
+						<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_no1_img01.webp" alt="地域密着の住宅会社" class="Trigger fadeIn cp_no1_img01">
+						<div class="cp_no1_ttl_box">
+						  <div class="Trigger fadeIn color_white cp_no01_ttl01">皆様に予算内でもっと</div>
+							<div class="Trigger fadeLeft color_white cp_no01_ttl02">価値のある暮らしをお届けしたい</div>
+							<div class="Trigger fadeIn color_white cp_no01_lead01">そんな想いでPG HOUSEの注文住宅は始まりました。</div>
+							<div class="cp_no_flex02">
+								<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_no1_img02.webp" alt="平屋モデルハウス" class="Trigger fadeUp cp_no01_img02"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_no1_img03.webp" class="Trigger fadeLeft cp_no01_img03">
+							</div>
+							<div class="color_white cp_no01_lead02">一生に一度の家づくりを通して、地域の皆様にもっと価値のある暮らしを。<br>これからも地域のナンバーワンを目指す我々PG HOUSEが確かな自信を持ってお届けします。</div>
+						</div>
+					</div>
+					<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_no1_voice_sp.webp" alt="断熱性と耐震性の高い家" class="sp1200 cp_no1_voice">
+					<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_no1_voice_pc.webp" class="pc1200 cp_no1_voice">
+				  <div class="color_white cp_no01_ttl03">そんな思いをお持ちのお客様のために、PG HOUSEがあります。</div>
+				</div>
+				<!--<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_no1_img_map.webp" alt="エリア最大規模の住宅展示場" class="cp_no1_img_map">-->
+			</div>
+
+			<div class="cp_three">
+				<div class="cp_comi_flex">
+					<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_line_left.gif" alt="地域密着の住宅会社" class="Trigger fadeUp cp_line_img">
+					<div class="cp_comi_ttl">選ばれ続ける理由が詰まった<br><span class="color_blue">圧倒的なコストパフォーマンス</span>でお届けする<br>住まいを一度ご覧ください。</div>
+					<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_line_right.gif" alt="完全自由設計の注文住宅" class="Trigger fadeUp cp_line_img">
+				</div>
+
+				<div class="Trigger fadeIn cp_pf_img_box">
+					<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_pf_img_sp.webp" alt="新築住宅ならPGハウス" class="sp480 cp_pf_img">
+					<img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/concept/cp_pf_img.webp" alt="新築住宅ならPGハウス" class="pc480 cp_pf_img">
+				</div>
+			</div>
+
+			<div class="cp_shiyo">
+				<div class="font_go color_white cp_shiyo_ttl">高性能・高品質、安心の標準仕様</div>
+				<div class="cp_plan_flex">
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon08.gif"><span class="cp_plan_txt">断熱性能<br>G2グレード</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon09.gif"><span class="cp_plan_txt">気密性<br>C値0.5以下</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon11.gif"><span class="cp_plan_txt">第一種 全熱交換<br>換気システム</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon03.gif"><span class="cp_plan_txt">耐震等級3<br>（最高等級）</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon15.gif"><span class="cp_plan_txt">地震保証<br>（100%建替え保証）</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon05.gif"><span class="cp_plan_txt">長期<br>優良住宅</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon17.gif"><span class="cp_plan_txt">無垢突板の床材</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon04.gif"><span class="cp_plan_txt">制震ダンパー</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon07.gif"><span class="cp_plan_txt">太陽光5.2kw<br>（キャンペーンご利用）</span></div>
+					<div class="cp_plan_list"><img src="//pg-house.jp/wp/wp-content/themes/pg-house/img/hiraya/cp_icon14.gif"><span class="cp_plan_txt">PG長期安心保証<br>60年</span></div>
+				</div>
+
+			</div>	
+
+			<div class="cp_menu_box">
+				<div class="font_go top_ft_bnr_flex">
+					  <a href="/concept/earthquake/" class="Trigger fadeIn top_ft_bnr_l01">
+						<div class="top_ft_bnr_ttl">
+							<div class="font_sofia top_ft_bnr_eng">STRUCTURE</div>
+							<div class="color_white top_ft_bnr_j">地震に強い超耐震構造</div>
+							<div class="color_white top_ft_bnr_j02">震度7相当に耐える耐震等級3を取得した地震に強い家</div>
+						</div>
+						<div class="hover_anm circle_arrow02"><svg class="arrow_svg"><use href="#arrow_svg"></svg></div>  
+						<div class="top_ft_bnr_bk"><img src="/img/top_foot_bnr01.jpg" class="top_ft_bnr" loading="lazy"></div>
+					  </a>
+					  <a href="/concept/zeh/" class="Trigger fadeIn top_ft_bnr_l01">
+						<div class="top_ft_bnr_ttl">
+							<div class="font_sofia top_ft_bnr_eng">PERFORMANCE</div>
+							<div class="color_white top_ft_bnr_j">超ZEH住宅</div>
+							<div class="color_white top_ft_bnr_j02">全棟ZEH基準超えのG2基準</div>
+						</div>
+						<div class="hover_anm circle_arrow02"><svg class="arrow_svg"><use href="#arrow_svg"></svg></div>  
+						<div class="top_ft_bnr_bk"><img src="/img/top_foot_bnr02.jpg" class="top_ft_bnr" loading="lazy"></div>
+					  </a>	  
+				  </div>
+				<div class="font_go top_ft_bnr_flex02">
+					  <a href="/concept/design/" class="Trigger fadeIn top_ft_bnr_l02">
+						<div class="top_ft_bnr_ttl02">
+							<div class="font_sofia top_ft_bnr_eng">DESIGN</div>
+							<div class="color_black top_ft_bnr_j">完全自由設計</div>
+							<div class="color_black top_ft_bnr_j02">あなたの憧れ・理想に寄り添う</div>
+						</div>
+					  <div class="hover_anm circle_arrow03"><svg class="arrow_svg"><use href="#arrow_svg"></svg></div>  
+						<div class="top_ft_bnr_bk top_ft_bnr_bk02"><img src="/img/top_foot_bnr03.jpg" class="top_ft_bnr02" loading="lazy"></div>
+					  </a>
+					  <a href="/concept/cost/" class="Trigger fadeIn top_ft_bnr_l02">
+						<div class="top_ft_bnr_ttl02">
+							<div class="font_sofia top_ft_bnr_eng">COST</div>
+							<div class="color_black top_ft_bnr_j">月々3万円</div>
+							<div class="color_black top_ft_bnr_j02">家計に優しいライフサイクルコスト</div>
+						</div>
+					  <div class="hover_anm circle_arrow03"><svg class="arrow_svg"><use href="#arrow_svg"></svg></div>  
+						<div class="top_ft_bnr_bk top_ft_bnr_bk02"><img src="/img/top_foot_bnr04.jpg" class="top_ft_bnr02" loading="lazy"></div>
+					  </a>
+					  <a href="/concept/after/" class="Trigger fadeIn top_ft_bnr_l02">
+						<div class="top_ft_bnr_ttl02">
+							<div class="font_sofia top_ft_bnr_eng">SUPPORT</div>
+							<div class="color_black top_ft_bnr_j">6つの安心</div>
+							<div class="color_black top_ft_bnr_j02">充実保証・アフターサポート</div>
+						</div>
+					  <div class="hover_anm circle_arrow03"><svg class="arrow_svg"><use href="#arrow_svg"></svg></div>  
+						<div class="top_ft_bnr_bk top_ft_bnr_bk02"><img src="/img/top_foot_bnr05.jpg" class="top_ft_bnr02" loading="lazy"></div>
+					  </a>  
+				  </div>		
+			</div>
+
+		</div>
+		<!-- / concept -->
+
+		<!-- cp_cv -->
+		<div class="tp_cp_cv_bk">
+			<a href="/concept/" class="tp_cp_cv_flex">
+				<div class="tp_cp_cv_list01">
+					<img src="/img/mv_logo.webp" class="Trigger fadeIn tp_cp_cv_logo">
+					<div class="Trigger fadeIn top_cp_flex03">
+					  <div class="top_cp_f01"><img src="/img/top_cp_cv_img01.webp"  alt="エリア最大規模の住宅展示場" loading="lazy"><div class="top_cp_cv_txt">震度7相当の地震に耐える</div></div>
+					  <div class="top_cp_f01"><img src="/img/top_cp_cv_img02.webp" loading="lazy"><div class="top_cp_cv_txt">高気密・高断熱の高性能仕様</div></div>
+					  <div class="top_cp_f01"><img src="/img/top_cp_cv_img03.webp" loading="lazy"><div class="top_cp_cv_txt">高品質な設備がフル装備</div></div>
+				    </div>
+				</div>
+				<div class="tp_cp_cv_list02">
+					<div><div class="Trigger fadeIn color_white tp_cp_cv_ttl">『超耐震×自由設計』を最強コスパで</div>
+					<div class="Trigger fadeUp link_white link_white02 btn_arrow btn01"><div class="color_blue btn01_txt">PG HOUSEの<br>デザインや性能について知る</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></div></div>
+				</div>
+			</a>	
+		</div>
+		<!--/ cp_cv -->	
+
+		
+		<!-- tp_sodan -->
+	 	<div class="tp_sodan_bk">
+			<a href="/sodan/" class="tp_sodan_flex">
+				<div class="tp_sodan_list">
+					<div class="Trigger fadeIn color_blue tp_sodan_txt">\ PG HOUSEにご興味を持たれた方へ /</div>
+					<div class="Trigger fadeIn tp_sodan_ttl">PG HOUSEネットワークの工務店に無料相談</div>
+					<div class="Trigger fadeIn tp_sodan_lead">家づくりの特徴や具体的な注文住宅の進め方の相談まで、お客様のご要望に合わせて幅広く無料でご相談いただけます。</div>
+					<div class="link_blue btn_arrow btn01"><div class="btn01_txt">PG HOUSEネットワーク<br>工務店に無料相談する</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></div>
+				</div>
+				<img src="/img/top_sodan_cv_img.jpg" class="Trigger fadeIn tp_sodan_cv_img">
+			</a>
+		</div>
+		<!--/ tp_sodan -->
+		<!-- cv bnr -->
+		<div class="Trigger fadeIn top_ft02_bnr_flex">
+			<a href="/event/" class="bnt_up top_ft02_f01"><img src="/img/top_foot_bnr_event_sp.jpg" class="sp768"><img src="/img/top_foot_bnr_event_pc.jpg" class="pc768"></a>   
+			<a href="/contact/" class="bnt_up top_ft02_f01"><img src="/img/top_foot_bnr_catalog_sp.jpg" class="sp768"><img src="/img/top_foot_bnr_catalog_pc.jpg" class="pc768"></a>   
+		  </div>	
+		<!--/ cv bnr-->	
+			
+			
+			
+	</div>								
+						
+		
+</div>
+
+
+
+
+<!-- side fix bnr -->									
+<div class="pc768 side_fix">
+	<div class="side_fix_box">
+		<a href="https://pg-house.jp/event/" class="link_orange side_bnr">
+            <div class="side_bnr_def">
+                <img src="/img/nav_cv_icon01.webp" class="side_bnr_img">
+                <div class="side_bnr_txt">イベント検索</div>
+            </div>
+            <div class="side_bnr_active">
+                <img src="/img/nav_cv_icon01.webp" class="side_bnr_img">
+                <div class="side_bnr_txt">イベント検索</div>
+            </div>
+        </a>
+		<a href="https://pg-house.jp/contact/" class="link_blue side_bnr">
+            <div class="side_bnr_def">
+                <img src="/img/nav_cv_icon02.webp" class="side_bnr_img">
+                <div class="side_bnr_txt">資料請求</div>
+            </div>
+            <div class="side_bnr_active">
+                <img src="/img/nav_cv_icon02.webp" class="side_bnr_img">
+                <div class="side_bnr_txt">資料請求</div>
+            </div>
+        </a>
+		<a href="https://pg-house.jp/sodan/" class="link_white side_bnr">
+            <div class="side_bnr_def">
+                <img src="/img/nav_cv_icon03.webp" class="side_bnr_img">
+                <div class="side_bnr_txt">無料相談</div>
+            </div>
+            <div class="side_bnr_active">
+                <img src="/img/nav_cv_icon03.webp" class="side_bnr_img">
+                <div class="side_bnr_txt">無料相談</div>
+            </div>
+        </a>
+	</div>
+</div>
+<!--/ side fix bnr -->
+<!-- foot fix bnr -->									
+<div class="sp768 foot_fix">
+	<div class="foot_fix_flex">
+		<a href="https://pg-house.jp/event/" class="link_orange foot_fix_bnr">
+			<img src="/img/nav_cv_icon01.webp" class="ft_fix_img"><div class="ft_fix_txt">イベント検索</div>
+		</a>
+		<a href="https://pg-house.jp/contact/" class="link_blue foot_fix_bnr">
+			<img src="/img/nav_cv_icon02.webp" class="ft_fix_img"><div class="ft_fix_txt">資料請求</div>
+		</a>
+		<a href="https://pg-house.jp/sodan/" class="link_white foot_fix_bnr">
+			<img src="/img/nav_cv_icon03.webp" class="ft_fix_img"><div class="ft_fix_txt">無料相談</div>
+		</a>
+
+	</div>
+</div>
+<!--/ foot fix bnr -->									
+
+<div class="pankuzu">
+	<div class="pan_box">
+		<a href="https://pg-house.jp/" class="pan_a">『超耐震×自由設計』の注文住宅PGHOUSE</a>
+
+		
+		
+				
+		
+		
+		<span class="pan_line">|</span><span class="pan_txt">ピージーハウスだからできる家づくり</span>
+	</div>  
+</div>	
+<footer>
+	<div class="g-nav_flex_foot">
+		<div class="g-nav_box">
+		  <div class="color_black g-nav_box_ttl"><img class="g-nav_icon" src="/img/nav_icon_01.webp" alt="エリア最大規模の住宅展示場" loading="lazy"><div class="g-nav_box_ttl_txt">PG HOUSEの家づくり</div><div class="link_m_icon_foot"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+			<div class="g-nav_box_cnt">
+				<a href="/concept/" class="color_black arrow_move01 g-nav_box_a">PG HOUSEの家づくり<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				<a href="/concept/earthquake/" class="color_black arrow_move01 g-nav_box_a">耐震等級3を取得した地震に強い家<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				<a href="/concept/zeh/" class="color_black arrow_move01 g-nav_box_a">全棟ZEH基準超えのG2基準<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>	
+				<a href="/concept/design/" class="color_black arrow_move01 g-nav_box_a">完全自由設計<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				<a href="/concept/cost/" class="color_black arrow_move01 g-nav_box_a">家計に優しい家<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				<a href="/concept/after/" class="color_black arrow_move01 g-nav_box_a">充実保証・アフターサポート<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>	
+			</div>
+		</div>
+
+		<!--<div class="g-nav_box">
+			<div class="color_black g-nav_box_ttl"><img class="g-nav_icon" src="/img/nav_icon_02.webp" alt="断熱性と耐震性の高い家" loading="lazy"><div class="g-nav_box_ttl_txt">施工事例</div><div class="link_m_icon_foot"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+			<div class="g-nav_box_cnt">
+				<a href="https://pg-house.jp/fav/" class="color_black arrow_move01 g-nav_box_a">お気に入り<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+								</div>
+		</div>-->
+					
+		<!--<div class="g-nav_box">
+			<div class="color_black g-nav_box_ttl"><img class="g-nav_icon" src="/img/nav_icon_06.webp" alt="断熱性と耐震性の高い家" loading="lazy"><div class="g-nav_box_ttl_txt">フォトギャラリー</div><div class="link_m_icon_foot"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+			<div class="g-nav_box_cnt">
+							</div>
+		</div>	-->		
+
+		<div class="g-nav_box02_flex">
+			<div class="g-nav_box02">
+				<div class="color_black g-nav_box_ttl"><img class="g-nav_icon" src="/img/nav_icon_03.webp" alt="地域密着の住宅会社" loading="lazy"><div class="g-nav_box_ttl_txt">モデル・工務店を探す</div><div class="link_m_icon_foot"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+				<div class="g-nav_box_cnt">
+					<a href="https://pg-house.jp/event/" class="color_black arrow_move01 g-nav_box_a">お近くのモデル・イベントを探す<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+					<a href="https://pg-house.jp/shop/" class="color_black arrow_move01 g-nav_box_a">お近くのPG HOUSEを探す<svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+				</div>
+			</div>
+
+			<div class="g-nav_box02">
+			  <a href="https://pg-house.jp/sodan/" class="color_black arrow_move01 g-nav_box_ttl"><img class="g-nav_icon" src="/img/nav_icon_04.webp" alt="エリア最大規模の住宅展示場" loading="lazy"><div class="g-nav_box_ttl_txt">工務店に無料相談</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+			</div>
+
+			<div class="g-nav_box02">
+			  <a href="https://pg-house.jp/contact/" class="color_black arrow_move01 g-nav_box_ttl"><img class="g-nav_icon" src="/img/nav_icon_05.webp" alt="エリア最大規模の住宅展示場" loading="lazy"><div class="g-nav_box_ttl_txt">資料請求する</div><svg class="arrow_svg"><use href="#arrow_svg"></svg></a>
+			</div>
+		</div>
+	</div>
+			
+	<div class="foot_link">
+	  <a href="https://pg-house.jp/shop_contact/" class="link_under">お問い合わせ</a>　｜　<a href="https://pg-house.jp/question/" class="link_under">よくあるご質問</a>　｜　<a href="https://pg-house.jp/privacy/" class="link_under">利用規約</a>　｜　<a href="https://pg-house.jp/company/" class="link_under">運営会社</a>
+		<div class="foot_sns"><!--<a href="https://www.youtube.com/@pure-growth/" target="_blank" class="bnt_up"><img src="/img/youtube.webp"></a><a href="http://instagram.com/" target="_blank" class="bnt_up"><img src="/img/instagram.webp"></a>--></div>		
+	</div>		
+	
+	<div class="foot_area_flex">
+		<div class="foot_area01">
+			<div class="color_black g-nav_box_ttl"><div class="g-nav_box_ttl_txt">地域別注文住宅</div><div class="link_m_icon_foot"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+			<div class="g-nav_box_cnt foot_areain">
+			  <div class="link_m_subttl">北海道・東北エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/hokkaido/" class="link_m_a02 ">北海道</a><a href="https://pg-house.jp/area/aomori/" class="link_m_a02 ">青森</a><a href="https://pg-house.jp/area/iwate/" class="link_m_a02 ">岩手</a><a href="https://pg-house.jp/area/miyagi/" class="link_m_a02 ">宮城</a><a href="https://pg-house.jp/area/akita/" class="link_m_a02 ">秋田</a><a href="https://pg-house.jp/area/yamagata/" class="link_m_a02 ">山形</a><a href="https://pg-house.jp/area/fukushima/" class="link_m_a02 ">福島</a>				</div>
+				<div class="pd10 link_m_subttl">関東エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/tokyo/" class="link_m_a02 ">東京都</a><a href="https://pg-house.jp/area/kanagawa/" class="link_m_a02 ">神奈川</a><a href="https://pg-house.jp/area/saitama/" class="link_m_a02 ">埼玉</a><a href="https://pg-house.jp/area/chiba/" class="link_m_a02 ">千葉</a><a href="https://pg-house.jp/area/ibaraki/" class="link_m_a02 ">茨城</a><a href="https://pg-house.jp/area/tochigi/" class="link_m_a02 ">栃木</a><a href="https://pg-house.jp/area/gunma/" class="link_m_a02 ">群馬</a>				</div>
+				<div class="pd10 link_m_subttl">甲信越・北陸エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/niigata/" class="link_m_a02 ">新潟</a><a href="https://pg-house.jp/area/toyama/" class="link_m_a02 ">富山</a><a href="https://pg-house.jp/area/ishikawa/" class="link_m_a02 ">石川</a><a href="https://pg-house.jp/area/fukui/" class="link_m_a02 ">福井</a><a href="https://pg-house.jp/area/yamanashi/" class="link_m_a02 ">山梨</a><a href="https://pg-house.jp/area/nagano/" class="link_m_a02 ">長野</a>				</div>
+				<div class="pd10 link_m_subttl">東海エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/aichi/" class="link_m_a02 ">愛知</a><a href="https://pg-house.jp/area/gifu/" class="link_m_a02 ">岐阜</a><a href="https://pg-house.jp/area/shizuoka/" class="link_m_a02 ">静岡</a><a href="https://pg-house.jp/area/mie/" class="link_m_a02 ">三重</a>				</div>
+				<div class="pd10 link_m_subttl">関西エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/osaka/" class="link_m_a02 ">大阪府</a><a href="https://pg-house.jp/area/hyogo/" class="link_m_a02 ">兵庫</a><a href="https://pg-house.jp/area/kyoto/" class="link_m_a02 ">京都府</a><a href="https://pg-house.jp/area/shiga/" class="link_m_a02 ">滋賀</a><a href="https://pg-house.jp/area/nara/" class="link_m_a02 ">奈良</a><a href="https://pg-house.jp/area/wakayama/" class="link_m_a02 ">和歌山</a>				</div>
+				<div class="pd10 link_m_subttl">中国エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/hiroshima/" class="link_m_a02 ">広島</a><a href="https://pg-house.jp/area/okayama/" class="link_m_a02 ">岡山</a><a href="https://pg-house.jp/area/tottori/" class="link_m_a02 ">鳥取</a><a href="https://pg-house.jp/area/shimane/" class="link_m_a02 ">島根</a><a href="https://pg-house.jp/area/yamaguchi/" class="link_m_a02 ">山口</a>				</div>
+				<div class="pd10 link_m_subttl">四国エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/kagawa/" class="link_m_a02 ">香川</a><a href="https://pg-house.jp/area/tokushima/" class="link_m_a02 ">徳島</a><a href="https://pg-house.jp/area/ehime/" class="link_m_a02 ">愛媛</a><a href="https://pg-house.jp/area/kochi/" class="link_m_a02 ">高知</a>				</div>
+				<div class="pd10 link_m_subttl">九州・沖縄エリア</div>
+				<div class="link_m_ac">
+					<a href="https://pg-house.jp/area/fukuoka/" class="link_m_a02 ">福岡</a><a href="https://pg-house.jp/area/saga/" class="link_m_a02 ">佐賀</a><a href="https://pg-house.jp/area/nagasaki/" class="link_m_a02 ">長崎</a><a href="https://pg-house.jp/area/kumamoto/" class="link_m_a02 ">熊本</a><a href="https://pg-house.jp/area/oita/" class="link_m_a02 ">大分</a><a href="https://pg-house.jp/area/miyazaki/" class="link_m_a02 ">宮崎</a><a href="https://pg-house.jp/area/kagoshima/" class="link_m_a02 ">鹿児島</a><a href="https://pg-house.jp/area/okinawa/" class="link_m_a02 ">沖縄</a>				</div>
+		  </div>
+	  </div>
+	  
+	  <div class="foot_area01">
+			<div class="color_black g-nav_box_ttl"><div class="g-nav_box_ttl_txt">注目地域の注文住宅</div><div class="link_m_icon_foot"><img src="/img/icon_plus.webp" class="icon_plus"><img src="/img/icon_bar.webp" class="icon_bar"></div></div>
+			<div class="g-nav_box_cnt foot_areain">
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">山形県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/yamagata/yamagata-city/" class="link_m_a02">山形市</a><a href="https://pg-house.jp/area/yamagata/kaminoyama-city/" class="link_m_a02">上山市</a><a href="https://pg-house.jp/area/yamagata/nanyo-city/" class="link_m_a02">南陽市</a><a href="https://pg-house.jp/area/yamagata/yonezawa-city/" class="link_m_a02">米沢市</a><a href="https://pg-house.jp/area/yamagata/nagai-city/" class="link_m_a02">長井市</a>
+					</div>
+				</div>
+				
+			    <div class="foot_city_flex">
+					<div class="link_m_subttl">福井県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/fukui/fukui-city/" class="link_m_a02">福井市</a><a href="https://pg-house.jp/area/fukui/sakai-city/" class="link_m_a02">坂井市</a><a href="https://pg-house.jp/area/fukui/echizen-city/" class="link_m_a02">越前市</a><a href="https://pg-house.jp/area/fukui/sabae-city/" class="link_m_a02">鯖江市</a><a href="https://pg-house.jp/area/fukui/ono-city/" class="link_m_a02">大野市</a><a href="https://pg-house.jp/area/fukui/awara-city/" class="link_m_a02">あわら市</a>
+					</div>
+				</div>
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">山梨県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/yamanashi/koufu-city/" class="link_m_a02">甲府市</a><a href="https://pg-house.jp/area/yamanashi/kai-city/" class="link_m_a02">甲斐市</a><a href="https://pg-house.jp/area/yamanashi/minamialps-city/" class="link_m_a02">南アルプス市</a><a href="https://pg-house.jp/area/yamanashi/fuefuki-city/" class="link_m_a02">笛吹市</a><a href="https://pg-house.jp/area/yamanashi/fujiyoshida-city/" class="link_m_a02">富士吉田市</a><a href="https://pg-house.jp/area/yamanashi/hokuto-city/" class="link_m_a02">北杜市</a><a href="https://pg-house.jp/area/yamanashi/yamanashi-city/" class="link_m_a02">山梨市</a><a href="https://pg-house.jp/area/yamanashi/chuo-city/" class="link_m_a02">中央市</a><a href="https://pg-house.jp/area/yamanashi/tsuru-city/" class="link_m_a02">都留市</a><a href="https://pg-house.jp/area/yamanashi/koshu-city/" class="link_m_a02">甲州市</a><a href="https://pg-house.jp/area/yamanashi/nirasaki-city/" class="link_m_a02">韮崎市</a>
+					</div>
+				</div>
+				
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">愛知県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/aichi/nagoya-city/" class="link_m_a02">名古屋市</a><a href="https://pg-house.jp/area/aichi/okazaki-city/" class="link_m_a02">岡崎市</a><a href="https://pg-house.jp/area/aichi/anjo-city/" class="link_m_a02">安城市</a><a href="https://pg-house.jp/area/aichi/nishio-city/" class="link_m_a02">西尾市</a><a href="https://pg-house.jp/area/aichi/gamagori-city/" class="link_m_a02">蒲郡市</a>
+					</div>
+				</div>
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">静岡県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/shizuoka/shizuoka-city/" class="link_m_a02">静岡市</a><a href="https://pg-house.jp/area/shizuoka/hamamatsu-city/" class="link_m_a02">浜松市</a><a href="https://pg-house.jp/area/shizuoka/numazu-city/" class="link_m_a02">沼津市</a><a href="https://pg-house.jp/area/shizuoka/fuji-city/" class="link_m_a02">富士市</a><a href="https://pg-house.jp/area/shizuoka/yaizu-city/" class="link_m_a02">焼津市</a><a href="https://pg-house.jp/area/shizuoka/kosai-city/" class="link_m_a02">湖西市</a>
+					</div>
+				</div>
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">三重県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/mie/matsusaka-city/" class="link_m_a02">松阪市</a><a href="https://pg-house.jp/area/mie/ise-city/" class="link_m_a02">伊勢市</a><a href="https://pg-house.jp/area/mie/yokkaichi-city/" class="link_m_a02">四日市市</a><a href="https://pg-house.jp/area/mie/suzuka-city/" class="link_m_a02">鈴鹿市</a><a href="https://pg-house.jp/area/mie/nabari-city/" class="link_m_a02">名張市</a><a href="https://pg-house.jp/area/mie/tsu-city/" class="link_m_a02">津市</a><a href="https://pg-house.jp/area/mie/iga-city/" class="link_m_a02">伊賀市</a><a href="https://pg-house.jp/area/mie/kuwana-city/" class="link_m_a02">桑名市</a>
+					</div>
+				</div>
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">兵庫県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/hyogo/himeji-city/" class="link_m_a02">姫路市</a><a href="https://pg-house.jp/area/hyogo/nishinomiya-city/" class="link_m_a02">西宮市</a><a href="https://pg-house.jp/area/hyogo/amagasaki-city/" class="link_m_a02">尼崎市</a><a href="https://pg-house.jp/area/hyogo/akashi-city/" class="link_m_a02">明石市</a><a href="https://pg-house.jp/area/hyogo/takarazuka-city/" class="link_m_a02">宝塚市</a><a href="https://pg-house.jp/area/hyogo/toyooka-city/" class="link_m_a02">豊岡市</a>
+					</div>
+				</div>
+				<div class="foot_city_flex">
+					<div class="link_m_subttl">宮崎県</div>
+					<div class="link_m_ac">
+						<a href="https://pg-house.jp/area/miyazaki/miyazaki-city/" class="link_m_a02">宮崎市</a><a href="https://pg-house.jp/area/miyazaki/miyakonojo-city/" class="link_m_a02">都城市</a><a href="https://pg-house.jp/area/miyazaki/nobeoka-city/" class="link_m_a02">延岡市</a><a href="https://pg-house.jp/area/miyazaki/hyuga-city/" class="link_m_a02">日向市</a><a href="https://pg-house.jp/area/miyazaki/nichinan-city/" class="link_m_a02">日南市</a><a href="https://pg-house.jp/area/miyazaki/kobayashi-city/" class="link_m_a02">小林市</a><a href="https://pg-house.jp/area/miyazaki/saito-city/" class="link_m_a02">西都市</a>
+					</div>
+				</div>
+				
+				
+		  </div>
+	  </div>	
+	</div>
+					
+	<div class="font_sofia color_darkblue copy">© PG HOUSE</div>				
+			
+			
+	
+</footer>
+
+
+	
+<!-- jsbase -->
+<script src="/js/base.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+jQuery(document).ready(function($){
+	$('.js-fav').on('click', function() {
+		const works_id = $(this).data('id');
+
+		let works_id_list = $.cookie('works_id_list');
+		let new_works_id_list = new Array();
+		let exist = false;
+		if (works_id_list) {
+			let ar_works_id_list = works_id_list.split(',');
+			$.each(ar_works_id_list, function(index, value) {
+				if (Number(works_id) === Number(value)) {
+					// 既に登録されている場合、登録解除
+					exist = true;
+					return;
+				}
+				new_works_id_list.push(value);
+			});
+		}
+		if (exist === false) {
+			// 未登録だった場合、追加
+			new_works_id_list.push(works_id);
+		}
+		// クッキーに登録
+		$.cookie('works_id_list', new_works_id_list.join(','), {expires: 365, path: '/'});
+	});
+	// お気に入りマークをアクティブに変更
+	$('.js-fav').each(function() {
+		const works_id = $(this).data('id');
+
+		let works_id_list = $.cookie('works_id_list');
+		let new_works_id_list = new Array();
+		let exist = false;
+		if (works_id_list) {
+			let ar_works_id_list = works_id_list.split(',');
+			$.each(ar_works_id_list, function(index, value) {
+				if (Number(works_id) === Number(value)) {
+					// 既に登録されている場合、登録解除
+					exist = true;
+					return;
+				}
+			});
+		}
+		if (exist === true) {
+			// アクティブにする
+			$(this).addClass('active');
+		}
+	});
+});
+</script>
+
+<svg style="display: none;">
+	<symbol id="arrow_svg" viewBox="0 0 7.54 5.15">
+		<polygon class="cls-1" points="7.54 2.58 0 0 0 5.15 7.54 2.58"/>
+	</symbol>
+</svg>
+<svg style="display: none;">
+	<symbol id="blank_svg" viewBox="0 0 339.53 339.53">
+		<path class="cls-1" d="M18.78,339.53C8.42,339.53,0,331.1,0,320.75V50.19c0-10.36,8.42-18.78,18.78-18.78h126.76v37.56H37.56s0,233,0,233h233s0-107.98,0-107.98h37.56v126.75c0,5.02-1.95,9.73-5.5,13.28-3.55,3.55-8.26,5.5-13.28,5.5H18.78Z"/><path class="cls-1" d="M141.35,215.06c-4.54,0-8.79-1.75-11.96-4.92-6.67-6.67-6.53-17.66.31-24.5L284.22,31.13l-80.63-.68c-7.94-.07-14.42-6.09-15.05-14.01-.34-4.29,1.07-8.39,3.99-11.55C195.43,1.74,199.4,0,203.7,0l127.23,1.1c4.1.04,7.46,3.4,7.49,7.49l1.11,127.1c.04,4.09-1.53,7.95-4.41,10.85-2.88,2.91-6.71,4.51-10.79,4.51-.42,0-.84-.02-1.26-.05-7.92-.64-13.94-7.11-14-15.05l-.69-80.63-154.5,154.5c-3.37,3.37-7.82,5.23-12.54,5.23Z"/>
+	</symbol>
+</svg>
+<svg style="display: none">
+	<symbol id="point_svg" viewBox="0 0 243.7 212.88">
+		<path class="cls-1" d="M189.63,92.08c.8,4.67,1.25,9.46,1.25,14.36,0,46.56-37.88,84.44-84.44,84.44S22,153,22,106.44,59.88,22,106.44,22c24.96,0,47.42,10.89,62.89,28.17l18.17-12.63C167.96,14.58,138.87,0,106.44,0,47.75,0,0,47.75,0,106.44s47.75,106.44,106.44,106.44,106.44-47.75,106.44-106.44c0-9.67-1.3-19.03-3.73-27.94l-19.52,13.58Z"/>
+	  <polygon class="cls-1" points="230 21.37 210.9 34.66 194.19 46.27 187.18 51.15 176.13 58.83 104.77 108.47 60.15 78.16 46.66 98.01 104.93 137.59 186.83 80.63 187.18 80.38 205.55 67.61 211.18 63.69 243.7 41.07 230 21.37"/>
+	</symbol>
+</svg>
+
+<svg style="display: none">
+	<symbol id="tel_svg" viewBox="0 0 885 885">
+  <path class="cls-1" d="M124.65,110.14c5.83-.09,11.69,1.77,15.61,3.66,15.64,5.6,116.48,144.15,129.26,194.46,9.82,38.64-8.78,44.55-52.57,107.42,0,0,10.38,44.56,118.88,149.89,110.44,105.3,155.29,114.36,155.29,114.36,61.54-45.63,68.27-64.42,107.77-55.74,51.32,11.28,194.08,107.95,200.14,123.42,22.1,48.28-65.31,126.35-71.09,128.85-42.88,18.54-148.9,3.36-193.68-12.09-221.8-76.54-427.5-336.38-490.44-450.69C-11.06,314.02-6.05,239.53,13.93,189.03c2.87-7.26,67.99-79.21,110.71-78.88h0ZM387.43,352.64c37.11,0,74.22,14.14,102.51,42.43,28.29,28.29,42.43,65.4,42.43,102.51h67.08c0-54.28-20.7-108.56-62.07-149.94-41.38-41.38-95.66-62.07-149.94-62.07v67.08h0ZM387.43,209.86c73.67,0,147.34,28.07,203.49,84.22,56.15,56.15,84.22,129.82,84.22,203.49h67.08c0-90.84-34.63-181.68-103.87-250.92-69.24-69.24-160.08-103.87-250.92-103.87v67.08h0ZM387.43,67.08c110.22,0,220.45,42,304.47,126.02,84.02,84.02,126.02,194.25,126.02,304.47h67.08c0-127.4-48.56-254.79-145.67-351.9C642.22,48.56,514.82,0,387.43,0v67.08h0Z"/>
+	</symbol>
+</svg>
+
+<svg style="display: none">
+	<symbol id="fav_svg" viewBox="0 0 611.48 541.67">
+  	<path class="cls-1" d="M600.37,111.04c-26.98-74.78-120.12-132.11-198.35-103.57-6.67,2.43-4.52,2.28-4.8,2.4-39.72,12.11-72.36,44.04-91.48,80.66-19.12-36.62-51.76-68.55-91.48-80.66-.28-.11,1.87.03-4.8-2.4C131.23-21.07,38.09,36.26,11.11,111.04c-32.94,91.32,12.46,171.72,69.58,239.94,46.94,56.07,140.02,136.93,201.55,176.36,7.7,4.93,15.66,9.6,23.49,14.34,7.83-4.73,15.8-9.41,23.49-14.34,61.53-39.42,154.61-120.29,201.55-176.36,57.12-68.22,102.53-148.62,69.58-239.94Z"/>
+	</symbol>
+</svg>
+
+
+<svg style="display: none">
+	<symbol id="search_svg" viewBox="0 0 550 321">
+	  <path class="cls-1" d="M274.17,100H26.83C12.01,100,0,87.99,0,73.17v-7.34C0,51.01,12.01,39,26.83,39h247.34c14.82,0,26.83,12.01,26.83,26.83v7.34c0,14.82-12.01,26.83-26.83,26.83"/>
+	  <path class="cls-1" d="M399.5,129c-35.57,0-64.5-28.93-64.5-64.5S363.93,0,399.5,0s64.5,28.93,64.5,64.5-28.93,64.5-64.5,64.5ZM399.5,30c-19.02,0-34.5,15.48-34.5,34.5s15.48,34.5,34.5,34.5,34.5-15.48,34.5-34.5-15.48-34.5-34.5-34.5Z"/>
+	  <path class="cls-1" d="M275.83,292h247.34c14.82,0,26.83-12.01,26.83-26.83v-7.34c0-14.82-12.01-26.83-26.83-26.83h-247.34c-14.82,0-26.83,12.01-26.83,26.83v7.34c0,14.82,12.01,26.83,26.83,26.83"/>
+	  <path class="cls-1" d="M150.5,192c-26.51,0-49.33,16.08-59.23,39H18.69c-10.32,0-18.69,8.37-18.69,18.69v23.62c0,10.32,8.37,18.69,18.69,18.69h75.62c.77,0,1.53-.06,2.28-.15,11.54,17.54,31.39,29.15,53.91,29.15,35.57,0,64.5-28.93,64.5-64.5s-28.93-64.5-64.5-64.5ZM150.5,291c-19.02,0-34.5-15.48-34.5-34.5s15.48-34.5,34.5-34.5,34.5,15.48,34.5,34.5-15.48,34.5-34.5,34.5Z"/>
+	</symbol>
+</svg>
+
+<svg style="display: none">
+	<symbol id="search_j_svg" viewBox="0 0 970.45 886.45">
+	  <path class="cls-1" d="M161.16,667.47H41.33c-22.82,0-41.33,15.81-41.33,35.32v148.34c0,19.51,18.5,35.32,41.33,35.32h119.84c22.82,0,41.33-15.81,41.33-35.32v-148.34c0-19.51-18.5-35.32-41.33-35.32"/>
+	  <path class="cls-1" d="M426.9,736.46h-121.84c-21.03,0-38.08,17.05-38.08,38.08v41.88c0,21.03,17.05,38.08,38.08,38.08h121.84c21.03,0,38.08-17.05,38.08-38.08v-41.88c0-21.03-17.05-38.08-38.08-38.08"/>
+	  <path class="cls-1" d="M775.98,241.49h-152.99c-16.57,0-30,13.43-30,30v251.98H241.49c-16.57,0-30,13.43-30,30v131.99c0,16.57,13.43,30,30,30h421.48v45c0,16.57,9.02,30,20.14,30h102.72c11.12,0,20.14-13.43,20.14-30v-488.97c0-16.57-13.43-30-30-30"/>
+	  <path class="cls-1" d="M940.45,0h-247.49c-16.57,0-30,13.43-30,30v154.49c0,16.57,13.43,30,30,30h247.49c16.57,0,30-13.43,30-30V30c0-16.57-13.43-30-30-30"/>
+	</symbol>
+</svg>
+
+
+<svg style="display: none">
+	<symbol id="shop_svg" viewBox="0 0 502.59 512">
+	  <path class="cls-1" d="M496.03,85.88c-.75-2.38-2.78-4.12-5.23-4.52-2.47-.39-4.94.64-6.39,2.67l-6.53,9.12-36.89,51.83c-7.14,9.97-21.69,11.78-32.5,4.05l-62.12-44.45c-10.81-7.73-13.81-22.09-6.67-32.06l37.78-53.06,6.2-8.66c1.44-2.03,1.62-4.69.47-6.89-1.14-2.19-3.44-3.56-5.91-3.53,0,0-5.86-.98-15.23.2-23.58,3.02-46.55,12.83-65.77,29.67-51.42,45.05-56.58,123.27-11.52,174.67,45.05,51.42,123.27,56.58,174.67,11.52,34.48-30.22,48.16-75.34,39.83-117.31-1.75-8.8-4.19-13.25-4.19-13.25Z"/>
+	  <path class="cls-1" d="M273.12,229.21h0c-2.34-2.34-4.62-4.78-6.81-7.28-8.05-9.19-14.84-19.17-20.34-29.73L15.29,422.85c-20.39,20.39-20.39,53.47,0,73.86,20.39,20.39,53.47,20.39,73.86,0l234.41-234.42c-18.42-7.28-35.64-18.28-50.44-33.08ZM35.29,476.71c-9.77-9.78-9.77-25.62,0-35.39,9.78-9.78,25.62-9.78,35.39,0,9.78,9.77,9.78,25.61,0,35.39-9.77,9.77-25.61,9.77-35.39,0Z"/>
+</symbol>
+</svg>
+
+<svg style="display: none">
+	<symbol id="post_svg" viewBox="0 0 685.28 1057.89">
+		<path class="cls-1" d="M584.92,100.36C520.21,35.64,434.16,0,342.64,0S165.07,35.64,100.36,100.36C35.64,165.07,0,251.12,0,342.64c0,.74.01,1.48.03,2.23,0,0,.02,1.58.02,1.63.79,71.25,23.23,139.33,64.9,196.88,61.63,85.11,116.31,170.59,162.53,254.07,23.47,42.39,42.9,88.18,57.74,136.11l32.92,106.28c4.12,13.32,15.36,18.06,24.5,18.06s20.38-4.75,24.5-18.06l32.89-106.19c15.03-48.54,35.32-95.89,60.3-140.75,45.65-81.97,99.48-165.92,160-249.51,41.67-57.55,64.11-125.63,64.89-196.88,0-.02.02-1.63.02-1.63.01-.74.03-1.48.03-2.23,0-91.52-35.64-177.57-100.36-242.28ZM342.64,483.55c-77.7,0-140.91-63.21-140.91-140.91s63.21-140.91,140.91-140.91,140.91,63.21,140.91,140.91-63.21,140.91-140.91,140.91Z"/>
+	</symbol>
+</svg>
+
+
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp\/wp-*.php","\/wp\/wp-admin\/*","\/wp\/wp-content\/uploads\/*","\/wp\/wp-content\/*","\/wp\/wp-content\/plugins\/*","\/wp\/wp-content\/themes\/pg-house\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://pg-house.jp/wp/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://pg-house.jp/wp/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://pg-house.jp/wp/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.2" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-09-30 07:44:19+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"This contact form is placed in the wrong place.":["\u3053\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u9593\u9055\u3063\u305f\u4f4d\u7f6e\u306b\u7f6e\u304b\u308c\u3066\u3044\u307e\u3059\u3002"],"Error:":["\u30a8\u30e9\u30fc:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/pg-house.jp\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://pg-house.jp/wp/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.2" id="contact-form-7-js"></script>
+
+
+
+</body>
+
+</html>

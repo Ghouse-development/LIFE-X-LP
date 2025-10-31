@@ -33,7 +33,7 @@ export function Cases() {
           {casesData.note}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {casesData.cases.map((caseItem, index) => (
             <motion.div
               key={caseItem.id}
@@ -42,7 +42,7 @@ export function Cases() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="relative h-64">
+              <div className="relative h-56 md:h-64">
                 <Image
                   src={caseItem.image}
                   alt={caseItem.area}
@@ -52,21 +52,21 @@ export function Cases() {
                 />
               </div>
 
-              <div className="p-6 text-center">
+              <div className="p-8 text-center">
                 {/* Main Number - HUGE */}
-                <div className="mb-2">
+                <div className="mb-3">
                   <span className="text-5xl md:text-6xl font-bold text-gray-900">
                     {caseItem.stats.contracts}
                   </span>
                 </div>
 
                 {/* Period */}
-                <div className="text-lg font-medium text-gray-600 mb-4">
+                <div className="text-lg font-medium text-gray-600 mb-6">
                   {caseItem.stats.period}
                 </div>
 
                 {/* Area */}
-                <h3 className="text-sm font-bold mb-3 text-gray-700">{caseItem.area}</h3>
+                <h3 className="text-sm font-bold mb-4 text-gray-700">{caseItem.area}</h3>
 
                 {/* Comment - Short */}
                 <p className="text-xs text-gray-500 italic">

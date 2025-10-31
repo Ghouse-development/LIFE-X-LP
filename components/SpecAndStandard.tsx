@@ -25,17 +25,17 @@ export function SpecAndStandard() {
         </motion.div>
 
         {/* Badges - PG HOUSE Style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {specData.badges.map((badge, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white border border-gray-300 rounded p-6 text-center hover:border-gray-400 transition-colors"
+              className="bg-white border border-gray-300 rounded p-8 text-center hover:border-gray-400 transition-colors"
             >
               {/* Icon */}
-              <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                 <Image
                   src={`/icons/${badge.icon}.svg`}
                   alt={badge.subValue}
@@ -45,14 +45,14 @@ export function SpecAndStandard() {
               </div>
 
               {/* Main Value - HUGE */}
-              <div className="mb-2">
+              <div className="mb-3">
                 <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   {badge.mainValue}
                 </div>
               </div>
 
               {/* Sub Value */}
-              <div className="text-lg font-medium text-gray-600 mb-4">
+              <div className="text-lg font-medium text-gray-600 mb-6">
                 {badge.subValue}
               </div>
 
