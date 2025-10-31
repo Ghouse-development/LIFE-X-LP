@@ -26,8 +26,20 @@ export function FinalCTA() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gradient-to-b from-gray-900 to-black text-white">
-      <div className="max-w-5xl mx-auto text-center">
+    <section ref={ref} className="relative py-24 px-4 text-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/cases/case-55.jpg"
+          alt="お問い合わせ背景"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/95 to-black/95" />
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

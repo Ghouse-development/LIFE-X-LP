@@ -67,6 +67,33 @@ const galleryImages = [
 
   { src: '/cases/case-59.jpg', alt: 'LIFE X 洗面所 1', category: '洗面所' },
   { src: '/cases/case-60.jpg', alt: 'LIFE X 洗面所 2', category: '洗面所' },
+
+  { src: '/cases/case-61.jpg', alt: 'LIFE X 外観 9', category: '外観' },
+  { src: '/cases/case-62.jpg', alt: 'LIFE X 外観 10', category: '外観' },
+  { src: '/cases/case-63.jpg', alt: 'LIFE X 内装 7', category: '内装' },
+  { src: '/cases/case-64.jpg', alt: 'LIFE X 内装 8', category: '内装' },
+  { src: '/cases/case-65.jpg', alt: 'LIFE X リビング 7', category: 'リビング' },
+  { src: '/cases/case-66.jpg', alt: 'LIFE X リビング 8', category: 'リビング' },
+  { src: '/cases/case-67.jpg', alt: 'LIFE X キッチン 6', category: 'キッチン' },
+  { src: '/cases/case-68.jpg', alt: 'LIFE X キッチン 7', category: 'キッチン' },
+  { src: '/cases/case-69.jpg', alt: 'LIFE X 寝室 5', category: '寝室' },
+  { src: '/cases/case-70.jpg', alt: 'LIFE X ダイニング 4', category: 'ダイニング' },
+  { src: '/cases/case-71.jpg', alt: 'LIFE X ダイニング 5', category: 'ダイニング' },
+  { src: '/cases/case-72.jpg', alt: 'LIFE X 書斎 3', category: '書斎' },
+  { src: '/cases/case-73.jpg', alt: 'LIFE X 外観 11', category: '外観' },
+  { src: '/cases/case-74.jpg', alt: 'LIFE X 外観 12', category: '外観' },
+  { src: '/cases/case-75.jpg', alt: 'LIFE X 外観 13', category: '外観' },
+  { src: '/cases/case-76.jpg', alt: 'LIFE X 内装 9', category: '内装' },
+  { src: '/cases/case-77.jpg', alt: 'LIFE X 内装 10', category: '内装' },
+  { src: '/cases/case-78.jpg', alt: 'LIFE X リビング 9', category: 'リビング' },
+  { src: '/cases/case-79.jpg', alt: 'LIFE X リビング 10', category: 'リビング' },
+  { src: '/cases/case-80.jpg', alt: 'LIFE X キッチン 8', category: 'キッチン' },
+  { src: '/cases/case-81.jpg', alt: 'LIFE X キッチン 9', category: 'キッチン' },
+  { src: '/cases/case-82.jpg', alt: 'LIFE X 寝室 6', category: '寝室' },
+  { src: '/cases/case-83.jpg', alt: 'LIFE X 寝室 7', category: '寝室' },
+  { src: '/cases/case-84.jpg', alt: 'LIFE X バスルーム 4', category: 'バスルーム' },
+  { src: '/cases/case-85.jpg', alt: 'LIFE X 玄関 5', category: '玄関' },
+  { src: '/cases/case-86.jpg', alt: 'LIFE X 収納 4', category: '収納' },
 ];
 
 const categories = ['すべて', '外観', '内装', 'リビング', 'ダイニング', 'キッチン', '寝室', 'バスルーム', '書斎', '洗面所', '玄関', '収納', 'バルコニー'];
