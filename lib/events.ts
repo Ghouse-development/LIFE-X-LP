@@ -6,8 +6,8 @@
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    fbq?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -24,7 +24,7 @@ interface EventParams {
   category?: string;
   label?: string;
   value?: number;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 /**
@@ -76,7 +76,7 @@ export function trackCTAClick(label: string, href?: string) {
 /**
  * Track form submission
  */
-export function trackFormSubmit(formType: 'lead' | 'webinar', data?: Record<string, any>) {
+export function trackFormSubmit(formType: 'lead' | 'webinar', data?: Record<string, unknown>) {
   const eventName = formType === 'lead' ? 'lead_submit' : 'webinar_submit';
   trackEvent(eventName, {
     category: 'conversion',
@@ -98,11 +98,11 @@ export function trackSectionView(sectionName: string) {
 /**
  * Track phone/email click
  */
-export function trackContactClick(type: 'phone' | 'email', value: string) {
+export function trackContactClick(type: 'phone' | 'email', contactValue: string) {
   trackEvent(type === 'phone' ? 'phone_click' : 'email_click', {
     category: 'engagement',
     label: type,
-    value,
+    contact: contactValue,
   });
 }
 

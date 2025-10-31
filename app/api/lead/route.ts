@@ -10,7 +10,7 @@ const leadSchema = z.object({
   prefecture: z.string().optional(),
   message: z.string().optional(),
   source: z.string().optional(),
-  utm: z.record(z.string()).optional(),
+  utm: z.record(z.string(), z.string()).optional(),
 });
 
 export async function POST(request: NextRequest) {
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: '入力内容に誤りがあります', details: error.errors },
+        { error: '入力内容に誤りがあります', details: error.issues },
         { status: 400 }
       );
     }

@@ -2,6 +2,7 @@ import { WebinarForm } from '@/components/WebinarForm';
 import { generateMetadata } from '@/lib/seo';
 import webinarData from '@/content/webinar.json';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = generateMetadata({
   title: 'LIFE X 事業化ウェビナー申込',
@@ -107,12 +108,12 @@ export default function WebinarPage() {
         <p className="text-gray-300 mb-6">
           ウェビナー以外に、個別での面談も随時受け付けております。
         </p>
-        <a
+        <Link
           href="/#lead-form"
           className="inline-block px-8 py-4 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 transition-colors"
         >
           個別相談を申し込む
-        </a>
+        </Link>
       </section>
     </main>
   );
