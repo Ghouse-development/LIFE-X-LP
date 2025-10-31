@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "src": "/hero/hero-00.jpg",
+    "alt": "LIFE X - 高性能規格住宅",
+    "sourceUrl": null,
+    "fetchedAt": null
+  },
+  "cases": [
+    {
+      "src": "/cases/case-00.jpg",
+      "alt": "LIFE X 施工事例",
+      "sourceUrl": null,
+      "fetchedAt": null
+    }
+  ],
+  "fetchedAt": null,
+  "note": "画像は `npm run fetch:images` で取得してください。"
+}

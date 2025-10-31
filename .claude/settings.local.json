@@ -11,7 +11,15 @@
       "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --use-npm)",
       "Bash(npm install)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nInitial project setup with Next.js, Supabase, and Vercel\n\n- Set up Next.js 15 with App Router\n- Configure TypeScript and Tailwind CSS\n- Add Supabase client and environment variables\n- Create documentation structure (開発記録, 目的, 重要事項)\n- Add Vercel configuration\n- Create initial landing page\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial project setup with Next.js, Supabase, and Vercel\n\n- Set up Next.js 15 with App Router\n- Configure TypeScript and Tailwind CSS\n- Add Supabase client and environment variables\n- Create documentation structure (開発記録, 目的, 重要事項)\n- Add Vercel configuration\n- Create initial landing page\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:shinkokyu.jp)",
+      "WebFetch(domain:pg-house.net)",
+      "WebSearch",
+      "WebFetch(domain:pg-house.jp)",
+      "Bash(npm install:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: LIFE X フランチャイズLP 完全構築\n\n## 実装内容\n\n### コンポーネント（12個）\n- Hero: 実写背景＋呼吸アニメーション\n- ValueProps: 6つの価値提案\n- SpecAndStandard: 標準仕様＋バッジ\n- UnitEconomics: 収益モデル概算\n- Flow: 導入6ステップ\n- Cases: 導入事例3件\n- WebinarCTA: ウェビナー強訴求\n- FAQ: 10問アコーディオン\n- LeadForm/WebinarForm: 問い合わせ・ウェビナー申込\n- FinalCTA: 最終CTA\n\n### ページ\n- /: メインLP（全セクション統合）\n- /webinar: ウェビナー申込専用\n\n### API Routes\n- /api/lead: 問い合わせ保存\n- /api/webinar: ウェビナー申込保存\n\n### データ管理\n- content/*.json: サイト設定・仕様・FAQ・事例等\n- scripts/fetch-ghouse-images.ts: G-houseから画像自動取得\n\n### SEO/計測\n- JSON-LD構造化データ\n- GA4 + Meta Pixel統合\n- OGP設定\n\n### Supabase\n- fc_leads/fc_webinar_regs テーブル\n- RLS設定（匿名は挿入のみ）\n\n### デザイン\n- SHINKOKYU: 余白・穏やかなモーション\n- PG HOUSE: FC導線・CTA配置\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,37 @@
+{
+  "name": "LIFE X フランチャイズ",
+  "description": "商品・設計・現場・集客の型を提供。毎月ウェビナー開催、まず30分で概要相談。",
+  "url": "https://life-x-lp.vercel.app",
+  "phone": "06-1234-5678",
+  "email": "fc@g-house.osaka.jp",
+  "hero": {
+    "title": "LIFE X フランチャイズ",
+    "subtitle": "少人数×短期立上げで始める高性能規格住宅",
+    "description": "商品・設計・現場・集客の「型」を提供。毎月ウェビナー開催／まずは30分で概要相談。",
+    "cta": [
+      {
+        "label": "資料請求・相談",
+        "href": "#lead-form",
+        "variant": "primary"
+      },
+      {
+        "label": "次回ウェビナー",
+        "href": "/webinar",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 LIFE X Franchise. All rights reserved.",
+    "links": [
+      {
+        "label": "プライバシーポリシー",
+        "href": "/privacy"
+      },
+      {
+        "label": "特定商取引法",
+        "href": "/legal"
+      }
+    ]
+  }
+}
