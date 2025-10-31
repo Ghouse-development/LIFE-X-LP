@@ -3,7 +3,6 @@ import { ValueProps } from '@/components/ValueProps';
 import { VisualFeatures } from '@/components/VisualFeatures';
 import { SpecAndStandard } from '@/components/SpecAndStandard';
 import { Gallery } from '@/components/Gallery';
-import { ImageShowcase } from '@/components/ImageShowcase';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Flow } from '@/components/Flow';
 import { Cases } from '@/components/Cases';

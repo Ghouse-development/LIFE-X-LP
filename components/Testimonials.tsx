@@ -57,7 +57,7 @@ export function Testimonials() {
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
             >
               {/* Quote Icon */}
-              <div className="text-5xl text-gray-300 mb-4 leading-none">"</div>
+              <div className="text-5xl text-gray-300 mb-4 leading-none">&ldquo;</div>
 
               {/* Main Quote */}
               <h3 className="text-xl font-bold mb-4 text-gray-900">
