@@ -33,36 +33,6 @@ export function UnitEconomics() {
           {financeData.disclaimer}
         </motion.p>
 
-        {/* Model Images */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {[
-            { src: '/cases/case-70.jpg', alt: 'モデルハウス外観' },
-            { src: '/cases/case-71.jpg', alt: 'ショールーム内装' },
-            { src: '/cases/case-72.jpg', alt: 'オフィス空間' },
-          ].map((image, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative h-64 rounded-lg overflow-hidden shadow-lg group"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <div className="absolute bottom-4 left-4 text-white font-medium">
-                  {image.alt}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {financeData.models.map((model, index) => (
             <motion.div

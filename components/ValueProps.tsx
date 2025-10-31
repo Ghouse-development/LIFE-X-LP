@@ -7,39 +7,39 @@ import Image from 'next/image';
 const values = [
   {
     icon: '/icons/house-shield.svg',
-    image: '/cases/case-01.jpg',
     title: '商品力',
     description: '耐震等級3相当×UA値0.46以下の高性能住宅。ZEH基準を大幅にクリアする仕様を標準化。',
+    specs: ['耐震等級3相当', 'UA値0.46以下', 'ZEH基準クリア'],
   },
   {
     icon: '/icons/chart-yen.svg',
-    image: '/cases/case-18.jpg',
     title: '粗利の見通し',
     description: '1棟500万円〜800万円の粗利レンジ。詳細な収益シミュレーションを面談時に提供。',
+    specs: ['粗利 500-800万円/棟', '売上 2000-2500万円', '原価率 約68%'],
   },
   {
     icon: '/icons/blueprint.svg',
-    image: '/cases/case-19.jpg',
     title: '設計・積算の型',
     description: '間取りは自由設計、構造・断熱は標準化。本部が設計支援を提供し、工期を短縮。',
+    specs: ['自由設計対応', '構造・断熱標準化', '設計期間 約2週間'],
   },
   {
     icon: '/icons/hammer-gear.svg',
-    image: '/cases/case-20.jpg',
     title: '現場標準化',
     description: '施工マニュアルと協力業者ネットワーク。着工から約4ヶ月で完成する工程管理。',
+    specs: ['施工マニュアル完備', '協力業者紹介', '工期 約4ヶ月'],
   },
   {
     icon: '/icons/megaphone-ab.svg',
-    image: '/cases/case-21.jpg',
     title: '広告運用の型',
     description: 'Web広告（Google・Meta等）の運用マニュアルと月次レビュー。初期3ヶ月は代行可能。',
+    specs: ['運用マニュアル提供', '月次レビュー', '初期3ヶ月代行可'],
   },
   {
     icon: '/icons/handshake.svg',
-    image: '/cases/case-22.jpg',
     title: '伴走サポート',
     description: '開業前の研修から開業後の定例MTGまで。商品・集客・運営の全領域で支援。',
+    specs: ['開業前研修', '定例MTG', '全領域サポート'],
   },
 ];
 
@@ -75,35 +75,33 @@ export function ValueProps() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+              className="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
-              {/* Large Image */}
-              <div className="relative h-56 overflow-hidden">
+              {/* Large Icon */}
+              <div className="w-16 h-16 mb-6 mx-auto">
                 <Image
-                  src={value.image}
+                  src={value.icon}
                   alt={value.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width={64}
+                  height={64}
+                  className="w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <div className="w-12 h-12 bg-white/90 rounded-lg p-2 backdrop-blur-sm">
-                    <Image
-                      src={value.icon}
-                      alt={value.title}
-                      width={48}
-                      height={48}
-                      className="w-full h-full"
-                    />
-                  </div>
-                </div>
               </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+              {/* Title */}
+              <h3 className="text-xl font-bold mb-3 text-center">{value.title}</h3>
+
+              {/* Description */}
+              <p className="text-gray-600 leading-relaxed mb-6 text-sm text-center">{value.description}</p>
+
+              {/* Specs - Visual List */}
+              <div className="bg-blue-50 rounded-lg p-4 space-y-2">
+                {value.specs.map((spec, specIndex) => (
+                  <div key={specIndex} className="flex items-center text-sm">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 flex-shrink-0" />
+                    <span className="text-gray-700 font-medium">{spec}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           ))}
