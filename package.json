@@ -7,12 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fetch:images": "tsx scripts/fetch-ghouse-images.ts"
+    "fetch:images": "tsx scripts/fetch-ghouse-images.ts",
+    "seed:stores": "tsx scripts/seed-stores.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.47.10",
     "@types/leaflet": "^1.9.21",
     "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.24",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.548.0",

@@ -14,7 +14,8 @@
       "Bash(do printf \"case-%02d.jpg\\n\" $i)",
       "Bash(done)",
       "Bash(while read img)",
-      "Bash(do grep -q $img app/page.tsx components/*.tsx)"
+      "Bash(do grep -q $img app/page.tsx components/*.tsx)",
+      "Bash(npm run seed:stores:*)"
     ],
     "deny": [],
     "ask": []
