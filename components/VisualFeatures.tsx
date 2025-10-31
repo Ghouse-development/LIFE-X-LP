@@ -70,7 +70,7 @@ export function VisualFeatures() {
             >
               {/* Image */}
               <div className="w-full lg:w-1/2">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-[4/3] rounded overflow-hidden shadow-lg">
                   <Image
                     src={feature.image}
                     alt={feature.title}

@@ -25,14 +25,14 @@ export function SpecAndStandard() {
         </motion.div>
 
         {/* Badges - PG HOUSE Style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
           {specData.badges.map((badge, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white border-2 border-gray-300 rounded-lg p-8 text-center hover:border-gray-400 transition-colors"
+              className="bg-white border border-gray-300 rounded p-6 text-center hover:border-gray-400 transition-colors"
             >
               {/* Large Icon */}
               <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">

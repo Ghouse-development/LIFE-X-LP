@@ -73,7 +73,7 @@ export function WebinarCTA() {
           <Link
             href="/webinar"
             onClick={handleCTAClick}
-            className="inline-block px-12 py-5 bg-white text-gray-800 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            className="inline-block px-12 py-5 bg-gray-700 text-white font-bold text-lg rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             ウェビナーに申し込む →
           </Link>

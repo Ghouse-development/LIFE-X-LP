@@ -68,14 +68,14 @@ export function ValueProps() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {values.map((value, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
             >
               {/* Large Icon */}
               <div className="w-16 h-16 mb-6 mx-auto">

@@ -48,7 +48,7 @@ export function WarrantySupport() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {warranties.map((warranty, index) => (
             <motion.div
               key={index}

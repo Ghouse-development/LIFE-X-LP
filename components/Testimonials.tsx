@@ -47,14 +47,14 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white rounded p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Quote Icon */}
               <div className="text-5xl text-gray-300 mb-4 leading-none">&ldquo;</div>

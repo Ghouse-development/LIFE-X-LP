@@ -36,7 +36,7 @@ export function FAQ() {
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="bg-white rounded-lg shadow-sm overflow-hidden"
+              className="bg-white rounded shadow-sm overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
