@@ -7,6 +7,8 @@ import { ImageShowcase } from '@/components/ImageShowcase';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Flow } from '@/components/Flow';
 import { Cases } from '@/components/Cases';
+import { Testimonials } from '@/components/Testimonials';
+import { WarrantySupport } from '@/components/WarrantySupport';
 import { FranchiseMapSimple } from '@/components/FranchiseMapSimple';
 import { WebinarCTA } from '@/components/WebinarCTA';
 import { FAQ } from '@/components/FAQ';
@@ -50,7 +52,9 @@ export default function Home() {
         <UnitEconomics />
         <Flow />
         <Cases />
+        <Testimonials />
         <Gallery />
+        <WarrantySupport />
         <FranchiseMapSimple />
         <WebinarCTA />
         <FAQ />
