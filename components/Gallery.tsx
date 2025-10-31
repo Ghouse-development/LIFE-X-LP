@@ -5,27 +5,71 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import { useState } from 'react';
 
-// 取得した画像の一部を使用
+// 取得した画像を最大限活用
 const galleryImages = [
   { src: '/cases/case-01.jpg', alt: 'LIFE X 外観 1', category: '外観' },
-  { src: '/cases/case-03.jpg', alt: 'LIFE X 外観 2', category: '外観' },
-  { src: '/cases/case-04.jpg', alt: 'LIFE X 外観 3', category: '外観' },
+  { src: '/cases/case-02.jpg', alt: 'LIFE X 外観 2', category: '外観' },
+  { src: '/cases/case-03.jpg', alt: 'LIFE X 外観 3', category: '外観' },
+  { src: '/cases/case-04.jpg', alt: 'LIFE X 外観 4', category: '外観' },
+  { src: '/cases/case-29.jpg', alt: 'LIFE X 外観 5', category: '外観' },
+  { src: '/cases/case-30.jpg', alt: 'LIFE X 外観 6', category: '外観' },
+  { src: '/cases/case-31.jpg', alt: 'LIFE X 外観 7', category: '外観' },
+  { src: '/cases/case-32.jpg', alt: 'LIFE X 外観 8', category: '外観' },
+
   { src: '/cases/case-05.jpg', alt: 'LIFE X 内装 1', category: '内装' },
   { src: '/cases/case-06.jpg', alt: 'LIFE X 内装 2', category: '内装' },
   { src: '/cases/case-07.jpg', alt: 'LIFE X 内装 3', category: '内装' },
+  { src: '/cases/case-33.jpg', alt: 'LIFE X 内装 4', category: '内装' },
+  { src: '/cases/case-34.jpg', alt: 'LIFE X 内装 5', category: '内装' },
+  { src: '/cases/case-35.jpg', alt: 'LIFE X 内装 6', category: '内装' },
+
   { src: '/cases/case-08.jpg', alt: 'LIFE X リビング 1', category: 'リビング' },
   { src: '/cases/case-09.jpg', alt: 'LIFE X リビング 2', category: 'リビング' },
+  { src: '/cases/case-36.jpg', alt: 'LIFE X リビング 3', category: 'リビング' },
+  { src: '/cases/case-37.jpg', alt: 'LIFE X リビング 4', category: 'リビング' },
+  { src: '/cases/case-38.jpg', alt: 'LIFE X リビング 5', category: 'リビング' },
+  { src: '/cases/case-39.jpg', alt: 'LIFE X リビング 6', category: 'リビング' },
+
   { src: '/cases/case-10.jpg', alt: 'LIFE X キッチン 1', category: 'キッチン' },
   { src: '/cases/case-11.jpg', alt: 'LIFE X キッチン 2', category: 'キッチン' },
+  { src: '/cases/case-40.jpg', alt: 'LIFE X キッチン 3', category: 'キッチン' },
+  { src: '/cases/case-41.jpg', alt: 'LIFE X キッチン 4', category: 'キッチン' },
+  { src: '/cases/case-42.jpg', alt: 'LIFE X キッチン 5', category: 'キッチン' },
+
   { src: '/cases/case-12.jpg', alt: 'LIFE X 寝室 1', category: '寝室' },
   { src: '/cases/case-13.jpg', alt: 'LIFE X 寝室 2', category: '寝室' },
-  { src: '/cases/case-14.jpg', alt: 'LIFE X バスルーム', category: 'バスルーム' },
-  { src: '/cases/case-15.jpg', alt: 'LIFE X 玄関', category: '玄関' },
-  { src: '/cases/case-16.jpg', alt: 'LIFE X 収納', category: '収納' },
-  { src: '/cases/case-17.jpg', alt: 'LIFE X バルコニー', category: 'バルコニー' },
+  { src: '/cases/case-43.jpg', alt: 'LIFE X 寝室 3', category: '寝室' },
+  { src: '/cases/case-44.jpg', alt: 'LIFE X 寝室 4', category: '寝室' },
+
+  { src: '/cases/case-14.jpg', alt: 'LIFE X バスルーム 1', category: 'バスルーム' },
+  { src: '/cases/case-45.jpg', alt: 'LIFE X バスルーム 2', category: 'バスルーム' },
+  { src: '/cases/case-46.jpg', alt: 'LIFE X バスルーム 3', category: 'バスルーム' },
+
+  { src: '/cases/case-15.jpg', alt: 'LIFE X 玄関 1', category: '玄関' },
+  { src: '/cases/case-47.jpg', alt: 'LIFE X 玄関 2', category: '玄関' },
+  { src: '/cases/case-48.jpg', alt: 'LIFE X 玄関 3', category: '玄関' },
+  { src: '/cases/case-49.jpg', alt: 'LIFE X 玄関 4', category: '玄関' },
+
+  { src: '/cases/case-16.jpg', alt: 'LIFE X 収納 1', category: '収納' },
+  { src: '/cases/case-50.jpg', alt: 'LIFE X 収納 2', category: '収納' },
+  { src: '/cases/case-51.jpg', alt: 'LIFE X 収納 3', category: '収納' },
+
+  { src: '/cases/case-17.jpg', alt: 'LIFE X バルコニー 1', category: 'バルコニー' },
+  { src: '/cases/case-52.jpg', alt: 'LIFE X バルコニー 2', category: 'バルコニー' },
+  { src: '/cases/case-53.jpg', alt: 'LIFE X バルコニー 3', category: 'バルコニー' },
+
+  { src: '/cases/case-54.jpg', alt: 'LIFE X ダイニング 1', category: 'ダイニング' },
+  { src: '/cases/case-55.jpg', alt: 'LIFE X ダイニング 2', category: 'ダイニング' },
+  { src: '/cases/case-56.jpg', alt: 'LIFE X ダイニング 3', category: 'ダイニング' },
+
+  { src: '/cases/case-57.jpg', alt: 'LIFE X 書斎 1', category: '書斎' },
+  { src: '/cases/case-58.jpg', alt: 'LIFE X 書斎 2', category: '書斎' },
+
+  { src: '/cases/case-59.jpg', alt: 'LIFE X 洗面所 1', category: '洗面所' },
+  { src: '/cases/case-60.jpg', alt: 'LIFE X 洗面所 2', category: '洗面所' },
 ];
 
-const categories = ['すべて', '外観', '内装', 'リビング', 'キッチン', '寝室', 'バスルーム', '玄関', '収納', 'バルコニー'];
+const categories = ['すべて', '外観', '内装', 'リビング', 'ダイニング', 'キッチン', '寝室', 'バスルーム', '書斎', '洗面所', '玄関', '収納', 'バルコニー'];
 
 export function Gallery() {
   const { ref, inView } = useInView({

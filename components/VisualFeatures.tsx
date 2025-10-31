@@ -29,6 +29,54 @@ const features = [
     image: '/cases/case-01.jpg',
     reverse: true,
   },
+  {
+    title: '家族が集うダイニング空間',
+    description: '自然光が差し込む明るいダイニング。食事の時間が特別なひとときに変わります。',
+    image: '/cases/case-54.jpg',
+    reverse: false,
+  },
+  {
+    title: '洗練されたバスルーム',
+    description: '一日の疲れを癒す、上質なバスタイム。清潔感と機能性を兼ね備えたデザイン。',
+    image: '/cases/case-14.jpg',
+    reverse: true,
+  },
+  {
+    title: '効率的な収納スペース',
+    description: '暮らしを整える豊富な収納。使いやすさを考え抜いた設計で、住まいがすっきり。',
+    image: '/cases/case-16.jpg',
+    reverse: false,
+  },
+  {
+    title: '心地よい玄関アプローチ',
+    description: '家族とゲストを迎える顔となる玄関。広々とした空間と上質な素材で好印象を演出。',
+    image: '/cases/case-15.jpg',
+    reverse: true,
+  },
+  {
+    title: '快適なワークスペース',
+    description: 'テレワークにも最適な書斎空間。集中できる環境で、仕事の効率が向上します。',
+    image: '/cases/case-57.jpg',
+    reverse: false,
+  },
+  {
+    title: '開放的なバルコニー',
+    description: '室内と屋外をつなぐバルコニー。朝のコーヒータイムや夕暮れの寛ぎに最適。',
+    image: '/cases/case-17.jpg',
+    reverse: true,
+  },
+  {
+    title: '明るく清潔な洗面所',
+    description: '朝の身支度がスムーズになる機能的な洗面所。収納も充実で、家事動線も完璧。',
+    image: '/cases/case-59.jpg',
+    reverse: false,
+  },
+  {
+    title: '細部まで こだわった内装',
+    description: '壁材、床材、建具に至るまで厳選した素材を使用。長く愛せる住まいを実現。',
+    image: '/cases/case-05.jpg',
+    reverse: true,
+  },
 ];
 
 export function VisualFeatures() {

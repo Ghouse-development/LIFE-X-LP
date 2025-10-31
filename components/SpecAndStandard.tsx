@@ -48,6 +48,41 @@ export function SpecAndStandard() {
           ))}
         </div>
 
+        {/* Visual Examples Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          {[
+            { src: '/cases/case-61.jpg', alt: '耐震構造' },
+            { src: '/cases/case-62.jpg', alt: '断熱性能' },
+            { src: '/cases/case-63.jpg', alt: '省エネ設備' },
+            { src: '/cases/case-64.jpg', alt: '換気システム' },
+            { src: '/cases/case-65.jpg', alt: '高性能窓' },
+            { src: '/cases/case-66.jpg', alt: '太陽光パネル' },
+            { src: '/cases/case-67.jpg', alt: '給湯設備' },
+            { src: '/cases/case-68.jpg', alt: '床暖房' },
+          ].map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.4, delay: 0.4 + index * 0.05 }}
+              className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-2 left-2 right-2 text-white text-sm font-medium">
+                  {image.alt}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Spec Table */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

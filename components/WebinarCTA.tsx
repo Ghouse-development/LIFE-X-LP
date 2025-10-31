@@ -18,8 +18,20 @@ export function WebinarCTA() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-      <div className="max-w-5xl mx-auto">
+    <section ref={ref} className="relative py-24 px-4 text-white overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/cases/case-69.jpg"
+          alt="ウェビナー背景"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
