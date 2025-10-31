@@ -7,6 +7,7 @@ import { ImageShowcase } from '@/components/ImageShowcase';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Flow } from '@/components/Flow';
 import { Cases } from '@/components/Cases';
+import { FranchiseMap } from '@/components/FranchiseMap';
 import { WebinarCTA } from '@/components/WebinarCTA';
 import { FAQ } from '@/components/FAQ';
 import { FinalCTA } from '@/components/FinalCTA';
@@ -100,6 +101,7 @@ export default function Home() {
         />
 
         <Cases />
+        <FranchiseMap />
         <WebinarCTA />
 
         <ImageShowcase
