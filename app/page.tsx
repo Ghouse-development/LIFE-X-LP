@@ -1,6 +1,8 @@
 import { Hero } from '@/components/Hero';
 import { ValueProps } from '@/components/ValueProps';
+import { VisualFeatures } from '@/components/VisualFeatures';
 import { SpecAndStandard } from '@/components/SpecAndStandard';
+import { Gallery } from '@/components/Gallery';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Flow } from '@/components/Flow';
 import { Cases } from '@/components/Cases';
@@ -41,7 +43,9 @@ export default function Home() {
       <main>
         <Hero />
         <ValueProps />
+        <VisualFeatures />
         <SpecAndStandard />
+        <Gallery />
         <UnitEconomics />
         <Flow />
         <Cases />

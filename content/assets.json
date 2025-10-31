@@ -2,17 +2,46 @@
   "hero": {
     "src": "/hero/hero-00.jpg",
     "alt": "LIFE X - 高性能規格住宅",
-    "sourceUrl": null,
-    "fetchedAt": null
+    "sourceUrl": "https://g-house.osaka.jp/product/life-x",
+    "fetchedAt": "2025-10-31T02:31:41.443Z"
   },
   "cases": [
     {
-      "src": "/cases/case-00.jpg",
+      "src": "/case/case-00.jpg",
       "alt": "LIFE X 施工事例",
-      "sourceUrl": null,
-      "fetchedAt": null
+      "sourceUrl": "https://g-house.osaka.jp",
+      "fetchedAt": "2025-10-31T02:31:40.495Z"
+    },
+    {
+      "src": "/case/case-01.jpg",
+      "alt": "LIFE X 施工事例",
+      "sourceUrl": "https://g-house.osaka.jp/product/life-x",
+      "fetchedAt": "2025-10-31T02:31:40.517Z"
+    },
+    {
+      "src": "/case/case-02.jpg",
+      "alt": "LIFE X 施工事例",
+      "sourceUrl": "https://g-house.osaka.jp/first",
+      "fetchedAt": "2025-10-31T02:31:40.521Z"
+    },
+    {
+      "src": "/case/case-03.jpg",
+      "alt": "LIFE X 施工事例",
+      "sourceUrl": "https://g-house.osaka.jp/product/life-x",
+      "fetchedAt": "2025-10-31T02:31:40.543Z"
+    },
+    {
+      "src": "/case/case-04.jpg",
+      "alt": "LIFE X 施工事例",
+      "sourceUrl": "https://g-house.osaka.jp/product/life-x",
+      "fetchedAt": "2025-10-31T02:31:40.567Z"
+    },
+    {
+      "src": "/case/case-05.jpg",
+      "alt": "LIFE X 施工事例",
+      "sourceUrl": "https://g-house.osaka.jp/product/life-x",
+      "fetchedAt": "2025-10-31T02:31:40.576Z"
     }
   ],
-  "fetchedAt": null,
-  "note": "画像は `npm run fetch:images` で取得してください。"
+  "fetchedAt": "2025-10-31T02:31:42.371Z"
 }
