@@ -28,15 +28,28 @@ const regions = [
   { name: '九州・沖縄', prefectures: ['福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県'] },
 ];
 
+// 仮データ（Supabaseテーブル作成前も表示されるように）
+const defaultStores: Store[] = [
+  {
+    id: '1',
+    name: 'コンチネンタルホーム株式会社',
+    prefecture: '栃木県',
+    city: '佐野市',
+    address: '大町2979-1',
+    full_address: '栃木県佐野市大町2979-1',
+    joined_date: '2025-10-31',
+  },
+];
+
 export function FranchiseMapSimple() {
-  const [stores, setStores] = useState<Store[]>([]);
+  const [stores, setStores] = useState<Store[]>(defaultStores);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  // 加盟店データを取得
+  // 加盟店データを取得（Supabaseから）
   useEffect(() => {
     const fetchStores = async () => {
       try {
@@ -45,10 +58,16 @@ export function FranchiseMapSimple() {
           .select('*')
           .order('joined_date', { ascending: false });
 
-        if (error) throw error;
-        setStores(data || []);
+        if (error) {
+          console.log('Supabase stores table not ready, using default data');
+          return; // エラー時は仮データのまま
+        }
+
+        if (data && data.length > 0) {
+          setStores(data); // データがあれば上書き
+        }
       } catch (error) {
-        console.error('Error fetching stores:', error);
+        console.log('Error fetching stores, using default data:', error);
       }
     };
 

@@ -24,26 +24,33 @@ export function SpecAndStandard() {
           <p className="text-gray-600 text-lg">{specData.description}</p>
         </motion.div>
 
-        {/* Badges */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {/* Badges - PG HOUSE Style */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {specData.badges.map((badge, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-blue-50 p-6 rounded-lg border border-blue-100 text-center"
+              className="bg-white border-2 border-gray-300 rounded-lg p-8 text-center hover:border-gray-400 transition-colors"
             >
-              <div className="w-12 h-12 mx-auto mb-4">
+              {/* Large Icon */}
+              <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                 <Image
                   src={`/icons/${badge.icon}.svg`}
                   alt={badge.label}
-                  width={48}
-                  height={48}
+                  width={56}
+                  height={56}
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-blue-900">{badge.label}</h3>
-              <p className="text-sm text-gray-600">{badge.description}</p>
+
+              {/* Big Number/Label Box */}
+              <div className="bg-gray-800 text-white rounded-lg py-4 px-6 mb-4">
+                <h3 className="text-2xl font-bold">{badge.label}</h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-gray-700 leading-relaxed">{badge.description}</p>
             </motion.div>
           ))}
         </div>

@@ -18,20 +18,8 @@ export function WebinarCTA() {
   };
 
   return (
-    <section ref={ref} className="relative py-24 px-4 text-white overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/cases/case-69.jpg"
-          alt="ウェビナー背景"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
-      </div>
-
-      <div className="relative z-10 max-w-5xl mx-auto">
+    <section ref={ref} className="py-24 px-4 bg-gray-800 text-white">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -53,7 +41,7 @@ export function WebinarCTA() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">{webinarData.title}</h2>
           <p className="text-xl md:text-2xl mb-2 text-blue-100">{webinarData.description}</p>
 
-          <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/30 rounded-lg px-6 py-4 mt-6">
+          <div className="inline-block bg-gray-700 border border-gray-600 rounded-lg px-6 py-4 mt-6">
             <div className="text-sm text-blue-100 mb-1">開催スケジュール</div>
             <div className="text-lg font-medium">
               {webinarData.schedule.frequency} {webinarData.schedule.time}
@@ -85,12 +73,12 @@ export function WebinarCTA() {
           <Link
             href="/webinar"
             onClick={handleCTAClick}
-            className="inline-block px-12 py-5 bg-white text-blue-600 font-bold text-lg rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            className="inline-block px-12 py-5 bg-white text-gray-800 font-bold text-lg rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
           >
             ウェビナーに申し込む →
           </Link>
 
-          <p className="text-sm text-blue-100 mt-4">
+          <p className="text-sm text-gray-300 mt-4">
             参加費無料・オンライン開催（Zoom）
           </p>
         </motion.div>
