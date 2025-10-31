@@ -9,7 +9,12 @@
       "Bash(pkill:*)",
       "Bash(git commit:*)",
       "Bash(npx next lint)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(for i in {0..86})",
+      "Bash(do printf \"case-%02d.jpg\\n\" $i)",
+      "Bash(done)",
+      "Bash(while read img)",
+      "Bash(do grep -q $img app/page.tsx components/*.tsx)"
     ],
     "deny": [],
     "ask": []

@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { Hero } from '@/components/Hero';
 import { ValueProps } from '@/components/ValueProps';
 import { VisualFeatures } from '@/components/VisualFeatures';
@@ -7,13 +8,18 @@ import { ImageShowcase } from '@/components/ImageShowcase';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Flow } from '@/components/Flow';
 import { Cases } from '@/components/Cases';
-import { FranchiseMap } from '@/components/FranchiseMap';
 import { WebinarCTA } from '@/components/WebinarCTA';
 import { FAQ } from '@/components/FAQ';
 import { FinalCTA } from '@/components/FinalCTA';
 import { LeadForm } from '@/components/LeadForm';
 import { generateMetadata, generateOrganizationSchema, generateProductSchema, generateFAQSchema } from '@/lib/seo';
 import faqData from '@/content/faq.json';
+
+// Leafletを使うコンポーネントは動的インポート（SSR無効化）
+const FranchiseMap = dynamic(
+  () => import('@/components/FranchiseMap').then((mod) => mod.FranchiseMap),
+  { ssr: false }
+);
 
 export const metadata = generateMetadata({
   title: 'LIFE X フランチャイズ | 少人数×短期立上げで始める高性能規格住宅',
