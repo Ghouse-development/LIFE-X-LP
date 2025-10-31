@@ -44,7 +44,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="text-base md:text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-base md:text-lg mb-pg-5 leading-relaxed max-w-2xl mx-auto">
           {hero.description}
         </p>
 
@@ -65,14 +65,14 @@ export function Hero() {
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-pg justify-center">
           {hero.cta.map((cta, index) => (
             <Link
               key={index}
               href={cta.href}
               onClick={() => handleCTAClick(cta.label, cta.href)}
               className={`
-                px-8 py-3 rounded-full font-medium text-base transition-all duration-300
+                px-8 py-3 rounded-pg-pill font-medium text-base transition-all duration-300
                 ${
                   cta.variant === 'primary'
                     ? 'bg-gray-700 hover:bg-gray-600 text-white shadow-lg hover:shadow-xl'

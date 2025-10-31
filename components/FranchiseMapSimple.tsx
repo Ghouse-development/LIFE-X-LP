@@ -91,7 +91,7 @@ export function FranchiseMapSimple() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             全国の加盟店
@@ -106,11 +106,11 @@ export function FranchiseMapSimple() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-pg mb-pg-5"
         >
           <button
             onClick={() => setSelectedRegion(null)}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+            className={`px-6 py-3 rounded-pg-pill font-medium transition-all duration-300 ${
               selectedRegion === null
                 ? 'bg-gray-700 text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -124,7 +124,7 @@ export function FranchiseMapSimple() {
               <button
                 key={region.name}
                 onClick={() => setSelectedRegion(region.name)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-pg-pill font-medium transition-all duration-300 ${
                   selectedRegion === region.name
                     ? 'bg-gray-700 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -141,13 +141,13 @@ export function FranchiseMapSimple() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-pg"
         >
           {selectedStores.length > 0 ? (
             selectedStores.map((store) => (
               <div
                 key={store.id}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white p-pg-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
                 <h4 className="font-bold text-lg mb-3">{store.name}</h4>
                 <div className="space-y-2 text-sm text-gray-600">

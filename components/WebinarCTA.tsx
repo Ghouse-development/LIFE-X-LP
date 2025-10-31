@@ -24,7 +24,7 @@ export function WebinarCTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-pg-5"
         >
           <div className="inline-block mb-4">
             <div className="w-16 h-16 mx-auto">
@@ -54,7 +54,7 @@ export function WebinarCTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-3 gap-pg mb-pg-5"
         >
           {webinarData.benefits.map((benefit, index) => (
             <div key={index} className="text-center">
@@ -73,7 +73,7 @@ export function WebinarCTA() {
           <Link
             href="/webinar"
             onClick={handleCTAClick}
-            className="inline-block px-12 py-5 bg-gray-700 text-white font-bold text-lg rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            className="inline-block px-12 py-5 bg-gray-700 text-white font-bold text-lg rounded-pg-pill hover:bg-gray-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             ウェビナーに申し込む →
           </Link>

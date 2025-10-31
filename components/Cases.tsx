@@ -28,12 +28,12 @@ export function Cases() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-sm text-gray-500 text-center mb-12"
+          className="text-sm text-gray-500 text-center mb-pg-5"
         >
           {casesData.note}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-pg">
           {casesData.cases.map((caseItem, index) => (
             <motion.div
               key={caseItem.id}
@@ -52,7 +52,7 @@ export function Cases() {
                 />
               </div>
 
-              <div className="p-8 text-center">
+              <div className="p-pg-4 text-center">
                 {/* Main Number - HUGE */}
                 <div className="mb-3">
                   <span className="text-5xl md:text-6xl font-bold text-gray-900">

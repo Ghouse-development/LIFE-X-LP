@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const steps = [
   {
@@ -60,7 +61,7 @@ export function Flow() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">導入の流れ</h2>
           <p className="text-gray-300 text-lg">
@@ -68,15 +69,36 @@ export function Flow() {
           </p>
         </motion.div>
 
+        {/* 図解: 導入フロー全体像 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-pg-5 max-w-4xl mx-auto"
+        >
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-lg border border-gray-700">
+            <Image
+              src="/cases/case-06.jpg"
+              alt="LIFE X 導入フロー図解"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 896px"
+            />
+          </div>
+          <p className="text-sm text-gray-400 text-center mt-3">
+            スマートホーム機能を標準装備した最新の住宅システム
+          </p>
+        </motion.div>
+
         {/* Desktop: Horizontal layout - Text Focus */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 gap-pg">
           {steps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors duration-300"
+              className="relative bg-gray-800 rounded-lg p-pg-4 border border-gray-700 hover:border-gray-600 transition-colors duration-300"
             >
               {/* Step Number - Large */}
               <div className="text-5xl font-bold text-gray-400 mb-4">{step.number}</div>
@@ -101,7 +123,7 @@ export function Flow() {
         <div className="md:hidden">
           <div className="relative rounded-lg overflow-hidden bg-gray-800 border border-gray-700">
             {/* Content */}
-            <div className="p-8">
+            <div className="p-pg-4">
               {/* Step Number */}
               <div className="text-6xl font-bold text-gray-400 mb-4">{steps[currentIndex].number}</div>
 

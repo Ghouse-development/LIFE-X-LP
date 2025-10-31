@@ -45,7 +45,7 @@ export function VisualFeatures() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-24"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             こだわりの住空間
@@ -57,7 +57,7 @@ export function VisualFeatures() {
           </p>
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="space-y-pg-5">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -66,7 +66,7 @@ export function VisualFeatures() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`flex flex-col ${
                 feature.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
-              } gap-12 items-center`}
+              } gap-pg items-center`}
             >
               {/* Image */}
               <div className="w-full lg:w-1/2">
@@ -82,7 +82,7 @@ export function VisualFeatures() {
               </div>
 
               {/* Content */}
-              <div className="w-full lg:w-1/2 space-y-6">
+              <div className="w-full lg:w-1/2 space-y-pg-4">
                 <div className="inline-block">
                   <span className="text-gray-600 font-bold text-sm tracking-wider uppercase">
                     Feature {index + 1}

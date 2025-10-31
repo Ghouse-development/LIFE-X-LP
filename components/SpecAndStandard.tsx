@@ -18,21 +18,42 @@ export function SpecAndStandard() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{specData.title}</h2>
           <p className="text-gray-600 text-lg">{specData.description}</p>
         </motion.div>
 
+        {/* 図解: 性能・仕様の視覚化 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-pg-5 max-w-4xl mx-auto"
+        >
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/cases/case-07.jpg"
+              alt="LIFE X 性能・仕様図解"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 896px"
+            />
+          </div>
+          <p className="text-sm text-gray-500 text-center mt-3">
+            ソーラーパネル標準装備で環境にも配慮
+          </p>
+        </motion.div>
+
         {/* Badges - PG HOUSE Style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-pg mb-pg-5">
           {specData.badges.map((badge, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white border border-gray-300 rounded p-8 text-center hover:border-gray-400 transition-colors"
+              className="bg-white border border-gray-300 rounded p-pg-4 text-center hover:border-gray-400 transition-colors"
             >
               {/* Icon */}
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">

@@ -52,7 +52,7 @@ export function Gallery() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             LIFE X ギャラリー
@@ -67,13 +67,13 @@ export function Gallery() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-pg mb-pg-5"
         >
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-pg-pill text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gray-700 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
@@ -85,7 +85,7 @@ export function Gallery() {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-pg">
           {filteredImages.map((image, index) => (
             <motion.div
               key={image.src}

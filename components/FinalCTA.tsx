@@ -36,7 +36,7 @@ export function FinalCTA() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             まずはお気軽にご相談ください
           </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-pg-5 leading-relaxed max-w-2xl mx-auto">
             加盟金・収益モデル・支援内容など、
             <br className="hidden md:block" />
             詳細は個別面談またはウェビナーでご説明いたします。
@@ -47,13 +47,13 @@ export function FinalCTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 gap-pg max-w-4xl mx-auto"
         >
           {/* Phone */}
           <a
             href={`tel:${siteData.phone}`}
             onClick={handlePhoneClick}
-            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full p-8 transition-all duration-300 hover:scale-105"
+            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-pg-pill p-pg-4 transition-all duration-300 hover:scale-105"
           >
             <div className="w-12 h-12 mx-auto mb-4">
               <Image
@@ -73,7 +73,7 @@ export function FinalCTA() {
           <Link
             href="#lead-form"
             onClick={handleFormClick}
-            className="bg-gray-700 hover:bg-gray-600 border border-gray-600 rounded-full p-8 transition-all duration-300 hover:scale-105 shadow-xl"
+            className="bg-gray-700 hover:bg-gray-600 border border-gray-600 rounded-pg-pill p-pg-4 transition-all duration-300 hover:scale-105 shadow-xl"
           >
             <div className="w-12 h-12 mx-auto mb-4">
               <Image
@@ -96,7 +96,7 @@ export function FinalCTA() {
           <Link
             href="/webinar"
             onClick={handleWebinarClick}
-            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full p-8 transition-all duration-300 hover:scale-105"
+            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-pg-pill p-pg-4 transition-all duration-300 hover:scale-105"
           >
             <div className="w-12 h-12 mx-auto mb-4">
               <Image

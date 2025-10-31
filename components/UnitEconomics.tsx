@@ -24,23 +24,44 @@ export function UnitEconomics() {
           <p className="text-gray-600 text-lg">{financeData.description}</p>
         </motion.div>
 
+        {/* 図解: 収益モデル概念図 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-pg-5 max-w-4xl mx-auto"
+        >
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/cases/case-20.jpg"
+              alt="LIFE X 収益モデル図解"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 896px"
+            />
+          </div>
+          <p className="text-sm text-gray-500 text-center mt-3">
+            高性能住宅による安定した収益モデル
+          </p>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 mb-12 max-w-3xl mx-auto"
+          className="text-sm text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 mb-pg-5 max-w-3xl mx-auto"
         >
           {financeData.disclaimer}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-pg">
           {financeData.models.map((model, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 + 0.1 * index }}
-              className="bg-white p-8 rounded shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white p-pg-4 rounded shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               {/* Icon */}
               <div className="w-16 h-16 mb-6 mx-auto">

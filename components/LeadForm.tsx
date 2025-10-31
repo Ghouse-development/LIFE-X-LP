@@ -104,7 +104,7 @@ export function LeadForm() {
             <a
               href="/public/LIFEX_FC_Overview.pdf"
               download
-              className="inline-block px-6 py-3 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors mb-4"
+              className="inline-block px-6 py-3 bg-gray-700 text-white rounded-pg-pill hover:bg-gray-600 transition-colors mb-4"
             >
               資料をダウンロード（PDF）
             </a>
@@ -130,7 +130,7 @@ export function LeadForm() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">資料請求・お問い合わせ</h2>
           <p className="text-gray-600 text-lg">
@@ -143,7 +143,7 @@ export function LeadForm() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-lg shadow-md space-y-6"
+          className="bg-white p-pg-4 rounded-lg shadow-md space-y-pg-4"
         >
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -155,7 +155,7 @@ export function LeadForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
 
@@ -170,7 +170,7 @@ export function LeadForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
 
@@ -185,7 +185,7 @@ export function LeadForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
 
@@ -199,7 +199,7 @@ export function LeadForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             />
           </div>
 
@@ -212,7 +212,7 @@ export function LeadForm() {
               name="prefecture"
               value={formData.prefecture}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
             >
               <option value="">選択してください</option>
               <option value="北海道">北海道</option>
@@ -248,7 +248,7 @@ export function LeadForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-gray-700 text-white font-bold text-lg rounded-full hover:bg-gray-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="w-full px-8 py-4 bg-gray-700 text-white font-bold text-lg rounded-pg-pill hover:bg-gray-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
           >
             {isSubmitting ? '送信中...' : '送信する'}
           </button>

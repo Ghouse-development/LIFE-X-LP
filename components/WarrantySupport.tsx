@@ -38,7 +38,7 @@ export function WarrantySupport() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-pg-5"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             保証・サポート体制
@@ -48,7 +48,7 @@ export function WarrantySupport() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-pg">
           {warranties.map((warranty, index) => (
             <motion.div
               key={index}
