@@ -36,7 +36,7 @@ export function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-blue-600 font-semibold text-sm mb-2 uppercase tracking-wider">Testimonials</p>
+          <p className="text-gray-600 font-semibold text-sm mb-2 uppercase tracking-wider">Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             多くの加盟店が<br className="md:hidden" />
             「コスパの高さに驚いた！」
@@ -51,7 +51,7 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"

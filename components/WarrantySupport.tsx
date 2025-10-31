@@ -32,7 +32,7 @@ export function WarrantySupport() {
   });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-white">
+    <section ref={ref} className="py-24 px-4 bg-white border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,18 +52,18 @@ export function WarrantySupport() {
           {warranties.map((warranty, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
               {/* Icon Circle */}
-              <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                 <Image
                   src={`/icons/${warranty.icon}.svg`}
                   alt={warranty.title}
-                  width={56}
-                  height={56}
+                  width={48}
+                  height={48}
                 />
               </div>
 

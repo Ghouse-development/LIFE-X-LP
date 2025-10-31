@@ -57,11 +57,11 @@ export function VisualFeatures() {
           </p>
         </motion.div>
 
-        <div className="space-y-40">
+        <div className="space-y-24">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`flex flex-col ${
@@ -84,7 +84,7 @@ export function VisualFeatures() {
               {/* Content */}
               <div className="w-full lg:w-1/2 space-y-6">
                 <div className="inline-block">
-                  <span className="text-blue-600 font-bold text-sm tracking-wider uppercase">
+                  <span className="text-gray-600 font-bold text-sm tracking-wider uppercase">
                     Feature {index + 1}
                   </span>
                 </div>
@@ -95,7 +95,7 @@ export function VisualFeatures() {
                   {feature.description}
                 </p>
                 <div className="pt-4">
-                  <div className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors cursor-pointer group">
+                  <div className="inline-flex items-center text-gray-600 font-medium hover:text-gray-700 transition-colors cursor-pointer group">
                     <span>詳しく見る</span>
                     <svg
                       className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"

@@ -33,7 +33,7 @@ export function FAQ() {
           {faqData.faqs.map((faq, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="bg-white rounded-lg shadow-sm overflow-hidden"
@@ -47,7 +47,7 @@ export function FAQ() {
                   Q. {faq.question}
                 </span>
                 <span
-                  className={`flex-shrink-0 text-2xl text-blue-600 transition-transform duration-200 ${
+                  className={`flex-shrink-0 text-2xl text-gray-600 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-45' : ''
                   }`}
                 >

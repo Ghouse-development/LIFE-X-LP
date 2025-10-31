@@ -31,7 +31,7 @@ export function Hero() {
 
       {/* Content */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="relative z-10 max-w-4xl mx-auto text-center text-white"
@@ -55,10 +55,10 @@ export function Hero() {
               href={cta.href}
               onClick={() => handleCTAClick(cta.label, cta.href)}
               className={`
-                px-8 py-3 rounded-lg font-medium text-base transition-all duration-300
+                px-8 py-3 rounded-full font-medium text-base transition-all duration-300
                 ${
                   cta.variant === 'primary'
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl'
+                    ? 'bg-gray-700 hover:bg-gray-600 text-white shadow-lg hover:shadow-xl'
                     : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/30'
                 }
               `}

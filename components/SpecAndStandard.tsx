@@ -12,7 +12,7 @@ export function SpecAndStandard() {
   });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-white">
+    <section ref={ref} className="py-24 px-4 bg-white border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ export function SpecAndStandard() {
           {specData.badges.map((badge, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white border-2 border-gray-300 rounded-lg p-8 text-center hover:border-gray-400 transition-colors"

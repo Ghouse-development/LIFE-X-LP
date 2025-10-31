@@ -12,7 +12,7 @@ export function Cases() {
   });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-white">
+    <section ref={ref} className="py-24 px-4 bg-white border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export function Cases() {
           {casesData.cases.map((caseItem, index) => (
             <motion.div
               key={caseItem.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
@@ -62,15 +62,11 @@ export function Cases() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">契約棟数</span>
-                    <span className="font-medium text-blue-600">{caseItem.stats.contracts}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">体制</span>
-                    <span className="font-medium">{caseItem.stats.staff}</span>
+                    <span className="font-medium text-gray-700">{caseItem.stats.contracts}</span>
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-600 italic leading-relaxed border-l-4 border-blue-500 pl-4">
+                <p className="text-sm text-gray-600 italic leading-relaxed border-l-4 border-gray-500 pl-4">
                   「{caseItem.comment}」
                 </p>
               </div>

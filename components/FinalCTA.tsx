@@ -26,10 +26,10 @@ export function FinalCTA() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gray-900 text-white">
+    <section ref={ref} className="py-24 px-4 bg-gray-900 text-white border-t border-gray-800">
       <div className="max-w-5xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
@@ -53,7 +53,7 @@ export function FinalCTA() {
           <a
             href={`tel:${siteData.phone}`}
             onClick={handlePhoneClick}
-            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg p-8 transition-all duration-300 hover:scale-105"
+            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full p-8 transition-all duration-300 hover:scale-105"
           >
             <div className="w-12 h-12 mx-auto mb-4">
               <Image
@@ -65,7 +65,7 @@ export function FinalCTA() {
               />
             </div>
             <div className="font-bold text-lg mb-2">お電話でのお問い合わせ</div>
-            <div className="text-2xl font-bold text-blue-400 mb-2">{siteData.phone}</div>
+            <div className="text-2xl font-bold text-gray-300 mb-2">{siteData.phone}</div>
             <div className="text-sm text-gray-400">平日 9:00〜18:00</div>
           </a>
 
@@ -73,7 +73,7 @@ export function FinalCTA() {
           <Link
             href="#lead-form"
             onClick={handleFormClick}
-            className="bg-gray-700 hover:bg-gray-600 border border-gray-600 rounded-lg p-8 transition-all duration-300 hover:scale-105 shadow-xl"
+            className="bg-gray-700 hover:bg-gray-600 border border-gray-600 rounded-full p-8 transition-all duration-300 hover:scale-105 shadow-xl"
           >
             <div className="w-12 h-12 mx-auto mb-4">
               <Image
@@ -96,7 +96,7 @@ export function FinalCTA() {
           <Link
             href="/webinar"
             onClick={handleWebinarClick}
-            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg p-8 transition-all duration-300 hover:scale-105"
+            className="bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full p-8 transition-all duration-300 hover:scale-105"
           >
             <div className="w-12 h-12 mx-auto mb-4">
               <Image

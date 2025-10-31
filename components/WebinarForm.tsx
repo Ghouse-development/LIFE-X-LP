@@ -107,7 +107,7 @@ export function WebinarForm() {
             <br />
             ご確認ください。
           </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
             <div className="text-sm text-gray-600 mb-2">開催日時</div>
             <div className="font-bold text-lg">
               {new Date(formData.desired_date || webinarData.nextDates[0]).toLocaleDateString('ja-JP', {
@@ -122,7 +122,7 @@ export function WebinarForm() {
           </div>
           <button
             onClick={() => setShowThanks(false)}
-            className="text-blue-600 hover:underline text-sm"
+            className="text-gray-600 hover:underline text-sm"
           >
             フォームに戻る
           </button>
@@ -144,7 +144,7 @@ export function WebinarForm() {
             value={formData.desired_date}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           >
             {webinarData.nextDates.map((date) => (
               <option key={date} value={date}>
@@ -185,7 +185,7 @@ export function WebinarForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           />
         </div>
 
@@ -200,7 +200,7 @@ export function WebinarForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           />
         </div>
 
@@ -215,7 +215,7 @@ export function WebinarForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           />
         </div>
 
@@ -229,7 +229,7 @@ export function WebinarForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           />
         </div>
 
@@ -242,7 +242,7 @@ export function WebinarForm() {
             name="prefecture"
             value={formData.prefecture}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-gray-500 focus:border-transparent"
           >
             <option value="">選択してください</option>
             <option value="北海道">北海道</option>
@@ -263,7 +263,7 @@ export function WebinarForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="w-full px-8 py-4 bg-gray-700 text-white font-bold text-lg rounded-full hover:bg-gray-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {isSubmitting ? '送信中...' : '申し込む'}
         </button>

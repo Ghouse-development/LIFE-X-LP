@@ -112,7 +112,7 @@ export function FranchiseMapSimple() {
             onClick={() => setSelectedRegion(null)}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedRegion === null
-                ? 'bg-blue-600 text-white shadow-lg'
+                ? 'bg-gray-700 text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
             }`}
           >
@@ -126,7 +126,7 @@ export function FranchiseMapSimple() {
                 onClick={() => setSelectedRegion(region.name)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedRegion === region.name
-                    ? 'bg-blue-600 text-white shadow-lg'
+                    ? 'bg-gray-700 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 }`}
               >

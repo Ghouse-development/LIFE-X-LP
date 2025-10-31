@@ -76,10 +76,10 @@ export function Flow() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-500 transition-colors duration-300"
+              className="relative bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-gray-600 transition-colors duration-300"
             >
               {/* Step Number - Large */}
-              <div className="text-5xl font-bold text-blue-500 mb-4">{step.number}</div>
+              <div className="text-5xl font-bold text-gray-400 mb-4">{step.number}</div>
 
               {/* Title */}
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
@@ -89,7 +89,7 @@ export function Flow() {
 
               {/* Arrow Connector */}
               {index < steps.length - 1 && (
-                <div className="absolute top-1/2 -right-3 transform -translate-y-1/2 text-blue-500 text-2xl hidden lg:block">
+                <div className="absolute top-1/2 -right-3 transform -translate-y-1/2 text-gray-500 text-2xl hidden lg:block">
                   →
                 </div>
               )}
@@ -103,7 +103,7 @@ export function Flow() {
             {/* Content */}
             <div className="p-8">
               {/* Step Number */}
-              <div className="text-6xl font-bold text-blue-500 mb-4">{steps[currentIndex].number}</div>
+              <div className="text-6xl font-bold text-gray-400 mb-4">{steps[currentIndex].number}</div>
 
               {/* Title */}
               <h3 className="text-2xl font-bold mb-4">{steps[currentIndex].title}</h3>
@@ -128,7 +128,7 @@ export function Flow() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-blue-500' : 'bg-gray-600'
+                    index === currentIndex ? 'bg-gray-500' : 'bg-gray-700'
                   }`}
                   aria-label={`ステップ ${index + 1}`}
                 />

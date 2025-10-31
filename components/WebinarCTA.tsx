@@ -18,7 +18,7 @@ export function WebinarCTA() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gray-800 text-white">
+    <section ref={ref} className="py-24 px-4 bg-gray-800 text-white border-t border-gray-700">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,14 +39,14 @@ export function WebinarCTA() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">{webinarData.title}</h2>
-          <p className="text-xl md:text-2xl mb-2 text-blue-100">{webinarData.description}</p>
+          <p className="text-xl md:text-2xl mb-2 text-gray-300">{webinarData.description}</p>
 
           <div className="inline-block bg-gray-700 border border-gray-600 rounded-lg px-6 py-4 mt-6">
-            <div className="text-sm text-blue-100 mb-1">開催スケジュール</div>
+            <div className="text-sm text-gray-300 mb-1">開催スケジュール</div>
             <div className="text-lg font-medium">
               {webinarData.schedule.frequency} {webinarData.schedule.time}
             </div>
-            <div className="text-sm text-blue-100 mt-2">{webinarData.schedule.note}</div>
+            <div className="text-sm text-gray-300 mt-2">{webinarData.schedule.note}</div>
           </div>
         </motion.div>
 
@@ -73,7 +73,7 @@ export function WebinarCTA() {
           <Link
             href="/webinar"
             onClick={handleCTAClick}
-            className="inline-block px-12 py-5 bg-white text-gray-800 font-bold text-lg rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            className="inline-block px-12 py-5 bg-white text-gray-800 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
           >
             ウェビナーに申し込む →
           </Link>

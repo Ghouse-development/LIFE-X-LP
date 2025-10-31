@@ -15,7 +15,9 @@
       "Bash(done)",
       "Bash(while read img)",
       "Bash(do grep -q $img app/page.tsx components/*.tsx)",
-      "Bash(npm run seed:stores:*)"
+      "Bash(npm run seed:stores:*)",
+      "WebFetch(domain:pg-house.jp)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
