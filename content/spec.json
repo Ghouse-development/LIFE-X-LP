@@ -3,18 +3,21 @@
   "description": "高性能×自由設計を両立する規格住宅の仕様詳細。",
   "badges": [
     {
-      "label": "耐震等級3相当",
-      "description": "許容応力度計算による構造設計",
+      "mainValue": "3",
+      "subValue": "耐震等級",
+      "note": "許容応力度計算",
       "icon": "house-shield"
     },
     {
-      "label": "UA値 0.46以下",
-      "description": "HEAT20 G2相当の断熱性能",
+      "mainValue": "0.46",
+      "subValue": "UA値以下",
+      "note": "HEAT20 G2相当",
       "icon": "insulation-sun-snow"
     },
     {
-      "label": "第一種換気",
-      "description": "熱交換型全館空調対応",
+      "mainValue": "第一種",
+      "subValue": "換気",
+      "note": "熱交換型全館空調対応",
       "icon": "airflow"
     }
   ],

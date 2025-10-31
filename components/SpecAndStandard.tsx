@@ -34,23 +34,30 @@ export function SpecAndStandard() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white border border-gray-300 rounded p-6 text-center hover:border-gray-400 transition-colors"
             >
-              {/* Large Icon */}
-              <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
+              {/* Icon */}
+              <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
                 <Image
                   src={`/icons/${badge.icon}.svg`}
-                  alt={badge.label}
-                  width={56}
-                  height={56}
+                  alt={badge.subValue}
+                  width={48}
+                  height={48}
                 />
               </div>
 
-              {/* Big Number/Label Box */}
-              <div className="bg-gray-800 text-white rounded-lg py-4 px-6 mb-4">
-                <h3 className="text-2xl font-bold">{badge.label}</h3>
+              {/* Main Value - HUGE */}
+              <div className="mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                  {badge.mainValue}
+                </div>
               </div>
 
-              {/* Description */}
-              <p className="text-sm text-gray-700 leading-relaxed">{badge.description}</p>
+              {/* Sub Value */}
+              <div className="text-lg font-medium text-gray-600 mb-4">
+                {badge.subValue}
+              </div>
+
+              {/* Note */}
+              <p className="text-xs text-gray-500">{badge.note}</p>
             </motion.div>
           ))}
         </div>

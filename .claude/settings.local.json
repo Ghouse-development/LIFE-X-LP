@@ -18,7 +18,8 @@
       "Bash(npm run seed:stores:*)",
       "WebFetch(domain:pg-house.jp)",
       "Bash(git add:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

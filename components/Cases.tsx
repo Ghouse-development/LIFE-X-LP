@@ -52,22 +52,25 @@ export function Cases() {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">{caseItem.area}</h3>
-
-                <div className="space-y-2 mb-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">開業期間</span>
-                    <span className="font-medium">{caseItem.stats.period}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">契約棟数</span>
-                    <span className="font-medium text-gray-700">{caseItem.stats.contracts}</span>
-                  </div>
+              <div className="p-6 text-center">
+                {/* Main Number - HUGE */}
+                <div className="mb-2">
+                  <span className="text-5xl md:text-6xl font-bold text-gray-900">
+                    {caseItem.stats.contracts}
+                  </span>
                 </div>
 
-                <p className="text-sm text-gray-600 italic leading-relaxed border-l-4 border-gray-500 pl-4">
-                  「{caseItem.comment}」
+                {/* Period */}
+                <div className="text-lg font-medium text-gray-600 mb-4">
+                  {caseItem.stats.period}
+                </div>
+
+                {/* Area */}
+                <h3 className="text-sm font-bold mb-3 text-gray-700">{caseItem.area}</h3>
+
+                {/* Comment - Short */}
+                <p className="text-xs text-gray-500 italic">
+                  {caseItem.comment.slice(0, 40)}...
                 </p>
               </div>
             </motion.div>

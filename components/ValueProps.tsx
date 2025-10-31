@@ -8,38 +8,44 @@ const values = [
   {
     icon: '/icons/house-shield.svg',
     title: '商品力',
-    description: '耐震等級3相当×UA値0.46以下の高性能住宅。ZEH基準を大幅にクリアする仕様を標準化。',
-    specs: ['耐震等級3相当', 'UA値0.46以下'],
+    mainValue: '耐震等級 3',
+    subValue: 'UA値 0.46以下',
+    note: 'ZEH基準を大幅にクリア',
   },
   {
     icon: '/icons/chart-yen.svg',
     title: '粗利の見通し',
-    description: '1棟500万円〜800万円の粗利レンジ。詳細な収益シミュレーションを面談時に提供。',
-    specs: ['粗利 500-800万円/棟', '売上 2000-2500万円'],
+    mainValue: '500~800万円',
+    subValue: '/棟',
+    note: '売上2000-2500万円',
   },
   {
     icon: '/icons/blueprint.svg',
     title: '設計・積算の型',
-    description: '間取りは自由設計、構造・断熱は標準化。本部が設計支援を提供し、工期を短縮。',
-    specs: ['自由設計対応', '設計期間 約2週間'],
+    mainValue: '約2週間',
+    subValue: '設計期間',
+    note: '自由設計×構造標準化',
   },
   {
     icon: '/icons/hammer-gear.svg',
     title: '現場標準化',
-    description: '施工マニュアルと協力業者ネットワーク。着工から約4ヶ月で完成する工程管理。',
-    specs: ['施工マニュアル完備', '工期 約4ヶ月'],
+    mainValue: '約4ヶ月',
+    subValue: '工期',
+    note: '施工マニュアル完備',
   },
   {
     icon: '/icons/megaphone-ab.svg',
     title: '広告運用の型',
-    description: 'Web広告（Google・Meta等）の運用マニュアルと月次レビュー。初期3ヶ月は代行可能。',
-    specs: ['運用マニュアル提供', '初期3ヶ月代行可'],
+    mainValue: '初期3ヶ月',
+    subValue: '運用代行可能',
+    note: 'マニュアル+月次レビュー',
   },
   {
     icon: '/icons/handshake.svg',
     title: '伴走サポート',
-    description: '開業前の研修から開業後の定例MTGまで。商品・集客・運営の全領域で支援。',
-    specs: ['開業前研修', '定例MTG'],
+    mainValue: '全領域',
+    subValue: 'サポート',
+    note: '開業前研修+定例MTG',
   },
 ];
 
@@ -77,31 +83,35 @@ export function ValueProps() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
             >
-              {/* Large Icon */}
-              <div className="w-16 h-16 mb-6 mx-auto">
+              {/* Icon */}
+              <div className="w-20 h-20 mb-4 mx-auto">
                 <Image
                   src={value.icon}
                   alt={value.title}
-                  width={64}
-                  height={64}
+                  width={80}
+                  height={80}
                   className="w-full h-full"
                 />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold mb-3 text-center">{value.title}</h3>
+              <h3 className="text-lg font-bold mb-4 text-center text-gray-700">{value.title}</h3>
 
-              {/* Description */}
-              <p className="text-gray-600 leading-relaxed mb-6 text-sm text-center">{value.description}</p>
+              {/* Main Value - HUGE */}
+              <div className="mb-2 text-center">
+                <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                  {value.mainValue}
+                </div>
+              </div>
 
-              {/* Specs - Visual List */}
-              <div className="bg-gray-100 rounded-lg p-4 space-y-2">
-                {value.specs.map((spec, specIndex) => (
-                  <div key={specIndex} className="flex items-center text-sm">
-                    <div className="w-1.5 h-1.5 bg-gray-600 rounded-full mr-2 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{spec}</span>
-                  </div>
-                ))}
+              {/* Sub Value */}
+              <div className="text-lg font-medium text-gray-600 mb-4 text-center">
+                {value.subValue}
+              </div>
+
+              {/* Note */}
+              <div className="text-xs text-gray-500 text-center">
+                {value.note}
               </div>
             </motion.div>
           ))}

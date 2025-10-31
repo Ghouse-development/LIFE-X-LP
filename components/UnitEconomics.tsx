@@ -42,22 +42,30 @@ export function UnitEconomics() {
               transition={{ duration: 0.5, delay: 0.4 + 0.1 * index }}
               className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-12 h-12 mb-6">
-                <Image src={`/icons/${model.icon}.svg`} alt={model.title} width={48} height={48} />
+              {/* Icon */}
+              <div className="w-16 h-16 mb-4 mx-auto">
+                <Image src={`/icons/${model.icon}.svg`} alt={model.title} width={64} height={64} />
               </div>
 
-              <h3 className="text-xl font-bold mb-2">{model.title}</h3>
-              <div className="text-3xl font-bold text-gray-700 mb-4">{model.value}</div>
-              <p className="text-gray-600 mb-6 leading-relaxed">{model.description}</p>
+              {/* Title */}
+              <h3 className="text-lg font-bold mb-4 text-center text-gray-700">{model.title}</h3>
 
-              <ul className="space-y-2">
-                {model.details.map((detail, detailIndex) => (
-                  <li key={detailIndex} className="text-sm text-gray-500 flex items-start">
-                    <span className="mr-2 text-gray-600 mt-1">•</span>
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Main Value - HUGE */}
+              <div className="mb-2 text-center">
+                <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                  {model.mainValue}
+                </div>
+              </div>
+
+              {/* Sub Value */}
+              <div className="text-lg font-medium text-gray-600 mb-4 text-center">
+                {model.subValue}
+              </div>
+
+              {/* Note */}
+              <div className="text-xs text-gray-500 text-center">
+                {model.note}
+              </div>
             </motion.div>
           ))}
         </div>
