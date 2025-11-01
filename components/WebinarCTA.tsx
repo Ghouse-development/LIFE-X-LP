@@ -26,6 +26,13 @@ export function WebinarCTA() {
           transition={{ duration: 0.5 }}
           className="text-center mb-pg-5"
         >
+          {/* Urgency Badge */}
+          <div className="inline-block mb-6">
+            <div className="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold animate-pulse">
+              ⚠️ 月間3社限定 / 今月残り2枠
+            </div>
+          </div>
+
           <div className="inline-block mb-4">
             <div className="w-16 h-16 mx-auto">
               <Image

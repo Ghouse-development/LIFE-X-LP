@@ -29,7 +29,8 @@
       "Bash(vercel:*)",
       "WebFetch(domain:life-x-dzfzik87t-ghouse-developments-projects.vercel.app)",
       "Bash(for i in 11 12 13 14 15)",
-      "Bash(Select-String \"case-\")"
+      "Bash(Select-String \"case-\")",
+      "WebFetch(domain:life-x-4qgpx6d9h-ghouse-developments-projects.vercel.app)"
     ],
     "deny": [],
     "ask": []
