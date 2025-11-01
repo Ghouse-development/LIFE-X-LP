@@ -24,27 +24,9 @@ const comparisonData = [
     isAdvantage: true,
   },
   {
-    category: '設計・積算',
-    traditional: '自社で全て対応',
-    lifex: '本部が型を提供',
-    isAdvantage: true,
-  },
-  {
-    category: '集客支援',
-    traditional: '限定的',
-    lifex: 'Web・ツール完備',
-    isAdvantage: true,
-  },
-  {
-    category: '商品力',
-    traditional: '独自開発必要',
-    lifex: 'ZEH基準クリア商品',
-    isAdvantage: true,
-  },
-  {
-    category: '継続サポート',
+    category: 'サポート',
     traditional: '年1〜2回',
-    lifex: '毎月ウェビナー + 個別対応',
+    lifex: '毎月ウェビナー',
     isAdvantage: true,
   },
 ];

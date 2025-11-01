@@ -93,6 +93,33 @@ export function ValueProps() {
             </motion.div>
           ))}
         </div>
+
+        {/* 実績数字（控えめに） */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-20 pt-12 border-t border-gray-200"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">12</div>
+              <div className="text-sm text-gray-500">加盟店数</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">3,800</div>
+              <div className="text-sm text-gray-500">平均年商（万円）</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">4.2</div>
+              <div className="text-sm text-gray-500">オーナー満足度</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">3〜6</div>
+              <div className="text-sm text-gray-500">開業期間（ヶ月）</div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -88,6 +88,49 @@ export function Cases() {
             </div>
           </div>
         </motion.div>
+
+        {/* 1つの導入事例（簡潔に） */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-20 max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-md"
+        >
+          <div className="flex items-start gap-6 mb-6">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src="/cases/case-01.jpg"
+                alt="コンチネンタルホーム"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">コンチネンタルホーム株式会社</h3>
+              <p className="text-sm text-gray-600">栃木県佐野市 / 2024年11月加盟</p>
+              <div className="inline-block mt-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                開業3ヶ月で初受注達成
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            従来のFCは初期投資が大きく、人員も10名以上必要でした。LIFE Xは最小2名でスタートでき、本部の手厚いサポートで3ヶ月で初受注できました。設計・積算は本部が型を提供してくれるので、営業に集中できます。
+          </p>
+          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+            <div className="text-center">
+              <p className="text-sm text-gray-500 mb-1">初年度売上見込</p>
+              <p className="text-lg font-bold text-gray-900">3,200万円</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm text-gray-500 mb-1">粗利率</p>
+              <p className="text-lg font-bold text-gray-900">32%</p>
+            </div>
+            <div className="text-center">
+              <p className="text-sm text-gray-500 mb-1">開業時人員</p>
+              <p className="text-lg font-bold text-gray-900">2名</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

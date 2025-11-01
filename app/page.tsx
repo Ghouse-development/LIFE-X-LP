@@ -1,13 +1,8 @@
 import { Hero } from '@/components/Hero';
-import { Stats } from '@/components/Stats';
 import { ValueProps } from '@/components/ValueProps';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Comparison } from '@/components/Comparison';
 import { Cases } from '@/components/Cases';
-import { Testimonials } from '@/components/Testimonials';
-import { PricingBreakdown } from '@/components/PricingBreakdown';
-import { Guarantee } from '@/components/Guarantee';
-import { Authority } from '@/components/Authority';
 import { Flow } from '@/components/Flow';
 import { FranchiseMapSimple } from '@/components/FranchiseMapSimple';
 import { FAQ } from '@/components/FAQ';
@@ -44,15 +39,10 @@ export default function Home() {
 
       <main>
         <Hero />
-        <Stats />
         <ValueProps />
         <UnitEconomics />
         <Comparison />
-        <PricingBreakdown />
         <Cases />
-        <Testimonials />
-        <Guarantee />
-        <Authority />
         <Flow />
         <FranchiseMapSimple />
         <FAQ />
