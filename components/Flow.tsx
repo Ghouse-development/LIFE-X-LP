@@ -77,7 +77,7 @@ export function Flow() {
         </motion.div>
 
         {/* Desktop: Horizontal layout - Text Focus */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 gap-pg">
+        <div className="hidden md:grid md:grid-cols-3 gap-pg">
           {steps.map((step, index) => (
             <motion.div
               key={index}
