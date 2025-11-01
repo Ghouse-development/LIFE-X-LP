@@ -132,12 +132,32 @@ export function LeadForm() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">今すぐ始める</h2>
-          <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            まずは30分の概要相談から
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">無料資料請求・相談申込</h2>
+          <p className="text-xl md:text-2xl text-gray-300 mb-6">
+            まずは30分の概要相談から始めませんか
           </p>
-          <p className="text-gray-400">
-            1営業日以内にご連絡いたします
+
+          {/* ベネフィット表示 - 競合分析から */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-6">
+            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+              <div className="text-3xl mb-2">📄</div>
+              <p className="text-sm font-medium">詳細資料</p>
+              <p className="text-xs text-gray-400 mt-1">収益モデル・初期費用</p>
+            </div>
+            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+              <div className="text-3xl mb-2">💬</div>
+              <p className="text-sm font-medium">30分相談</p>
+              <p className="text-xs text-gray-400 mt-1">オンライン・電話OK</p>
+            </div>
+            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
+              <div className="text-3xl mb-2">📍</div>
+              <p className="text-sm font-medium">エリア確認</p>
+              <p className="text-xs text-gray-400 mt-1">希望エリアの可否即答</p>
+            </div>
+          </div>
+
+          <p className="text-gray-400 text-sm">
+            1営業日以内にご連絡 / 資料はメール送付
           </p>
         </motion.div>
 
@@ -251,10 +271,13 @@ export function LeadForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-5 bg-white text-gray-900 font-bold text-xl rounded-pg-pill hover:bg-gray-100 transition-colors disabled:bg-gray-600 disabled:cursor-not-allowed shadow-lg"
+            className="w-full px-8 py-5 bg-blue-600 text-white font-bold text-xl rounded-lg hover:bg-blue-700 transition-all duration-300 disabled:bg-gray-600 disabled:cursor-not-allowed shadow-2xl hover:scale-105"
           >
-            {isSubmitting ? '送信中...' : '送信する'}
+            {isSubmitting ? '送信中...' : '無料で資料請求・相談する'}
           </button>
+          <p className="text-center text-sm text-gray-400 mt-2">
+            ※営業時間外のお問い合わせは翌営業日に対応いたします
+          </p>
 
           <p className="text-xs text-gray-500 text-center leading-relaxed">
             ご入力いただいた個人情報は、お問い合わせ対応のみに使用し、

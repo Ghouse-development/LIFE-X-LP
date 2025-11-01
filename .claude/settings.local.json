@@ -30,7 +30,12 @@
       "WebFetch(domain:life-x-dzfzik87t-ghouse-developments-projects.vercel.app)",
       "Bash(for i in 11 12 13 14 15)",
       "Bash(Select-String \"case-\")",
-      "WebFetch(domain:life-x-4qgpx6d9h-ghouse-developments-projects.vercel.app)"
+      "WebFetch(domain:life-x-4qgpx6d9h-ghouse-developments-projects.vercel.app)",
+      "WebFetch(domain:www.herbarhouse.jp)",
+      "WebFetch(domain:www.aerafc.jp)",
+      "WebFetch(domain:www.cleverlyhome.com)",
+      "WebFetch(domain:www.lixil-jk.co.jp)",
+      "WebFetch(domain:green-energy.co.jp)"
     ],
     "deny": [],
     "ask": []

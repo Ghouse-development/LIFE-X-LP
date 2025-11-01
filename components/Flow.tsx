@@ -129,6 +129,47 @@ export function Flow() {
             </button>
           </div>
         </div>
+
+        {/* サポート・保証内容 - 競合分析から追加 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-20 bg-gray-800 rounded-3xl p-8 md:p-12 border border-gray-700"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            充実のサポート体制
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                ✓
+              </div>
+              <h4 className="font-bold text-lg mb-2">毎月ウェビナー開催</h4>
+              <p className="text-sm text-gray-300">
+                最新の営業ノウハウ、施工事例、集客手法を毎月共有。オンラインで全国から参加可能。
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                ✓
+              </div>
+              <h4 className="font-bold text-lg mb-2">施工サポート</h4>
+              <p className="text-sm text-gray-300">
+                設計図面の提供、施工マニュアル完備、現場管理のサポート。本部が遠隔でバックアップ。
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                ✓
+              </div>
+              <h4 className="font-bold text-lg mb-2">集客支援</h4>
+              <p className="text-sm text-gray-300">
+                営業資料・チラシのテンプレート提供、WEBサイト構築支援、SNS運用アドバイス。
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -46,9 +46,25 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="text-base md:text-lg mb-pg-5 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-base md:text-lg mb-6 leading-relaxed max-w-2xl mx-auto">
           {hero.description}
         </p>
+
+        {/* Trust Indicators - 競合分析から追加 */}
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm md:text-base">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2">
+            <span className="text-blue-400 font-bold">12</span>
+            <span>加盟店</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2">
+            <span className="text-blue-400 font-bold">4.2</span>
+            <span>満足度</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2">
+            <span className="text-blue-400 font-bold">3〜6ヶ月</span>
+            <span>開業</span>
+          </div>
+        </div>
 
         {/* Problem Statement - シンプル1文 */}
         {hero.problems && hero.problems.length > 0 && (
@@ -62,18 +78,18 @@ export function Hero() {
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-pg justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {hero.cta.map((cta, index) => (
             <Link
               key={index}
               href={cta.href}
               onClick={() => handleCTAClick(cta.label, cta.href)}
               className={`
-                px-8 py-3 rounded-pg-pill font-medium text-base transition-all duration-300
+                px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105
                 ${
                   cta.variant === 'primary'
-                    ? 'bg-gray-700 hover:bg-gray-600 text-white shadow-lg hover:shadow-xl'
-                    : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/30'
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50'
+                    : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border-2 border-white/50 shadow-lg'
                 }
               `}
             >
@@ -81,6 +97,11 @@ export function Hero() {
             </Link>
           ))}
         </div>
+
+        {/* CTA下の補足文 - 競合分析から */}
+        <p className="mt-4 text-sm text-white/80">
+          参加費無料・オンライン開催 / 電話・メールでのご相談も受付中
+        </p>
       </motion.div>
     </section>
   );
