@@ -33,21 +33,21 @@ export function UnitEconomics() {
               transition={{ duration: 0.5, delay: 0.2 + 0.1 * index }}
               className="text-center"
             >
-              {/* Main Value - 超巨大 */}
-              <div className="mb-4">
-                <div className="text-7xl md:text-9xl font-bold text-gray-900 leading-none">
+              {/* Title - 上部に配置 */}
+              <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-4">
+                {model.title}
+              </div>
+
+              {/* Main Value - 巨大 */}
+              <div className="mb-3">
+                <div className="text-5xl md:text-7xl font-bold text-gray-900 leading-none">
                   {model.mainValue}
                 </div>
               </div>
 
               {/* Sub Value */}
-              <div className="text-2xl md:text-3xl font-medium text-gray-600 mb-4">
+              <div className="text-xl md:text-2xl font-medium text-gray-600">
                 {model.subValue}
-              </div>
-
-              {/* Title */}
-              <div className="text-base text-gray-500">
-                {model.title}
               </div>
             </motion.div>
           ))}

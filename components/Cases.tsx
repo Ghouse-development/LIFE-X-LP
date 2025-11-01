@@ -43,30 +43,48 @@ export function Cases() {
           </div>
 
           {/* 3つのキーメトリクス - 巨大表示 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
             <div className="text-center">
-              <div className="text-7xl md:text-8xl font-bold text-gray-900 mb-3">
+              <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-3">
+                気密性
+              </div>
+              <div className="text-5xl md:text-7xl font-bold text-gray-900 mb-2">
                 0.24
               </div>
-              <div className="text-2xl md:text-3xl font-medium text-gray-600">
-                C値（気密性）
+              <div className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
+                C値
               </div>
+              <p className="text-sm text-gray-500">
+                高気密で冷暖房効率が良い
+              </p>
             </div>
             <div className="text-center">
-              <div className="text-7xl md:text-8xl font-bold text-gray-900 mb-3">
+              <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-3">
+                断熱性
+              </div>
+              <div className="text-5xl md:text-7xl font-bold text-gray-900 mb-2">
                 0.46
               </div>
-              <div className="text-2xl md:text-3xl font-medium text-gray-600">
-                UA値（断熱性）
+              <div className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
+                UA値
               </div>
+              <p className="text-sm text-gray-500">
+                ZEH基準大幅クリア
+              </p>
             </div>
             <div className="text-center">
-              <div className="text-7xl md:text-8xl font-bold text-gray-900 mb-3">
+              <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-3">
+                耐震性
+              </div>
+              <div className="text-5xl md:text-7xl font-bold text-gray-900 mb-2">
                 等級3
               </div>
-              <div className="text-2xl md:text-3xl font-medium text-gray-600">
+              <div className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
                 耐震等級
               </div>
+              <p className="text-sm text-gray-500">
+                建築基準法の1.5倍の耐震性
+              </p>
             </div>
           </div>
         </motion.div>

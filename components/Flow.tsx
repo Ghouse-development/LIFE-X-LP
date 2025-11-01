@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import Image from 'next/image';
 
 const steps = [
   {
@@ -46,33 +45,11 @@ export function Flow() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-pg-5"
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">導入の流れ</h2>
           <p className="text-xl md:text-2xl text-gray-300">
             3ステップ、3〜6ヶ月で開業
-          </p>
-        </motion.div>
-
-        {/* 図解: 導入フロー全体像 - 巨大化 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-16 max-w-6xl mx-auto"
-        >
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700">
-            <Image
-              src="/cases/case-06.jpg"
-              alt="LIFE X 導入フロー図解"
-              fill
-              className="object-cover"
-              sizes="100vw"
-              priority
-            />
-          </div>
-          <p className="text-base text-gray-300 text-center mt-6 font-medium">
-            スマートホーム機能を標準装備した最新の住宅システム
           </p>
         </motion.div>
 

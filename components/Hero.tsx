@@ -23,10 +23,12 @@ export function Hero() {
           alt={assetsData.hero.alt}
           fill
           priority
-          className="object-cover opacity-40"
+          className="object-cover opacity-30"
           sizes="100vw"
           quality={90}
         />
+        {/* Dark gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       </div>
 
       {/* Content */}
