@@ -1,8 +1,11 @@
 import { Hero } from '@/components/Hero';
+import { Stats } from '@/components/Stats';
 import { ValueProps } from '@/components/ValueProps';
 import { UnitEconomics } from '@/components/UnitEconomics';
-import { Flow } from '@/components/Flow';
+import { Comparison } from '@/components/Comparison';
 import { Cases } from '@/components/Cases';
+import { Testimonials } from '@/components/Testimonials';
+import { Flow } from '@/components/Flow';
 import { FranchiseMapSimple } from '@/components/FranchiseMapSimple';
 import { FAQ } from '@/components/FAQ';
 import { LeadForm } from '@/components/LeadForm';
@@ -38,9 +41,12 @@ export default function Home() {
 
       <main>
         <Hero />
+        <Stats />
         <ValueProps />
         <UnitEconomics />
+        <Comparison />
         <Cases />
+        <Testimonials />
         <Flow />
         <FranchiseMapSimple />
         <FAQ />
