@@ -36,11 +36,33 @@ export function FinalCTA() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             まずはお気軽にご相談ください
           </h2>
-          <p className="text-xl text-gray-300 mb-pg-5 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-6 leading-relaxed max-w-2xl mx-auto">
             加盟金・収益モデル・支援内容など、
             <br className="hidden md:block" />
             詳細は個別面談またはウェビナーでご説明いたします。
           </p>
+
+          {/* 安心保証メッセージ */}
+          <div className="max-w-3xl mx-auto mb-pg-5">
+            <div className="bg-blue-600/20 backdrop-blur-sm border border-blue-500/40 rounded-lg p-4 md:p-6">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base">
+                <div className="flex items-center gap-2">
+                  <span className="text-blue-400 text-xl">✓</span>
+                  <span>相談・資料請求は完全無料</span>
+                </div>
+                <div className="hidden md:block text-gray-600">|</div>
+                <div className="flex items-center gap-2">
+                  <span className="text-blue-400 text-xl">✓</span>
+                  <span>しつこい営業は一切なし</span>
+                </div>
+                <div className="hidden md:block text-gray-600">|</div>
+                <div className="flex items-center gap-2">
+                  <span className="text-blue-400 text-xl">✓</span>
+                  <span>初年度売上保証あり</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div

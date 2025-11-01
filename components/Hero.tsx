@@ -102,6 +102,25 @@ export function Hero() {
         <p className="mt-4 text-sm text-white/80">
           参加費無料・オンライン開催 / 電話・メールでのご相談も受付中
         </p>
+
+        {/* 安心感・限定性の追加 */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-8 max-w-2xl mx-auto"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+            <div className="flex items-center justify-center gap-2 bg-green-600/20 backdrop-blur-sm border border-green-500/40 rounded-lg px-4 py-3">
+              <span className="text-green-400 text-lg">✓</span>
+              <span className="text-white/90">初年度売上未達なら研修費返金</span>
+            </div>
+            <div className="flex items-center justify-center gap-2 bg-amber-600/20 backdrop-blur-sm border border-amber-500/40 rounded-lg px-4 py-3">
+              <span className="text-amber-400 text-lg">⚠</span>
+              <span className="text-white/90">募集エリア残りわずか</span>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

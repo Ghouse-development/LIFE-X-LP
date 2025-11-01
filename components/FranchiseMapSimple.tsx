@@ -205,7 +205,7 @@ export function FranchiseMapSimple() {
           </p>
         </motion.div>
 
-        {/* 日本地図ビジュアル */}
+        {/* 日本地図ビジュアル - 白地図 + ピン配置 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -213,196 +213,126 @@ export function FranchiseMapSimple() {
           className="mb-12 bg-gradient-to-b from-blue-50 to-white rounded-3xl p-8"
         >
           <div className="max-w-4xl mx-auto">
-            <svg viewBox="0 0 800 600" className="w-full h-auto">
-              {/* 日本地図（簡略版：地域ブロック表示） */}
-              {/* 北海道・東北 */}
-              <g>
-                <rect
-                  x="600"
-                  y="20"
-                  width="180"
-                  height="140"
-                  fill={getStoresByRegion(regions[0].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[0].name)}
-                />
-                <text x="690" y="80" fontSize="16" fill="white" fontWeight="bold" textAnchor="middle">
-                  北海道・東北
-                </text>
-                <text x="690" y="105" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[0].prefectures).length}店
-                </text>
+            <svg viewBox="0 0 1000 1200" className="w-full h-auto">
+              {/* 日本地図（白地図） */}
+              <g id="japan-map" fill="#f9fafb" stroke="#9ca3af" strokeWidth="2">
+                {/* 北海道 */}
+                <path d="M 820,80 L 900,60 L 950,100 L 940,180 L 880,200 L 800,180 L 780,120 Z" />
+
+                {/* 本州 */}
+                {/* 東北地方 */}
+                <path d="M 850,220 L 900,240 L 920,320 L 900,400 L 880,450 L 860,480 L 840,460 L 820,420 L 800,360 L 810,280 L 830,240 Z" />
+
+                {/* 関東地方 */}
+                <path d="M 860,480 L 880,510 L 900,540 L 920,580 L 900,620 L 860,640 L 820,630 L 800,600 L 790,560 L 810,520 L 840,490 Z" />
+
+                {/* 中部地方 */}
+                <path d="M 790,560 L 800,600 L 780,640 L 740,660 L 700,670 L 660,660 L 640,630 L 650,590 L 680,560 L 720,550 L 760,555 Z" />
+
+                {/* 近畿地方 */}
+                <path d="M 660,660 L 700,670 L 720,700 L 720,740 L 680,760 L 640,750 L 610,720 L 620,680 L 640,665 Z" />
+
+                {/* 中国地方 */}
+                <path d="M 610,720 L 640,750 L 620,790 L 560,810 L 480,820 L 420,810 L 400,780 L 420,740 L 480,730 L 540,735 L 590,730 Z" />
+
+                {/* 四国 */}
+                <path d="M 560,840 L 620,850 L 650,880 L 640,920 L 580,930 L 520,920 L 480,890 L 500,860 L 540,845 Z" />
+
+                {/* 九州 */}
+                <path d="M 350,860 L 400,880 L 430,920 L 440,980 L 420,1040 L 380,1080 L 320,1100 L 260,1080 L 240,1020 L 250,960 L 280,900 L 320,870 Z" />
               </g>
 
-              {/* 関東 */}
-              <g>
-                <rect
-                  x="580"
-                  y="180"
-                  width="200"
-                  height="120"
-                  fill={getStoresByRegion(regions[1].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[1].name)}
-                />
-                <text x="680" y="230" fontSize="16" fill="white" fontWeight="bold" textAnchor="middle">
-                  関東
-                </text>
-                <text x="680" y="255" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[1].prefectures).length}店
-                </text>
-              </g>
+              {/* 加盟店ピン配置 */}
+              {stores.map((store, index) => {
+                // 都道府県別の座標マッピング
+                const prefectureCoords: { [key: string]: { x: number; y: number } } = {
+                  '北海道': { x: 870, y: 130 },
+                  '青森県': { x: 870, y: 260 },
+                  '岩手県': { x: 890, y: 300 },
+                  '宮城県': { x: 880, y: 350 },
+                  '秋田県': { x: 850, y: 310 },
+                  '山形県': { x: 850, y: 370 },
+                  '福島県': { x: 860, y: 430 },
+                  '茨城県': { x: 880, y: 500 },
+                  '栃木県': { x: 850, y: 510 },
+                  '群馬県': { x: 820, y: 520 },
+                  '埼玉県': { x: 850, y: 550 },
+                  '千葉県': { x: 900, y: 560 },
+                  '東京都': { x: 870, y: 580 },
+                  '神奈川県': { x: 860, y: 610 },
+                  '新潟県': { x: 800, y: 450 },
+                  '富山県': { x: 750, y: 510 },
+                  '石川県': { x: 730, y: 530 },
+                  '福井県': { x: 710, y: 560 },
+                  '山梨県': { x: 820, y: 580 },
+                  '長野県': { x: 780, y: 560 },
+                  '岐阜県': { x: 740, y: 600 },
+                  '静岡県': { x: 800, y: 630 },
+                  '愛知県': { x: 740, y: 640 },
+                  '三重県': { x: 720, y: 670 },
+                  '滋賀県': { x: 690, y: 660 },
+                  '京都府': { x: 690, y: 690 },
+                  '大阪府': { x: 670, y: 710 },
+                  '兵庫県': { x: 640, y: 700 },
+                  '奈良県': { x: 690, y: 720 },
+                  '和歌山県': { x: 680, y: 750 },
+                  '鳥取県': { x: 600, y: 720 },
+                  '島根県': { x: 550, y: 730 },
+                  '岡山県': { x: 600, y: 760 },
+                  '広島県': { x: 540, y: 770 },
+                  '山口県': { x: 470, y: 790 },
+                  '徳島県': { x: 640, y: 860 },
+                  '香川県': { x: 600, y: 850 },
+                  '愛媛県': { x: 550, y: 870 },
+                  '高知県': { x: 590, y: 900 },
+                  '福岡県': { x: 380, y: 890 },
+                  '佐賀県': { x: 340, y: 910 },
+                  '長崎県': { x: 300, y: 930 },
+                  '熊本県': { x: 350, y: 960 },
+                  '大分県': { x: 420, y: 920 },
+                  '宮崎県': { x: 400, y: 1000 },
+                  '鹿児島県': { x: 340, y: 1050 },
+                  '沖縄県': { x: 250, y: 1150 },
+                };
 
-              {/* 甲信越・北陸 */}
-              <g>
-                <rect
-                  x="420"
-                  y="160"
-                  width="140"
-                  height="120"
-                  fill={getStoresByRegion(regions[2].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[2].name)}
-                />
-                <text x="490" y="210" fontSize="14" fill="white" fontWeight="bold" textAnchor="middle">
-                  甲信越・北陸
-                </text>
-                <text x="490" y="235" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[2].prefectures).length}店
-                </text>
-              </g>
+                const coords = prefectureCoords[store.prefecture];
+                if (!coords) return null;
 
-              {/* 東海 */}
-              <g>
-                <rect
-                  x="480"
-                  y="300"
-                  width="160"
-                  height="100"
-                  fill={getStoresByRegion(regions[3].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[3].name)}
-                />
-                <text x="560" y="340" fontSize="16" fill="white" fontWeight="bold" textAnchor="middle">
-                  東海
-                </text>
-                <text x="560" y="365" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[3].prefectures).length}店
-                </text>
-              </g>
-
-              {/* 関西 */}
-              <g>
-                <rect
-                  x="280"
-                  y="300"
-                  width="180"
-                  height="120"
-                  fill={getStoresByRegion(regions[4].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[4].name)}
-                />
-                <text x="370" y="350" fontSize="16" fill="white" fontWeight="bold" textAnchor="middle">
-                  関西
-                </text>
-                <text x="370" y="375" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[4].prefectures).length}店
-                </text>
-              </g>
-
-              {/* 中国 */}
-              <g>
-                <rect
-                  x="80"
-                  y="280"
-                  width="180"
-                  height="100"
-                  fill={getStoresByRegion(regions[5].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[5].name)}
-                />
-                <text x="170" y="320" fontSize="16" fill="white" fontWeight="bold" textAnchor="middle">
-                  中国
-                </text>
-                <text x="170" y="345" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[5].prefectures).length}店
-                </text>
-              </g>
-
-              {/* 四国 */}
-              <g>
-                <rect
-                  x="180"
-                  y="400"
-                  width="160"
-                  height="90"
-                  fill={getStoresByRegion(regions[6].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[6].name)}
-                />
-                <text x="260" y="435" fontSize="16" fill="white" fontWeight="bold" textAnchor="middle">
-                  四国
-                </text>
-                <text x="260" y="460" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[6].prefectures).length}店
-                </text>
-              </g>
-
-              {/* 九州・沖縄 */}
-              <g>
-                <rect
-                  x="20"
-                  y="400"
-                  width="140"
-                  height="180"
-                  fill={getStoresByRegion(regions[7].prefectures).length > 0 ? '#3b82f6' : '#e5e7eb'}
-                  stroke="#9ca3af"
-                  strokeWidth="2"
-                  rx="8"
-                  className="cursor-pointer hover:opacity-80 transition-opacity"
-                  onClick={() => setSelectedRegion(regions[7].name)}
-                />
-                <text x="90" y="480" fontSize="14" fill="white" fontWeight="bold" textAnchor="middle">
-                  九州・沖縄
-                </text>
-                <text x="90" y="505" fontSize="24" fill="white" fontWeight="bold" textAnchor="middle">
-                  {getStoresByRegion(regions[7].prefectures).length}店
-                </text>
-              </g>
+                return (
+                  <g key={store.id}>
+                    {/* ピン */}
+                    <circle
+                      cx={coords.x}
+                      cy={coords.y}
+                      r="12"
+                      fill="#3b82f6"
+                      stroke="white"
+                      strokeWidth="3"
+                      className="cursor-pointer hover:fill-blue-700 transition-colors"
+                      onClick={() => setSelectedRegion(null)}
+                    />
+                    {/* ピン下の影 */}
+                    <ellipse
+                      cx={coords.x}
+                      cy={coords.y + 2}
+                      rx="8"
+                      ry="3"
+                      fill="black"
+                      opacity="0.2"
+                    />
+                  </g>
+                );
+              })}
 
               {/* 凡例 */}
-              <g transform="translate(20, 20)">
-                <rect x="0" y="0" width="20" height="20" fill="#3b82f6" rx="4" />
-                <text x="30" y="15" fontSize="14" fill="#4b5563">加盟店あり</text>
-
-                <rect x="120" y="0" width="20" height="20" fill="#e5e7eb" rx="4" />
-                <text x="150" y="15" fontSize="14" fill="#4b5563">未展開</text>
+              <g transform="translate(50, 50)">
+                <circle cx="10" cy="10" r="10" fill="#3b82f6" stroke="white" strokeWidth="2" />
+                <text x="30" y="15" fontSize="16" fill="#4b5563" fontWeight="500">加盟店（全{stores.length}店）</text>
               </g>
             </svg>
 
             <p className="text-center text-gray-600 mt-4 text-sm">
-              地域をクリックすると詳細が表示されます
+              各ピンは加盟店の所在地を示しています
             </p>
           </div>
         </motion.div>
