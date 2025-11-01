@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
-import casesData from '@/content/cases.json';
 
 export function Cases() {
   const { ref, inView } = useInView({
@@ -18,64 +17,59 @@ export function Cases() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-4"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{casesData.title}</h2>
-          <p className="text-gray-600 text-lg">{casesData.description}</p>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">
+            人生を変える家
+          </h2>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-sm text-gray-500 text-center mb-pg-5"
+        {/* 1つの巨大図解 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-6xl mx-auto"
         >
-          {casesData.note}
-        </motion.p>
+          <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl">
+            <Image
+              src="/cases/case-20.jpg"
+              alt="LIFE X 高性能住宅コンセプト"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-pg">
-          {casesData.cases.map((caseItem, index) => (
-            <motion.div
-              key={caseItem.id}
-              initial={{ opacity: 0, y: 15 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              <div className="relative h-56 md:h-64">
-                <Image
-                  src={caseItem.image}
-                  alt={caseItem.area}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+          {/* 3つのキーメトリクス - 巨大表示 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="text-center">
+              <div className="text-7xl md:text-8xl font-bold text-gray-900 mb-3">
+                0.24
               </div>
-
-              <div className="p-8 text-center">
-                {/* Main Number - 超巨大化 */}
-                <div className="mb-4">
-                  <span className="text-6xl md:text-8xl font-bold text-gray-900 leading-none">
-                    {caseItem.stats.contracts}
-                  </span>
-                </div>
-
-                {/* Period */}
-                <div className="text-2xl md:text-3xl font-medium text-gray-600 mb-8">
-                  {caseItem.stats.period}
-                </div>
-
-                {/* Area */}
-                <h3 className="text-sm font-bold mb-4 text-gray-700">{caseItem.area}</h3>
-
-                {/* Comment - Short */}
-                <p className="text-xs text-gray-500 italic">
-                  {caseItem.comment.slice(0, 40)}...
-                </p>
+              <div className="text-2xl md:text-3xl font-medium text-gray-600">
+                C値（気密性）
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+            <div className="text-center">
+              <div className="text-7xl md:text-8xl font-bold text-gray-900 mb-3">
+                0.46
+              </div>
+              <div className="text-2xl md:text-3xl font-medium text-gray-600">
+                UA値（断熱性）
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-7xl md:text-8xl font-bold text-gray-900 mb-3">
+                等級3
+              </div>
+              <div className="text-2xl md:text-3xl font-medium text-gray-600">
+                耐震等級
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

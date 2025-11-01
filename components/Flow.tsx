@@ -9,32 +9,17 @@ const steps = [
   {
     number: '01',
     title: '相談',
-    description: 'まずは30分の概要相談。事業内容と疑問点を確認します。NDA締結後、詳細資料を提供。',
+    description: '30分の概要相談から開始',
   },
   {
     number: '02',
-    title: '商品・運用レクチャ',
-    description: 'LIFE X の仕様、設計の型、集客手法を詳しく解説。実際の事例データも共有します。',
+    title: '契約・研修',
+    description: '契約締結後、商品・設計・集客の型を習得',
   },
   {
     number: '03',
-    title: 'エリア調査',
-    description: 'ご希望エリアの市場調査と競合分析。テリトリーの可否を確認し、事業計画を策定。',
-  },
-  {
-    number: '04',
-    title: '契約',
-    description: 'FC契約締結。加盟金・ロイヤリティ等の条件を確定し、正式にスタート。',
-  },
-  {
-    number: '05',
-    title: 'モデル・広告立上げ',
-    description: 'モデルハウスの企画・建築、Web広告の初期設定を本部がサポート。',
-  },
-  {
-    number: '06',
-    title: '初回着工',
-    description: '初回顧客の着工。現場管理・施工品質を本部が伴走し、標準化を定着させます。',
+    title: '開業',
+    description: '3〜6ヶ月で初回着工、本部が全面伴走',
   },
 ];
 
@@ -63,9 +48,9 @@ export function Flow() {
           transition={{ duration: 0.5 }}
           className="text-center mb-pg-5"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">導入の流れ</h2>
-          <p className="text-gray-300 text-lg">
-            契約から最短3〜6ヶ月で開業。6ステップで着実に立ち上げます。
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">導入の流れ</h2>
+          <p className="text-xl md:text-2xl text-gray-300">
+            3ステップ、3〜6ヶ月で開業
           </p>
         </motion.div>
 

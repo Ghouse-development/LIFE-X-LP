@@ -6,46 +6,25 @@ import Image from 'next/image';
 
 const values = [
   {
+    icon: '/icons/chart-yen.svg',
+    title: '収益性',
+    mainValue: '500~800万円',
+    subValue: '粗利/棟',
+    note: '売上2000-2500万円で安定収益',
+  },
+  {
     icon: '/icons/house-shield.svg',
     title: '商品力',
     mainValue: '耐震等級 3',
-    subValue: 'UA値 0.46以下',
-    note: 'ZEH基準を大幅にクリア',
-  },
-  {
-    icon: '/icons/chart-yen.svg',
-    title: '粗利の見通し',
-    mainValue: '500~800万円',
-    subValue: '/棟',
-    note: '売上2000-2500万円',
-  },
-  {
-    icon: '/icons/blueprint.svg',
-    title: '設計・積算の型',
-    mainValue: '約2週間',
-    subValue: '設計期間',
-    note: '自由設計×構造標準化',
-  },
-  {
-    icon: '/icons/hammer-gear.svg',
-    title: '現場標準化',
-    mainValue: '約4ヶ月',
-    subValue: '工期',
-    note: '施工マニュアル完備',
-  },
-  {
-    icon: '/icons/megaphone-ab.svg',
-    title: '広告運用の型',
-    mainValue: '初期3ヶ月',
-    subValue: '運用代行可能',
-    note: 'マニュアル+月次レビュー',
+    subValue: 'UA値 0.46',
+    note: 'ZEH基準大幅クリア・全棟長期優良住宅',
   },
   {
     icon: '/icons/handshake.svg',
-    title: '伴走サポート',
-    mainValue: '全領域',
-    subValue: 'サポート',
-    note: '開業前研修+定例MTG',
+    title: '開業支援',
+    mainValue: '3~6ヶ月',
+    subValue: '開業期間',
+    note: '設計・現場・集客すべての型を提供',
   },
 ];
 
@@ -64,13 +43,11 @@ export function ValueProps() {
           transition={{ duration: 0.5 }}
           className="text-center mb-pg-5"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            LIFE X が提供する価値
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            3つの強み
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            商品・設計・現場・集客・運営の「型」を提供し、
-            <br className="hidden md:block" />
-            少人数でも高品質な住宅事業を立ち上げられます。
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+            高収益×高品質×短期立上げ
           </p>
         </motion.div>
 
