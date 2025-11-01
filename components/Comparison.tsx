@@ -2,7 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 import { Check, X } from 'lucide-react';
+import { trackCTAClick } from '@/lib/events';
 
 const comparisonData = [
   {
@@ -97,9 +99,16 @@ export function Comparison() {
             <p className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
               初期投資を70%削減、開業期間を75%短縮
             </p>
-            <p className="text-sm md:text-base text-gray-600">
+            <p className="text-sm md:text-base text-gray-600 mb-6">
               まずは30分の無料相談で詳細をご確認ください
             </p>
+            <Link
+              href="#form"
+              onClick={() => trackCTAClick('無料相談に申し込む', '#form')}
+              className="inline-block px-10 py-4 bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              無料相談に申し込む
+            </Link>
           </div>
         </motion.div>
       </div>

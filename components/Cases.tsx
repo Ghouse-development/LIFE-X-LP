@@ -89,48 +89,137 @@ export function Cases() {
           </div>
         </motion.div>
 
-        {/* 1つの導入事例（簡潔に） */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-md"
-        >
-          <div className="flex items-start gap-6 mb-6">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
-              <Image
-                src="/cases/case-01.jpg"
-                alt="コンチネンタルホーム"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">コンチネンタルホーム株式会社</h3>
-              <p className="text-sm text-gray-600">栃木県佐野市 / 2024年11月加盟</p>
-              <div className="inline-block mt-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-                開業3ヶ月で初受注達成
+        {/* 3つの導入事例 */}
+        <div className="mt-20 space-y-8">
+          {/* 事例1: コンチネンタルホーム */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-md"
+          >
+            <div className="flex items-start gap-6 mb-6">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src="/cases/case-01.jpg"
+                  alt="コンチネンタルホーム"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">コンチネンタルホーム株式会社</h3>
+                <p className="text-sm text-gray-600">栃木県佐野市 / 2024年11月加盟</p>
+                <div className="inline-block mt-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                  開業3ヶ月で初受注達成
+                </div>
               </div>
             </div>
-          </div>
-          <p className="text-gray-700 leading-relaxed mb-6">
-            従来のFCは初期投資が大きく、人員も10名以上必要でした。LIFE Xは最小2名でスタートでき、本部の手厚いサポートで3ヶ月で初受注できました。設計・積算は本部が型を提供してくれるので、営業に集中できます。
-          </p>
-          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
-            <div className="text-center">
-              <p className="text-sm text-gray-500 mb-1">初年度売上見込</p>
-              <p className="text-lg font-bold text-gray-900">3,200万円</p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              従来のFCは初期投資が大きく、人員も10名以上必要でした。LIFE Xは最小2名でスタートでき、本部の手厚いサポートで3ヶ月で初受注できました。設計・積算は本部が型を提供してくれるので、営業に集中できます。
+            </p>
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">初年度売上見込</p>
+                <p className="text-lg font-bold text-gray-900">3,200万円</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">粗利率</p>
+                <p className="text-lg font-bold text-gray-900">32%</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">開業時人員</p>
+                <p className="text-lg font-bold text-gray-900">2名</p>
+              </div>
             </div>
-            <div className="text-center">
-              <p className="text-sm text-gray-500 mb-1">粗利率</p>
-              <p className="text-lg font-bold text-gray-900">32%</p>
+          </motion.div>
+
+          {/* 事例2: 東京エリア */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-md"
+          >
+            <div className="flex items-start gap-6 mb-6">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src="/cases/case-02.jpg"
+                  alt="東京エリア加盟店"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">ビルダー転換事例</h3>
+                <p className="text-sm text-gray-600">東京都 / 2024年6月加盟</p>
+                <div className="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                  初年度売上4,500万円達成
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <p className="text-sm text-gray-500 mb-1">開業時人員</p>
-              <p className="text-lg font-bold text-gray-900">2名</p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              地場ビルダーとして活動していましたが、高性能住宅への対応と集客に課題がありました。LIFE Xの規格住宅は設計が標準化されており、営業資料も充実。初年度から目標を大きく上回る売上を達成しました。
+            </p>
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">初年度売上</p>
+                <p className="text-lg font-bold text-gray-900">4,500万円</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">粗利率</p>
+                <p className="text-lg font-bold text-gray-900">35%</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">受注棟数</p>
+                <p className="text-lg font-bold text-gray-900">2棟</p>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+          {/* 事例3: 関西エリア */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-md"
+          >
+            <div className="flex items-start gap-6 mb-6">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src="/cases/case-03.jpg"
+                  alt="関西エリア加盟店"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">異業種からの参入</h3>
+                <p className="text-sm text-gray-600">大阪府 / 2024年8月加盟</p>
+                <div className="inline-block mt-2 px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
+                  開業5ヶ月で2棟受注
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              建設業界未経験でしたが、LIFE Xの充実した研修プログラムと本部サポートで5ヶ月で2棟受注。施工管理も本部が遠隔サポートしてくれるので、営業とお客様対応に専念できます。月次ウェビナーで最新ノウハウも学べます。
+            </p>
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">開業5ヶ月売上</p>
+                <p className="text-lg font-bold text-gray-900">3,800万円</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">粗利率</p>
+                <p className="text-lg font-bold text-gray-900">33%</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-gray-500 mb-1">開業時人員</p>
+                <p className="text-lg font-bold text-gray-900">3名</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
+import { trackCTAClick } from '@/lib/events';
 import financeData from '@/content/finance.json';
 
 export function UnitEconomics() {
@@ -52,6 +54,22 @@ export function UnitEconomics() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <Link
+            href="#form"
+            onClick={() => trackCTAClick('詳しい収益シミュレーションを見る', '#form')}
+            className="inline-block px-10 py-4 bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-colors"
+          >
+            詳しい収益シミュレーションを見る
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
