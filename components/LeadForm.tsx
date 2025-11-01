@@ -158,7 +158,7 @@ export function LeadForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
             />
           </div>
 
@@ -173,7 +173,7 @@ export function LeadForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
             />
           </div>
 
@@ -188,7 +188,7 @@ export function LeadForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
             />
           </div>
 
@@ -202,7 +202,7 @@ export function LeadForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
             />
           </div>
 
@@ -215,7 +215,7 @@ export function LeadForm() {
               name="prefecture"
               value={formData.prefecture}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-pg-pill focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
             >
               <option value="">選択してください</option>
               <option value="北海道">北海道</option>
