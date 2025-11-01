@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { MapPin } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -52,6 +52,11 @@ export function FranchiseMapSimple() {
   // 加盟店データを取得（Supabaseから）
   useEffect(() => {
     const fetchStores = async () => {
+      // Supabaseが設定されていない場合は早期リターン
+      if (!isSupabaseConfigured) {
+        return;
+      }
+
       try {
         const { data, error } = await supabase
           .from('stores')

@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     template: "%s | LIFE X フランチャイズ",
   },
   description: "商品・設計・現場・集客の型を提供。毎月ウェビナー開催／まずは30分で概要相談。",
+  icons: {
+    icon: "/icons/house-shield.svg",
+    apple: "/icons/house-shield.svg",
+  },
 };
 
 export default function RootLayout({
