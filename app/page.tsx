@@ -1,16 +1,10 @@
 import { Hero } from '@/components/Hero';
 import { ValueProps } from '@/components/ValueProps';
-import { VisualFeatures } from '@/components/VisualFeatures';
-import { SpecAndStandard } from '@/components/SpecAndStandard';
-import { Gallery } from '@/components/Gallery';
 import { UnitEconomics } from '@/components/UnitEconomics';
 import { Flow } from '@/components/Flow';
 import { Cases } from '@/components/Cases';
-import { WarrantySupport } from '@/components/WarrantySupport';
 import { FranchiseMapSimple } from '@/components/FranchiseMapSimple';
-import { WebinarCTA } from '@/components/WebinarCTA';
 import { FAQ } from '@/components/FAQ';
-import { FinalCTA } from '@/components/FinalCTA';
 import { LeadForm } from '@/components/LeadForm';
 import { generateMetadata, generateOrganizationSchema, generateProductSchema, generateFAQSchema } from '@/lib/seo';
 import faqData from '@/content/faq.json';
@@ -45,18 +39,12 @@ export default function Home() {
       <main>
         <Hero />
         <ValueProps />
-        <VisualFeatures />
-        <SpecAndStandard />
         <UnitEconomics />
-        <Flow />
         <Cases />
-        <Gallery />
-        <WarrantySupport />
+        <Flow />
         <FranchiseMapSimple />
-        <WebinarCTA />
         <FAQ />
         <LeadForm />
-        <FinalCTA />
       </main>
     </>
   );

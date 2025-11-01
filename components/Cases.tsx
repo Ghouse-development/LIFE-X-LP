@@ -12,8 +12,8 @@ export function Cases() {
   });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-white border-t border-gray-200">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-40 px-4 bg-gray-50 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -52,16 +52,16 @@ export function Cases() {
                 />
               </div>
 
-              <div className="p-pg-4 text-center">
-                {/* Main Number - HUGE */}
-                <div className="mb-3">
-                  <span className="text-5xl md:text-6xl font-bold text-gray-900">
+              <div className="p-8 text-center">
+                {/* Main Number - 超巨大化 */}
+                <div className="mb-4">
+                  <span className="text-6xl md:text-8xl font-bold text-gray-900 leading-none">
                     {caseItem.stats.contracts}
                   </span>
                 </div>
 
                 {/* Period */}
-                <div className="text-lg font-medium text-gray-600 mb-6">
+                <div className="text-2xl md:text-3xl font-medium text-gray-600 mb-8">
                   {caseItem.stats.period}
                 </div>
 

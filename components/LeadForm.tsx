@@ -124,17 +124,20 @@ export function LeadForm() {
   }
 
   return (
-    <section ref={ref} id="lead-form" className="py-24 px-4 bg-gray-50">
-      <div className="max-w-2xl mx-auto">
+    <section ref={ref} id="lead-form" className="py-40 px-4 bg-gray-900 text-white">
+      <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-pg-5"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">資料請求・お問い合わせ</h2>
-          <p className="text-gray-600 text-lg">
-            フォーム送信後、1営業日以内にご連絡いたします。
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">今すぐ始める</h2>
+          <p className="text-xl md:text-2xl text-gray-300 mb-4">
+            まずは30分の概要相談から
+          </p>
+          <p className="text-gray-400">
+            1営業日以内にご連絡いたします
           </p>
         </motion.div>
 
@@ -143,10 +146,10 @@ export function LeadForm() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-white p-pg-4 rounded-lg shadow-md space-y-pg-4"
+          className="bg-gray-800 p-8 rounded-2xl shadow-2xl space-y-6 border border-gray-700"
         >
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
               会社名・屋号
             </label>
             <input
@@ -160,7 +163,7 @@ export function LeadForm() {
           </div>
 
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               お名前 <span className="text-red-500">*</span>
             </label>
             <input
@@ -175,7 +178,7 @@ export function LeadForm() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               メールアドレス <span className="text-red-500">*</span>
             </label>
             <input
@@ -190,7 +193,7 @@ export function LeadForm() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               電話番号
             </label>
             <input
@@ -204,7 +207,7 @@ export function LeadForm() {
           </div>
 
           <div>
-            <label htmlFor="prefecture" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="prefecture" className="block text-sm font-medium text-gray-300 mb-2">
               都道府県
             </label>
             <select
@@ -225,7 +228,7 @@ export function LeadForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
               お問い合わせ内容
             </label>
             <textarea
@@ -234,7 +237,7 @@ export function LeadForm() {
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
               placeholder="ご質問やご要望がございましたらご記入ください"
             />
           </div>
@@ -248,7 +251,7 @@ export function LeadForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-gray-700 text-white font-bold text-lg rounded-pg-pill hover:bg-gray-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="w-full px-8 py-5 bg-white text-gray-900 font-bold text-xl rounded-pg-pill hover:bg-gray-100 transition-colors disabled:bg-gray-600 disabled:cursor-not-allowed shadow-lg"
           >
             {isSubmitting ? '送信中...' : '送信する'}
           </button>

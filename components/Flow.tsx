@@ -55,8 +55,8 @@ export function Flow() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-40 px-4 bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -69,23 +69,24 @@ export function Flow() {
           </p>
         </motion.div>
 
-        {/* 図解: 導入フロー全体像 */}
+        {/* 図解: 導入フロー全体像 - 巨大化 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-pg-5 max-w-4xl mx-auto"
+          className="mb-16 max-w-6xl mx-auto"
         >
-          <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-lg border border-gray-700">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700">
             <Image
               src="/cases/case-06.jpg"
               alt="LIFE X 導入フロー図解"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 896px"
+              sizes="100vw"
+              priority
             />
           </div>
-          <p className="text-sm text-gray-400 text-center mt-3">
+          <p className="text-base text-gray-300 text-center mt-6 font-medium">
             スマートホーム機能を標準装備した最新の住宅システム
           </p>
         </motion.div>

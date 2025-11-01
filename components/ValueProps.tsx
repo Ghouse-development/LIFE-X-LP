@@ -56,8 +56,8 @@ export function ValueProps() {
   });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-40 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -97,15 +97,15 @@ export function ValueProps() {
               {/* Title */}
               <h3 className="text-lg font-bold mb-6 text-center text-gray-700">{value.title}</h3>
 
-              {/* Main Value - HUGE */}
-              <div className="mb-3 text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              {/* Main Value - 超巨大化 */}
+              <div className="mb-4 text-center">
+                <div className="text-5xl md:text-7xl font-bold text-gray-900 leading-none">
                   {value.mainValue}
                 </div>
               </div>
 
               {/* Sub Value */}
-              <div className="text-lg font-medium text-gray-600 mb-6 text-center">
+              <div className="text-xl md:text-2xl font-medium text-gray-600 mb-8 text-center">
                 {value.subValue}
               </div>
 

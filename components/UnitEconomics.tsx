@@ -12,8 +12,8 @@ export function UnitEconomics() {
   });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-40 px-4 bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -24,23 +24,24 @@ export function UnitEconomics() {
           <p className="text-gray-600 text-lg">{financeData.description}</p>
         </motion.div>
 
-        {/* 図解: 収益モデル概念図 */}
+        {/* 図解: 収益モデル概念図 - 巨大化 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-pg-5 max-w-4xl mx-auto"
+          className="mb-16 max-w-6xl mx-auto"
         >
-          <div className="relative aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/cases/case-20.jpg"
               alt="LIFE X 収益モデル図解"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 896px"
+              sizes="100vw"
+              priority
             />
           </div>
-          <p className="text-sm text-gray-500 text-center mt-3">
+          <p className="text-base text-gray-600 text-center mt-6 font-medium">
             高性能住宅による安定した収益モデル
           </p>
         </motion.div>
@@ -71,15 +72,15 @@ export function UnitEconomics() {
               {/* Title */}
               <h3 className="text-lg font-bold mb-6 text-center text-gray-700">{model.title}</h3>
 
-              {/* Main Value - HUGE */}
-              <div className="mb-3 text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              {/* Main Value - 超巨大化 */}
+              <div className="mb-4 text-center">
+                <div className="text-6xl md:text-8xl font-bold text-gray-900 leading-none">
                   {model.mainValue}
                 </div>
               </div>
 
               {/* Sub Value */}
-              <div className="text-lg font-medium text-gray-600 mb-6 text-center">
+              <div className="text-2xl md:text-3xl font-medium text-gray-600 mb-8 text-center">
                 {model.subValue}
               </div>
 
