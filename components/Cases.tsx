@@ -116,7 +116,7 @@ export function Cases() {
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              従来のFCは初期投資が大きく、人員も10名以上必要でした。LIFE Xは最小2名でスタートでき、本部の手厚いサポートで3ヶ月で初受注できました。設計・積算は本部が型を提供してくれるので、営業に集中できます。
+              大手FC説明会で1,500万円の初期投資を提示され、躊躇していました。LIFE Xは加盟金300万円。「これなら勝負できる」と即決しました。研修で設計・積算の型を習得し、営業だけに集中。開業3ヶ月で地元工務店との競合に勝ち、初受注を獲得。本部の遠隔サポートで無事引き渡しまで完了しました。
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
               <div className="text-center py-2 sm:py-0">
@@ -159,7 +159,7 @@ export function Cases() {
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              地場ビルダーとして活動していましたが、高性能住宅への対応と集客に課題がありました。LIFE Xの規格住宅は設計が標準化されており、営業資料も充実。初年度から目標を大きく上回る売上を達成しました。
+              地場ビルダーとして5年。高性能住宅の需要は感じるも、設計ノウハウがなく見積もりに2週間かかっていました。LIFE Xは設計図面・積算シートを即提供。商談スピードが3倍に加速。初年度2棟で4,500万円の売上を達成。「もっと早く出会いたかった」というのが本音です。
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
               <div className="text-center py-2 sm:py-0">
@@ -202,7 +202,7 @@ export function Cases() {
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              建設業界未経験でしたが、LIFE Xの充実した研修プログラムと本部サポートで5ヶ月で2棟受注。施工管理も本部が遠隔サポートしてくれるので、営業とお客様対応に専念できます。月次ウェビナーで最新ノウハウも学べます。
+              不動産業界から転身。建設の知識ゼロから挑戦しました。3週間の研修で商品知識・営業トークを習得。5ヶ月目、初めてのお客様が「高性能なのにこの価格？」と即決。本部の施工サポートで無事竣工。2棟目も紹介で受注できました。業界未経験でもできると実感しています。
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
               <div className="text-center py-2 sm:py-0">
