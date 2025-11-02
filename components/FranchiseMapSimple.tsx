@@ -243,7 +243,7 @@ export function FranchiseMapSimple() {
     setIsClient(true);
 
     const fetchStores = async () => {
-      if (!isSupabaseConfigured() || !supabase) {
+      if (!isSupabaseConfigured || !supabase) {
         return;
       }
 
