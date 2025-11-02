@@ -101,7 +101,7 @@ export function Flow() {
           <div className="flex items-center justify-between mt-6">
             <button
               onClick={handlePrev}
-              className="px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
+              className="px-4 py-2 md:px-6 md:py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-sm md:text-base"
               aria-label="前へ"
             >
               ← 前へ
@@ -122,7 +122,7 @@ export function Flow() {
 
             <button
               onClick={handleNext}
-              className="px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
+              className="px-4 py-2 md:px-6 md:py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-sm md:text-base"
               aria-label="次へ"
             >
               次へ →
@@ -142,7 +142,7 @@ export function Flow() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-pg-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 mx-auto mb-4 bg-success-green rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 ✓
               </div>
               <h4 className="font-bold text-lg mb-2 text-gray-900">毎月ウェビナー開催</h4>
@@ -151,7 +151,7 @@ export function Flow() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-pg-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 mx-auto mb-4 bg-success-green rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 ✓
               </div>
               <h4 className="font-bold text-lg mb-2 text-gray-900">施工サポート</h4>
@@ -160,7 +160,7 @@ export function Flow() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-pg-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 mx-auto mb-4 bg-success-green rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 ✓
               </div>
               <h4 className="font-bold text-lg mb-2 text-gray-900">集客支援</h4>
