@@ -31,7 +31,7 @@ export function Cases() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-6xl mx-auto"
         >
-          <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-lg border-2 border-gray-200">
             <Image
               src="/cases/case-20.jpg"
               alt="LIFE X 高性能住宅コンセプト"
@@ -43,12 +43,12 @@ export function Cases() {
           </div>
 
           {/* 3つのキーメトリクス - 巨大表示 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-16">
             <div className="text-center">
               <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-3">
                 気密性
               </div>
-              <div className="text-5xl md:text-7xl font-bold text-gray-900 mb-2">
+              <div className="text-5xl md:text-7xl font-bold text-success-green mb-2">
                 0.24
               </div>
               <div className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
@@ -62,7 +62,7 @@ export function Cases() {
               <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-3">
                 断熱性
               </div>
-              <div className="text-5xl md:text-7xl font-bold text-gray-900 mb-2">
+              <div className="text-5xl md:text-7xl font-bold text-success-green mb-2">
                 0.46
               </div>
               <div className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
@@ -76,7 +76,7 @@ export function Cases() {
               <div className="text-sm md:text-base font-medium text-gray-500 uppercase tracking-wider mb-3">
                 耐震性
               </div>
-              <div className="text-5xl md:text-7xl font-bold text-gray-900 mb-2">
+              <div className="text-5xl md:text-7xl font-bold text-success-green mb-2">
                 等級3
               </div>
               <div className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
@@ -118,16 +118,16 @@ export function Cases() {
             <p className="text-gray-700 leading-relaxed mb-6">
               従来のFCは初期投資が大きく、人員も10名以上必要でした。LIFE Xは最小2名でスタートでき、本部の手厚いサポートで3ヶ月で初受注できました。設計・積算は本部が型を提供してくれるので、営業に集中できます。
             </p>
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
-              <div className="text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">初年度売上見込</p>
-                <p className="text-lg font-bold text-gray-900">3,200万円</p>
+                <p className="text-lg font-bold text-revenue-orange">3,200万円</p>
               </div>
-              <div className="text-center">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">粗利率</p>
-                <p className="text-lg font-bold text-gray-900">32%</p>
+                <p className="text-lg font-bold text-revenue-orange">32%</p>
               </div>
-              <div className="text-center">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">開業時人員</p>
                 <p className="text-lg font-bold text-gray-900">2名</p>
               </div>
@@ -161,18 +161,18 @@ export function Cases() {
             <p className="text-gray-700 leading-relaxed mb-6">
               地場ビルダーとして活動していましたが、高性能住宅への対応と集客に課題がありました。LIFE Xの規格住宅は設計が標準化されており、営業資料も充実。初年度から目標を大きく上回る売上を達成しました。
             </p>
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
-              <div className="text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">初年度売上</p>
-                <p className="text-lg font-bold text-gray-900">4,500万円</p>
+                <p className="text-lg font-bold text-revenue-orange">4,500万円</p>
               </div>
-              <div className="text-center">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">粗利率</p>
-                <p className="text-lg font-bold text-gray-900">35%</p>
+                <p className="text-lg font-bold text-revenue-orange">35%</p>
               </div>
-              <div className="text-center">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">受注棟数</p>
-                <p className="text-lg font-bold text-gray-900">2棟</p>
+                <p className="text-lg font-bold text-success-green">2棟</p>
               </div>
             </div>
           </motion.div>
@@ -204,16 +204,16 @@ export function Cases() {
             <p className="text-gray-700 leading-relaxed mb-6">
               建設業界未経験でしたが、LIFE Xの充実した研修プログラムと本部サポートで5ヶ月で2棟受注。施工管理も本部が遠隔サポートしてくれるので、営業とお客様対応に専念できます。月次ウェビナーで最新ノウハウも学べます。
             </p>
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
-              <div className="text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">開業5ヶ月売上</p>
-                <p className="text-lg font-bold text-gray-900">3,800万円</p>
+                <p className="text-lg font-bold text-revenue-orange">3,800万円</p>
               </div>
-              <div className="text-center">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">粗利率</p>
-                <p className="text-lg font-bold text-gray-900">33%</p>
+                <p className="text-lg font-bold text-revenue-orange">33%</p>
               </div>
-              <div className="text-center">
+              <div className="text-center py-2 sm:py-0">
                 <p className="text-sm text-gray-500 mb-1">開業時人員</p>
                 <p className="text-lg font-bold text-gray-900">3名</p>
               </div>

@@ -14,6 +14,10 @@ export default {
         // PG HOUSE カラースキーム
         'pg-blue': '#0693e3',
         'pg-gray': '#32373c',
+        // 戦略的カラーパレット
+        'success-green': '#10b981',      // 成功・実績・達成
+        'revenue-orange': '#f97316',     // 収益・CTA・緊急性
+        'trust-navy': '#1e3a8a',         // 信頼・保証・安心
       },
       // PG HOUSE デザインシステム
       fontSize: {

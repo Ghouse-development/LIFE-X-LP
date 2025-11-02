@@ -51,17 +51,17 @@ export function Hero() {
         </p>
 
         {/* Trust Indicators - 競合分析から追加 */}
-        <div className="mb-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm md:text-base">
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2">
-            <span className="text-blue-400 font-bold">12</span>
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-3 md:gap-5 text-sm md:text-base">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-5 py-2">
+            <span className="text-success-green font-bold">12</span>
             <span>加盟店</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2">
-            <span className="text-blue-400 font-bold">4.2</span>
+            <span className="text-success-green font-bold">4.2</span>
             <span>満足度</span>
           </div>
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2">
-            <span className="text-blue-400 font-bold">3〜6ヶ月</span>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-3 py-2">
+            <span className="text-pg-blue font-bold">3〜6ヶ月</span>
             <span>開業</span>
           </div>
         </div>
@@ -85,11 +85,11 @@ export function Hero() {
               href={cta.href}
               onClick={() => handleCTAClick(cta.label, cta.href)}
               className={`
-                px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105
+                px-6 py-3 md:px-10 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all duration-300 hover:scale-105
                 ${
                   cta.variant === 'primary'
-                    ? 'bg-pg-blue hover:bg-[#0580ca] text-white shadow-2xl hover:shadow-pg-blue/50'
-                    : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border-2 border-white/50 shadow-lg'
+                    ? 'bg-revenue-orange hover:bg-orange-600 text-white shadow-2xl hover:shadow-revenue-orange/50'
+                    : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border-2 border-white/50'
                 }
               `}
             >

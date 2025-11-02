@@ -26,7 +26,7 @@ export function UnitEconomics() {
         </motion.div>
 
         {/* シンプルな数字表示 - カードなし */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 max-w-6xl mx-auto">
           {financeData.models.map((model, index) => (
             <motion.div
               key={index}
@@ -42,7 +42,7 @@ export function UnitEconomics() {
 
               {/* Main Value - 巨大 */}
               <div className="mb-3">
-                <div className="text-5xl md:text-7xl font-bold text-gray-900 leading-none">
+                <div className="text-5xl md:text-7xl font-bold text-revenue-orange leading-none">
                   {model.mainValue}
                 </div>
               </div>
@@ -65,7 +65,7 @@ export function UnitEconomics() {
           <Link
             href="#form"
             onClick={() => trackCTAClick('詳しい収益シミュレーションを見る', '#form')}
-            className="inline-block px-10 py-4 bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-colors"
+            className="inline-block px-6 py-3 md:px-10 md:py-4 bg-revenue-orange text-white font-bold text-base md:text-lg rounded-lg hover:bg-orange-600 transition-all duration-300 hover:scale-105 shadow-xl"
           >
             詳しい収益シミュレーションを見る
           </Link>

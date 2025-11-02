@@ -58,13 +58,13 @@ export function Comparison() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+          className="bg-white rounded-2xl border-2 border-gray-200 shadow-lg overflow-hidden"
         >
           {/* Header */}
-          <div className="grid grid-cols-3 gap-0 bg-gray-900 text-white p-6">
-            <div className="text-center text-sm md:text-base font-medium">項目</div>
-            <div className="text-center text-sm md:text-base font-medium">従来の住宅FC</div>
-            <div className="text-center text-sm md:text-base font-medium bg-blue-600 rounded-lg p-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 bg-gray-900 text-white p-4 md:p-6">
+            <div className="text-center text-sm md:text-base font-medium py-2 md:py-0">項目</div>
+            <div className="text-center text-sm md:text-base font-medium py-2 md:py-0">従来の住宅FC</div>
+            <div className="text-center text-sm md:text-base font-medium bg-success-green rounded-lg p-2">
               LIFE X
             </div>
           </div>
@@ -77,17 +77,17 @@ export function Comparison() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                className="grid grid-cols-3 gap-0 p-6 hover:bg-gray-50 transition-colors"
+                className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-0 p-4 md:p-6 hover:bg-gray-50 transition-colors"
               >
-                <div className="text-center md:text-left font-semibold text-gray-900 text-sm md:text-base">
+                <div className="text-center md:text-left font-semibold text-gray-900 text-sm md:text-base py-2 md:py-0">
                   {item.category}
                 </div>
-                <div className="text-center text-gray-600 flex items-center justify-center text-sm md:text-base">
+                <div className="text-center text-gray-600 flex items-center justify-center text-sm md:text-base py-2 md:py-0">
                   <X className="w-4 h-4 mr-1 text-red-500 flex-shrink-0" />
                   <span>{item.traditional}</span>
                 </div>
-                <div className="text-center text-gray-900 font-semibold flex items-center justify-center text-sm md:text-base">
-                  <Check className="w-4 h-4 mr-1 text-green-500 flex-shrink-0" />
+                <div className="text-center text-gray-900 font-semibold flex items-center justify-center text-sm md:text-base py-2 md:py-0">
+                  <Check className="w-4 h-4 mr-1 text-success-green flex-shrink-0" />
                   <span>{item.lifex}</span>
                 </div>
               </motion.div>
@@ -95,7 +95,7 @@ export function Comparison() {
           </div>
 
           {/* Footer CTA */}
-          <div className="bg-blue-50 p-8 text-center">
+          <div className="bg-green-50 p-6 md:p-8 text-center">
             <p className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
               初期投資を70%削減、開業期間を75%短縮
             </p>
@@ -105,7 +105,7 @@ export function Comparison() {
             <Link
               href="#form"
               onClick={() => trackCTAClick('無料相談に申し込む', '#form')}
-              className="inline-block px-10 py-4 bg-gray-900 text-white font-bold text-base rounded-lg hover:bg-gray-800 transition-colors"
+              className="inline-block px-6 py-3 md:px-10 md:py-4 bg-revenue-orange text-white font-bold text-base md:text-lg rounded-lg hover:bg-orange-600 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               無料相談に申し込む
             </Link>

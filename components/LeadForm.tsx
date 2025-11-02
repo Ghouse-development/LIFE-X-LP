@@ -166,7 +166,7 @@ export function LeadForm() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-gray-800 p-8 rounded-2xl shadow-2xl space-y-6 border border-gray-700"
+          className="bg-gray-800 p-6 md:p-8 rounded-2xl shadow-xl space-y-6 border border-gray-700"
         >
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -271,7 +271,7 @@ export function LeadForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-5 bg-blue-600 text-white font-bold text-xl rounded-lg hover:bg-blue-700 transition-all duration-300 disabled:bg-gray-600 disabled:cursor-not-allowed shadow-2xl hover:scale-105"
+            className="w-full px-6 py-4 md:px-8 md:py-5 bg-revenue-orange text-white font-bold text-lg md:text-xl rounded-lg hover:bg-orange-600 transition-all duration-300 disabled:bg-gray-600 disabled:cursor-not-allowed shadow-xl hover:scale-105"
           >
             {isSubmitting ? '送信中...' : '無料で資料請求・相談する'}
           </button>
