@@ -8,24 +8,21 @@
       "icon": "chart-yen",
       "mainValue": "500~800",
       "subValue": "万円/棟",
-      "note": "坪単価55~70万円想定",
-      "context": "建売2,000万円時代に注文住宅2,500万円で勝負。本部の型により原価率65%を実現。"
+      "note": "坪単価55~70万円想定"
     },
     {
       "title": "初年度販促費",
       "icon": "megaphone-ab",
       "mainValue": "300~600",
       "subValue": "万円/年",
-      "note": "Web広告+モデルハウス等",
-      "context": "大手FCは年間1,000万円超。LIFE XはWeb広告とSNSで最小投資。本部が営業資料を提供。"
+      "note": "Web広告+モデルハウス等"
     },
     {
       "title": "損益分岐点",
       "icon": "timeline-6",
       "mainValue": "4~6棟",
       "subValue": "初年度",
-      "note": "最小構成での試算",
-      "context": "2名体制で開業3ヶ月目から着工開始。半年で損益分岐を超える加盟店が8割。"
+      "note": "最小構成での試算"
     }
   ]
 }

@@ -48,16 +48,9 @@ export function UnitEconomics() {
               </div>
 
               {/* Sub Value */}
-              <div className="text-xl md:text-2xl font-medium text-gray-600 mb-4">
+              <div className="text-xl md:text-2xl font-medium text-gray-600">
                 {model.subValue}
               </div>
-
-              {/* Context - ストーリー性追加 */}
-              {model.context && (
-                <p className="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
-                  {model.context}
-                </p>
-              )}
             </motion.div>
           ))}
         </div>
