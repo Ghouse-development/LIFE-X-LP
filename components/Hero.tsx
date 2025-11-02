@@ -88,7 +88,7 @@ export function Hero() {
                 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105
                 ${
                   cta.variant === 'primary'
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50'
+                    ? 'bg-pg-blue hover:bg-[#0580ca] text-white shadow-2xl hover:shadow-pg-blue/50'
                     : 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border-2 border-white/50 shadow-lg'
                 }
               `}

@@ -39,7 +39,7 @@ export function Flow() {
   };
 
   return (
-    <section ref={ref} className="py-40 px-4 bg-gray-900 text-white">
+    <section ref={ref} className="py-40 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,8 +47,8 @@ export function Flow() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">導入の流れ</h2>
-          <p className="text-xl md:text-2xl text-gray-300">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">導入の流れ</h2>
+          <p className="text-xl md:text-2xl text-gray-600">
             3ステップ、3〜6ヶ月で開業
           </p>
         </motion.div>
@@ -135,36 +135,36 @@ export function Flow() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-20 bg-gray-800 rounded-3xl p-8 md:p-12 border border-gray-700"
+          className="mt-20 bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
             充実のサポート体制
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 mx-auto mb-4 bg-pg-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 ✓
               </div>
-              <h4 className="font-bold text-lg mb-2">毎月ウェビナー開催</h4>
-              <p className="text-sm text-gray-300">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">毎月ウェビナー開催</h4>
+              <p className="text-sm text-gray-600">
                 最新の営業ノウハウ、施工事例、集客手法を毎月共有。オンラインで全国から参加可能。
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 mx-auto mb-4 bg-pg-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 ✓
               </div>
-              <h4 className="font-bold text-lg mb-2">施工サポート</h4>
-              <p className="text-sm text-gray-300">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">施工サポート</h4>
+              <p className="text-sm text-gray-600">
                 設計図面の提供、施工マニュアル完備、現場管理のサポート。本部が遠隔でバックアップ。
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 mx-auto mb-4 bg-pg-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
                 ✓
               </div>
-              <h4 className="font-bold text-lg mb-2">集客支援</h4>
-              <p className="text-sm text-gray-300">
+              <h4 className="font-bold text-lg mb-2 text-gray-900">集客支援</h4>
+              <p className="text-sm text-gray-600">
                 営業資料・チラシのテンプレート提供、WEBサイト構築支援、SNS運用アドバイス。
               </p>
             </div>

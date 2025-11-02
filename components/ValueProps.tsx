@@ -43,10 +43,10 @@ export function ValueProps() {
           transition={{ duration: 0.5 }}
           className="text-center mb-pg-5"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-pg-xl md:text-5xl font-bold mb-6">
             3つの強み
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-pg-base md:text-2xl text-gray-600 max-w-3xl mx-auto">
             高収益×高品質×短期立上げ
           </p>
 
@@ -71,7 +71,7 @@ export function ValueProps() {
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded p-pg-4 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-lg p-pg-4 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-pg-blue"
             >
               {/* Icon */}
               <div className="w-20 h-20 mb-6 mx-auto">
@@ -120,22 +120,22 @@ export function ValueProps() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-2">12</div>
+                <div className="text-5xl md:text-6xl font-bold text-pg-blue mb-2">12</div>
                 <div className="text-sm md:text-base font-medium text-gray-700">加盟店数</div>
                 <div className="text-xs text-gray-500 mt-1">全国展開中</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-2">3,800</div>
+                <div className="text-5xl md:text-6xl font-bold text-pg-blue mb-2">3,800</div>
                 <div className="text-sm md:text-base font-medium text-gray-700">平均年商（万円）</div>
                 <div className="text-xs text-gray-500 mt-1">初年度実績</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-2">4.2</div>
+                <div className="text-5xl md:text-6xl font-bold text-pg-blue mb-2">4.2</div>
                 <div className="text-sm md:text-base font-medium text-gray-700">オーナー満足度</div>
                 <div className="text-xs text-gray-500 mt-1">5点満点中</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-2">3〜6</div>
+                <div className="text-5xl md:text-6xl font-bold text-pg-blue mb-2">3〜6</div>
                 <div className="text-sm md:text-base font-medium text-gray-700">開業期間（ヶ月）</div>
                 <div className="text-xs text-gray-500 mt-1">最短3ヶ月</div>
               </div>

@@ -35,7 +35,8 @@
       "WebFetch(domain:www.aerafc.jp)",
       "WebFetch(domain:www.cleverlyhome.com)",
       "WebFetch(domain:www.lixil-jk.co.jp)",
-      "WebFetch(domain:green-energy.co.jp)"
+      "WebFetch(domain:green-energy.co.jp)",
+      "WebFetch(domain:www.pg-house.jp)"
     ],
     "deny": [],
     "ask": []

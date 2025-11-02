@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        // PG HOUSE カラースキーム
+        'pg-blue': '#0693e3',
+        'pg-gray': '#32373c',
       },
       // PG HOUSE デザインシステム
       fontSize: {

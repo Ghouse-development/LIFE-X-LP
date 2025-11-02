@@ -40,7 +40,7 @@ export function Comparison() {
   });
 
   return (
-    <section ref={ref} className="py-40 px-4 bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+    <section ref={ref} className="py-40 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
