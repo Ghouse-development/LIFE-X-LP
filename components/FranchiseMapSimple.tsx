@@ -215,8 +215,10 @@ const defaultStores: Store[] = [
 ];
 
 // Leafletアイコンの設定（クライアントサイドでのみ）
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let DefaultIcon: any;
 if (typeof window !== 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const L = require('leaflet');
   DefaultIcon = L.icon({
     iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
