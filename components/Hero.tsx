@@ -111,8 +111,8 @@ export function Hero() {
           className="mt-8 max-w-2xl mx-auto"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-            <div className="flex items-center justify-center gap-2 bg-green-600/20 backdrop-blur-sm border border-green-500/40 rounded-lg px-4 py-3">
-              <span className="text-green-400 text-lg">✓</span>
+            <div className="flex items-center justify-center gap-2 bg-trust-navy/30 backdrop-blur-sm border border-trust-navy/50 rounded-lg px-4 py-3">
+              <span className="text-blue-400 text-lg">✓</span>
               <span className="text-white/90">初年度売上未達なら研修費返金</span>
             </div>
             <div className="flex items-center justify-center gap-2 bg-amber-600/20 backdrop-blur-sm border border-amber-500/40 rounded-lg px-4 py-3">
