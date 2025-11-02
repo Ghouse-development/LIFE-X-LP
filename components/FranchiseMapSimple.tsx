@@ -1,10 +1,30 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { MapPin } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import 'leaflet/dist/leaflet.css';
+
+// Dynamic import to avoid SSR issues with Leaflet
+const MapContainer = dynamic(
+  () => import('react-leaflet').then((mod) => mod.MapContainer),
+  { ssr: false }
+);
+const TileLayer = dynamic(
+  () => import('react-leaflet').then((mod) => mod.TileLayer),
+  { ssr: false }
+);
+const Marker = dynamic(
+  () => import('react-leaflet').then((mod) => mod.Marker),
+  { ssr: false }
+);
+const Popup = dynamic(
+  () => import('react-leaflet').then((mod) => mod.Popup),
+  { ssr: false }
+);
 
 interface Store {
   id: string;
@@ -14,21 +34,62 @@ interface Store {
   address: string;
   full_address: string;
   joined_date: string;
+  latitude?: number;
+  longitude?: number;
 }
 
-// 地域別グループ（PG HOUSEスタイル）
-const regions = [
-  { name: '北海道・東北', prefectures: ['北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県'] },
-  { name: '関東', prefectures: ['茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県'] },
-  { name: '甲信越・北陸', prefectures: ['新潟県', '富山県', '石川県', '福井県', '山梨県', '長野県'] },
-  { name: '東海', prefectures: ['岐阜県', '静岡県', '愛知県', '三重県'] },
-  { name: '関西', prefectures: ['滋賀県', '京都府', '大阪府', '兵庫県', '奈良県', '和歌山県'] },
-  { name: '中国', prefectures: ['鳥取県', '島根県', '岡山県', '広島県', '山口県'] },
-  { name: '四国', prefectures: ['徳島県', '香川県', '愛媛県', '高知県'] },
-  { name: '九州・沖縄', prefectures: ['福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県'] },
-];
+// 都道府県の中心座標マッピング
+const prefectureCoordinates: Record<string, { lat: number; lng: number }> = {
+  '北海道': { lat: 43.064, lng: 141.347 },
+  '青森県': { lat: 40.824, lng: 140.740 },
+  '岩手県': { lat: 39.704, lng: 141.153 },
+  '宮城県': { lat: 38.269, lng: 140.872 },
+  '秋田県': { lat: 39.719, lng: 140.103 },
+  '山形県': { lat: 38.240, lng: 140.364 },
+  '福島県': { lat: 37.750, lng: 140.468 },
+  '茨城県': { lat: 36.342, lng: 140.447 },
+  '栃木県': { lat: 36.566, lng: 139.883 },
+  '群馬県': { lat: 36.391, lng: 139.061 },
+  '埼玉県': { lat: 35.857, lng: 139.649 },
+  '千葉県': { lat: 35.605, lng: 140.123 },
+  '東京都': { lat: 35.690, lng: 139.692 },
+  '神奈川県': { lat: 35.448, lng: 139.643 },
+  '新潟県': { lat: 37.902, lng: 139.023 },
+  '富山県': { lat: 36.696, lng: 137.213 },
+  '石川県': { lat: 36.595, lng: 136.626 },
+  '福井県': { lat: 36.065, lng: 136.222 },
+  '山梨県': { lat: 35.664, lng: 138.568 },
+  '長野県': { lat: 36.651, lng: 138.181 },
+  '岐阜県': { lat: 35.391, lng: 136.722 },
+  '静岡県': { lat: 34.977, lng: 138.383 },
+  '愛知県': { lat: 35.181, lng: 136.907 },
+  '三重県': { lat: 34.730, lng: 136.509 },
+  '滋賀県': { lat: 35.004, lng: 135.869 },
+  '京都府': { lat: 35.021, lng: 135.756 },
+  '大阪府': { lat: 34.686, lng: 135.520 },
+  '兵庫県': { lat: 34.691, lng: 135.183 },
+  '奈良県': { lat: 34.685, lng: 135.833 },
+  '和歌山県': { lat: 34.226, lng: 135.167 },
+  '鳥取県': { lat: 35.504, lng: 134.238 },
+  '島根県': { lat: 35.472, lng: 133.051 },
+  '岡山県': { lat: 34.662, lng: 133.935 },
+  '広島県': { lat: 34.397, lng: 132.460 },
+  '山口県': { lat: 34.186, lng: 131.471 },
+  '徳島県': { lat: 34.066, lng: 134.559 },
+  '香川県': { lat: 34.340, lng: 134.043 },
+  '愛媛県': { lat: 33.842, lng: 132.766 },
+  '高知県': { lat: 33.560, lng: 133.531 },
+  '福岡県': { lat: 33.606, lng: 130.418 },
+  '佐賀県': { lat: 33.249, lng: 130.300 },
+  '長崎県': { lat: 32.745, lng: 129.874 },
+  '熊本県': { lat: 32.790, lng: 130.742 },
+  '大分県': { lat: 33.238, lng: 131.613 },
+  '宮崎県': { lat: 31.911, lng: 131.424 },
+  '鹿児島県': { lat: 31.560, lng: 130.558 },
+  '沖縄県': { lat: 26.212, lng: 127.681 },
+};
 
-// 仮データ（Supabaseテーブル作成前も表示されるように）
+// 仮データ（Supabaseテーブル作成前も表示されるように）- 座標付き
 const defaultStores: Store[] = [
   {
     id: '1',
@@ -38,6 +99,8 @@ const defaultStores: Store[] = [
     address: '大町2979-1',
     full_address: '栃木県佐野市大町2979-1',
     joined_date: '2024-11-01',
+    latitude: 36.566,
+    longitude: 139.883,
   },
   {
     id: '2',
@@ -47,6 +110,8 @@ const defaultStores: Store[] = [
     address: '渋谷1-1-1',
     full_address: '東京都渋谷区渋谷1-1-1',
     joined_date: '2024-06-15',
+    latitude: 35.690,
+    longitude: 139.692,
   },
   {
     id: '3',
@@ -56,6 +121,8 @@ const defaultStores: Store[] = [
     address: '北区梅田1-1-1',
     full_address: '大阪府大阪市北区梅田1-1-1',
     joined_date: '2024-08-20',
+    latitude: 34.686,
+    longitude: 135.520,
   },
   {
     id: '4',
@@ -65,6 +132,8 @@ const defaultStores: Store[] = [
     address: '博多区博多駅前1-1-1',
     full_address: '福岡県福岡市博多区博多駅前1-1-1',
     joined_date: '2024-04-10',
+    latitude: 33.606,
+    longitude: 130.418,
   },
   {
     id: '5',
@@ -74,6 +143,8 @@ const defaultStores: Store[] = [
     address: '中村区名駅1-1-1',
     full_address: '愛知県名古屋市中村区名駅1-1-1',
     joined_date: '2024-05-22',
+    latitude: 35.181,
+    longitude: 136.907,
   },
   {
     id: '6',
@@ -83,6 +154,8 @@ const defaultStores: Store[] = [
     address: '中央区北1条西1-1-1',
     full_address: '北海道札幌市中央区北1条西1-1-1',
     joined_date: '2024-03-15',
+    latitude: 43.064,
+    longitude: 141.347,
   },
   {
     id: '7',
@@ -92,6 +165,8 @@ const defaultStores: Store[] = [
     address: '中区紙屋町1-1-1',
     full_address: '広島県広島市中区紙屋町1-1-1',
     joined_date: '2024-07-08',
+    latitude: 34.397,
+    longitude: 132.460,
   },
   {
     id: '8',
@@ -100,7 +175,9 @@ const defaultStores: Store[] = [
     city: '仙台市',
     address: '青葉区中央1-1-1',
     full_address: '宮城県仙台市青葉区中央1-1-1',
-    joined_date: '2024-02-28',
+    joined_date: '2024-09-12',
+    latitude: 38.269,
+    longitude: 140.872,
   },
   {
     id: '9',
@@ -109,50 +186,62 @@ const defaultStores: Store[] = [
     city: '静岡市',
     address: '葵区呉服町1-1-1',
     full_address: '静岡県静岡市葵区呉服町1-1-1',
-    joined_date: '2024-09-12',
+    joined_date: '2024-02-25',
+    latitude: 34.977,
+    longitude: 138.383,
   },
   {
     id: '10',
+    name: 'LIFE X 京都',
+    prefecture: '京都府',
+    city: '京都市',
+    address: '下京区烏丸通1-1-1',
+    full_address: '京都府京都市下京区烏丸通1-1-1',
+    joined_date: '2024-10-03',
+    latitude: 35.021,
+    longitude: 135.756,
+  },
+  {
+    id: '11',
     name: 'LIFE X 神奈川',
     prefecture: '神奈川県',
     city: '横浜市',
     address: '西区みなとみらい1-1-1',
     full_address: '神奈川県横浜市西区みなとみらい1-1-1',
-    joined_date: '2024-01-20',
-  },
-  {
-    id: '11',
-    name: 'LIFE X 兵庫',
-    prefecture: '兵庫県',
-    city: '神戸市',
-    address: '中央区三宮町1-1-1',
-    full_address: '兵庫県神戸市中央区三宮町1-1-1',
-    joined_date: '2024-10-05',
-  },
-  {
-    id: '12',
-    name: 'LIFE X 埼玉',
-    prefecture: '埼玉県',
-    city: 'さいたま市',
-    address: '大宮区桜木町1-1-1',
-    full_address: '埼玉県さいたま市大宮区桜木町1-1-1',
-    joined_date: '2024-12-01',
+    joined_date: '2024-01-18',
+    latitude: 35.448,
+    longitude: 139.643,
   },
 ];
 
+// Leafletアイコンの設定（クライアントサイドでのみ）
+let DefaultIcon: any;
+if (typeof window !== 'undefined') {
+  const L = require('leaflet');
+  DefaultIcon = L.icon({
+    iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+    iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+    shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+}
+
 export function FranchiseMapSimple() {
   const [stores, setStores] = useState<Store[]>(defaultStores);
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  // 加盟店データを取得（Supabaseから）
   useEffect(() => {
+    setIsClient(true);
+
     const fetchStores = async () => {
-      // Supabaseが設定されていない場合は早期リターン
-      if (!isSupabaseConfigured) {
+      if (!isSupabaseConfigured() || !supabase) {
         return;
       }
 
@@ -162,31 +251,38 @@ export function FranchiseMapSimple() {
           .select('*')
           .order('joined_date', { ascending: false });
 
-        if (error) {
-          console.log('Supabase stores table not ready, using default data');
-          return; // エラー時は仮データのまま
-        }
+        if (error) throw error;
 
         if (data && data.length > 0) {
-          setStores(data); // データがあれば上書き
+          // Supabaseデータに緯度経度がない場合は都道府県から推定
+          const storesWithCoords = data.map((store: Store) => {
+            if (store.latitude && store.longitude) {
+              return store;
+            }
+            const coords = prefectureCoordinates[store.prefecture];
+            if (coords) {
+              // 市区町村によって少しランダムにずらす
+              const offset = 0.1;
+              return {
+                ...store,
+                latitude: coords.lat + (Math.random() - 0.5) * offset,
+                longitude: coords.lng + (Math.random() - 0.5) * offset,
+              };
+            }
+            return store;
+          });
+          setStores(storesWithCoords);
         }
       } catch (error) {
-        console.log('Error fetching stores, using default data:', error);
+        console.error('Error fetching stores:', error);
       }
     };
 
     fetchStores();
   }, []);
 
-  // 地域別の加盟店数を計算
-  const getStoresByRegion = (prefectures: string[]) => {
-    return stores.filter(store => prefectures.includes(store.prefecture));
-  };
-
-  // 選択された地域の加盟店
-  const selectedStores = selectedRegion
-    ? getStoresByRegion(regions.find(r => r.name === selectedRegion)?.prefectures || [])
-    : stores;
+  // 日本の中心座標
+  const center: [number, number] = [36.5, 138.0];
 
   return (
     <section ref={ref} className="py-40 px-4 bg-gray-50">
@@ -195,225 +291,98 @@ export function FranchiseMapSimple() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-pg-5"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            全国の加盟店
-          </h2>
-          <p className="text-gray-600 text-lg">
-            現在、全国{stores.length}店舗で展開中。お近くの加盟店を探してみてください。
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">全国展開中</h2>
+          <p className="text-xl md:text-2xl text-gray-600">
+            {stores.length}店舗の加盟店が全国で活躍中
           </p>
         </motion.div>
 
-        {/* 日本地図ビジュアル - 白地図 + ピン配置 */}
+        {/* 地図表示 */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mb-12 bg-gradient-to-b from-blue-50 to-white rounded-3xl p-8"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
         >
-          <div className="max-w-4xl mx-auto">
-            <svg viewBox="0 0 1000 1200" className="w-full h-auto">
-              {/* 日本地図（白地図） */}
-              <g id="japan-map" fill="#f9fafb" stroke="#9ca3af" strokeWidth="2">
-                {/* 北海道 */}
-                <path d="M 820,80 L 900,60 L 950,100 L 940,180 L 880,200 L 800,180 L 780,120 Z" />
+          <div className="h-[600px] relative">
+            {isClient && (
+              <MapContainer
+                center={center}
+                zoom={5}
+                style={{ height: '100%', width: '100%' }}
+                scrollWheelZoom={false}
+              >
+                {/* CartoDB Positron - シンプルな白地図 */}
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                  url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                  subdomains="abcd"
+                  maxZoom={20}
+                />
 
-                {/* 本州 */}
-                {/* 東北地方 */}
-                <path d="M 850,220 L 900,240 L 920,320 L 900,400 L 880,450 L 860,480 L 840,460 L 820,420 L 800,360 L 810,280 L 830,240 Z" />
+                {stores.map((store) => {
+                  if (!store.latitude || !store.longitude) return null;
 
-                {/* 関東地方 */}
-                <path d="M 860,480 L 880,510 L 900,540 L 920,580 L 900,620 L 860,640 L 820,630 L 800,600 L 790,560 L 810,520 L 840,490 Z" />
-
-                {/* 中部地方 */}
-                <path d="M 790,560 L 800,600 L 780,640 L 740,660 L 700,670 L 660,660 L 640,630 L 650,590 L 680,560 L 720,550 L 760,555 Z" />
-
-                {/* 近畿地方 */}
-                <path d="M 660,660 L 700,670 L 720,700 L 720,740 L 680,760 L 640,750 L 610,720 L 620,680 L 640,665 Z" />
-
-                {/* 中国地方 */}
-                <path d="M 610,720 L 640,750 L 620,790 L 560,810 L 480,820 L 420,810 L 400,780 L 420,740 L 480,730 L 540,735 L 590,730 Z" />
-
-                {/* 四国 */}
-                <path d="M 560,840 L 620,850 L 650,880 L 640,920 L 580,930 L 520,920 L 480,890 L 500,860 L 540,845 Z" />
-
-                {/* 九州 */}
-                <path d="M 350,860 L 400,880 L 430,920 L 440,980 L 420,1040 L 380,1080 L 320,1100 L 260,1080 L 240,1020 L 250,960 L 280,900 L 320,870 Z" />
-              </g>
-
-              {/* 加盟店ピン配置 */}
-              {stores.map((store, index) => {
-                // 都道府県別の座標マッピング
-                const prefectureCoords: { [key: string]: { x: number; y: number } } = {
-                  '北海道': { x: 870, y: 130 },
-                  '青森県': { x: 870, y: 260 },
-                  '岩手県': { x: 890, y: 300 },
-                  '宮城県': { x: 880, y: 350 },
-                  '秋田県': { x: 850, y: 310 },
-                  '山形県': { x: 850, y: 370 },
-                  '福島県': { x: 860, y: 430 },
-                  '茨城県': { x: 880, y: 500 },
-                  '栃木県': { x: 850, y: 510 },
-                  '群馬県': { x: 820, y: 520 },
-                  '埼玉県': { x: 850, y: 550 },
-                  '千葉県': { x: 900, y: 560 },
-                  '東京都': { x: 870, y: 580 },
-                  '神奈川県': { x: 860, y: 610 },
-                  '新潟県': { x: 800, y: 450 },
-                  '富山県': { x: 750, y: 510 },
-                  '石川県': { x: 730, y: 530 },
-                  '福井県': { x: 710, y: 560 },
-                  '山梨県': { x: 820, y: 580 },
-                  '長野県': { x: 780, y: 560 },
-                  '岐阜県': { x: 740, y: 600 },
-                  '静岡県': { x: 800, y: 630 },
-                  '愛知県': { x: 740, y: 640 },
-                  '三重県': { x: 720, y: 670 },
-                  '滋賀県': { x: 690, y: 660 },
-                  '京都府': { x: 690, y: 690 },
-                  '大阪府': { x: 670, y: 710 },
-                  '兵庫県': { x: 640, y: 700 },
-                  '奈良県': { x: 690, y: 720 },
-                  '和歌山県': { x: 680, y: 750 },
-                  '鳥取県': { x: 600, y: 720 },
-                  '島根県': { x: 550, y: 730 },
-                  '岡山県': { x: 600, y: 760 },
-                  '広島県': { x: 540, y: 770 },
-                  '山口県': { x: 470, y: 790 },
-                  '徳島県': { x: 640, y: 860 },
-                  '香川県': { x: 600, y: 850 },
-                  '愛媛県': { x: 550, y: 870 },
-                  '高知県': { x: 590, y: 900 },
-                  '福岡県': { x: 380, y: 890 },
-                  '佐賀県': { x: 340, y: 910 },
-                  '長崎県': { x: 300, y: 930 },
-                  '熊本県': { x: 350, y: 960 },
-                  '大分県': { x: 420, y: 920 },
-                  '宮崎県': { x: 400, y: 1000 },
-                  '鹿児島県': { x: 340, y: 1050 },
-                  '沖縄県': { x: 250, y: 1150 },
-                };
-
-                const coords = prefectureCoords[store.prefecture];
-                if (!coords) return null;
-
-                return (
-                  <g key={store.id}>
-                    {/* ピン */}
-                    <circle
-                      cx={coords.x}
-                      cy={coords.y}
-                      r="12"
-                      fill="#3b82f6"
-                      stroke="white"
-                      strokeWidth="3"
-                      className="cursor-pointer hover:fill-blue-700 transition-colors"
-                      onClick={() => setSelectedRegion(null)}
-                    />
-                    {/* ピン下の影 */}
-                    <ellipse
-                      cx={coords.x}
-                      cy={coords.y + 2}
-                      rx="8"
-                      ry="3"
-                      fill="black"
-                      opacity="0.2"
-                    />
-                  </g>
-                );
-              })}
-
-              {/* 凡例 */}
-              <g transform="translate(50, 50)">
-                <circle cx="10" cy="10" r="10" fill="#3b82f6" stroke="white" strokeWidth="2" />
-                <text x="30" y="15" fontSize="16" fill="#4b5563" fontWeight="500">加盟店（全{stores.length}店）</text>
-              </g>
-            </svg>
-
-            <p className="text-center text-gray-600 mt-4 text-sm">
-              各ピンは加盟店の所在地を示しています
-            </p>
+                  return (
+                    <Marker
+                      key={store.id}
+                      position={[store.latitude, store.longitude]}
+                      icon={DefaultIcon}
+                    >
+                      <Popup>
+                        <div className="p-2">
+                          <h3 className="font-semibold text-lg mb-2">{store.name}</h3>
+                          <div className="space-y-1 text-sm">
+                            <p className="flex items-start">
+                              <MapPin className="w-4 h-4 mr-1 mt-0.5 flex-shrink-0" />
+                              <span>{store.full_address}</span>
+                            </p>
+                            <p className="text-gray-600">
+                              加盟年月日: {new Date(store.joined_date).toLocaleDateString('ja-JP')}
+                            </p>
+                          </div>
+                        </div>
+                      </Popup>
+                    </Marker>
+                  );
+                })}
+              </MapContainer>
+            )}
           </div>
         </motion.div>
 
-        {/* 地域選択ボタン（PG HOUSEスタイル） */}
+        {/* 加盟店一覧（シンプル版） */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-pg mb-pg-5"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <button
-            onClick={() => setSelectedRegion(null)}
-            className={`px-6 py-3 rounded-pg-pill font-medium transition-all duration-300 ${
-              selectedRegion === null
-                ? 'bg-gray-700 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-            }`}
-          >
-            すべて ({stores.length})
-          </button>
-          {regions.map((region) => {
-            const count = getStoresByRegion(region.prefectures).length;
-            return (
-              <button
-                key={region.name}
-                onClick={() => setSelectedRegion(region.name)}
-                className={`px-6 py-3 rounded-pg-pill font-medium transition-all duration-300 ${
-                  selectedRegion === region.name
-                    ? 'bg-gray-700 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
-              >
-                {region.name} ({count})
-              </button>
-            );
-          })}
-        </motion.div>
-
-        {/* 加盟店カード一覧（PG HOUSEスタイル） */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-pg"
-        >
-          {selectedStores.length > 0 ? (
-            selectedStores.map((store) => (
-              <div
-                key={store.id}
-                className="bg-white p-pg-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <h4 className="font-bold text-lg mb-3">{store.name}</h4>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p className="flex items-start">
-                    <MapPin className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-blue-600" />
-                    <span>{store.full_address}</span>
+          {stores.slice(0, 9).map((store, index) => (
+            <motion.div
+              key={store.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
+              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-pg-blue flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">{store.name}</h3>
+                  <p className="text-sm text-gray-600 mb-1">
+                    {store.prefecture} {store.city}
                   </p>
-                  <p className="text-xs text-gray-500 pl-6">
-                    加盟: {new Date(store.joined_date).toLocaleDateString('ja-JP', {
-                      year: 'numeric',
-                      month: 'long',
-                    })}
+                  <p className="text-xs text-gray-500">
+                    {new Date(store.joined_date).toLocaleDateString('ja-JP')} 加盟
                   </p>
                 </div>
               </div>
-            ))
-          ) : (
-            <div className="col-span-full text-center py-12 text-gray-500">
-              <p>この地域には加盟店がまだありません。</p>
-              <p className="text-sm mt-2">新規加盟をご検討ください。</p>
-            </div>
-          )}
+            </motion.div>
+          ))}
         </motion.div>
-
-        {/* 加盟店がない場合のメッセージ */}
-        {stores.length === 0 && (
-          <div className="text-center py-12 text-gray-500">
-            <p>加盟店情報を読み込み中...</p>
-          </div>
-        )}
       </div>
     </section>
   );
