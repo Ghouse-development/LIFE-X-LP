@@ -11,6 +11,7 @@ const values = [
     mainValue: '500~800万円',
     subValue: '粗利/棟',
     note: '売上2000-2500万円で安定収益',
+    color: 'revenue-orange',
   },
   {
     icon: '/icons/house-shield.svg',
@@ -18,6 +19,7 @@ const values = [
     mainValue: '耐震等級 3',
     subValue: 'UA値 0.46',
     note: 'ZEH基準大幅クリア・全棟長期優良住宅',
+    color: 'success-green',
   },
   {
     icon: '/icons/handshake.svg',
@@ -25,6 +27,7 @@ const values = [
     mainValue: '3~6ヶ月',
     subValue: '開業期間',
     note: '設計・現場・集客すべての型を提供',
+    color: 'gray-900',
   },
 ];
 
@@ -89,7 +92,11 @@ export function ValueProps() {
 
               {/* Main Value - 超巨大化 */}
               <div className="mb-4 text-center">
-                <div className="text-5xl md:text-7xl font-bold text-gray-900 leading-none">
+                <div className={`text-5xl md:text-7xl font-bold leading-none ${
+                  value.color === 'revenue-orange' ? 'text-revenue-orange' :
+                  value.color === 'success-green' ? 'text-success-green' :
+                  'text-gray-900'
+                }`}>
                   {value.mainValue}
                 </div>
               </div>
@@ -114,7 +121,7 @@ export function ValueProps() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-20"
         >
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12 border border-blue-100">
+          <div className="bg-gray-50 rounded-3xl p-12 border border-gray-200">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
               選ばれる理由を数字で証明
             </h3>

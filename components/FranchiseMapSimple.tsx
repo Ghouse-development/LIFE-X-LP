@@ -89,7 +89,7 @@ const prefectureCoordinates: Record<string, { lat: number; lng: number }> = {
   '沖縄県': { lat: 26.212, lng: 127.681 },
 };
 
-// 仮データ（Supabaseテーブル作成前も表示されるように）- 座標付き
+// 実在する加盟店データのみ
 const defaultStores: Store[] = [
   {
     id: '1',
@@ -101,116 +101,6 @@ const defaultStores: Store[] = [
     joined_date: '2024-11-01',
     latitude: 36.566,
     longitude: 139.883,
-  },
-  {
-    id: '2',
-    name: 'LIFE X 東京',
-    prefecture: '東京都',
-    city: '渋谷区',
-    address: '渋谷1-1-1',
-    full_address: '東京都渋谷区渋谷1-1-1',
-    joined_date: '2024-06-15',
-    latitude: 35.690,
-    longitude: 139.692,
-  },
-  {
-    id: '3',
-    name: 'LIFE X 大阪',
-    prefecture: '大阪府',
-    city: '大阪市',
-    address: '北区梅田1-1-1',
-    full_address: '大阪府大阪市北区梅田1-1-1',
-    joined_date: '2024-08-20',
-    latitude: 34.686,
-    longitude: 135.520,
-  },
-  {
-    id: '4',
-    name: 'LIFE X 福岡',
-    prefecture: '福岡県',
-    city: '福岡市',
-    address: '博多区博多駅前1-1-1',
-    full_address: '福岡県福岡市博多区博多駅前1-1-1',
-    joined_date: '2024-04-10',
-    latitude: 33.606,
-    longitude: 130.418,
-  },
-  {
-    id: '5',
-    name: 'LIFE X 愛知',
-    prefecture: '愛知県',
-    city: '名古屋市',
-    address: '中村区名駅1-1-1',
-    full_address: '愛知県名古屋市中村区名駅1-1-1',
-    joined_date: '2024-05-22',
-    latitude: 35.181,
-    longitude: 136.907,
-  },
-  {
-    id: '6',
-    name: 'LIFE X 北海道',
-    prefecture: '北海道',
-    city: '札幌市',
-    address: '中央区北1条西1-1-1',
-    full_address: '北海道札幌市中央区北1条西1-1-1',
-    joined_date: '2024-03-15',
-    latitude: 43.064,
-    longitude: 141.347,
-  },
-  {
-    id: '7',
-    name: 'LIFE X 広島',
-    prefecture: '広島県',
-    city: '広島市',
-    address: '中区紙屋町1-1-1',
-    full_address: '広島県広島市中区紙屋町1-1-1',
-    joined_date: '2024-07-08',
-    latitude: 34.397,
-    longitude: 132.460,
-  },
-  {
-    id: '8',
-    name: 'LIFE X 宮城',
-    prefecture: '宮城県',
-    city: '仙台市',
-    address: '青葉区中央1-1-1',
-    full_address: '宮城県仙台市青葉区中央1-1-1',
-    joined_date: '2024-09-12',
-    latitude: 38.269,
-    longitude: 140.872,
-  },
-  {
-    id: '9',
-    name: 'LIFE X 静岡',
-    prefecture: '静岡県',
-    city: '静岡市',
-    address: '葵区呉服町1-1-1',
-    full_address: '静岡県静岡市葵区呉服町1-1-1',
-    joined_date: '2024-02-25',
-    latitude: 34.977,
-    longitude: 138.383,
-  },
-  {
-    id: '10',
-    name: 'LIFE X 京都',
-    prefecture: '京都府',
-    city: '京都市',
-    address: '下京区烏丸通1-1-1',
-    full_address: '京都府京都市下京区烏丸通1-1-1',
-    joined_date: '2024-10-03',
-    latitude: 35.021,
-    longitude: 135.756,
-  },
-  {
-    id: '11',
-    name: 'LIFE X 神奈川',
-    prefecture: '神奈川県',
-    city: '横浜市',
-    address: '西区みなとみらい1-1-1',
-    full_address: '神奈川県横浜市西区みなとみらい1-1-1',
-    joined_date: '2024-01-18',
-    latitude: 35.448,
-    longitude: 139.643,
   },
 ];
 
@@ -306,7 +196,7 @@ export function FranchiseMapSimple() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
+          className="bg-white rounded-3xl shadow-lg overflow-hidden mb-16"
         >
           <div className="h-[600px] relative">
             {isClient && (
