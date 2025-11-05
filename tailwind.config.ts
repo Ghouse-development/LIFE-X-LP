@@ -10,8 +10,8 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: ['-apple-system', 'BlinkMacSystemFont', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', 'Meiryo', 'sans-serif'],
-  			serif: ['Georgia', '"Yu Mincho"', 'YuMincho', '"Hiragino Mincho ProN"', 'serif'],
+  			sans: ['var(--font-noto-sans-jp)', '-apple-system', 'BlinkMacSystemFont', '"Hiragino Sans"', 'sans-serif'],
+  			serif: ['var(--font-noto-serif-jp)', 'Georgia', '"Yu Mincho"', 'serif'],
   		},
   		colors: {
   			background: 'var(--background)',

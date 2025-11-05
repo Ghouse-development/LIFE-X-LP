@@ -16,6 +16,8 @@ interface Testimonial {
     period: string
     contracts: string
   }
+  metric?: string
+  reason?: string
 }
 
 interface TestimonialsProps {
@@ -67,34 +69,42 @@ export function Testimonials({ data }: TestimonialsProps) {
               </div>
 
               <CardContent className="p-6">
-                {/* Stats */}
-                <div className="flex gap-4 mb-4">
+                {/* Headline Metric - Bold fact line */}
+                {testimonial.metric && (
+                  <div className="mb-4 pb-4 border-b border-black/5">
+                    <p className="font-serif text-lg font-bold text-[#D9B66A] leading-tight">
+                      {testimonial.metric}
+                    </p>
+                  </div>
+                )}
+
+                {/* Reason - 2 lines explaining why */}
+                {testimonial.reason && (
+                  <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                    {testimonial.reason}
+                  </p>
+                )}
+
+                {/* Stats Grid */}
+                <div className="flex gap-3 mb-4">
                   <div className="flex-1 text-center p-3 bg-[#D9B66A]/5 rounded-lg">
-                    <p className="text-xs text-[#6B7280] mb-1">期間</p>
-                    <p className="font-bold text-sm text-[#D9B66A]">
+                    <p className="text-xs text-neutral-500 mb-1">期間</p>
+                    <p className="font-bold text-sm text-[#0E1113]">
                       {testimonial.stats.period}
                     </p>
                   </div>
                   <div className="flex-1 text-center p-3 bg-[#D9B66A]/5 rounded-lg">
-                    <p className="text-xs text-[#6B7280] mb-1">実績</p>
-                    <p className="font-bold text-sm text-[#D9B66A]">
+                    <p className="text-xs text-neutral-500 mb-1">実績</p>
+                    <p className="font-bold text-sm text-[#0E1113]">
                       {testimonial.stats.contracts}
                     </p>
                   </div>
                 </div>
 
-                {/* Quote Icon */}
-                <Quote className="w-8 h-8 text-[#D9B66A]/30 mb-3" />
-
-                {/* Quote */}
-                <p className="text-[#6B7280] leading-relaxed mb-4 text-sm">
-                  {testimonial.quote}
-                </p>
-
-                {/* Name & Area */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <p className="font-bold text-sm">{testimonial.name}</p>
-                  <p className="text-xs text-[#6B7280]">{testimonial.area}</p>
+                {/* Attribution */}
+                <div className="flex items-center justify-between pt-4 border-t border-black/5">
+                  <p className="font-semibold text-sm text-[#0E1113]">{testimonial.name}</p>
+                  <p className="text-xs text-neutral-500">{testimonial.area}</p>
                 </div>
               </CardContent>
             </Card>

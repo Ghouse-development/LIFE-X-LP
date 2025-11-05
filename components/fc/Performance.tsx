@@ -65,33 +65,46 @@ export function Performance({ data }: PerformanceProps) {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        {specs.map((spec, index) => (
-          <motion.div
-            key={spec.label}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
-            <Card className="h-full border-2 border-[#D9B66A]/20 shadow-lg">
-              <CardContent className="p-8 text-center">
-                <p className="text-sm text-[#6B7280] mb-3">{spec.label}</p>
-                <p className="font-serif text-2xl md:text-3xl font-bold text-[#D9B66A] mb-4">
-                  {spec.value}
-                </p>
-                <p className="text-xs text-[#6B7280] leading-relaxed">
-                  {spec.note}
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* Left: Main performance metrics (2 columns) */}
+        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {specs.slice(0, 3).map((spec, index) => (
+            <motion.div
+              key={spec.label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] text-center"
+            >
+              <div className="text-sm text-neutral-500 mb-2">{spec.label}</div>
+              <div className="font-serif text-3xl md:text-4xl font-bold text-[#0E1113] mb-3">
+                {spec.value}
+              </div>
+              <p className="text-xs text-neutral-400 leading-relaxed">{spec.note}</p>
+            </motion.div>
+          ))}
+        </div>
 
-      <p className="text-center text-sm text-[#6B7280] max-w-[680px] mx-auto leading-relaxed">
-        {data.note}
-      </p>
+        {/* Right: Evidence/Citation card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="rounded-2xl border border-black/5 bg-[#F8F9FA] p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)]"
+        >
+          <h3 className="text-sm font-bold text-[#0E1113] mb-3">根拠・出典</h3>
+          <div className="text-xs text-neutral-600 leading-relaxed space-y-3">
+            <p>・断熱性能：HEAT20 G2グレード基準</p>
+            <p>・気密性能：全棟気密測定実施</p>
+            <p>・耐震性能：許容応力度計算による構造検証</p>
+            <p className="pt-3 border-t border-black/5 text-neutral-500">
+              {data.note}
+            </p>
+          </div>
+        </motion.div>
+      </div>
     </Section>
   )
 }
