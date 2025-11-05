@@ -65,7 +65,7 @@ export function Performance({ data }: PerformanceProps) {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch mb-12">
         {/* Left: Main performance metrics (2 columns) */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {specs.slice(0, 3).map((spec, index) => (

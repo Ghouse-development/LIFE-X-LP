@@ -14,6 +14,42 @@
   }
 }
 
+/* ゼロずれ・ゼロ崩れ：ボタン規格 */
+@layer components {
+  .btn-base {
+    height: 44px;
+    min-height: 44px;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-lg {
+    height: 48px;
+    min-height: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .btn-sm {
+    height: 36px;
+    min-height: 36px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

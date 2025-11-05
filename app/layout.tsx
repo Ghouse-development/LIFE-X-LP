@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="antialiased font-sans">
+      <body className="antialiased [font-feature-settings:'palt'] text-[#0E1113] bg-white">
         <Analytics />
         {children}
       </body>

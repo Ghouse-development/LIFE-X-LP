@@ -38,26 +38,23 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button
               asChild
-              size="lg"
-              className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+              className="btn-base btn-lg bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
               data-gtm="cta_primary_request"
             >
               <Link href="#contact">資料請求</Link>
             </Button>
             <Button
               asChild
-              size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#0E1113]"
+              className="btn-base btn-lg border-2 border-white text-white hover:bg-white hover:text-[#0E1113]"
               data-gtm="cta_secondary_consult"
             >
               <Link href="#contact">個別相談</Link>
             </Button>
             <Button
               asChild
-              size="lg"
               variant="ghost"
-              className="text-white/90 hover:text-white hover:bg-white/10"
+              className="btn-base btn-lg text-white/90 hover:text-white hover:bg-white/10"
               data-gtm="cta_tertiary_webinar"
             >
               <Link href="#webinar">ウェビナー</Link>

@@ -193,8 +193,7 @@ export function Webinar({ data }: WebinarProps) {
       <div className="text-center mt-10">
         <Button
           asChild
-          size="lg"
-          className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-base px-10 py-6 h-auto"
+          className="btn-base btn-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white"
           data-gtm="cta_webinar_register"
         >
           <Link href="#contact">次回ウェビナーに申し込む</Link>

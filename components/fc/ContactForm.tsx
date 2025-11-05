@@ -222,12 +222,14 @@ export function ContactForm() {
               <div className="space-y-6">
                 <h3 className="font-bold text-xl mb-6">基本情報</h3>
 
-                <div>
-                  <Label htmlFor="company">会社名・屋号 *</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="company" className="text-sm text-neutral-600">
+                    会社名・屋号<span className="text-neutral-400"> *</span>
+                  </Label>
                   <Input
                     id="company"
                     {...form.register('company')}
-                    className="mt-2"
+                    className="h-11 rounded-xl"
                   />
                   {form.formState.errors.company && (
                     <p className="text-sm text-red-500 mt-1">
@@ -236,12 +238,14 @@ export function ContactForm() {
                   )}
                 </div>
 
-                <div>
-                  <Label htmlFor="name">お名前 *</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="name" className="text-sm text-neutral-600">
+                    お名前<span className="text-neutral-400"> *</span>
+                  </Label>
                   <Input
                     id="name"
                     {...form.register('name')}
-                    className="mt-2"
+                    className="h-11 rounded-xl"
                   />
                   {form.formState.errors.name && (
                     <p className="text-sm text-red-500 mt-1">
@@ -250,13 +254,15 @@ export function ContactForm() {
                   )}
                 </div>
 
-                <div>
-                  <Label htmlFor="email">メールアドレス *</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="email" className="text-sm text-neutral-600">
+                    メールアドレス<span className="text-neutral-400"> *</span>
+                  </Label>
                   <Input
                     id="email"
                     type="email"
                     {...form.register('email')}
-                    className="mt-2"
+                    className="h-11 rounded-xl"
                   />
                   {form.formState.errors.email && (
                     <p className="text-sm text-red-500 mt-1">
@@ -265,13 +271,15 @@ export function ContactForm() {
                   )}
                 </div>
 
-                <div>
-                  <Label htmlFor="phone">電話番号 *</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="phone" className="text-sm text-neutral-600">
+                    電話番号<span className="text-neutral-400"> *</span>
+                  </Label>
                   <Input
                     id="phone"
                     type="tel"
                     {...form.register('phone')}
-                    className="mt-2"
+                    className="h-11 rounded-xl"
                   />
                   {form.formState.errors.phone && (
                     <p className="text-sm text-red-500 mt-1">
@@ -283,7 +291,7 @@ export function ContactForm() {
                 <Button
                   type="button"
                   onClick={nextStep}
-                  className="w-full bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+                  className="btn-base btn-lg w-full mt-2 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
                   data-gtm="form_step1_next"
                 >
                   次へ
@@ -296,12 +304,14 @@ export function ContactForm() {
               <div className="space-y-6">
                 <h3 className="font-bold text-xl mb-6">希望内容</h3>
 
-                <div>
-                  <Label htmlFor="prefecture">都道府県 *</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="prefecture" className="text-sm text-neutral-600">
+                    都道府県<span className="text-neutral-400"> *</span>
+                  </Label>
                   <select
                     id="prefecture"
                     {...form.register('prefecture')}
-                    className="w-full mt-2 p-2 border rounded-md"
+                    className="w-full h-11 px-3 border rounded-xl"
                   >
                     <option value="">選択してください</option>
                     <option value="北海道">北海道</option>
@@ -320,12 +330,14 @@ export function ContactForm() {
                   )}
                 </div>
 
-                <div>
-                  <Label htmlFor="interest">興味のある内容 *</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="interest" className="text-sm text-neutral-600">
+                    興味のある内容<span className="text-neutral-400"> *</span>
+                  </Label>
                   <select
                     id="interest"
                     {...form.register('interest')}
-                    className="w-full mt-2 p-2 border rounded-md"
+                    className="w-full h-11 px-3 border rounded-xl"
                   >
                     <option value="">選択してください</option>
                     <option value="資料請求">資料請求</option>
@@ -340,29 +352,31 @@ export function ContactForm() {
                   )}
                 </div>
 
-                <div>
-                  <Label htmlFor="message">お問い合わせ内容（任意）</Label>
+                <div className="grid gap-1">
+                  <Label htmlFor="message" className="text-sm text-neutral-600">
+                    お問い合わせ内容（任意）
+                  </Label>
                   <Textarea
                     id="message"
                     {...form.register('message')}
                     rows={4}
-                    className="mt-2"
+                    className="rounded-xl"
                   />
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-2">
                   <Button
                     type="button"
                     onClick={() => setStep(1)}
                     variant="outline"
-                    className="flex-1"
+                    className="btn-base btn-lg flex-1"
                   >
                     戻る
                   </Button>
                   <Button
                     type="button"
                     onClick={nextStep}
-                    className="flex-1 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+                    className="btn-base btn-lg flex-1 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
                     data-gtm="form_step2_next"
                   >
                     次へ
@@ -423,24 +437,24 @@ export function ContactForm() {
                   </p>
                 )}
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-2">
                   <Button
                     type="button"
                     onClick={() => setStep(2)}
                     variant="outline"
-                    className="flex-1"
+                    className="btn-base btn-lg flex-1"
                   >
                     戻る
                   </Button>
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+                    className="btn-base btn-lg flex-1 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
                     data-gtm="form_submit"
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        <Loader2 className="size-4 -mt-px" />
                         送信中...
                       </>
                     ) : (

@@ -102,9 +102,11 @@ export function ValueGrid({ data }: ValueGridProps) {
               className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] text-center"
             >
               <div className="text-sm text-neutral-500 mb-2">{item.label}</div>
-              <div className="font-serif text-4xl md:text-5xl font-bold text-[#0E1113] mb-3">
-                {item.value.split('万円')[0]}
-                <span className="text-2xl text-neutral-500">万円</span>
+              <div className="flex items-baseline justify-center gap-2 mb-3">
+                <span className="font-serif text-4xl md:text-5xl font-bold text-[#0E1113] tracking-[0.02em]">
+                  {item.value.split('万円')[0]}
+                </span>
+                <span className="text-2xl text-neutral-500 translate-y-[1px]">万円</span>
               </div>
               <p className="text-xs text-neutral-400 leading-relaxed">{item.note}</p>
             </motion.div>
