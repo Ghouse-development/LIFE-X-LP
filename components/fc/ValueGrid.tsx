@@ -35,7 +35,7 @@ export function ValueGrid({ data }: ValueGridProps) {
     <Section id="value" variant="light" spacing="2xl">
       <div className="text-center mb-16">
         <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold mb-6"
+          className="font-serif text-3xl md:text-5xl font-bold text-[var(--ink-strong)] mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -44,7 +44,7 @@ export function ValueGrid({ data }: ValueGridProps) {
           選ばれる理由
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-[var(--ink-muted)] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -66,13 +66,13 @@ export function ValueGrid({ data }: ValueGridProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <Card className="h-full border border-black/5 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-[#D9B66A]/10 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-[#D9B66A]" />
+                  <div className="w-14 h-14 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-7 h-7 text-[var(--accent)]" />
                   </div>
-                  <h3 className="font-bold text-xl mb-3">{reason.title}</h3>
-                  <p className="text-[#6B7280] leading-relaxed">{reason.desc}</p>
+                  <h3 className="font-bold text-xl text-[var(--ink-strong)] mb-3">{reason.title}</h3>
+                  <p className="text-[var(--ink)] leading-relaxed">{reason.desc}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -83,7 +83,7 @@ export function ValueGrid({ data }: ValueGridProps) {
       {/* KPI - Elegant strength with ultra-thin shadows */}
       <div>
         <motion.h3
-          className="font-serif text-2xl md:text-3xl font-bold text-center mb-12"
+          className="font-serif text-2xl md:text-3xl font-bold text-[var(--ink-strong)] text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -101,18 +101,18 @@ export function ValueGrid({ data }: ValueGridProps) {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] text-center"
             >
-              <div className="text-sm text-neutral-500 mb-2">{item.label}</div>
-              <div className="flex items-baseline justify-center gap-2 mb-3">
-                <span className="font-serif text-4xl md:text-5xl font-bold text-[#0E1113] tracking-[0.02em]">
+              <div className="text-sm text-[var(--ink-muted)] mb-3">{item.label}</div>
+              <div className="flex items-baseline justify-center gap-2 mb-4">
+                <span className="font-serif text-5xl md:text-6xl font-extrabold text-[var(--ink-strong)] tracking-[0.02em]">
                   {item.value.split('万円')[0]}
                 </span>
-                <span className="text-2xl text-neutral-500 translate-y-[1px]">万円</span>
+                <span className="text-xl md:text-2xl text-[var(--ink-muted)] translate-y-[2px]">万円</span>
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed">{item.note}</p>
+              <p className="text-xs text-[var(--ink-muted)] leading-relaxed">{item.note}</p>
             </motion.div>
           ))}
         </div>
-        <p className="text-center text-sm text-neutral-400 mt-8 max-w-2xl mx-auto">
+        <p className="text-center text-sm text-[var(--ink-muted)] mt-8 max-w-2xl mx-auto">
           ※以上は参考値です。エリア・施策により変動します。確定値は契約前面談で開示します。
         </p>
       </div>
