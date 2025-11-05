@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+// import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@/lib/analytics";
 
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-});
+// Temporary fallback: Use system fonts due to Google Fonts connection issues
+// const notoSansJP = Noto_Sans_JP({
+//   variable: "--font-noto-sans-jp",
+//   subsets: ["latin"],
+//   weight: ["400", "500", "700", "900"],
+// });
+
+// const notoSerifJP = Noto_Serif_JP({
+//   variable: "--font-noto-serif-jp",
+//   subsets: ["latin"],
+//   weight: ["400", "600", "700", "900"],
+// });
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${notoSansJP.variable} antialiased`}>
+      <body className="antialiased font-sans">
         <Analytics />
         {children}
       </body>

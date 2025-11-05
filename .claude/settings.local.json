@@ -37,7 +37,20 @@
       "WebFetch(domain:www.lixil-jk.co.jp)",
       "WebFetch(domain:green-energy.co.jp)",
       "WebFetch(domain:www.pg-house.jp)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npm i:*)",
+      "Bash(npx shadcn@latest init -y)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash($null)",
+      "Bash(npm run a11y:*)",
+      "Bash(npx playwright:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9)",
+      "Bash(cat:*)",
+      "Bash(PORT=3000 npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []

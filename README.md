@@ -1,8 +1,8 @@
-# LIFE X フランチャイズ LP
+# LIFE X フランチャイズ LP（FC版）
 
-LIFE X フランチャイズ向けランディングページ - Next.js 15 + Supabase + Vercel
+LIFE X フランチャイズ向けランディングページ - Next.js 15 + Supabase + shadcn/ui
 
-## 概要
+## プロジェクト概要
 
 工務店（FC検討層）向けのランディングページ。商品力・収益モデル・導入フローを段階的に提示し、問い合わせ（MQL）とウェビナー登録を獲得します。
 
@@ -10,16 +10,19 @@ LIFE X フランチャイズ向けランディングページ - Next.js 15 + Sup
 
 - **フレームワーク**: Next.js 15 (App Router)
 - **言語**: TypeScript
-- **スタイリング**: Tailwind CSS
-- **アニメーション**: Framer Motion（最小限）
+- **スタイリング**: Tailwind CSS + shadcn/ui
+- **フォーム**: react-hook-form + zod
+- **アニメーション**: Framer Motion（最小限、0.3-0.4秒）
 - **データベース**: Supabase
 - **デプロイ**: Vercel
 - **計測**: Google Analytics 4 + Meta Pixel
+- **テスト**: Playwright + axe-core (a11y)
 
-### デザインリファレンス
+### デザインコンセプト
 
-- **SHINKOKYU**: 余白・静かな写真主体・穏やかなモーション（"呼吸"のような微動）
-- **PG HOUSE**: FC訴求の流れ（なぜ→導入フロー→事例→問い合わせ）とCTA配置
+- **余白リッチ、写真主体、静かな自信**
+- PGハウス参考：余白・静かな写真主体・穏やかなモーション
+- 配色：ダーク (#0B0D0F) / ライト (#F8F9FA) / アクセント金 (#D9B66A)
 
 ## セットアップ
 
@@ -49,41 +52,177 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_META_PIXEL_ID=123456789012345
 \`\`\`
 
-### 3. Supabaseのテーブル作成
-
-Supabase Dashboard > SQL Editor で \`supabase-setup.sql\` を実行してください。
-
-\`\`\`bash
-# または、Supabase CLIを使用
-supabase db push
-\`\`\`
-
-### 4. 画像の取得（G-house公式サイトから）
-
-\`\`\`bash
-npm run fetch:images
-\`\`\`
-
-このスクリプトは以下を実行します：
-
-- G-house公式サイト（LIFE X関連ページ）から画像を自動取得
-- 16:9 ±10%の画像は \`/public/hero\` に保存
-- その他の画像は \`/public/cases\` に保存
-- \`content/assets.json\` と \`ASSETS.md\` を自動更新
-
-**注意**: 画像はG-house公式サイトからのみ取得します。商用利用の権利は確認済みであることを前提としています。
-
-### 5. 開発サーバーの起動
+### 3. 開発サーバーの起動
 
 \`\`\`bash
 npm run dev
 \`\`\`
 
-ブラウザで [http://localhost:3000](http://localhost:3000) を開いてください。
+ブラウザで [http://localhost:3000/fc](http://localhost:3000/fc) を開いてください。
 
-## Vercelへのデプロイ
+## ディレクトリ構成
 
-### Vercel CLIを使用
+\`\`\`
+.
+├── app/
+│   ├── fc/                         # FC専用ページ
+│   │   └── page.tsx               # メインページ
+│   ├── layout.tsx                 # ルートレイアウト（フォント設定）
+│   └── globals.css                # グローバルスタイル
+├── components/
+│   ├── fc/                        # FC専用コンポーネント
+│   │   ├── Section.tsx           # 汎用セクションラッパー
+│   │   ├── SiteHeader.tsx        # ヘッダー
+│   │   ├── SiteFooter.tsx        # フッター
+│   │   ├── Hero.tsx              # ヒーロー
+│   │   ├── FloatingCTA.tsx       # 固定CTA（右下）
+│   │   ├── Concept.tsx           # コンセプト
+│   │   ├── ValueGrid.tsx         # 価値提案・KPI
+│   │   ├── Performance.tsx       # 性能・構造
+│   │   ├── Gallery.tsx           # ギャラリー（Lightbox付）
+│   │   ├── Process.tsx           # 導入ステップ
+│   │   ├── SupportTable.tsx      # サポート範囲
+│   │   ├── Testimonials.tsx      # 導入事例
+│   │   ├── Map.tsx               # 全国展開エリア
+│   │   ├── Webinar.tsx           # ウェビナー
+│   │   ├── FAQ.tsx               # よくある質問（Accordion）
+│   │   └── ContactForm.tsx       # 問い合わせフォーム（3ステップ、draft保存）
+│   └── ui/                        # shadcn/ui コンポーネント
+├── data/
+│   └── fc.json                    # FCページデータ（統合JSON）
+├── lib/
+│   ├── utils.ts                   # cn() utility
+│   ├── supabase.ts                # Supabaseクライアント
+│   ├── seo.ts                     # SEO/OGP/JSON-LD
+│   ├── events.ts                  # GA4/Meta Pixel イベント
+│   └── analytics.tsx              # Analytics スクリプト
+├── styles/
+│   └── theme.ts                   # テーマトークン（色/余白/角丸/影）
+├── public/
+│   ├── fc/
+│   │   ├── prompts.md            # 画像生成プロンプト
+│   │   ├── hero-01.webp          # ヒーロー画像
+│   │   ├── concept_*.webp        # コンセプト画像
+│   │   ├── kitchen.webp          # キッチン画像
+│   │   └── gallery_*.webp        # ギャラリー画像
+│   ├── cases/                     # 事例画像（既存流用）
+│   └── icons/                     # SVGアイコン
+├── tests/
+│   ├── accessibility.spec.ts     # アクセシビリティテスト
+│   └── screenshot.spec.ts        # スクリーンショットテスト
+├── playwright.config.ts          # Playwright設定
+└── README.md                     # このファイル
+\`\`\`
+
+## スクリプト
+
+- \`npm run dev\`: 開発サーバーを起動
+- \`npm run build\`: 本番用ビルドを作成
+- \`npm run start\`: 本番サーバーを起動
+- \`npm run lint\`: ESLintでコードをチェック
+- \`npm run preview\`: ビルド後にプレビュー
+- \`npm run snap\`: スクリーンショット自動出力（PC/768/390）
+- \`npm run a11y\`: アクセシビリティ重大エラー検出
+- \`npm test\`: すべてのPlaywrightテストを実行
+- \`npm run test:ui\`: Playwright UIモードでテスト
+
+## コンテンツ編集
+
+### データの編集
+
+すべてのコンテンツは \`data/fc.json\` で一元管理されています：
+
+\`\`\`json
+{
+  "hero": { ... },           // ヒーローセクション
+  "kpi": [ ... ],           // 収益モデル
+  "reasons": [ ... ],       // 選ばれる理由
+  "performance": { ... },   // 性能データ
+  "process": [ ... ],       // 導入ステップ
+  "support": [ ... ],       // サポート範囲
+  "testimonials": [ ... ],  // 導入事例
+  "areas": [ ... ],         // 展開エリア
+  "webinar": { ... },       // ウェビナー情報
+  "faq": [ ... ],           // よくある質問
+  "contact": { ... },       // 連絡先
+  "gallery": [ ... ]        // ギャラリー画像
+}
+\`\`\`
+
+### 配色の変更
+
+配色を変更する場合は、以下のファイルを編集してください：
+
+1. **\`styles/theme.ts\`** - テーマトークン（グローバル定義）
+2. **各コンポーネント** - インライン色指定（例：\`bg-[#D9B66A]\`）
+
+主要な色：
+
+- ダーク背景: \`#0B0D0F\`
+- ライト背景: \`#F8F9FA\`
+- アクセント金: \`#D9B66A\`
+- 補助青: \`#4C86E8\`
+
+### 画像の追加・変更
+
+画像を変更する場合は、\`/public/fc/prompts.md\` に記載されている生成プロンプトを参照してください。
+
+**重要**: すべてオリジナル画像として生成してください。第三者の著作権を侵害しないこと。
+
+## テスト
+
+### アクセシビリティテスト
+
+\`\`\`bash
+npm run a11y
+\`\`\`
+
+WCAG 2.1 AA基準でチェックします。重大なエラーがある場合、テストが失敗します。
+
+### スクリーンショットテスト
+
+\`\`\`bash
+npm run snap
+\`\`\`
+
+PC/タブレット/モバイルの3つのビューポートでスクリーンショットを自動生成します。
+結果は \`tests/screenshots/\` に保存されます。
+
+## パフォーマンス目標
+
+- **Lighthouse**: 90+
+- **CLS**: <0.1
+- **LCP**: <2.5s（3G Fast）
+
+### 最適化手法
+
+- Next.jsの\`next/image\`で画像最適化（AVIF/WebP、sizesレスポンシブ）
+- Framer Motionは最小限（初回表示時のみ、0.3-0.4s、移動距離小）
+- コードスプリッティング（App Router自動）
+- Noto Sans JP / Noto Serif JP フォント最適化
+
+## SEO/計測
+
+### JSON-LD構造化データ
+
+- Organization（サイト情報）
+- Product（LIFE X フランチャイズ）
+- FAQPage（よくある質問）
+
+### イベントトラッキング
+
+主要なイベント（\`data-gtm\`属性で設定）：
+
+- \`cta_primary_request\`: 資料請求CTA
+- \`cta_secondary_consult\`: 個別相談CTA
+- \`cta_tertiary_webinar\`: ウェビナーCTA
+- \`floating_cta_*\`: FloatingCTAからのアクション
+- \`form_step*_next\`: フォームステップ遷移
+- \`form_submit\`: フォーム送信完了
+
+## デプロイ
+
+### Vercelへのデプロイ
 
 \`\`\`bash
 # Vercelにログイン
@@ -110,154 +249,6 @@ vercel --prod
 3. 環境変数を設定（上記参照）
 4. デプロイ
 
-## ディレクトリ構成
-
-\`\`\`
-.
-├── app/
-│   ├── api/
-│   │   ├── lead/route.ts          # 問い合わせAPI
-│   │   └── webinar/route.ts       # ウェビナー申込API
-│   ├── webinar/
-│   │   └── page.tsx               # ウェビナーページ
-│   ├── layout.tsx                 # ルートレイアウト
-│   ├── page.tsx                   # ホームページ
-│   └── globals.css                # グローバルスタイル
-├── components/
-│   ├── Hero.tsx                   # ヒーローセクション
-│   ├── ValueProps.tsx             # 価値提案
-│   ├── SpecAndStandard.tsx        # 標準仕様
-│   ├── UnitEconomics.tsx          # 収益モデル
-│   ├── Flow.tsx                   # 導入フロー
-│   ├── Cases.tsx                  # 事例
-│   ├── WebinarCTA.tsx             # ウェビナーCTA
-│   ├── FAQ.tsx                    # よくある質問
-│   ├── FinalCTA.tsx               # 最終CTA
-│   ├── LeadForm.tsx               # 問い合わせフォーム
-│   └── WebinarForm.tsx            # ウェビナー申込フォーム
-├── content/
-│   ├── site.json                  # サイト設定
-│   ├── spec.json                  # 仕様データ
-│   ├── finance.json               # 収益モデルデータ
-│   ├── faq.json                   # FAQデータ
-│   ├── cases.json                 # 事例データ
-│   ├── webinar.json               # ウェビナーデータ
-│   └── assets.json                # 画像アセット（自動生成）
-├── lib/
-│   ├── supabase.ts                # Supabaseクライアント
-│   ├── seo.ts                     # SEO/OGP/JSON-LD
-│   ├── events.ts                  # GA4/Meta Pixel イベント
-│   └── analytics.tsx              # Analytics スクリプト
-├── public/
-│   ├── icons/                     # SVGアイコン（単色線画）
-│   ├── hero/                      # ヒーロー画像（16:9）
-│   ├── cases/                     # 事例画像
-│   ├── og/                        # OG画像
-│   └── placeholders/              # プレースホルダー画像
-├── scripts/
-│   └── fetch-ghouse-images.ts     # 画像取得スクリプト
-├── supabase-setup.sql             # Supabaseテーブル定義
-├── ASSETS.md                      # 画像出所記録（自動生成）
-└── README.md                      # このファイル
-\`\`\`
-
-## コンテンツ更新
-
-### JSONファイルの編集
-
-各種コンテンツは \`content/*.json\` で管理されています：
-
-- \`site.json\`: サイト基本情報、ヒーロー、フッター
-- \`spec.json\`: LIFE X の標準仕様
-- \`finance.json\`: 収益モデル概算
-- \`faq.json\`: よくある質問（10問）
-- \`cases.json\`: 導入事例（ダミーデータ）
-- \`webinar.json\`: ウェビナー情報・日程
-- \`assets.json\`: 画像アセット（自動生成、手動編集不要）
-
-### 画像の更新
-
-画像を更新する場合：
-
-\`\`\`bash
-npm run fetch:images
-\`\`\`
-
-手動で画像を追加する場合は、\`/public/hero\` または \`/public/cases\` に配置し、\`content/assets.json\` を手動更新してください。
-
-## スクリプト
-
-- \`npm run dev\`: 開発サーバーを起動
-- \`npm run build\`: 本番用ビルドを作成
-- \`npm run start\`: 本番サーバーを起動
-- \`npm run lint\`: ESLintでコードをチェック
-- \`npm run fetch:images\`: G-houseから画像を取得
-
-## パフォーマンス目標
-
-- **Lighthouse**: 90+
-- **CLS**: <0.05
-- **LCP**: <2.5s（3G Fast）
-
-### 最適化手法
-
-- Next.jsの\`next/image\`で画像最適化（AVIF/WebP、sizesレスポンシブ）
-- Framer Motionは最小限（初回表示時のみ、0.3–0.5s、移動距離小）
-- コードスプリッティング（App Router自動）
-- クリティカルCSSのインライン化
-
-## SEO/計測
-
-### JSON-LD構造化データ
-
-- Organization（サイト情報）
-- Product（LIFE X フランチャイズ）
-- FAQPage（よくある質問）
-
-### イベントトラッキング
-
-- \`cta_click\`: CTA クリック
-- \`lead_submit\`: 問い合わせ送信
-- \`webinar_view\`: ウェビナーページ閲覧
-- \`webinar_submit\`: ウェビナー申込
-- \`section_view\`: セクション表示
-- \`phone_click\`: 電話番号クリック
-- \`email_click\`: メールアドレスクリック
-
-## データベース
-
-### テーブル
-
-#### \`fc_leads\`（問い合わせ）
-
-| カラム | 型 | 説明 |
-|--------|------|------|
-| id | uuid | 主キー |
-| company | text | 会社名・屋号 |
-| name | text | 名前（必須） |
-| email | text | メールアドレス（必須） |
-| phone | text | 電話番号 |
-| prefecture | text | 都道府県 |
-| message | text | お問い合わせ内容 |
-| source | text | 流入元 |
-| utm | jsonb | UTMパラメータ |
-| created_at | timestamptz | 作成日時 |
-
-#### \`fc_webinar_regs\`（ウェビナー申込）
-
-| カラム | 型 | 説明 |
-|--------|------|------|
-| id | uuid | 主キー |
-| company | text | 会社名・屋号 |
-| name | text | 名前（必須） |
-| email | text | メールアドレス（必須） |
-| phone | text | 電話番号 |
-| prefecture | text | 都道府県 |
-| desired_date | timestamptz | 希望日時 |
-| recording_ok | boolean | 録画視聴希望 |
-| utm | jsonb | UTMパラメータ |
-| created_at | timestamptz | 作成日時 |
-
 ## コピー規律（AI臭カット）
 
 - 一文60字以内
@@ -267,14 +258,6 @@ npm run fetch:images
 
 ## トラブルシューティング
 
-### 画像が表示されない
-
-\`npm run fetch:images\` を実行して画像を取得してください。
-
-### Supabaseエラー
-
-環境変数（\`.env.local\`）が正しく設定されているか確認してください。
-
 ### ビルドエラー
 
 \`\`\`bash
@@ -283,10 +266,29 @@ npm install
 npm run build
 \`\`\`
 
+### 型エラー
+
+shadcn/ui のコンポーネントで型エラーが出る場合は、\`@hookform/resolvers\` のバージョンを確認してください。
+
+### 画像が表示されない
+
+\`/public/fc/\` 配下に画像を配置してください。プレースホルダーとして \`/cases/\` の既存画像を使用できます。
+
+## 法務・ブランド注意事項
+
+- 参考サイト（PGハウス等）の文言/画像/図版/コードを直接流用しない
+- 画像・アイコンは商用可能か自社生成のみ
+- 性能表記など第三者出典が必要な箇所は注釈でダミー表現→本番差替え
+- ロゴ・商標は自社および許諾済みのみ
+
 ## ライセンス
 
 Private
 
-## お問い合わせ
+## 制作記録
 
-詳細は [ASSETS.md](./ASSETS.md) を参照してください。
+このプロジェクトは、プロンプト「【Claude Code 一発実装プロンプト】LIFE X フランチャイズ LP」に基づいて作成されました。
+
+- **作成日**: 2025-01-05
+- **コンセプト**: 余白リッチ、上品な金色、静かな自信
+- **参考**: PGハウス（構成・レイアウトの空気感のみ）
