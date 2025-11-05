@@ -35,7 +35,7 @@ export function ValueGrid({ data }: ValueGridProps) {
     <Section id="value" variant="light" spacing="2xl">
       <div className="text-center mb-16">
         <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold text-[var(--ink-strong)] mb-6"
+          className="font-serif text-3xl md:text-5xl font-bold text-[var(--primary)] mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -68,10 +68,10 @@ export function ValueGrid({ data }: ValueGridProps) {
             >
               <Card className="h-full border border-black/5 shadow-lg hover:shadow-xl transition-shadow">
                 <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-7 h-7 text-[var(--accent)]" />
+                  <div className="w-14 h-14 bg-[var(--brand)]/10 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-7 h-7 text-[var(--brand)]" />
                   </div>
-                  <h3 className="font-bold text-xl text-[var(--ink-strong)] mb-3">{reason.title}</h3>
+                  <h3 className="font-bold text-xl text-[var(--primary)] mb-3">{reason.title}</h3>
                   <p className="text-[var(--ink)] leading-relaxed">{reason.desc}</p>
                 </CardContent>
               </Card>
@@ -83,7 +83,7 @@ export function ValueGrid({ data }: ValueGridProps) {
       {/* KPI - Elegant strength with ultra-thin shadows */}
       <div>
         <motion.h3
-          className="font-serif text-2xl md:text-3xl font-bold text-[var(--ink-strong)] text-center mb-12"
+          className="font-serif text-2xl md:text-3xl font-bold text-[var(--primary)] text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -103,7 +103,7 @@ export function ValueGrid({ data }: ValueGridProps) {
             >
               <div className="text-sm text-[var(--ink-muted)] mb-3">{item.label}</div>
               <div className="flex items-baseline justify-center gap-2 mb-4">
-                <span className="font-serif text-5xl md:text-6xl font-extrabold text-[var(--ink-strong)] tracking-[0.02em]">
+                <span className="font-serif text-5xl md:text-6xl font-extrabold text-[var(--primary)] tracking-[0.02em]">
                   {item.value.split('万円')[0]}
                 </span>
                 <span className="text-xl md:text-2xl text-[var(--ink-muted)] translate-y-[2px]">万円</span>

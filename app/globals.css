@@ -52,19 +52,19 @@
 
 :root {
   /* AA準拠デザイントークン */
-  --ink-strong: #0E1113;    /* 最濃文字（見出し・重要要素） */
+  --ink-strong: #0E1113;    /* 最濃文字（本文の濃い部分） */
   --ink: #374151;            /* 本文 */
   --ink-muted: #6B7280;      /* 補足文・キャプション */
-  --link: #2563EB;           /* リンク */
+  --link: #1D4ED8;           /* テキストリンク */
 
   --surface: #FFFFFF;        /* 白背景 */
   --surface-alt: #F8F9FA;    /* 薄グレー背景 */
   --surface-dark: #0B0D0F;   /* ダーク背景 */
 
-  --primary: #2563EB;        /* プライマリボタン（青） */
-  --primary-hover: #1D4ED8;
+  --primary: #0F172A;        /* 濃紺：ボタン塗り/見出し */
+  --primary-hover: #111827;
 
-  --accent: #D9B66A;         /* ゴールド（線・アイコン・ラベルのみ） */
+  --brand: #D9B66A;          /* ゴールド（線・アイコン・ラベルのみ） */
 
   /* shadcn/ui互換 */
   --background: #ffffff;

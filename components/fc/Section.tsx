@@ -3,9 +3,12 @@
 import { cn } from '@/lib/utils'
 import { ReactNode } from 'react'
 import { useSectionView } from '@/hooks/use-section-view'
+import { motion } from 'framer-motion'
 
 interface SectionProps {
   children: ReactNode
+  title?: string
+  subtitle?: string
   tone?: 'light' | 'alt' | 'dark'
   variant?: 'light' | 'dark' | 'white' // 後方互換性
   spacing?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
@@ -16,6 +19,8 @@ interface SectionProps {
 
 export function Section({
   children,
+  title,
+  subtitle,
   tone,
   variant = 'white',
   spacing = 'xl',
@@ -54,7 +59,33 @@ export function Section({
       id={id}
       className={cn(toneClasses[effectiveTone], spacings[spacing], className)}
     >
-      <div className={widths[width]}>{children}</div>
+      <div className={widths[width]}>
+        {title && (
+          <div className="text-center mb-16">
+            <motion.h2
+              className="font-serif text-[var(--primary)] text-3xl md:text-4xl leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+            >
+              {title}
+            </motion.h2>
+            {subtitle && (
+              <motion.p
+                className="mx-auto mt-4 max-w-[680px] text-[var(--ink-muted)] leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                {subtitle}
+              </motion.p>
+            )}
+          </div>
+        )}
+        <div className={title ? 'mt-10' : ''}>{children}</div>
+      </div>
     </section>
   )
 }

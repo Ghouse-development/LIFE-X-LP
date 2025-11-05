@@ -24,7 +24,7 @@ export function Gallery({ data }: GalleryProps) {
     <Section id="gallery" variant="dark" spacing="2xl">
       <div className="text-center mb-16">
         <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold mb-6"
+          className="font-serif text-3xl md:text-5xl font-bold text-white mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -33,7 +33,7 @@ export function Gallery({ data }: GalleryProps) {
           ギャラリー
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#EDEFF1]/80 max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

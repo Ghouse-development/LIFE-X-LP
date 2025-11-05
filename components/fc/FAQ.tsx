@@ -23,7 +23,7 @@ export function FAQ({ data }: FAQProps) {
     <Section id="faq" variant="white" spacing="2xl">
       <div className="text-center mb-16">
         <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold text-[var(--ink-strong)] mb-6"
+          className="font-serif text-3xl md:text-5xl font-bold text-[var(--primary)] mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,7 +56,7 @@ export function FAQ({ data }: FAQProps) {
               value={`item-${index}`}
               className="border border-gray-200 rounded-2xl px-6 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
-              <AccordionTrigger className="text-left font-bold text-[var(--ink-strong)] py-6 hover:no-underline">
+              <AccordionTrigger className="text-left font-bold text-[var(--primary)] py-6 hover:no-underline">
                 {faq.q}
               </AccordionTrigger>
               <AccordionContent className="text-[var(--ink)] leading-relaxed pb-6">
