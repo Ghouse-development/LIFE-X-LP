@@ -67,7 +67,7 @@ export function Gallery({ data }: GalleryProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className={`${colSpan} relative ${aspectRatio} overflow-hidden rounded-2xl cursor-pointer group border border-white/10`}
+              className={`${colSpan} relative ${aspectRatio} overflow-hidden rounded-2xl cursor-pointer group ring-1 ring-black/5`}
               onClick={() => setSelectedImage(item)}
             >
               <Image

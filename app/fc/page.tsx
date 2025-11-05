@@ -54,7 +54,7 @@ export default function FCPage() {
       <SiteHeader />
 
       {/* Hero */}
-      <Hero data={fcData.hero} />
+      <Hero />
 
       {/* Floating CTA */}
       <FloatingCTA />

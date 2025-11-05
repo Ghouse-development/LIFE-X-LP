@@ -92,17 +92,14 @@ export function Performance({ data }: PerformanceProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className="rounded-2xl border border-black/5 bg-[#F8F9FA] p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)]"
+          className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)]"
         >
-          <h3 className="text-sm font-bold text-[#0E1113] mb-3">根拠・出典</h3>
-          <div className="text-xs text-neutral-600 leading-relaxed space-y-3">
-            <p>・断熱性能：HEAT20 G2グレード基準</p>
-            <p>・気密性能：全棟気密測定実施</p>
-            <p>・耐震性能：許容応力度計算による構造検証</p>
-            <p className="pt-3 border-t border-black/5 text-neutral-500">
-              {data.note}
-            </p>
-          </div>
+          <div className="text-sm font-medium text-neutral-700 mb-3">注釈 / 根拠</div>
+          <ul className="space-y-2 text-sm text-neutral-600 leading-relaxed">
+            <li>・数値は一例であり、仕様・地域・設計条件により変動します。</li>
+            <li>・耐震は許容応力度計算に基づく設計指針（詳細は面談時に提示）。</li>
+            <li>・図は概念図です。実際の納まりや部材構成は設計図書に準じます。</li>
+          </ul>
         </motion.div>
       </div>
     </Section>

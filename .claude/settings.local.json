@@ -55,7 +55,11 @@
       "Bash(for file in Performance.tsx Process.tsx SupportTable.tsx Testimonials.tsx Map.tsx FAQ.tsx Webinar.tsx ContactForm.tsx)",
       "Bash(do if [ -f \"$file\" ])",
       "Bash(then sed -i 's/max-w-3xl mx-auto/max-w-[680px] mx-auto leading-relaxed/g' \"$file\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(npm run a11y:fc:*)",
+      "Bash(npm run:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
