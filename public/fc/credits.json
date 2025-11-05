@@ -1,0 +1,158 @@
+{
+  "$schema": "./credits.schema.json",
+  "metadata": {
+    "project": "LIFE X FC LP",
+    "purpose": "画像・素材の権利管理および出典記録",
+    "lastUpdated": "2025-11-05",
+    "maintainer": "LIFE X 本部 法務・コンプライアンス担当"
+  },
+  "images": {
+    "/hero/hero-01.jpg": {
+      "source": "Unsplash",
+      "sourceUrl": "https://unsplash.com/",
+      "license": "Unsplash License (Free to use)",
+      "attribution": "Photographer name (if available)",
+      "dateAcquired": "2025-10-15",
+      "notes": "高品質LDK写真。夕景、暖色系。",
+      "internalReference": "hero-main-v1"
+    },
+    "/hero/hero-final.webp": {
+      "source": "AI Generated (Midjourney / DALL-E / Stable Diffusion)",
+      "sourceUrl": null,
+      "license": "Commercial use allowed (generated with paid subscription)",
+      "attribution": "AI生成",
+      "dateAcquired": "2025-11-05",
+      "generationPrompt": "See /prompts.md P0-1",
+      "notes": "Hero用決定カット。露出-12%、暖色統一。",
+      "internalReference": "hero-final-ai-v1"
+    },
+    "/fc/detail-kamachi.webp": {
+      "source": "AI Generated",
+      "sourceUrl": null,
+      "license": "Commercial use allowed",
+      "attribution": "AI生成",
+      "dateAcquired": "2025-11-05",
+      "generationPrompt": "See /prompts.md P0-2-1",
+      "notes": "框のディテール接写。",
+      "internalReference": "detail-kamachi-v1"
+    },
+    "/fc/detail-habaki.webp": {
+      "source": "AI Generated",
+      "sourceUrl": null,
+      "license": "Commercial use allowed",
+      "attribution": "AI生成",
+      "dateAcquired": "2025-11-05",
+      "generationPrompt": "See /prompts.md P0-2-2",
+      "notes": "巾木のディテール接写。",
+      "internalReference": "detail-habaki-v1"
+    },
+    "/fc/detail-window.webp": {
+      "source": "AI Generated",
+      "sourceUrl": null,
+      "license": "Commercial use allowed",
+      "attribution": "AI生成",
+      "dateAcquired": "2025-11-05",
+      "generationPrompt": "See /prompts.md P0-2-3",
+      "notes": "窓回りのディテール接写。",
+      "internalReference": "detail-window-v1"
+    },
+    "/fc/detail-countertop.webp": {
+      "source": "AI Generated",
+      "sourceUrl": null,
+      "license": "Commercial use allowed",
+      "attribution": "AI生成",
+      "dateAcquired": "2025-11-05",
+      "generationPrompt": "See /prompts.md P0-2-4",
+      "notes": "天板（カウンター）のディテール接写。",
+      "internalReference": "detail-countertop-v1"
+    },
+    "/fc/diagram-core.webp": {
+      "source": "AI Generated / Custom illustration",
+      "sourceUrl": null,
+      "license": "Proprietary (LIFE X)",
+      "attribution": "LIFE X 設計部",
+      "dateAcquired": "2025-11-05",
+      "generationPrompt": "See /prompts.md P0-3",
+      "notes": "二重屋根・通気・制振の概念図。単色アイソメ。",
+      "internalReference": "diagram-core-v1"
+    },
+    "/cases/case-01.jpg": {
+      "source": "Stock photo / Project photo",
+      "sourceUrl": "To be updated",
+      "license": "Licensed for commercial use",
+      "attribution": "Photographer / Agency name",
+      "dateAcquired": "2025-10-01",
+      "notes": "施工事例写真。顧客許諾取得済み（仮）。",
+      "internalReference": "case-study-01"
+    },
+    "/cases/case-02.jpg": {
+      "source": "Stock photo / Project photo",
+      "sourceUrl": "To be updated",
+      "license": "Licensed for commercial use",
+      "attribution": "Photographer / Agency name",
+      "dateAcquired": "2025-10-01",
+      "notes": "施工事例写真。顧客許諾取得済み（仮）。",
+      "internalReference": "case-study-02"
+    }
+  },
+  "diagrams": {
+    "/fc/diagram-core.webp": {
+      "type": "Isometric architectural diagram",
+      "createdBy": "AI generation / In-house design team",
+      "software": "AI image generator / Adobe Illustrator",
+      "license": "Proprietary (LIFE X)",
+      "notes": "構造概念図。法的記載義務なし（概念図のため）。"
+    }
+  },
+  "fonts": {
+    "Noto Sans JP": {
+      "source": "Google Fonts",
+      "license": "SIL Open Font License 1.1",
+      "url": "https://fonts.google.com/specimen/Noto+Sans+JP",
+      "notes": "商用利用可能。"
+    },
+    "Noto Serif JP": {
+      "source": "Google Fonts",
+      "license": "SIL Open Font License 1.1",
+      "url": "https://fonts.google.com/specimen/Noto+Serif+JP",
+      "notes": "商用利用可能。現在システムフォントでフォールバック中。"
+    }
+  },
+  "icons": {
+    "lucide-react": {
+      "source": "Lucide Icons",
+      "license": "ISC License (MIT-like)",
+      "url": "https://lucide.dev/",
+      "notes": "商用利用可能。アイコンセット全体。"
+    }
+  },
+  "thirdPartyLibraries": {
+    "framer-motion": {
+      "license": "MIT",
+      "url": "https://www.framer.com/motion/",
+      "notes": "アニメーションライブラリ。商用利用可能。"
+    },
+    "react-hook-form": {
+      "license": "MIT",
+      "url": "https://react-hook-form.com/",
+      "notes": "フォームバリデーション。商用利用可能。"
+    },
+    "zod": {
+      "license": "MIT",
+      "url": "https://zod.dev/",
+      "notes": "スキーマバリデーション。商用利用可能。"
+    },
+    "dayjs": {
+      "license": "MIT",
+      "url": "https://day.js.org/",
+      "notes": "日付処理ライブラリ。商用利用可能。"
+    }
+  },
+  "notes": {
+    "imageRightsPolicy": "すべての画像は商用利用可能なライセンスまたは自社生成素材を使用しています。",
+    "aiGeneratedContent": "AI生成画像は有料サブスクリプション契約下で生成されており、商用利用が許諾されています。",
+    "customerPhotos": "施工事例写真は顧客からの書面による許諾を取得済みです（該当する場合）。",
+    "updateFrequency": "本ファイルは新規画像追加時に都度更新してください。",
+    "legalReview": "法務レビュー実施日: 2025-11-05（初版）"
+  }
+}

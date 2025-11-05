@@ -1,5 +1,8 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 import { ReactNode } from 'react'
+import { useSectionView } from '@/hooks/use-section-view'
 
 interface SectionProps {
   children: ReactNode
@@ -18,6 +21,7 @@ export function Section({
   className,
   id,
 }: SectionProps) {
+  const sectionRef = useSectionView(id)
   const bgColors = {
     light: 'bg-[#F8F9FA]',
     dark: 'bg-[#0B0D0F] text-[#EDEFF1]',
@@ -39,7 +43,11 @@ export function Section({
   }
 
   return (
-    <section id={id} className={cn(bgColors[variant], spacings[spacing], className)}>
+    <section
+      ref={sectionRef}
+      id={id}
+      className={cn(bgColors[variant], spacings[spacing], className)}
+    >
       <div className={widths[width]}>{children}</div>
     </section>
   )

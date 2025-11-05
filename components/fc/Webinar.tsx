@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Section } from './Section'
 import { Calendar, Clock, Video, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
+import dayjs from 'dayjs'
 
 interface WebinarProps {
   data: {
@@ -34,6 +35,17 @@ export function Webinar({ data }: WebinarProps) {
     })
   }
 
+  // Calculate days until next webinar
+  const getDaysUntilNext = (dateString: string) => {
+    const now = dayjs()
+    const next = dayjs(dateString)
+    const days = next.diff(now, 'day')
+    return days
+  }
+
+  const nextWebinarDate = data.nextDates[0]
+  const daysUntil = getDaysUntilNext(nextWebinarDate)
+
   return (
     <Section id="webinar" variant="white" spacing="2xl">
       <div className="text-center mb-16">
@@ -46,6 +58,22 @@ export function Webinar({ data }: WebinarProps) {
         >
           {data.title}
         </motion.h2>
+
+        {/* Days Until Badge */}
+        {daysUntil >= 0 && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.05 }}
+            className="inline-block mb-4"
+          >
+            <div className="bg-[#D9B66A] text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md">
+              直近開催まで あと{daysUntil}日
+            </div>
+          </motion.div>
+        )}
+
         <motion.p
           className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
