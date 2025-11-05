@@ -17,8 +17,8 @@ export function Hero() {
         className="object-cover"
       />
 
-      {/* Black overlay 40% */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Black overlay 50% for better text contrast */}
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 md:pt-36 w-full">
