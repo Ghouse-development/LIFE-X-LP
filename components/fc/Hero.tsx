@@ -27,7 +27,8 @@ export function Hero({ data }: HeroProps) {
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+        {/* Subtle overlay for sophistication */}
+        <div className="absolute inset-0 bg-[#0B0D0F]/40" />
       </div>
 
       {/* Content */}
@@ -37,46 +38,34 @@ export function Hero({ data }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* Problems */}
-          {data.problems && data.problems.length > 0 && (
-            <p className="text-sm md:text-base text-white/80 mb-6">
-              {data.problems[0]}
-            </p>
-          )}
-
-          {/* Title */}
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            {data.title}
+          {/* Title - Large serif with wide tracking for sophistication */}
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-wide leading-tight md:leading-[1.2] text-white mb-6">
+            規格住宅の&ldquo;美しさと再現性&rdquo;を、<br className="hidden md:inline" />あなたの商圏の武器に。
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl lg:text-3xl font-light mb-4">
-            {data.subtitle}
+          {/* Lead - Constrained width for breathing room */}
+          <p className="mt-5 max-w-[680px] mx-auto text-white/80 text-base md:text-lg leading-relaxed mb-12">
+            設計思想・標準仕様・営業〜施工フローまで、立上げの要素をワンパッケージで。
           </p>
 
-          {/* Lead */}
-          <p className="text-base md:text-lg max-w-3xl mx-auto mb-10 text-white/90 leading-relaxed">
-            {data.lead}
-          </p>
-
-          {/* CTA Buttons */}
+          {/* Primary CTA + Secondary actions */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               asChild
               size="lg"
-              className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113] text-base px-8 py-6 h-auto"
+              className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113] font-semibold text-base px-10 py-6 h-auto rounded-lg shadow-lg"
               data-gtm="cta_primary_request"
             >
-              <Link href="#contact">資料請求・相談</Link>
+              <Link href="#contact">資料請求・個別相談</Link>
             </Button>
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#0E1113] text-base px-8 py-6 h-auto"
-              data-gtm="cta_secondary_consult"
+              variant="ghost"
+              className="text-white/90 hover:text-white hover:bg-white/10 text-base px-8 py-6 h-auto"
+              data-gtm="cta_secondary_webinar"
             >
-              <Link href="#webinar">次回ウェビナー</Link>
+              <Link href="#webinar">ウェビナーを見る</Link>
             </Button>
           </div>
         </motion.div>

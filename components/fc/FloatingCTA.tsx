@@ -2,16 +2,17 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { Phone, Mail, Video } from 'lucide-react'
+import { FileText, MessageCircle, Video, ChevronUp } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      // ヒーローセクションを過ぎたら表示
+      // Show after scrolling past hero
       setIsVisible(window.scrollY > window.innerHeight * 0.8)
     }
 
@@ -22,50 +23,96 @@ export function FloatingCTA() {
   return (
     <div
       className={cn(
-        'fixed bottom-6 right-6 z-40 flex flex-col gap-3 transition-all duration-300',
+        'fixed bottom-5 right-5 z-50 transition-all duration-300',
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
       )}
     >
-      {/* 資料請求 */}
-      <Button
-        asChild
-        size="lg"
-        className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113] shadow-lg rounded-full w-14 h-14 p-0 md:w-auto md:h-auto md:px-6 md:py-3"
-        data-gtm="floating_cta_request"
-      >
-        <Link href="#contact" className="flex items-center justify-center gap-2">
-          <Mail size={20} />
-          <span className="hidden md:inline">資料請求</span>
-        </Link>
-      </Button>
+      {/* Mobile: Expandable single button */}
+      <div className="md:hidden">
+        <div className={cn(
+          'rounded-2xl bg-white/95 backdrop-blur shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-black/5 p-2 flex flex-col gap-2 transition-all duration-300',
+          isExpanded ? 'mb-2' : ''
+        )}>
+          {isExpanded && (
+            <>
+              <Button
+                asChild
+                size="sm"
+                className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113] text-xs"
+                data-gtm="floating_cta_request"
+              >
+                <Link href="#contact">資料請求</Link>
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                variant="outline"
+                className="text-xs"
+                data-gtm="floating_cta_consult"
+              >
+                <Link href="#contact">個別相談</Link>
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                variant="ghost"
+                className="text-xs"
+                data-gtm="floating_cta_webinar"
+              >
+                <Link href="#webinar">ウェビナー</Link>
+              </Button>
+            </>
+          )}
+          <Button
+            size="sm"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+          >
+            <ChevronUp className={cn('transition-transform', isExpanded && 'rotate-180')} size={16} />
+          </Button>
+        </div>
+      </div>
 
-      {/* 個別相談 */}
-      <Button
-        asChild
-        size="lg"
-        variant="outline"
-        className="bg-white hover:bg-gray-50 text-[#0E1113] shadow-lg border-2 border-[#D9B66A] rounded-full w-14 h-14 p-0 md:w-auto md:h-auto md:px-6 md:py-3"
-        data-gtm="floating_cta_consult"
-      >
-        <a href="tel:06-1234-5678" className="flex items-center justify-center gap-2">
-          <Phone size={20} />
-          <span className="hidden md:inline">個別相談</span>
-        </a>
-      </Button>
-
-      {/* ウェビナー */}
-      <Button
-        asChild
-        size="lg"
-        variant="outline"
-        className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-lg border-0 rounded-full w-14 h-14 p-0 md:w-auto md:h-auto md:px-6 md:py-3"
-        data-gtm="floating_cta_tertiary_webinar"
-      >
-        <Link href="#webinar" className="flex items-center justify-center gap-2">
-          <Video size={20} />
-          <span className="hidden md:inline">ウェビナー</span>
-        </Link>
-      </Button>
+      {/* Desktop: Horizontal box with 3 buttons */}
+      <div className="hidden md:block">
+        <div className="rounded-2xl bg-white/95 backdrop-blur shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-black/5 p-2 flex gap-2">
+          <Button
+            asChild
+            size="sm"
+            className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113] text-sm px-4"
+            data-gtm="floating_cta_request"
+          >
+            <Link href="#contact" className="flex items-center gap-2">
+              <FileText size={16} />
+              資料請求
+            </Link>
+          </Button>
+          <Button
+            asChild
+            size="sm"
+            variant="outline"
+            className="text-sm px-4"
+            data-gtm="floating_cta_consult"
+          >
+            <Link href="#contact" className="flex items-center gap-2">
+              <MessageCircle size={16} />
+              個別相談
+            </Link>
+          </Button>
+          <Button
+            asChild
+            size="sm"
+            variant="ghost"
+            className="text-sm px-4"
+            data-gtm="floating_cta_webinar"
+          >
+            <Link href="#webinar" className="flex items-center gap-2">
+              <Video size={16} />
+              ウェビナー
+            </Link>
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

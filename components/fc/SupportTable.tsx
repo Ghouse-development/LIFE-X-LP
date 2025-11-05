@@ -28,7 +28,7 @@ export function SupportTable({ data }: SupportTableProps) {
           サポート範囲
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

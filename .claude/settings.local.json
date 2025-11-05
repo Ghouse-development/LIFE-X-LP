@@ -50,7 +50,12 @@
       "Bash(cat:*)",
       "Bash(PORT=3000 npm run dev:*)",
       "Bash(curl:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "WebFetch(domain:life-x-i4bk3kscs-ghouse-developments-projects.vercel.app)",
+      "Bash(for file in Performance.tsx Process.tsx SupportTable.tsx Testimonials.tsx Map.tsx FAQ.tsx Webinar.tsx ContactForm.tsx)",
+      "Bash(do if [ -f \"$file\" ])",
+      "Bash(then sed -i 's/max-w-3xl mx-auto/max-w-[680px] mx-auto leading-relaxed/g' \"$file\")",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

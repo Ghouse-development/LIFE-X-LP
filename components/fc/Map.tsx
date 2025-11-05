@@ -32,7 +32,7 @@ export function Map({ data }: MapProps) {
         </motion.p>
       </div>
 
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-[680px] mx-auto leading-relaxed">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {data.map((area, index) => (
             <motion.div

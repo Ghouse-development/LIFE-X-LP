@@ -178,7 +178,7 @@ export function ContactForm() {
           資料請求・個別相談
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -188,7 +188,7 @@ export function ContactForm() {
         </motion.p>
       </div>
 
-      <Card className="max-w-3xl mx-auto shadow-xl">
+      <Card className="max-w-[680px] mx-auto leading-relaxed shadow-xl">
         <CardContent className="p-8">
           {/* Progress Indicator */}
           <div className="flex items-center justify-center mb-8">

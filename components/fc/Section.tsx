@@ -25,11 +25,11 @@ export function Section({
   }
 
   const spacings = {
-    sm: 'py-10 md:py-14',
-    md: 'py-14 md:py-24',
-    lg: 'py-20 md:py-32',
-    xl: 'py-24 md:py-40',
-    '2xl': 'py-32 md:py-52',
+    sm: 'py-12 md:py-16',
+    md: 'py-16 md:py-28',
+    lg: 'py-24 md:py-36',
+    xl: 'py-28 md:py-46',
+    '2xl': 'py-36 md:py-60',
   }
 
   const widths = {

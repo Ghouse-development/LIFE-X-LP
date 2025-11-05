@@ -47,7 +47,7 @@ export function Webinar({ data }: WebinarProps) {
           {data.title}
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -144,7 +144,7 @@ export function Webinar({ data }: WebinarProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="max-w-3xl mx-auto"
+        className="max-w-[680px] mx-auto leading-relaxed"
       >
         <Card className="bg-[#D9B66A]/5 border-0">
           <CardContent className="p-8">

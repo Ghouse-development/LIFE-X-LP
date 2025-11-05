@@ -55,7 +55,7 @@ export function Performance({ data }: PerformanceProps) {
           性能・構造
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -89,7 +89,7 @@ export function Performance({ data }: PerformanceProps) {
         ))}
       </div>
 
-      <p className="text-center text-sm text-[#6B7280] max-w-3xl mx-auto">
+      <p className="text-center text-sm text-[#6B7280] max-w-[680px] mx-auto leading-relaxed">
         {data.note}
       </p>
     </Section>
