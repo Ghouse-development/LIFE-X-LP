@@ -20,28 +20,13 @@ interface FAQProps {
 
 export function FAQ({ data }: FAQProps) {
   return (
-    <Section id="faq" variant="white" spacing="2xl">
-      <div className="text-center mb-16">
-        <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold text-[var(--primary)] mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          よくある質問
-        </motion.h2>
-        <motion.p
-          className="text-lg md:text-xl text-[var(--ink-muted)] max-w-[680px] mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          FC加盟に関する疑問にお答えします
-        </motion.p>
-      </div>
-
+    <Section
+      id="faq"
+      variant="white"
+      spacing="2xl"
+      title="よくある質問"
+      subtitle="FC加盟に関する疑問にお答えします"
+    >
       <motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 30 }}

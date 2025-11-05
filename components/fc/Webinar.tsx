@@ -47,43 +47,27 @@ export function Webinar({ data }: WebinarProps) {
   const daysUntil = getDaysUntilNext(nextWebinarDate)
 
   return (
-    <Section id="webinar" variant="white" spacing="2xl">
-      <div className="text-center mb-16">
-        <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+    <Section
+      id="webinar"
+      variant="white"
+      spacing="2xl"
+      title={data.title}
+      subtitle="オンラインで30分、事業概要と収益モデルを解説します"
+    >
+      {/* Days Until Badge */}
+      {daysUntil >= 0 && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.05 }}
+          className="inline-block mb-8 flex justify-center"
         >
-          {data.title}
-        </motion.h2>
-
-        {/* Days Until Badge */}
-        {daysUntil >= 0 && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.05 }}
-            className="inline-block mb-4"
-          >
-            <div className="bg-[#D9B66A] text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md">
-              直近開催まで あと{daysUntil}日
-            </div>
-          </motion.div>
-        )}
-
-        <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          オンラインで30分、事業概要と収益モデルを解説します
-        </motion.p>
-      </div>
+          <div className="bg-[var(--brand)] text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-md">
+            直近開催まで あと{daysUntil}日
+          </div>
+        </motion.div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
         {/* Schedule */}
@@ -93,42 +77,42 @@ export function Webinar({ data }: WebinarProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          <Card className="h-full border-2 border-[#D9B66A]/20 shadow-lg">
+          <Card className="h-full border-2 border-[var(--brand)]/20 shadow-lg">
             <CardContent className="p-8">
-              <h3 className="font-bold text-2xl mb-6">開催スケジュール</h3>
+              <h3 className="font-bold text-2xl text-[var(--primary)] mb-6">開催スケジュール</h3>
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-[#D9B66A] flex-shrink-0 mt-1" />
+                  <Calendar className="w-5 h-5 text-[var(--brand)] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-medium text-sm text-[#6B7280] mb-1">開催頻度</p>
-                    <p className="font-bold">{data.frequency}</p>
+                    <p className="font-medium text-sm text-[var(--ink-muted)] mb-1">開催頻度</p>
+                    <p className="font-bold text-[var(--ink-strong)]">{data.frequency}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-[#D9B66A] flex-shrink-0 mt-1" />
+                  <Clock className="w-5 h-5 text-[var(--brand)] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-medium text-sm text-[#6B7280] mb-1">時間</p>
-                    <p className="font-bold">{data.time}</p>
+                    <p className="font-medium text-sm text-[var(--ink-muted)] mb-1">時間</p>
+                    <p className="font-bold text-[var(--ink-strong)]">{data.time}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Video className="w-5 h-5 text-[#D9B66A] flex-shrink-0 mt-1" />
+                  <Video className="w-5 h-5 text-[var(--brand)] flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-medium text-sm text-[#6B7280] mb-1">プラットフォーム</p>
-                    <p className="font-bold">{data.platform}</p>
+                    <p className="font-medium text-sm text-[var(--ink-muted)] mb-1">プラットフォーム</p>
+                    <p className="font-bold text-[var(--ink-strong)]">{data.platform}</p>
                   </div>
                 </div>
               </div>
 
               <div className="border-t pt-6">
-                <p className="font-medium text-sm text-[#6B7280] mb-3">次回開催日</p>
+                <p className="font-medium text-sm text-[var(--ink-muted)] mb-3">次回開催日</p>
                 <div className="space-y-2">
                   {data.nextDates.slice(0, 3).map((date) => (
-                    <div key={date} className="bg-[#D9B66A]/5 p-3 rounded-lg">
-                      <p className="text-sm font-medium">{formatDate(date)}</p>
+                    <div key={date} className="bg-[var(--brand)]/5 p-3 rounded-lg">
+                      <p className="text-sm font-medium text-[var(--ink-strong)]">{formatDate(date)}</p>
                     </div>
                   ))}
                 </div>
@@ -146,17 +130,17 @@ export function Webinar({ data }: WebinarProps) {
         >
           <Card className="h-full border-0 shadow-lg">
             <CardContent className="p-8">
-              <h3 className="font-bold text-2xl mb-6">アジェンダ</h3>
+              <h3 className="font-bold text-2xl text-[var(--primary)] mb-6">アジェンダ</h3>
 
               <div className="space-y-4">
                 {data.agenda.map((item, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#D9B66A]/10 rounded-lg flex items-center justify-center">
-                      <span className="text-sm font-bold text-[#D9B66A]">{item.time}</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-[var(--brand)]/10 rounded-lg flex items-center justify-center">
+                      <span className="text-sm font-bold text-[var(--brand)]">{item.time}</span>
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1">{item.title}</h4>
-                      <p className="text-sm text-[#6B7280]">{item.description}</p>
+                      <h4 className="font-bold text-[var(--ink-strong)] mb-1">{item.title}</h4>
+                      <p className="text-sm text-[var(--ink)]">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -174,14 +158,14 @@ export function Webinar({ data }: WebinarProps) {
         transition={{ duration: 0.4 }}
         className="max-w-[680px] mx-auto leading-relaxed"
       >
-        <Card className="bg-[#D9B66A]/5 border-0">
+        <Card className="bg-[var(--brand)]/5 border-0">
           <CardContent className="p-8">
-            <h3 className="font-bold text-xl mb-6 text-center">参加メリット</h3>
+            <h3 className="font-bold text-xl text-[var(--primary)] mb-6 text-center">参加メリット</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {data.benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-[#D9B66A] flex-shrink-0 mt-0.5" />
-                  <p className="text-sm">{benefit}</p>
+                  <CheckCircle2 className="w-5 h-5 text-[var(--brand)] flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-[var(--ink)]">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -193,12 +177,13 @@ export function Webinar({ data }: WebinarProps) {
       <div className="text-center mt-10">
         <Button
           asChild
-          className="btn-base btn-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white"
+          variant="primary"
+          size="lg"
           data-gtm="cta_webinar_register"
         >
           <Link href="#contact">次回ウェビナーに申し込む</Link>
         </Button>
-        <p className="text-sm text-[#6B7280] mt-4">※録画視聴も可能です</p>
+        <p className="text-sm text-[var(--ink-muted)] mt-4">※録画視聴も可能です</p>
       </div>
     </Section>
   )

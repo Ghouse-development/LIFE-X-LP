@@ -147,12 +147,18 @@ export function ContactForm() {
 
   if (isSuccess) {
     return (
-      <Section id="contact" variant="light" spacing="2xl">
+      <Section
+        id="contact"
+        variant="light"
+        spacing="2xl"
+        title="資料請求・個別相談"
+        subtitle="まずは30分で概要をご説明します。お気軽にお問い合わせください。"
+      >
         <Card className="max-w-2xl mx-auto text-center py-12">
           <CardContent>
             <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-6" />
-            <h3 className="font-serif text-2xl font-bold mb-4">送信完了</h3>
-            <p className="text-[#6B7280] mb-6">
+            <h3 className="font-serif text-2xl font-bold text-[var(--primary)] mb-4">送信完了</h3>
+            <p className="text-[var(--ink-muted)] mb-6">
               お問い合わせありがとうございます。<br />
               担当者より追ってご連絡いたします。
             </p>
@@ -166,28 +172,13 @@ export function ContactForm() {
   }
 
   return (
-    <Section id="contact" variant="light" spacing="2xl">
-      <div className="text-center mb-12">
-        <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          資料請求・個別相談
-        </motion.h2>
-        <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          まずは30分で概要をご説明します。お気軽にお問い合わせください。
-        </motion.p>
-      </div>
-
+    <Section
+      id="contact"
+      variant="light"
+      spacing="2xl"
+      title="資料請求・個別相談"
+      subtitle="まずは30分で概要をご説明します。お気軽にお問い合わせください。"
+    >
       <Card className="max-w-[680px] mx-auto leading-relaxed shadow-xl">
         <CardContent className="p-8">
           {/* Progress Indicator */}
@@ -197,7 +188,7 @@ export function ContactForm() {
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${
                     s === step
-                      ? 'bg-[#D9B66A] text-white'
+                      ? 'bg-[var(--brand)] text-white'
                       : s < step
                       ? 'bg-green-500 text-white'
                       : 'bg-gray-200 text-gray-500'
@@ -220,11 +211,11 @@ export function ContactForm() {
             {/* Step 1: 基本情報 */}
             {step === 1 && (
               <div className="space-y-6">
-                <h3 className="font-bold text-xl mb-6">基本情報</h3>
+                <h3 className="font-bold text-xl text-[var(--primary)] mb-6">基本情報</h3>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="company" className="text-sm text-neutral-600">
-                    会社名・屋号<span className="text-neutral-400"> *</span>
+                  <Label htmlFor="company" className="text-sm text-[var(--ink)]">
+                    会社名・屋号<span className="text-[var(--ink-muted)]"> *</span>
                   </Label>
                   <Input
                     id="company"
@@ -239,8 +230,8 @@ export function ContactForm() {
                 </div>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="name" className="text-sm text-neutral-600">
-                    お名前<span className="text-neutral-400"> *</span>
+                  <Label htmlFor="name" className="text-sm text-[var(--ink)]">
+                    お名前<span className="text-[var(--ink-muted)]"> *</span>
                   </Label>
                   <Input
                     id="name"
@@ -255,8 +246,8 @@ export function ContactForm() {
                 </div>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="email" className="text-sm text-neutral-600">
-                    メールアドレス<span className="text-neutral-400"> *</span>
+                  <Label htmlFor="email" className="text-sm text-[var(--ink)]">
+                    メールアドレス<span className="text-[var(--ink-muted)]"> *</span>
                   </Label>
                   <Input
                     id="email"
@@ -272,8 +263,8 @@ export function ContactForm() {
                 </div>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="phone" className="text-sm text-neutral-600">
-                    電話番号<span className="text-neutral-400"> *</span>
+                  <Label htmlFor="phone" className="text-sm text-[var(--ink)]">
+                    電話番号<span className="text-[var(--ink-muted)]"> *</span>
                   </Label>
                   <Input
                     id="phone"
@@ -291,7 +282,9 @@ export function ContactForm() {
                 <Button
                   type="button"
                   onClick={nextStep}
-                  className="btn-base btn-lg w-full mt-2 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+                  variant="primary"
+                  size="lg"
+                  className="w-full mt-2"
                   data-gtm="form_step1_next"
                 >
                   次へ
@@ -302,11 +295,11 @@ export function ContactForm() {
             {/* Step 2: 希望内容 */}
             {step === 2 && (
               <div className="space-y-6">
-                <h3 className="font-bold text-xl mb-6">希望内容</h3>
+                <h3 className="font-bold text-xl text-[var(--primary)] mb-6">希望内容</h3>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="prefecture" className="text-sm text-neutral-600">
-                    都道府県<span className="text-neutral-400"> *</span>
+                  <Label htmlFor="prefecture" className="text-sm text-[var(--ink)]">
+                    都道府県<span className="text-[var(--ink-muted)]"> *</span>
                   </Label>
                   <select
                     id="prefecture"
@@ -331,8 +324,8 @@ export function ContactForm() {
                 </div>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="interest" className="text-sm text-neutral-600">
-                    興味のある内容<span className="text-neutral-400"> *</span>
+                  <Label htmlFor="interest" className="text-sm text-[var(--ink)]">
+                    興味のある内容<span className="text-[var(--ink-muted)]"> *</span>
                   </Label>
                   <select
                     id="interest"
@@ -353,7 +346,7 @@ export function ContactForm() {
                 </div>
 
                 <div className="grid gap-1">
-                  <Label htmlFor="message" className="text-sm text-neutral-600">
+                  <Label htmlFor="message" className="text-sm text-[var(--ink)]">
                     お問い合わせ内容（任意）
                   </Label>
                   <Textarea
@@ -369,14 +362,17 @@ export function ContactForm() {
                     type="button"
                     onClick={() => setStep(1)}
                     variant="outline"
-                    className="btn-base btn-lg flex-1"
+                    size="lg"
+                    className="flex-1"
                   >
                     戻る
                   </Button>
                   <Button
                     type="button"
                     onClick={nextStep}
-                    className="btn-base btn-lg flex-1 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+                    variant="primary"
+                    size="lg"
+                    className="flex-1"
                     data-gtm="form_step2_next"
                   >
                     次へ
@@ -388,32 +384,32 @@ export function ContactForm() {
             {/* Step 3: 同意・送信 */}
             {step === 3 && (
               <div className="space-y-6">
-                <h3 className="font-bold text-xl mb-6">確認・送信</h3>
+                <h3 className="font-bold text-xl text-[var(--primary)] mb-6">確認・送信</h3>
 
                 <div className="bg-gray-50 p-6 rounded-lg space-y-3 text-sm">
                   <div className="grid grid-cols-3 gap-2">
-                    <span className="text-[#6B7280]">会社名・屋号:</span>
-                    <span className="col-span-2 font-medium">{form.watch('company')}</span>
+                    <span className="text-[var(--ink-muted)]">会社名・屋号:</span>
+                    <span className="col-span-2 font-medium text-[var(--ink-strong)]">{form.watch('company')}</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <span className="text-[#6B7280]">お名前:</span>
-                    <span className="col-span-2 font-medium">{form.watch('name')}</span>
+                    <span className="text-[var(--ink-muted)]">お名前:</span>
+                    <span className="col-span-2 font-medium text-[var(--ink-strong)]">{form.watch('name')}</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <span className="text-[#6B7280]">メール:</span>
-                    <span className="col-span-2 font-medium">{form.watch('email')}</span>
+                    <span className="text-[var(--ink-muted)]">メール:</span>
+                    <span className="col-span-2 font-medium text-[var(--ink-strong)]">{form.watch('email')}</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <span className="text-[#6B7280]">電話番号:</span>
-                    <span className="col-span-2 font-medium">{form.watch('phone')}</span>
+                    <span className="text-[var(--ink-muted)]">電話番号:</span>
+                    <span className="col-span-2 font-medium text-[var(--ink-strong)]">{form.watch('phone')}</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <span className="text-[#6B7280]">都道府県:</span>
-                    <span className="col-span-2 font-medium">{form.watch('prefecture')}</span>
+                    <span className="text-[var(--ink-muted)]">都道府県:</span>
+                    <span className="col-span-2 font-medium text-[var(--ink-strong)]">{form.watch('prefecture')}</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <span className="text-[#6B7280]">興味の内容:</span>
-                    <span className="col-span-2 font-medium">{form.watch('interest')}</span>
+                    <span className="text-[var(--ink-muted)]">興味の内容:</span>
+                    <span className="col-span-2 font-medium text-[var(--ink-strong)]">{form.watch('interest')}</span>
                   </div>
                 </div>
 
@@ -424,8 +420,8 @@ export function ContactForm() {
                     {...form.register('agreement')}
                     className="mt-1"
                   />
-                  <Label htmlFor="agreement" className="text-sm cursor-pointer">
-                    <a href="/privacy" className="text-[#2563EB] hover:underline">
+                  <Label htmlFor="agreement" className="text-sm text-[var(--ink)] cursor-pointer">
+                    <a href="/privacy" className="text-[var(--link)] hover:underline">
                       プライバシーポリシー
                     </a>
                     に同意します *
@@ -442,14 +438,17 @@ export function ContactForm() {
                     type="button"
                     onClick={() => setStep(2)}
                     variant="outline"
-                    className="btn-base btn-lg flex-1"
+                    size="lg"
+                    className="flex-1"
                   >
                     戻る
                   </Button>
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-base btn-lg flex-1 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+                    variant="primary"
+                    size="lg"
+                    className="flex-1"
                     data-gtm="form_submit"
                   >
                     {isSubmitting ? (

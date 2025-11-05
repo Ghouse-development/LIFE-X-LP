@@ -43,29 +43,14 @@ export function Performance({ data }: PerformanceProps) {
   ]
 
   return (
-    <Section id="performance" variant="white" spacing="2xl">
-      <div className="text-center mb-16">
-        <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold text-[var(--primary)] mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          性能・構造
-        </motion.h2>
-        <motion.p
-          className="text-lg md:text-xl text-[var(--ink-muted)] max-w-[680px] mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          数値で語る性能、写真で語る生活の美
-        </motion.p>
-      </div>
-
-      <div className="mt-10 grid gap-6 md:grid-cols-3 items-stretch mb-12">
+    <Section
+      id="performance"
+      variant="white"
+      spacing="2xl"
+      title="性能・構造"
+      subtitle="数値で語る性能、写真で語る生活の美"
+    >
+      <div className="grid gap-6 md:grid-cols-3 items-stretch mb-12">
         {/* Left: Main performance metrics (2 columns) */}
         <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {specs.slice(0, 3).map((spec, index) => (

@@ -53,6 +53,9 @@ export function Section({
     narrow: 'mx-auto max-w-4xl px-6 sm:px-4',
   }
 
+  const titleColorClass = effectiveTone === 'dark' ? 'text-white' : 'text-[var(--primary)]'
+  const subtitleColorClass = effectiveTone === 'dark' ? 'text-white/80' : 'text-[var(--ink-muted)]'
+
   return (
     <section
       ref={sectionRef}
@@ -63,7 +66,7 @@ export function Section({
         {title && (
           <div className="text-center mb-16">
             <motion.h2
-              className="font-serif text-[var(--primary)] text-3xl md:text-4xl leading-tight"
+              className={`font-serif ${titleColorClass} text-3xl md:text-4xl leading-tight`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -73,7 +76,7 @@ export function Section({
             </motion.h2>
             {subtitle && (
               <motion.p
-                className="mx-auto mt-4 max-w-[680px] text-[var(--ink-muted)] leading-relaxed"
+                className={`mx-auto mt-4 max-w-[680px] ${subtitleColorClass} leading-relaxed`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

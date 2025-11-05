@@ -21,28 +21,13 @@ export function Gallery({ data }: GalleryProps) {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null)
 
   return (
-    <Section id="gallery" variant="dark" spacing="2xl">
-      <div className="text-center mb-16">
-        <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold text-white mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          ギャラリー
-        </motion.h2>
-        <motion.p
-          className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          空間とディテールが織りなす美しさ
-        </motion.p>
-      </div>
-
+    <Section
+      id="gallery"
+      variant="dark"
+      spacing="2xl"
+      title="ギャラリー"
+      subtitle="空間とディテールが織りなす美しさ"
+    >
       {/* Editorial asymmetric grid: 1 large + 3 medium + 4 small */}
       <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto">
         {data.map((item, index) => {

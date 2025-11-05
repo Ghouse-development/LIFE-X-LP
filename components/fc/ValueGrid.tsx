@@ -32,28 +32,13 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function ValueGrid({ data }: ValueGridProps) {
   return (
-    <Section id="value" variant="light" spacing="2xl">
-      <div className="text-center mb-16">
-        <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold text-[var(--primary)] mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          選ばれる理由
-        </motion.h2>
-        <motion.p
-          className="text-lg md:text-xl text-[var(--ink-muted)] max-w-[680px] mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          スモールスタートで始める高性能住宅FC
-        </motion.p>
-      </div>
-
+    <Section
+      id="value"
+      variant="light"
+      spacing="2xl"
+      title="選ばれる理由"
+      subtitle="スモールスタートで始める高性能住宅FC"
+    >
       {/* Reasons */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {data.reasons.map((reason, index) => {

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { SiteHeader } from '@/components/fc/SiteHeader'
 import { Hero } from '@/components/fc/Hero'
+import { Subnav } from '@/components/fc/Subnav'
 import { FloatingCTA } from '@/components/fc/FloatingCTA'
 import { Concept } from '@/components/fc/Concept'
 import { ValueGrid } from '@/components/fc/ValueGrid'
@@ -55,6 +56,9 @@ export default function FCPage() {
 
       {/* Hero */}
       <Hero />
+
+      {/* Subnav */}
+      <Subnav />
 
       {/* Floating CTA */}
       <FloatingCTA />

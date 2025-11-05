@@ -30,7 +30,8 @@ export function FloatingCTA() {
       <div className="hidden md:flex gap-2 rounded-2xl border border-black/5 bg-white/95 backdrop-blur shadow-xl p-2">
         <Button
           asChild
-          className="btn-base btn-sm bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+          variant="primary"
+          size="sm"
           data-gtm="cta_primary_request"
         >
           <Link href="#contact">資料請求</Link>
@@ -38,7 +39,7 @@ export function FloatingCTA() {
         <Button
           asChild
           variant="outline"
-          className="btn-base btn-sm"
+          size="sm"
           data-gtm="cta_secondary_consult"
         >
           <Link href="#contact">個別相談</Link>
@@ -46,7 +47,7 @@ export function FloatingCTA() {
         <Button
           asChild
           variant="ghost"
-          className="btn-base btn-sm"
+          size="sm"
           data-gtm="cta_tertiary_webinar"
         >
           <Link href="#webinar">ウェビナー</Link>
@@ -61,7 +62,8 @@ export function FloatingCTA() {
             <Button
               asChild
               variant="outline"
-              className="btn-base btn-sm rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
+              size="sm"
+              className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
               data-gtm="cta_secondary_consult_mobile"
             >
               <Link href="#contact">個別相談</Link>
@@ -69,7 +71,8 @@ export function FloatingCTA() {
             <Button
               asChild
               variant="ghost"
-              className="btn-base btn-sm rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
+              size="sm"
+              className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
               data-gtm="cta_tertiary_webinar_mobile"
             >
               <Link href="#webinar">ウェビナー</Link>
@@ -93,7 +96,9 @@ export function FloatingCTA() {
           </button>
           <Button
             asChild
-            className="btn-base btn-sm bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113] rounded-full shadow-xl min-w-[100px]"
+            variant="primary"
+            size="sm"
+            className="rounded-full shadow-xl min-w-[100px]"
             data-gtm="cta_primary_request_mobile"
           >
             <Link href="#contact">資料請求</Link>
