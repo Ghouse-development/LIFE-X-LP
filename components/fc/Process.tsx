@@ -6,9 +6,11 @@ import { Section } from './Section'
 import { ArrowRight } from 'lucide-react'
 
 interface ProcessStep {
-  step: string
+  week: string
   title: string
   desc: string
+  deliverable: string
+  step?: string  // 後方互換性
   duration?: string
   deliverables?: string
   owner?: string
@@ -24,50 +26,46 @@ export function Process({ data }: ProcessProps) {
       id="process"
       variant="light"
       spacing="2xl"
-      title="導入ステップ"
-      subtitle="相談から開業まで、スムーズな立上げをサポートします"
+      title="最短8週間ロードマップ"
+      subtitle="契約から稼働開始まで、週単位の具体的なステップ"
     >
-      {/* Horizontal Timeline */}
-      <div className="relative">
-        {/* Timeline line (desktop only) */}
-        <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-[var(--brand)]/20" />
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
           {data.map((step, index) => (
             <motion.div
-              key={step.step}
+              key={step.week}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.15 }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               className="relative flex flex-col"
             >
-              {/* Timeline node */}
-              <div className="hidden md:flex absolute top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[var(--brand)] rounded-full border-4 border-[var(--surface-alt)] z-10" />
-
-              {/* Card */}
-              <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] mt-20 md:mt-16 flex flex-col h-full">
-                {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-[var(--brand)] rounded-full mb-4">
-                  <span className="font-serif text-xl font-bold text-white">{step.step}</span>
+              <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
+                {/* Week Badge */}
+                <div className="inline-flex items-center justify-center px-3 py-1 bg-[var(--brand)]/10 rounded-full mb-3 self-start">
+                  <span className="font-semibold text-sm text-[var(--brand)]">{step.week}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-xl font-bold text-[var(--primary)] mb-2">{step.title}</h3>
+                <h3 className="font-bold text-lg text-[var(--primary)] mb-2 break-words">{step.title}</h3>
 
                 {/* Description */}
-                <p className="text-sm text-[var(--ink)] leading-relaxed flex-1">{step.desc}</p>
-              </div>
+                <p className="text-sm text-[var(--ink)] leading-relaxed mb-3 line-clamp-4">{step.desc}</p>
 
-              {/* Arrow connector (except last) */}
-              {index < data.length - 1 && (
-                <div className="hidden md:block absolute top-12 right-0 transform translate-x-1/2 -translate-y-1/2">
-                  <ArrowRight className="text-[var(--brand)] w-5 h-5" />
+                {/* Deliverable */}
+                <div className="mt-auto pt-3 border-t border-black/5">
+                  <p className="text-xs text-[var(--ink-muted)]">
+                    <span className="font-medium">成果物：</span>{step.deliverable}
+                  </p>
                 </div>
-              )}
+              </div>
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-sm text-[var(--ink-muted)] max-w-3xl mx-auto">
+          ※目安期間です。貴社の環境・体制により前後します。詳細スケジュールは契約時に調整します。
+        </p>
       </div>
     </Section>
   )

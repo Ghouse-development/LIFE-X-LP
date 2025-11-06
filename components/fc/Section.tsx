@@ -43,8 +43,8 @@ export function Section({
     sm: 'pt-16 md:pt-20 pb-12 md:pb-16',
     md: 'pt-20 md:pt-24 pb-16 md:pb-20',
     lg: 'pt-24 md:pt-28 pb-18 md:pb-22',
-    xl: 'pt-28 md:pt-36 pb-20 md:pb-24',
-    '2xl': 'pt-32 md:pt-40 pb-28 md:pb-32',
+    xl: 'pt-16 md:pt-24 pb-20 md:pb-24',
+    '2xl': 'pt-16 md:pt-24 pb-28 md:pb-32',
   }
 
   const widths = {
@@ -66,7 +66,7 @@ export function Section({
         {title && (
           <div className="text-center mb-16">
             <motion.h2
-              className={`font-serif ${titleColorClass} text-3xl md:text-4xl leading-tight`}
+              className={`font-serif ${titleColorClass} text-2xl md:text-3xl font-semibold tracking-[.01em] leading-tight`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -76,7 +76,7 @@ export function Section({
             </motion.h2>
             {subtitle && (
               <motion.p
-                className={`mx-auto mt-4 max-w-[680px] ${subtitleColorClass} leading-relaxed`}
+                className={`mx-auto mt-4 max-w-[680px] text-base ${subtitleColorClass} leading-[1.5]`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

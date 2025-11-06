@@ -30,16 +30,16 @@ export function FloatingCTA() {
       <div className="hidden md:flex gap-2 rounded-2xl border border-black/5 bg-white/95 backdrop-blur shadow-xl p-2">
         <Button
           asChild
-          variant="primary"
           size="sm"
+          className="bg-[#0f172a] text-white hover:bg-slate-900 font-medium"
           data-cta="floating_request"
         >
-          <Link href="#contact">📄 資料請求</Link>
+          <Link href="#contact">📄 サンプル請求</Link>
         </Button>
         <Button
           asChild
-          variant="outline"
           size="sm"
+          className="bg-white text-[#0f172a] border-2 border-[#0f172a] hover:bg-gray-50 font-medium"
           data-cta="floating_webinar"
         >
           <Link href="#webinar">🎥 説明会</Link>
@@ -53,9 +53,8 @@ export function FloatingCTA() {
           <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
             <Button
               asChild
-              variant="outline"
               size="sm"
-              className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[110px]"
+              className="rounded-full shadow-lg bg-white backdrop-blur min-w-[110px] border-2 border-[#0f172a] text-[#0f172a] hover:bg-gray-50 font-medium"
               data-cta="floating_webinar_mobile"
             >
               <Link href="#webinar">🎥 説明会</Link>
@@ -79,12 +78,11 @@ export function FloatingCTA() {
           </button>
           <Button
             asChild
-            variant="primary"
             size="sm"
-            className="rounded-full shadow-xl min-w-[110px]"
+            className="rounded-full shadow-xl min-w-[120px] bg-[#0f172a] text-white hover:bg-slate-900 font-medium"
             data-cta="floating_request_mobile"
           >
-            <Link href="#contact">📄 資料</Link>
+            <Link href="#contact">📄 サンプル</Link>
           </Button>
         </div>
       </div>

@@ -17,8 +17,8 @@ export function Hero() {
         className="object-cover"
       />
 
-      {/* Black overlay for text contrast */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Dark overlay for text contrast */}
+      <div className="absolute inset-0 bg-[#0b1220]/60" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 md:pt-36 w-full">
@@ -42,18 +42,16 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Button
               asChild
-              variant="primary"
               size="lg"
               data-cta="hero_request"
-              className="h-12 px-6 rounded-xl bg-white text-[var(--primary)] hover:bg-white/90"
+              className="h-12 px-6 rounded-xl bg-[#0f172a] text-white hover:bg-slate-900 font-medium shadow-lg focus:ring-2 focus:ring-[#0f172a] focus:ring-offset-2"
             >
-              <Link href="#contact">資料請求</Link>
+              <Link href="#contact">サンプル一式を請求</Link>
             </Button>
             <Button
               asChild
-              variant="outline"
               size="lg"
-              className="h-12 px-6 rounded-xl border-2 border-white/80 text-white hover:bg-white/20"
+              className="h-12 px-6 rounded-xl bg-white/95 text-[#0f172a] border-2 border-white/80 hover:bg-white font-medium shadow-lg"
               data-cta="hero_webinar"
             >
               <Link href="#webinar">30分で分かる説明会</Link>

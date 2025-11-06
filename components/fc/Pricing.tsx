@@ -64,12 +64,11 @@ export function Pricing() {
       <div className="mt-6 text-center">
         <Button
           asChild
-          variant="primary"
           size="lg"
-          className="h-12 px-6 rounded-xl"
+          className="h-12 px-6 rounded-xl bg-[#0f172a] text-white hover:bg-slate-900 font-medium shadow-lg focus:ring-2 focus:ring-[#0f172a] focus:ring-offset-2"
           data-cta="pricing_request"
         >
-          <Link href="#contact">価格資料を受け取る</Link>
+          <Link href="#contact">サンプル一式を請求</Link>
         </Button>
       </div>
     </Section>
