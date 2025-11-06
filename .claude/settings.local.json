@@ -59,7 +59,10 @@
       "Bash(npm run a11y:fc:*)",
       "Bash(npm run:*)",
       "Bash(netstat:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "WebFetch(domain:life-x-lp.vercel.app)",
+      "WebFetch(domain:github.com)",
+      "Bash(timeout 2 echo:*)"
     ],
     "deny": [],
     "ask": []

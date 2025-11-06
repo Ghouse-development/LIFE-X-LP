@@ -10,25 +10,25 @@ export function SiteFooter() {
           {/* Left: Logo & Description */}
           <div className="flex-1 max-w-md">
             <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
-              LIFE X <span className="text-[#D9B66A]">フランチャイズ</span>
+              LIFE X <span className="text-[var(--brand)]">フランチャイズ</span>
             </h3>
             <p className="text-sm text-[#EDEFF1]/70 leading-relaxed mb-6">
               少人数×短期立上げで始める高性能規格住宅
             </p>
             <nav className="flex flex-wrap gap-4">
-              <Link href="#concept" className="text-xs text-[#EDEFF1]/60 hover:text-[#D9B66A] transition-colors">
+              <Link href="#concept" className="text-xs text-[#EDEFF1]/60 hover:text-[var(--brand)] transition-colors">
                 特徴
               </Link>
-              <Link href="#value" className="text-xs text-[#EDEFF1]/60 hover:text-[#D9B66A] transition-colors">
+              <Link href="#value" className="text-xs text-[#EDEFF1]/60 hover:text-[var(--brand)] transition-colors">
                 収益モデル
               </Link>
-              <Link href="#performance" className="text-xs text-[#EDEFF1]/60 hover:text-[#D9B66A] transition-colors">
+              <Link href="#performance" className="text-xs text-[#EDEFF1]/60 hover:text-[var(--brand)] transition-colors">
                 性能
               </Link>
-              <Link href="#process" className="text-xs text-[#EDEFF1]/60 hover:text-[#D9B66A] transition-colors">
+              <Link href="#process" className="text-xs text-[#EDEFF1]/60 hover:text-[var(--brand)] transition-colors">
                 導入フロー
               </Link>
-              <Link href="#faq" className="text-xs text-[#EDEFF1]/60 hover:text-[#D9B66A] transition-colors">
+              <Link href="#faq" className="text-xs text-[#EDEFF1]/60 hover:text-[var(--brand)] transition-colors">
                 FAQ
               </Link>
             </nav>
@@ -40,7 +40,7 @@ export function SiteFooter() {
             <div className="flex flex-col gap-1 text-xs text-[#EDEFF1]/50">
               <a
                 href="tel:06-1234-5678"
-                className="hover:text-[#D9B66A] transition-colors"
+                className="hover:text-[var(--brand)] transition-colors"
                 data-gtm="footer_phone_click"
               >
                 TEL: 06-1234-5678

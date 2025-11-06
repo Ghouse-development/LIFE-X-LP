@@ -40,10 +40,10 @@ export function SiteHeader() {
           {/* Logo */}
           <Link
             href="#hero"
-            className="font-serif text-xl md:text-2xl font-bold text-[#0E1113]"
+            className="font-serif text-xl md:text-2xl font-bold text-[var(--ink-strong)]"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            LIFE X <span className="text-[#D9B66A]">FC</span>
+            LIFE X <span className="text-[var(--brand)]">FC</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,14 +52,15 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-[#0E1113] hover:text-[#D9B66A] transition-colors"
+                className="text-sm font-medium text-[var(--ink-strong)] hover:text-[var(--primary)] transition-colors"
               >
                 {item.label}
               </Link>
             ))}
             <Button
               asChild
-              className="bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+              variant="primary"
+              size="md"
               data-gtm="nav_cta_request"
             >
               <Link href="#contact">資料請求</Link>
@@ -83,7 +84,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-sm text-[#0E1113] hover:text-[#D9B66A]"
+                className="block py-3 text-sm font-medium text-[var(--ink-strong)] hover:text-[var(--primary)]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
@@ -91,7 +92,9 @@ export function SiteHeader() {
             ))}
             <Button
               asChild
-              className="w-full mt-4 bg-[#D9B66A] hover:bg-[#E5C889] text-[#0E1113]"
+              variant="primary"
+              size="lg"
+              className="w-full mt-4"
               data-gtm="mobile_nav_cta_request"
             >
               <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>

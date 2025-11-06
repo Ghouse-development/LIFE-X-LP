@@ -27,7 +27,7 @@ export function Concept() {
     <Section id="concept" variant="white" spacing="2xl">
       <div className="text-center mb-16">
         <motion.h2
-          className="font-serif text-3xl md:text-5xl font-bold mb-6"
+          className="font-serif text-3xl md:text-5xl font-bold text-[var(--primary)] mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,7 +36,7 @@ export function Concept() {
           LIFE X の設計思想
         </motion.h2>
         <motion.p
-          className="text-lg md:text-xl text-[#6B7280] max-w-[680px] mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-[var(--ink)] max-w-[680px] mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -64,10 +64,10 @@ export function Concept() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500 image-enhanced"
               />
             </div>
-            <h3 className="font-serif text-xl md:text-2xl font-bold mb-3">
+            <h3 className="font-serif text-xl md:text-2xl font-bold text-[var(--primary)] mb-3">
               {concept.title}
             </h3>
-            <p className="text-[#6B7280] leading-relaxed">
+            <p className="text-[var(--ink)] leading-relaxed">
               {concept.description}
             </p>
           </motion.div>
