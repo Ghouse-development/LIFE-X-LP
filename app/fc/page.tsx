@@ -4,9 +4,12 @@ import { Hero } from '@/components/fc/Hero'
 import { Subnav } from '@/components/fc/Subnav'
 import { FloatingCTA } from '@/components/fc/FloatingCTA'
 import { Concept } from '@/components/fc/Concept'
+import { FourReasons } from '@/components/fc/FourReasons'
 import { Reproducibility } from '@/components/fc/Reproducibility'
 import { ValueGrid } from '@/components/fc/ValueGrid'
 import { Performance } from '@/components/fc/Performance'
+import { StandardEquipment } from '@/components/fc/StandardEquipment'
+import { TrustAndSupport } from '@/components/fc/TrustAndSupport'
 import { Gallery } from '@/components/fc/Gallery'
 import { Process } from '@/components/fc/Process'
 import { SupportTable } from '@/components/fc/SupportTable'
@@ -67,6 +70,9 @@ export default function FCPage() {
       {/* Concept */}
       <Concept />
 
+      {/* Four Reasons */}
+      <FourReasons />
+
       {/* Reproducibility Mechanism */}
       <Reproducibility />
 
@@ -80,6 +86,12 @@ export default function FCPage() {
 
       {/* Performance */}
       <Performance data={fcData.performance} />
+
+      {/* Standard Equipment */}
+      <StandardEquipment />
+
+      {/* Trust & Support */}
+      <TrustAndSupport />
 
       {/* Gallery */}
       <Gallery data={fcData.gallery} />
