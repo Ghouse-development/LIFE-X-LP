@@ -1,87 +1,91 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { X } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Section } from './Section'
 
 export function DesignGallery() {
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
 
-  // 外観パース画像リスト（gaikan-01.jpg 〜 gaikan-58.jpg）
-  const designs = Array.from({ length: 58 }, (_, i) => ({
+  // 厳選10プラン（gaikan-01.jpg 〜 gaikan-10.jpg）
+  const designs = Array.from({ length: 10 }, (_, i) => ({
     id: `design-${i + 1}`,
     src: `/fc/gaikan/gaikan-${String(i + 1).padStart(2, '0')}.jpg`,
-    alt: `LIFE X 規格住宅 外観デザイン ${i + 1}`,
+    alt: `LIFE X 規格住宅 外観プラン ${i + 1}`,
   }))
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 400
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      })
+    }
+  }
 
   return (
     <Section
       id="design-gallery"
       variant="dark"
       spacing="2xl"
-      title="外観デザイン集"
-      subtitle="58パターンの外観バリエーション"
+      title="外観デザイン"
+      subtitle="厳選10プランから選べる外観バリエーション"
     >
-      {/* Grid of exterior perspectives */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
-        {designs.map((design, index) => (
-          <motion.div
-            key={design.id}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: index * 0.02 }}
-            className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group ring-1 ring-white/20"
-            onClick={() => setSelectedImage({ src: design.src, alt: design.alt })}
-          >
-            <Image
-              src={design.src}
-              alt={design.alt}
-              fill
-              className="object-cover group-hover:scale-110 transition-transform duration-500"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-          </motion.div>
-        ))}
+      <div className="relative max-w-7xl mx-auto">
+        {/* Scroll Buttons */}
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-colors"
+          aria-label="前へ"
+        >
+          <ChevronLeft className="w-6 h-6 text-[var(--primary)]" />
+        </button>
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-colors"
+          aria-label="次へ"
+        >
+          <ChevronRight className="w-6 h-6 text-[var(--primary)]" />
+        </button>
+
+        {/* Horizontal Scroll Container */}
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory px-12 py-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {designs.map((design, index) => (
+            <motion.div
+              key={design.id}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="flex-shrink-0 w-[380px] snap-center"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-xl">
+                <Image
+                  src={design.src}
+                  alt={design.alt}
+                  fill
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-center text-sm text-white/80 mt-3">プラン {index + 1}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
-      {/* Lightbox */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              className="absolute top-4 right-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
-              onClick={() => setSelectedImage(null)}
-              aria-label="閉じる"
-            >
-              <X size={32} />
-            </button>
-            <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              className="relative w-full h-full max-w-5xl max-h-[80vh]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Image
-                src={selectedImage.src}
-                alt={selectedImage.alt}
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </Section>
   )
 }
