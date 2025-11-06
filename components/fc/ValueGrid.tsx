@@ -3,7 +3,9 @@
 import { motion } from 'framer-motion'
 import { Shield, Sparkles, Rocket, Users, Package, LucideIcon } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import { Section } from './Section'
+import Link from 'next/link'
 
 interface Reason {
   icon: string
@@ -40,7 +42,7 @@ export function ValueGrid({ data }: ValueGridProps) {
       subtitle="スモールスタートで始める高性能住宅FC"
     >
       {/* Reasons */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 auto-rows-fr">
         {data.reasons.map((reason, index) => {
           const Icon = iconMap[reason.icon] || Shield
           return (
@@ -50,14 +52,15 @@ export function ValueGrid({ data }: ValueGridProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="flex"
             >
-              <Card className="h-full border border-black/5 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8">
+              <Card className="flex-1 border border-black/5 shadow-lg hover:shadow-xl transition-shadow flex flex-col min-h-[220px] sm:min-h-[unset]">
+                <CardContent className="p-8 flex flex-col flex-1">
                   <div className="w-14 h-14 bg-[var(--brand)]/10 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-7 h-7 text-[var(--brand)]" />
                   </div>
-                  <h3 className="font-bold text-xl text-[var(--primary)] mb-3">{reason.title}</h3>
-                  <p className="text-[var(--ink)] leading-relaxed">{reason.desc}</p>
+                  <h3 className="font-bold text-xl text-[var(--primary)] mb-3 break-words hyphens-auto">{reason.title}</h3>
+                  <p className="text-[var(--ink)] leading-relaxed line-clamp-3 sm:line-clamp-none">{reason.desc}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -100,6 +103,16 @@ export function ValueGrid({ data }: ValueGridProps) {
         <p className="text-center text-sm text-[var(--ink-muted)] mt-8 max-w-2xl mx-auto">
           ※以上は参考値です。エリア・施策により変動します。確定値は契約前面談で開示します。
         </p>
+        <div className="text-center mt-8">
+          <Button
+            asChild
+            variant="primary"
+            size="lg"
+            data-cta="value_request_materials"
+          >
+            <Link href="#contact">商圏別の収益モデルを資料で確認</Link>
+          </Button>
+        </div>
       </div>
     </Section>
   )

@@ -10,21 +10,25 @@ export function StandardEquipment() {
       name: 'グラフテクトキッチン',
       description: 'BOSCH食洗機・タッチレス水栓・ダイニング収納・キッチンコンセント標準',
       image: '/fc/equipment/graftekt.jpg',
+      alt: 'グラフテクトキッチン（BOSCH食洗機・タッチレス水栓付き）標準装備',
     },
     {
       name: 'AICA洗面化粧台',
       description: 'スマートサニタリーU / W1220・W1675（間取りに合わせて選択）',
       image: '/fc/equipment/aica.jpg',
+      alt: 'AICA洗面化粧台 スマートサニタリーU W1220・W1675選択可',
     },
     {
       name: '全熱交換型第一種換気',
       description: '高効率換気システムで快適な室内環境を実現',
       image: '/fc/equipment/ventilation.jpg',
+      alt: '全熱交換型第一種換気システム',
     },
     {
       name: 'スマートキー玄関ドア',
       description: 'タッチ&キーレスで快適な出入り、防犯性も向上',
       image: '/fc/equipment/smartkey.jpg',
+      alt: 'スマートキー玄関ドア タッチ&キーレス対応',
     },
   ]
 
@@ -45,7 +49,7 @@ export function StandardEquipment() {
       title="充実の標準仕様"
       subtitle="通常はオプション扱いの設備を、最初から標準で"
     >
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-12">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-fr mb-12">
         {equipment.map((item, index) => (
           <motion.div
             key={item.name}
@@ -53,19 +57,19 @@ export function StandardEquipment() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="rounded-2xl border border-black/10 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-black/10 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col min-h-[220px] sm:min-h-[unset]"
           >
             <div className="relative h-40">
               <Image
                 src={item.image}
-                alt={item.name}
+                alt={item.alt}
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="p-4">
-              <h3 className="font-bold text-[var(--primary)] mb-2">{item.name}</h3>
-              <p className="text-xs text-[var(--ink-muted)] leading-relaxed">
+            <div className="p-4 flex flex-col flex-1">
+              <h3 className="font-bold text-[var(--primary)] mb-2 break-words hyphens-auto">{item.name}</h3>
+              <p className="text-xs text-[var(--ink-muted)] leading-relaxed line-clamp-3 sm:line-clamp-none">
                 {item.description}
               </p>
             </div>

@@ -10,14 +10,14 @@ export function Subnav() {
   ]
 
   return (
-    <div className="sticky top-0 z-40 bg-[var(--surface)]/92 backdrop-blur border-b border-black/10">
+    <div className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
       <nav className="mx-auto max-w-6xl px-6 py-3">
         <ul className="flex flex-wrap gap-2">
           {items.map(([href, label]) => (
             <li key={href}>
               <a
                 href={href}
-                className="h-10 px-4 inline-flex items-center rounded-full border border-[var(--ink-strong)] text-[var(--ink-strong)] text-[15px] font-medium hover:bg-[var(--ink-strong)] hover:text-white transition-colors"
+                className="h-10 px-4 inline-flex items-center rounded-full text-slate-600 bg-white border border-slate-300 text-[15px] font-medium hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400"
               >
                 {label}
               </a>

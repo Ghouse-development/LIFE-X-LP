@@ -50,7 +50,7 @@ export function CaseStudies() {
       title="導入事例"
       subtitle="規格住宅の効率化で、営業・設計工数を削減しながら成約率を向上"
     >
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
         {cases.map((caseStudy, index) => (
           <motion.div
             key={index}
@@ -58,7 +58,7 @@ export function CaseStudies() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="rounded-2xl border border-black/10 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-black/10 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col min-h-[220px] sm:min-h-[unset]"
           >
             <div className="relative h-48">
               <Image
@@ -68,8 +68,8 @@ export function CaseStudies() {
                 className="object-cover"
               />
             </div>
-            <div className="p-6">
-              <h3 className="font-bold text-[var(--primary)] text-lg mb-2">
+            <div className="p-6 flex flex-col flex-1">
+              <h3 className="font-bold text-[var(--primary)] text-lg mb-2 break-words hyphens-auto">
                 {caseStudy.title}
               </h3>
               <div className="flex gap-4 text-sm text-[var(--ink-muted)] mb-4">

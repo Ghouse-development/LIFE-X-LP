@@ -32,7 +32,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-[680px] text-white/90 leading-relaxed text-base md:text-lg">
-            設計思想・標準仕様・営業〜施工・教育/販促までをワンパッケージで。最短3〜6ヶ月で立ち上げ。
+            設計負担を削減し、粗利を安定化。LIFE X フランチャイズ
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -42,25 +42,16 @@ export function Hero() {
               size="lg"
               data-cta="hero_request"
             >
-              <Link href="#contact">資料請求</Link>
+              <Link href="#contact">無料資料請求</Link>
             </Button>
             <Button
               asChild
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-[var(--ink-strong)]"
-              data-cta="hero_consult"
-            >
-              <Link href="#contact">個別相談</Link>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              size="lg"
-              className="text-white/90 hover:text-white hover:no-underline hover:bg-white/10"
               data-cta="hero_webinar"
             >
-              <Link href="#webinar">ウェビナー</Link>
+              <Link href="#webinar">30分で分かる説明会</Link>
             </Button>
           </div>
         </motion.div>
