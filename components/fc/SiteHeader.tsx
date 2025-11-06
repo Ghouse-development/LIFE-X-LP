@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 
 export function SiteHeader() {

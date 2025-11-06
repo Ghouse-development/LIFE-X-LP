@@ -43,7 +43,7 @@ export function Concept() {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
-          規格住宅の"迷い"を減らす仕組みを一式でご提供
+          規格住宅の&ldquo;迷い&rdquo;を減らす仕組みを一式でご提供
         </motion.p>
       </div>
 
