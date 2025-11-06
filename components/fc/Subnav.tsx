@@ -11,8 +11,8 @@ export function Subnav() {
 
   return (
     <div className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
-      <nav className="mx-auto max-w-6xl px-6 py-3">
-        <ul className="flex flex-wrap gap-2">
+      <nav className="mx-auto max-w-6xl px-6 py-3" aria-label="ページ内ナビゲーション">
+        <ul className="flex flex-wrap gap-2" role="list">
           {items.map(([href, label]) => (
             <li key={href}>
               <a

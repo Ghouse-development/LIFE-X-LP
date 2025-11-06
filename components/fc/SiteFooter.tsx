@@ -15,7 +15,7 @@ export function SiteFooter() {
             <p className="text-sm text-[#EDEFF1]/70 leading-relaxed mb-6">
               少人数×短期立上げで始める高性能規格住宅
             </p>
-            <nav className="flex flex-wrap gap-4">
+            <nav className="flex flex-wrap gap-4" aria-label="フッターナビゲーション">
               <Link href="#concept" className="text-xs text-[#EDEFF1]/60 hover:text-[var(--brand)] transition-colors">
                 特徴
               </Link>

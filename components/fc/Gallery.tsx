@@ -45,6 +45,14 @@ export function Gallery({ data }: GalleryProps) {
             aspectRatio = 'aspect-[4/3]'
           }
 
+          // Calculate sizes based on grid layout
+          let sizes = '(max-width: 768px) 50vw, 25vw' // small default
+          if (index === 0) {
+            sizes = '(max-width: 768px) 100vw, 66vw' // hero image
+          } else if (index >= 1 && index <= 3) {
+            sizes = '(max-width: 768px) 50vw, 33vw' // medium images
+          }
+
           return (
             <motion.div
               key={item.id}
@@ -60,6 +68,7 @@ export function Gallery({ data }: GalleryProps) {
                 alt={item.alt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
+                sizes={sizes}
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                 <span className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium tracking-wide">

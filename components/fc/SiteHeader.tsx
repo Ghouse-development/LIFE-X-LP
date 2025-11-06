@@ -47,7 +47,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="メインナビゲーション">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -71,7 +71,9 @@ export function SiteHeader() {
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="メニューを開く"
+            aria-label={isMobileMenuOpen ? 'メニューを閉じる' : 'メニューを開く'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -79,7 +81,11 @@ export function SiteHeader() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200">
+          <nav
+            id="mobile-menu"
+            className="md:hidden py-4 border-t border-gray-200"
+            aria-label="モバイルナビゲーション"
+          >
             {navItems.map((item) => (
               <Link
                 key={item.href}

@@ -28,6 +28,7 @@ import { Toaster } from '@/components/ui/toaster'
 import fcData from '@/data/fc.json'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://life-x-lp.vercel.app'),
   title: 'LIFE X フランチャイズ | 設計負担削減・粗利安定化の高性能規格住宅FC',
   description:
     '建築家デザイン×HEAT20 G2相当×耐震等級3。営業・設計工数削減で成約率向上。最小2名・初期投資300万円〜、3-6ヶ月で立ち上げ。無料資料請求・30分説明会受付中。',
@@ -43,19 +44,32 @@ export const metadata: Metadata = {
     'スモールスタート',
     '設計負担削減',
   ],
+  alternates: {
+    canonical: '/fc',
+  },
   openGraph: {
     title: 'LIFE X フランチャイズ | 設計負担削減・粗利安定化の高性能規格住宅FC',
     description:
       '建築家デザイン×HEAT20 G2相当×耐震等級3。営業・設計工数削減で成約率向上。最小2名・初期投資300万円〜で3-6ヶ月で立ち上げ可能。',
+    url: '/fc',
     type: 'website',
     locale: 'ja_JP',
     siteName: 'LIFE X',
+    images: [
+      {
+        url: '/cases/case-08.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'LIFE X 規格住宅の外観',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'LIFE X フランチャイズ | 高性能規格住宅FC',
     description:
       '設計負担削減・粗利安定化。建築家デザイン×HEAT20 G2×耐震等級3。最小2名・初期投資300万円〜。',
+    images: ['/cases/case-08.jpg'],
   },
   robots: {
     index: true,
@@ -69,6 +83,14 @@ export default function FCPage() {
       {/* Structured Data for SEO */}
       <StructuredData />
 
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:bg-white focus:text-[var(--primary)] focus:rounded focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+      >
+        メインコンテンツへスキップ
+      </a>
+
       {/* Header */}
       <SiteHeader />
 
@@ -81,8 +103,10 @@ export default function FCPage() {
       {/* Floating CTA */}
       <FloatingCTA />
 
-      {/* Concept */}
-      <Concept />
+      {/* Main Content */}
+      <main id="main-content">
+        {/* Concept */}
+        <Concept />
 
       {/* Comparison (Building Type Positioning) */}
       <Comparison />
@@ -136,6 +160,7 @@ export default function FCPage() {
 
       {/* Contact Form */}
       <ContactForm />
+      </main>
 
       {/* Footer */}
       <SiteFooter />

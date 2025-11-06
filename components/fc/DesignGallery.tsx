@@ -73,6 +73,7 @@ export function DesignGallery() {
                   fill
                   className="object-cover"
                   loading="lazy"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 380px"
                 />
               </div>
               <p className="text-center text-sm text-white/80 mt-3">プラン {index + 1}</p>
