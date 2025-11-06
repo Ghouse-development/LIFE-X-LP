@@ -17,8 +17,8 @@ export function Hero() {
         className="object-cover"
       />
 
-      {/* Black overlay 70% for perfect text contrast */}
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Black overlay for text contrast */}
+      <div className="absolute inset-0 bg-black/55" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 md:pt-36 w-full">
@@ -35,7 +35,7 @@ export function Hero() {
             設計思想・標準仕様・営業〜施工・教育/販促までをワンパッケージで。最短3〜6ヶ月で立ち上げ。
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-6">
+          <div className="mt-8 flex flex-wrap gap-3">
             <Button
               asChild
               variant="primary"

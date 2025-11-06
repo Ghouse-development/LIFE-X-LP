@@ -41,10 +41,10 @@ export function FAQ({ data }: FAQProps) {
               value={`item-${index}`}
               className="border border-gray-200 rounded-2xl px-6 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
-              <AccordionTrigger className="text-left font-bold text-[var(--primary)] py-6 hover:no-underline text-base md:text-lg leading-[1.6]">
+              <AccordionTrigger className="text-left font-medium text-[var(--ink-strong)] py-4 hover:no-underline">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-[var(--ink)] leading-[1.7] pb-6 text-[15px]">
+              <AccordionContent className="text-[var(--ink)] leading-relaxed pb-4 text-sm">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

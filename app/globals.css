@@ -58,13 +58,13 @@
   --link: #1D4ED8;           /* テキストリンク */
 
   --surface: #FFFFFF;        /* 白背景 */
-  --surface-alt: #F8F9FA;    /* 薄グレー背景 */
+  --surface-alt: #F3F4F6;    /* 薄グレー背景 */
   --surface-dark: #0B0D0F;   /* ダーク背景 */
 
   --primary: #0F172A;        /* 濃紺：ボタン塗り/見出し */
   --primary-hover: #111827;
 
-  --brand: #D9B66A;          /* ゴールド（線・アイコン・ラベルのみ） */
+  --brand: #C8A654;          /* ゴールド（線・アイコン・ラベルのみ、塗り×白字は使わない） */
 
   /* shadcn/ui互換 */
   --background: #ffffff;

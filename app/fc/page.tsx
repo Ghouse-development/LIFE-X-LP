@@ -4,6 +4,7 @@ import { Hero } from '@/components/fc/Hero'
 import { Subnav } from '@/components/fc/Subnav'
 import { FloatingCTA } from '@/components/fc/FloatingCTA'
 import { Concept } from '@/components/fc/Concept'
+import { Reproducibility } from '@/components/fc/Reproducibility'
 import { ValueGrid } from '@/components/fc/ValueGrid'
 import { Performance } from '@/components/fc/Performance'
 import { Gallery } from '@/components/fc/Gallery'
@@ -11,7 +12,7 @@ import { Process } from '@/components/fc/Process'
 import { SupportTable } from '@/components/fc/SupportTable'
 import { Testimonials } from '@/components/fc/Testimonials'
 import { Map } from '@/components/fc/Map'
-import { Webinar } from '@/components/fc/Webinar'
+import { ConsultationWebinar } from '@/components/fc/ConsultationWebinar'
 import { FAQ } from '@/components/fc/FAQ'
 import { ContactForm } from '@/components/fc/ContactForm'
 import { SiteFooter } from '@/components/fc/SiteFooter'
@@ -66,6 +67,9 @@ export default function FCPage() {
       {/* Concept */}
       <Concept />
 
+      {/* Reproducibility Mechanism */}
+      <Reproducibility />
+
       {/* Value & KPI */}
       <ValueGrid
         data={{
@@ -92,8 +96,8 @@ export default function FCPage() {
       {/* Map */}
       <Map data={fcData.areas} />
 
-      {/* Webinar */}
-      <Webinar data={fcData.webinar} />
+      {/* Consultation & Webinar */}
+      <ConsultationWebinar />
 
       {/* FAQ */}
       <FAQ data={fcData.faq} />
