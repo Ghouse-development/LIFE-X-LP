@@ -40,7 +40,7 @@ export function Hero() {
               asChild
               variant="primary"
               size="lg"
-              data-gtm="cta_primary_request"
+              data-cta="hero_request"
             >
               <Link href="#contact">資料請求</Link>
             </Button>
@@ -49,7 +49,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-[var(--ink-strong)]"
-              data-gtm="cta_secondary_consult"
+              data-cta="hero_consult"
             >
               <Link href="#contact">個別相談</Link>
             </Button>
@@ -58,7 +58,7 @@ export function Hero() {
               variant="ghost"
               size="lg"
               className="text-white/90 hover:text-white hover:no-underline hover:bg-white/10"
-              data-gtm="cta_tertiary_webinar"
+              data-cta="hero_webinar"
             >
               <Link href="#webinar">ウェビナー</Link>
             </Button>

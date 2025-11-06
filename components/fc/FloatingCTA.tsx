@@ -32,7 +32,7 @@ export function FloatingCTA() {
           asChild
           variant="primary"
           size="sm"
-          data-gtm="cta_primary_request"
+          data-cta="floating_request"
         >
           <Link href="#contact">資料請求</Link>
         </Button>
@@ -40,7 +40,7 @@ export function FloatingCTA() {
           asChild
           variant="outline"
           size="sm"
-          data-gtm="cta_secondary_consult"
+          data-cta="floating_consult"
         >
           <Link href="#contact">個別相談</Link>
         </Button>
@@ -48,7 +48,7 @@ export function FloatingCTA() {
           asChild
           variant="ghost"
           size="sm"
-          data-gtm="cta_tertiary_webinar"
+          data-cta="floating_webinar"
         >
           <Link href="#webinar">ウェビナー</Link>
         </Button>
@@ -64,7 +64,7 @@ export function FloatingCTA() {
               variant="outline"
               size="sm"
               className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
-              data-gtm="cta_secondary_consult_mobile"
+              data-cta="floating_consult_mobile"
             >
               <Link href="#contact">個別相談</Link>
             </Button>
@@ -73,7 +73,7 @@ export function FloatingCTA() {
               variant="ghost"
               size="sm"
               className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
-              data-gtm="cta_tertiary_webinar_mobile"
+              data-cta="floating_webinar_mobile"
             >
               <Link href="#webinar">ウェビナー</Link>
             </Button>
@@ -99,7 +99,7 @@ export function FloatingCTA() {
             variant="primary"
             size="sm"
             className="rounded-full shadow-xl min-w-[100px]"
-            data-gtm="cta_primary_request_mobile"
+            data-cta="floating_request_mobile"
           >
             <Link href="#contact">資料請求</Link>
           </Button>

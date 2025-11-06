@@ -11,6 +11,7 @@ import { Performance } from '@/components/fc/Performance'
 import { StandardEquipment } from '@/components/fc/StandardEquipment'
 import { TrustAndSupport } from '@/components/fc/TrustAndSupport'
 import { Gallery } from '@/components/fc/Gallery'
+import { CaseStudies } from '@/components/fc/CaseStudies'
 import { Process } from '@/components/fc/Process'
 import { SupportTable } from '@/components/fc/SupportTable'
 import { Testimonials } from '@/components/fc/Testimonials'
@@ -95,6 +96,9 @@ export default function FCPage() {
 
       {/* Gallery */}
       <Gallery data={fcData.gallery} />
+
+      {/* Case Studies */}
+      <CaseStudies />
 
       {/* Process */}
       <Process data={fcData.process} />

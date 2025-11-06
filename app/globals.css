@@ -53,18 +53,19 @@
 :root {
   /* AA準拠デザイントークン */
   --ink-strong: #0E1113;    /* 最濃文字（本文の濃い部分） */
-  --ink: #374151;            /* 本文 */
-  --ink-muted: #6B7280;      /* 補足文・キャプション */
+  --ink: #1F2A44;            /* 本文（指示書準拠） */
+  --ink-muted: #5B6275;      /* 補足文・キャプション（指示書準拠） */
   --link: #1D4ED8;           /* テキストリンク */
 
   --surface: #FFFFFF;        /* 白背景 */
-  --surface-alt: #F3F4F6;    /* 薄グレー背景 */
+  --surface-alt: #F7F8FB;    /* 薄グレー背景（指示書準拠） */
   --surface-dark: #0B0D0F;   /* ダーク背景 */
 
-  --primary: #0F172A;        /* 濃紺：ボタン塗り/見出し */
-  --primary-hover: #111827;
+  --primary: #1E3A8A;        /* 濃紺：ボタン塗り/見出し（指示書準拠） */
+  --primary-hover: #1e40af;
 
   --brand: #C8A654;          /* ゴールド（線・アイコン・ラベルのみ、塗り×白字は使わない） */
+  --brand-accent: #C9493D;   /* アクセント赤（指示書準拠） */
 
   /* shadcn/ui互換 */
   --background: #ffffff;

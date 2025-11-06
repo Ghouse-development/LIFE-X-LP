@@ -29,7 +29,7 @@ export function Gallery({ data }: GalleryProps) {
       subtitle="空間とディテールが織りなす美しさ"
     >
       {/* Editorial asymmetric grid: 1 large + 3 medium + 4 small */}
-      <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto mb-8">
         {data.map((item, index) => {
           // Layout logic: First = hero, next 3 = medium, rest = small
           let colSpan = 'col-span-12 md:col-span-3' // small default
@@ -69,6 +69,16 @@ export function Gallery({ data }: GalleryProps) {
             </motion.div>
           )
         })}
+      </div>
+
+      {/* CTA Button */}
+      <div className="text-center">
+        <button
+          data-cta="gallery_view_all"
+          className="btn-base btn-lg border-2 border-white text-white hover:bg-white hover:text-[var(--surface-dark)] transition-colors rounded-full font-medium"
+        >
+          標準プランの外観一覧を見る
+        </button>
       </div>
 
       {/* Lightbox */}
