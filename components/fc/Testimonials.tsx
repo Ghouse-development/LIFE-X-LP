@@ -57,7 +57,7 @@ export function Testimonials({ data }: TestimonialsProps) {
                 {/* Headline Metric - Bold fact line */}
                 {testimonial.metric && (
                   <div className="mb-4 pb-4 border-b border-black/5">
-                    <p className="font-serif text-lg font-bold text-[var(--brand)] leading-tight">
+                    <p className="font-serif text-lg font-bold text-[var(--brand)] leading-tight break-words">
                       {testimonial.metric}
                     </p>
                   </div>
@@ -65,7 +65,7 @@ export function Testimonials({ data }: TestimonialsProps) {
 
                 {/* Reason - 2 lines explaining why */}
                 {testimonial.reason && (
-                  <p className="text-sm text-[var(--ink)] leading-relaxed mb-4">
+                  <p className="text-sm text-[var(--ink)] leading-relaxed mb-4 line-clamp-3 overflow-hidden">
                     {testimonial.reason}
                   </p>
                 )}

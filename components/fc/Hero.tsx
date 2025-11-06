@@ -36,7 +36,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-4 max-w-2xl text-white/90 leading-relaxed text-base md:text-lg">
-            設計・打合せの負担を抑え、短期立上げを実現するLIFE X。
+            工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げで&ldquo;美しさと再現性&rdquo;を実現。
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -45,7 +45,7 @@ export function Hero() {
               variant="primary"
               size="lg"
               data-cta="hero_request"
-              className="h-12 px-6 rounded-xl bg-[#0f172a] text-white hover:bg-slate-900"
+              className="h-12 px-6 rounded-xl bg-white text-[var(--primary)] hover:bg-white/90"
             >
               <Link href="#contact">資料請求</Link>
             </Button>
@@ -53,7 +53,7 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="h-12 px-6 rounded-xl border border-white/60 text-white hover:bg-white/10"
+              className="h-12 px-6 rounded-xl border-2 border-white/80 text-white hover:bg-white/20"
               data-cta="hero_webinar"
             >
               <Link href="#webinar">30分で分かる説明会</Link>

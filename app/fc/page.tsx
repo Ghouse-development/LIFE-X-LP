@@ -9,6 +9,7 @@ import { FourReasons } from '@/components/fc/FourReasons'
 import { Reproducibility } from '@/components/fc/Reproducibility'
 import { ValueGrid } from '@/components/fc/ValueGrid'
 import { Pricing } from '@/components/fc/Pricing'
+import { PackageContents } from '@/components/fc/PackageContents'
 import { Performance } from '@/components/fc/Performance'
 import { StandardEquipment } from '@/components/fc/StandardEquipment'
 import { TrustAndSupport } from '@/components/fc/TrustAndSupport'
@@ -30,28 +31,32 @@ import fcData from '@/data/fc.json'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://life-x-lp.vercel.app'),
-  title: 'LIFE X',
+  title: 'LIFE X - 工務店向けフランチャイズ・パッケージ',
   description:
-    '規格住宅の美しさと再現性を、あなたの商圏の武器に。設計・打合せの負担を抑え、短期立上げを実現するLIFE X。',
+    '規格住宅の美しさと再現性を、あなたの商圏の武器に。工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げで"美しさと再現性"を実現するLIFE X。',
   keywords: [
     'LIFE X',
-    'フランチャイズ',
+    '工務店向けフランチャイズ',
     '工務店FC',
-    '高性能住宅',
+    'フランチャイズ',
     '規格住宅',
-    'HEAT20 G2',
-    '建築家デザイン',
-    '耐震等級3',
+    '高性能住宅',
     'スモールスタート',
+    '短期立上げ',
     '設計負担削減',
+    '建築家デザイン',
+    '再現性',
+    '標準仕様',
+    '営業ツール',
+    '施工マニュアル',
   ],
   alternates: {
     canonical: '/fc',
   },
   openGraph: {
-    title: 'LIFE X',
+    title: 'LIFE X - 工務店向けフランチャイズ・パッケージ',
     description:
-      '規格住宅の美しさと再現性を、あなたの商圏の武器に。',
+      '規格住宅の美しさと再現性を、あなたの商圏の武器に。工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げを実現。',
     url: '/fc',
     type: 'website',
     locale: 'ja_JP',
@@ -61,15 +66,15 @@ export const metadata: Metadata = {
         url: '/cases/case-08.jpg',
         width: 1200,
         height: 630,
-        alt: 'LIFE X 規格住宅の外観',
+        alt: 'LIFE X 工務店向けフランチャイズ・パッケージ',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LIFE X',
+    title: 'LIFE X - 工務店向けフランチャイズ・パッケージ',
     description:
-      '規格住宅の美しさと再現性を、あなたの商圏の武器に。',
+      '規格住宅の美しさと再現性を、あなたの商圏の武器に。工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げを実現。',
     images: ['/cases/case-08.jpg'],
   },
   robots: {
@@ -127,6 +132,9 @@ export default function FCPage() {
 
       {/* Pricing */}
       <Pricing />
+
+      {/* Package Contents */}
+      <PackageContents />
 
       {/* Performance */}
       <Performance data={fcData.performance} />

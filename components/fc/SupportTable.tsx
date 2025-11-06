@@ -34,14 +34,14 @@ export function SupportTable({ data }: SupportTableProps) {
           >
             <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader className="bg-[var(--brand)]/5 pb-4">
-                <CardTitle className="text-xl font-bold text-[var(--primary)]">{support.area}</CardTitle>
+                <CardTitle className="text-xl font-bold text-[var(--primary)] break-words">{support.area}</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
                 <ul className="space-y-3">
                   {support.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-[var(--brand)] flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-[var(--ink)]">{item}</span>
+                      <span className="text-sm text-[var(--ink)] break-words">{item}</span>
                     </li>
                   ))}
                 </ul>

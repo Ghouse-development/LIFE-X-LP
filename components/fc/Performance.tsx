@@ -53,11 +53,11 @@ export function Performance({ data }: PerformanceProps) {
             transition={{ duration: 0.4, delay: index * 0.1 }}
             className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] text-center"
           >
-            <div className="text-sm font-medium text-[var(--ink-strong)] mb-2">{spec.label}</div>
-            <div className="font-serif text-2xl md:text-3xl font-bold text-[var(--primary)] mb-3">
+            <div className="text-sm font-medium text-[var(--ink-strong)] mb-2 break-words">{spec.label}</div>
+            <div className="font-serif text-2xl md:text-3xl font-bold text-[var(--primary)] mb-3 break-words">
               {spec.value}
             </div>
-            <p className="text-xs text-[var(--ink)] leading-relaxed">{spec.note}</p>
+            <p className="text-xs text-[var(--ink)] leading-relaxed overflow-hidden">{spec.note}</p>
           </motion.div>
         ))}
       </div>
