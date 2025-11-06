@@ -26,7 +26,7 @@ export function FloatingCTA() {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
       )}
     >
-      {/* Desktop: 3 buttons horizontal */}
+      {/* Desktop: 2 buttons horizontal */}
       <div className="hidden md:flex gap-2 rounded-2xl border border-black/5 bg-white/95 backdrop-blur shadow-xl p-2">
         <Button
           asChild
@@ -34,48 +34,31 @@ export function FloatingCTA() {
           size="sm"
           data-cta="floating_request"
         >
-          <Link href="#contact">資料請求</Link>
+          <Link href="#contact">無料資料請求</Link>
         </Button>
         <Button
           asChild
           variant="outline"
           size="sm"
-          data-cta="floating_consult"
-        >
-          <Link href="#contact">個別相談</Link>
-        </Button>
-        <Button
-          asChild
-          variant="ghost"
-          size="sm"
           data-cta="floating_webinar"
         >
-          <Link href="#webinar">ウェビナー</Link>
+          <Link href="#webinar">説明会に申し込む</Link>
         </Button>
       </div>
 
       {/* Mobile: 1 button + expandable */}
       <div className="md:hidden flex flex-col gap-2 items-end">
-        {/* Secondary buttons (expanded) */}
+        {/* Secondary button (expanded) */}
         {isExpanded && (
           <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200">
             <Button
               asChild
               variant="outline"
               size="sm"
-              className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
-              data-cta="floating_consult_mobile"
-            >
-              <Link href="#contact">個別相談</Link>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              size="sm"
-              className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[120px]"
+              className="rounded-full shadow-lg bg-white/95 backdrop-blur min-w-[140px]"
               data-cta="floating_webinar_mobile"
             >
-              <Link href="#webinar">ウェビナー</Link>
+              <Link href="#webinar">説明会</Link>
             </Button>
           </div>
         )}
@@ -98,7 +81,7 @@ export function FloatingCTA() {
             asChild
             variant="primary"
             size="sm"
-            className="rounded-full shadow-xl min-w-[100px]"
+            className="rounded-full shadow-xl min-w-[110px]"
             data-cta="floating_request_mobile"
           >
             <Link href="#contact">資料請求</Link>

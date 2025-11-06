@@ -21,42 +21,54 @@ import { ConsultationWebinar } from '@/components/fc/ConsultationWebinar'
 import { FAQ } from '@/components/fc/FAQ'
 import { ContactForm } from '@/components/fc/ContactForm'
 import { SiteFooter } from '@/components/fc/SiteFooter'
+import { StructuredData } from '@/components/fc/StructuredData'
 import { Toaster } from '@/components/ui/toaster'
 
 // データ読み込み
 import fcData from '@/data/fc.json'
 
 export const metadata: Metadata = {
-  title: 'LIFE X フランチャイズ | 少人数×短期立上げで始める高性能規格住宅',
+  title: 'LIFE X フランチャイズ | 設計負担削減・粗利安定化の高性能規格住宅FC',
   description:
-    '商品・設計・現場・集客の「型」を提供。最小2名・初期投資300万円〜で始められるスモールスタートFC。毎月ウェビナー開催、まずは30分で概要相談。',
+    '建築家デザイン×HEAT20 G2相当×耐震等級3。営業・設計工数削減で成約率向上。最小2名・初期投資300万円〜、3-6ヶ月で立ち上げ。無料資料請求・30分説明会受付中。',
   keywords: [
-    'フランチャイズ',
-    '工務店',
-    '高性能住宅',
-    'FC加盟',
-    '規格住宅',
     'LIFE X',
+    'フランチャイズ',
+    '工務店FC',
+    '高性能住宅',
+    '規格住宅',
+    'HEAT20 G2',
+    '建築家デザイン',
+    '耐震等級3',
     'スモールスタート',
+    '設計負担削減',
   ],
   openGraph: {
-    title: 'LIFE X フランチャイズ | 少人数×短期立上げで始める高性能規格住宅',
+    title: 'LIFE X フランチャイズ | 設計負担削減・粗利安定化の高性能規格住宅FC',
     description:
-      '商品・設計・現場・集客の「型」を提供。最小2名・初期投資300万円〜で始められるスモールスタートFC。',
+      '建築家デザイン×HEAT20 G2相当×耐震等級3。営業・設計工数削減で成約率向上。最小2名・初期投資300万円〜で3-6ヶ月で立ち上げ可能。',
     type: 'website',
     locale: 'ja_JP',
+    siteName: 'LIFE X',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LIFE X フランチャイズ',
+    title: 'LIFE X フランチャイズ | 高性能規格住宅FC',
     description:
-      '少人数×短期立上げで始める高性能規格住宅。最小2名・初期投資300万円〜でスタート可能。',
+      '設計負担削減・粗利安定化。建築家デザイン×HEAT20 G2×耐震等級3。最小2名・初期投資300万円〜。',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
 export default function FCPage() {
   return (
     <div className="min-h-screen">
+      {/* Structured Data for SEO */}
+      <StructuredData />
+
       {/* Header */}
       <SiteHeader />
 
