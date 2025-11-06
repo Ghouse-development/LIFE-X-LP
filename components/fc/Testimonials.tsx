@@ -30,8 +30,8 @@ export function Testimonials({ data }: TestimonialsProps) {
       id="testimonials"
       variant="white"
       spacing="2xl"
-      title="導入事例"
-      subtitle="実際の加盟店の声をご紹介します"
+      title="実装サンプル"
+      subtitle="LIFE X 導入による運用改善の効果イメージ"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.map((testimonial, index) => (
@@ -96,6 +96,10 @@ export function Testimonials({ data }: TestimonialsProps) {
           </motion.div>
         ))}
       </div>
+
+      <p className="mt-8 text-center text-sm text-[var(--ink-muted)] max-w-3xl mx-auto leading-relaxed">
+        ※掲載内容は、標準的な運用改善効果を示す実装サンプルです。企業名・数値は匿名化しています。実際の効果は貴社の環境・体制により異なります。
+      </p>
     </Section>
   )
 }

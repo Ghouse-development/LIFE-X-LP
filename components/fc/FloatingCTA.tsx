@@ -31,18 +31,18 @@ export function FloatingCTA() {
         <Button
           asChild
           size="sm"
-          className="bg-[#0f172a] text-white hover:bg-slate-900 font-medium"
+          className="bg-[#1f2b46] text-white hover:bg-slate-900 font-medium"
           data-cta="floating_request"
         >
-          <Link href="#contact">📄 サンプル請求</Link>
+          <Link href="#contact">サンプル一式を請求</Link>
         </Button>
         <Button
           asChild
           size="sm"
-          className="bg-white text-[#0f172a] border-2 border-[#0f172a] hover:bg-gray-50 font-medium"
-          data-cta="floating_webinar"
+          className="bg-white text-[#1f2b46] border-2 border-[#1f2b46] hover:bg-gray-50 font-medium"
+          data-cta="floating_consultation"
         >
-          <Link href="#webinar">🎥 説明会</Link>
+          <Link href="#consultation">個別相談</Link>
         </Button>
       </div>
 
@@ -54,10 +54,10 @@ export function FloatingCTA() {
             <Button
               asChild
               size="sm"
-              className="rounded-full shadow-lg bg-white backdrop-blur min-w-[110px] border-2 border-[#0f172a] text-[#0f172a] hover:bg-gray-50 font-medium"
-              data-cta="floating_webinar_mobile"
+              className="rounded-full shadow-lg bg-white backdrop-blur min-w-[110px] border-2 border-[#1f2b46] text-[#1f2b46] hover:bg-gray-50 font-medium"
+              data-cta="floating_consultation_mobile"
             >
-              <Link href="#webinar">🎥 説明会</Link>
+              <Link href="#consultation">個別相談</Link>
             </Button>
           </div>
         )}
@@ -79,10 +79,10 @@ export function FloatingCTA() {
           <Button
             asChild
             size="sm"
-            className="rounded-full shadow-xl min-w-[120px] bg-[#0f172a] text-white hover:bg-slate-900 font-medium"
+            className="rounded-full shadow-xl min-w-[120px] bg-[#1f2b46] text-white hover:bg-slate-900 font-medium"
             data-cta="floating_request_mobile"
           >
-            <Link href="#contact">📄 サンプル</Link>
+            <Link href="#contact">サンプル請求</Link>
           </Button>
         </div>
       </div>

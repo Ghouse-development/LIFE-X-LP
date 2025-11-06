@@ -27,7 +27,7 @@ export function ConsultationWebinar() {
           <p className="text-[var(--ink-muted)] text-sm leading-relaxed mb-6">
             導入可否の初診断、商圏の考え方、初期投資シミュレーションなど、貴社の状況に合わせて個別にご相談いただけます。
           </p>
-          <Button size="lg" asChild className="w-full bg-white text-[#0f172a] border-2 border-[#0f172a] hover:bg-gray-50 font-medium">
+          <Button size="lg" asChild className="w-full bg-white text-[#1f2b46] border-2 border-[#1f2b46] hover:bg-gray-50 font-medium">
             <Link href="#contact">個別相談を予約</Link>
           </Button>
         </motion.div>
@@ -47,7 +47,7 @@ export function ConsultationWebinar() {
           <p className="text-sm font-medium text-[var(--ink)] mb-6">
             次回：毎月第2・第4木曜 14:00〜
           </p>
-          <Button size="lg" asChild className="w-full bg-[#0f172a] text-white hover:bg-slate-900 font-medium shadow-lg">
+          <Button size="lg" asChild className="w-full bg-[#1f2b46] text-white hover:bg-slate-900 font-medium shadow-lg">
             <Link href="#contact">ウェビナーに申し込む</Link>
           </Button>
         </motion.div>

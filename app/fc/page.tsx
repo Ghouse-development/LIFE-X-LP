@@ -15,10 +15,14 @@ import { StandardEquipment } from '@/components/fc/StandardEquipment'
 import { TrustAndSupport } from '@/components/fc/TrustAndSupport'
 import { Gallery } from '@/components/fc/Gallery'
 import { DesignGallery } from '@/components/fc/DesignGallery'
+import { Roadmap } from '@/components/fc/Roadmap'
+import { ImplementationGallery } from '@/components/fc/ImplementationGallery'
 import { Process } from '@/components/fc/Process'
 import { SupportTable } from '@/components/fc/SupportTable'
 import { Testimonials } from '@/components/fc/Testimonials'
 import { Map } from '@/components/fc/Map'
+import { PrimaryCTA } from '@/components/fc/PrimaryCTA'
+import { SecondaryCTA } from '@/components/fc/SecondaryCTA'
 import { ConsultationWebinar } from '@/components/fc/ConsultationWebinar'
 import { FAQ } from '@/components/fc/FAQ'
 import { ContactForm } from '@/components/fc/ContactForm'
@@ -31,9 +35,9 @@ import fcData from '@/data/fc.json'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://life-x-lp.vercel.app'),
-  title: 'LIFE X - 工務店向けフランチャイズ・パッケージ',
+  title: 'LIFE X',
   description:
-    '規格住宅の美しさと再現性を、あなたの商圏の武器に。工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げで"美しさと再現性"を実現するLIFE X。',
+    '工務店向けフランチャイズ。台本・雛形・画像・運用ルールまで一式提供。最短8週間で販売運用を開始。',
   keywords: [
     'LIFE X',
     '工務店向けフランチャイズ',
@@ -54,9 +58,9 @@ export const metadata: Metadata = {
     canonical: '/fc',
   },
   openGraph: {
-    title: 'LIFE X - 工務店向けフランチャイズ・パッケージ',
+    title: 'LIFE X',
     description:
-      '規格住宅の美しさと再現性を、あなたの商圏の武器に。工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げを実現。',
+      '工務店向けフランチャイズ。台本・雛形・画像・運用ルールまで一式提供。最短8週間で販売運用を開始。',
     url: '/fc',
     type: 'website',
     locale: 'ja_JP',
@@ -66,15 +70,15 @@ export const metadata: Metadata = {
         url: '/cases/case-08.jpg',
         width: 1200,
         height: 630,
-        alt: 'LIFE X 工務店向けフランチャイズ・パッケージ',
+        alt: 'LIFE X 工務店向けフランチャイズ',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LIFE X - 工務店向けフランチャイズ・パッケージ',
+    title: 'LIFE X',
     description:
-      '規格住宅の美しさと再現性を、あなたの商圏の武器に。工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げを実現。',
+      '工務店向けフランチャイズ。台本・雛形・画像・運用ルールまで一式提供。最短8週間で販売運用を開始。',
     images: ['/cases/case-08.jpg'],
   },
   robots: {
@@ -111,7 +115,7 @@ export default function FCPage() {
 
       {/* Main Content */}
       <main id="main-content">
-        {/* Concept */}
+        {/* Concept - Value Proposition Boxes */}
         <Concept />
 
       {/* Comparison (Building Type Positioning) */}
@@ -123,18 +127,17 @@ export default function FCPage() {
       {/* Reproducibility Mechanism */}
       <Reproducibility />
 
-      {/* Value & KPI */}
-      <ValueGrid
-        data={{
-          reasons: fcData.reasons,
-        }}
-      />
+      {/* Operation Effects */}
+      <ValueGrid />
 
-      {/* Pricing */}
-      <Pricing />
-
-      {/* Package Contents */}
+      {/* Package Contents - What You'll Receive */}
       <PackageContents />
+
+      {/* Roadmap - Implementation Timeline */}
+      <Roadmap />
+
+      {/* Implementation Gallery - Dark Section with Tabs */}
+      <ImplementationGallery />
 
       {/* Performance */}
       <Performance data={fcData.performance} />
@@ -151,8 +154,8 @@ export default function FCPage() {
       {/* Design Gallery (Exterior Perspectives) */}
       <DesignGallery />
 
-      {/* Process */}
-      <Process data={fcData.process} />
+      {/* Pricing */}
+      <Pricing />
 
       {/* Support */}
       <SupportTable data={fcData.support} />
@@ -160,14 +163,17 @@ export default function FCPage() {
       {/* Testimonials */}
       <Testimonials data={fcData.testimonials} />
 
-      {/* Map */}
-      <Map data={fcData.areas} />
-
-      {/* Consultation & Webinar */}
-      <ConsultationWebinar />
+      {/* Primary CTA - Request Sample Package */}
+      <PrimaryCTA />
 
       {/* FAQ */}
       <FAQ data={fcData.faq} />
+
+      {/* Secondary CTA - Individual Consultation */}
+      <SecondaryCTA />
+
+      {/* Consultation & Webinar */}
+      <ConsultationWebinar />
 
       {/* Contact Form */}
       <ContactForm />

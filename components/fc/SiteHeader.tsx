@@ -20,9 +20,9 @@ export function SiteHeader() {
 
   const navItems = [
     { label: '特徴', href: '#concept' },
-    { label: '収益モデル', href: '#value' },
-    { label: '性能', href: '#performance' },
-    { label: '導入フロー', href: '#process' },
+    { label: '受け取れるもの', href: '#package' },
+    { label: '導入', href: '#roadmap' },
+    { label: '事例', href: '#samples' },
     { label: 'FAQ', href: '#faq' },
   ]
 
@@ -57,14 +57,13 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Button
-              asChild
-              variant="primary"
-              size="md"
+            <Link
+              href="#contact"
+              className="btn-primary"
               data-gtm="nav_cta_request"
             >
-              <Link href="#contact">資料請求</Link>
-            </Button>
+              サンプル一式を請求
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -96,17 +95,14 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Button
-              asChild
-              variant="primary"
-              size="lg"
-              className="w-full mt-4"
+            <Link
+              href="#contact"
+              className="btn-primary w-full mt-4"
+              onClick={() => setIsMobileMenuOpen(false)}
               data-gtm="mobile_nav_cta_request"
             >
-              <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                資料請求
-              </Link>
-            </Button>
+              サンプル一式を請求
+            </Link>
           </nav>
         )}
       </div>

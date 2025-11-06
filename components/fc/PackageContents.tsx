@@ -11,36 +11,42 @@ export function PackageContents() {
       title: '営業スライド雛形',
       description: '商談で使える提案資料テンプレート（表紙・商品概要・価格・施工事例）。初回商談から即使用可能。',
       detail: '約30ページのPowerPoint形式。貴社ロゴ差替のみで即使用可能。',
+      mockType: 'ppt',
     },
     {
       icon: FileText,
       title: '標準仕様書（サンプル）',
       description: '断熱・気密・構造・設備の標準仕様を体系化した仕様書。地域特性に応じた調整方法も記載。',
       detail: '目次・抜粋版をPDFで提供。実務版は契約後に配布。',
+      mockType: 'pdf',
     },
     {
       icon: DollarSign,
       title: '価格テーブル雛形',
       description: '坪数別の価格設定表と見積フォーマット。地域調整の考え方も含む。',
       detail: 'Excel形式。原価・粗利の計算式組込済み。',
+      mockType: 'excel',
     },
     {
       icon: ImageIcon,
       title: '外観・内観CGアセット',
       description: '提案・HP・広告で使用できる高品質CG画像（外観10パターン・内観6シーン）。',
       detail: '解像度1920×1080、JPEG形式。商用利用可。',
+      mockType: 'image',
     },
     {
       icon: Type,
       title: '広告コピー・台本テンプレート',
       description: 'Web広告見出し・LP文章・電話対応台本・SNS投稿例の文例集。',
       detail: 'Word/Googleドキュメント形式。自社用にカスタマイズ可能。',
+      mockType: 'doc',
     },
     {
       icon: ClipboardList,
       title: '運用ガイド1pダイジェスト',
       description: '施工要領・品質チェックリスト・工程管理の要点をまとめた導入ガイド。',
       detail: 'PDF 1ページ。詳細版は契約後に提供。',
+      mockType: 'guide',
     },
   ]
 
@@ -75,19 +81,31 @@ export function PackageContents() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="flex flex-col"
             >
-              <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
-                <div className="w-12 h-12 bg-[var(--brand)]/10 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-[var(--brand)]" />
+              <div className="rounded-2xl border border-black/5 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.05)] flex flex-col h-full overflow-hidden">
+                {/* Mock Thumbnail */}
+                <div className="relative aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-200 border-b border-black/5">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Icon className="w-12 h-12 text-slate-300" />
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-slate-400/30 tracking-widest rotate-[-15deg]">
+                      SAMPLE
+                    </span>
+                  </div>
                 </div>
-                <h3 className="font-bold text-lg text-[var(--primary)] mb-2 break-words">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-[var(--ink)] leading-relaxed mb-3 line-clamp-3">
-                  {item.description}
-                </p>
-                <p className="text-xs text-[var(--ink-muted)] leading-relaxed mt-auto pt-3 border-t border-black/5">
-                  {item.detail}
-                </p>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-bold text-lg text-[var(--primary)] mb-2 break-words">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[var(--ink)] leading-relaxed mb-3 line-clamp-3">
+                    {item.description}
+                  </p>
+                  <p className="text-xs text-[var(--ink-muted)] leading-relaxed mt-auto pt-3 border-t border-black/5">
+                    {item.detail}
+                  </p>
+                </div>
               </div>
             </motion.div>
           )
@@ -97,7 +115,7 @@ export function PackageContents() {
       <div className="mt-12 text-center">
         <a
           href="#contact"
-          className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-[#0f172a] text-white hover:bg-slate-900 font-medium shadow-lg focus:ring-2 focus:ring-[#0f172a] focus:ring-offset-2 transition-colors"
+          className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-[#1f2b46] text-white hover:bg-slate-900 font-medium shadow-lg focus:ring-2 focus:ring-[#1f2b46] focus:ring-offset-2 transition-colors"
         >
           サンプル一式を請求
         </a>

@@ -32,30 +32,28 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 font-serif text-white text-3xl md:text-5xl tracking-[0.03em] leading-tight drop-shadow-lg">
-            規格住宅の&ldquo;美しさと再現性&rdquo;を、<br className="hidden md:block" />あなたの商圏の武器に。
+            規格住宅の&ldquo;迷い&rdquo;を減らす<br className="hidden md:block" />仕組みを、最短8週間で。
           </h1>
 
           <p className="mt-4 max-w-2xl text-white/90 leading-relaxed text-base md:text-lg">
-            工務店向けフランチャイズ・パッケージ｜設計・打合せ負担を抑え、短期立上げで&ldquo;美しさと再現性&rdquo;を実現。
+            台本・雛形・画像・運用ルールまで一式提供。少人数でも同品質の商談運用をすぐに始められます。
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button
-              asChild
-              size="lg"
+            <Link
+              href="#contact"
+              className="h-12 px-6 rounded-xl bg-[var(--sky)] text-white hover:bg-slate-900 font-medium shadow-lg focus:ring-2 focus:ring-[var(--sky)] focus:ring-offset-2 inline-flex items-center justify-center transition-colors"
               data-cta="hero_request"
-              className="h-12 px-6 rounded-xl bg-[#0f172a] text-white hover:bg-slate-900 font-medium shadow-lg focus:ring-2 focus:ring-[#0f172a] focus:ring-offset-2"
             >
-              <Link href="#contact">サンプル一式を請求</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="h-12 px-6 rounded-xl bg-white/95 text-[#0f172a] border-2 border-white/80 hover:bg-white font-medium shadow-lg"
-              data-cta="hero_webinar"
+              サンプル一式を請求
+            </Link>
+            <Link
+              href="#consultation"
+              className="h-12 px-6 rounded-xl bg-white/95 text-[var(--sky)] border-2 border-white/80 hover:bg-white font-medium shadow-lg inline-flex items-center justify-center transition-colors"
+              data-cta="hero_consultation"
             >
-              <Link href="#webinar">30分で分かる説明会</Link>
-            </Button>
+              個別相談（30分）
+            </Link>
           </div>
         </motion.div>
       </div>
