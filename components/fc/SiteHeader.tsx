@@ -43,7 +43,7 @@ export function SiteHeader() {
             className="font-serif text-xl md:text-2xl font-bold text-[var(--ink-strong)]"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            LIFE X <span className="text-[var(--brand)]">FC</span>
+            LIFE X
           </Link>
 
           {/* Desktop Navigation */}

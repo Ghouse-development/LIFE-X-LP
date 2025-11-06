@@ -29,9 +29,9 @@ import fcData from '@/data/fc.json'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://life-x-lp.vercel.app'),
-  title: 'LIFE X フランチャイズ | 設計負担削減・粗利安定化の高性能規格住宅FC',
+  title: 'LIFE X',
   description:
-    '建築家デザイン×HEAT20 G2相当×耐震等級3。営業・設計工数削減で成約率向上。最小2名・初期投資300万円〜、3-6ヶ月で立ち上げ。無料資料請求・30分説明会受付中。',
+    '規格住宅の美しさと再現性を、あなたの商圏の武器に。設計・打合せの負担を抑え、短期立上げを実現するLIFE X。',
   keywords: [
     'LIFE X',
     'フランチャイズ',
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     canonical: '/fc',
   },
   openGraph: {
-    title: 'LIFE X フランチャイズ | 設計負担削減・粗利安定化の高性能規格住宅FC',
+    title: 'LIFE X',
     description:
-      '建築家デザイン×HEAT20 G2相当×耐震等級3。営業・設計工数削減で成約率向上。最小2名・初期投資300万円〜で3-6ヶ月で立ち上げ可能。',
+      '規格住宅の美しさと再現性を、あなたの商圏の武器に。',
     url: '/fc',
     type: 'website',
     locale: 'ja_JP',
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LIFE X フランチャイズ | 高性能規格住宅FC',
+    title: 'LIFE X',
     description:
-      '設計負担削減・粗利安定化。建築家デザイン×HEAT20 G2×耐震等級3。最小2名・初期投資300万円〜。',
+      '規格住宅の美しさと再現性を、あなたの商圏の武器に。',
     images: ['/cases/case-08.jpg'],
   },
   robots: {
@@ -121,7 +121,6 @@ export default function FCPage() {
       <ValueGrid
         data={{
           reasons: fcData.reasons,
-          kpi: fcData.kpi,
         }}
       />
 

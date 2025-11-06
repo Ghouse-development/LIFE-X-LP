@@ -16,11 +16,6 @@ interface Reason {
 interface ValueGridProps {
   data: {
     reasons: Reason[]
-    kpi: Array<{
-      label: string
-      value: string
-      note: string
-    }>
   }
 }
 
@@ -66,53 +61,6 @@ export function ValueGrid({ data }: ValueGridProps) {
             </motion.div>
           )
         })}
-      </div>
-
-      {/* KPI - Elegant strength with ultra-thin shadows */}
-      <div>
-        <motion.h3
-          className="font-serif text-2xl md:text-3xl font-bold text-[var(--primary)] text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          収益モデル概算
-        </motion.h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto">
-          {data.kpi.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="rounded-2xl border border-black/5 bg-white p-6 shadow-[0_2px_20px_rgba(0,0,0,0.05)] text-center"
-            >
-              <div className="text-sm text-[var(--ink-muted)] mb-3">{item.label}</div>
-              <div className="flex items-baseline justify-center gap-2 mb-4">
-                <span className="font-serif text-5xl md:text-6xl font-extrabold text-[var(--primary)] tracking-[0.02em]">
-                  {item.value.split('万円')[0]}
-                </span>
-                <span className="text-xl md:text-2xl text-[var(--ink-muted)] translate-y-[2px]">万円</span>
-              </div>
-              <p className="text-xs text-[var(--ink-muted)] leading-relaxed">{item.note}</p>
-            </motion.div>
-          ))}
-        </div>
-        <p className="text-center text-sm text-[var(--ink-muted)] mt-8 max-w-2xl mx-auto">
-          ※以上は参考値です。エリア・施策により変動します。確定値は契約前面談で開示します。
-        </p>
-        <div className="text-center mt-8">
-          <Button
-            asChild
-            variant="primary"
-            size="lg"
-            data-cta="value_request_materials"
-          >
-            <Link href="#contact">商圏別の収益モデルを資料で確認</Link>
-          </Button>
-        </div>
       </div>
     </Section>
   )

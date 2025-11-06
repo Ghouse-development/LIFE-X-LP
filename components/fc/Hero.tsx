@@ -18,7 +18,7 @@ export function Hero() {
       />
 
       {/* Black overlay for text contrast */}
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 md:pt-36 w-full">
@@ -27,12 +27,16 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <h1 className="font-serif text-white text-4xl md:text-6xl tracking-[0.03em] leading-[1.2] drop-shadow">
-            規格住宅の&ldquo;美しさと再現性&rdquo;を、あなたの商圏の武器に。
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm px-3 h-8 border border-white/20 text-white text-sm font-medium">
+            LIFE X
+          </span>
+
+          <h1 className="mt-6 font-serif text-white text-3xl md:text-5xl tracking-[0.03em] leading-tight drop-shadow-lg">
+            規格住宅の&ldquo;美しさと再現性&rdquo;を、<br className="hidden md:block" />あなたの商圏の武器に。
           </h1>
 
-          <p className="mt-5 max-w-[680px] text-white/90 leading-relaxed text-base md:text-lg">
-            設計負担を削減し、粗利を安定化。LIFE X フランチャイズ
+          <p className="mt-4 max-w-2xl text-white/90 leading-relaxed text-base md:text-lg">
+            設計・打合せの負担を抑え、短期立上げを実現するLIFE X。
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -41,14 +45,15 @@ export function Hero() {
               variant="primary"
               size="lg"
               data-cta="hero_request"
+              className="h-12 px-6 rounded-xl bg-[#0f172a] text-white hover:bg-slate-900"
             >
-              <Link href="#contact">無料資料請求</Link>
+              <Link href="#contact">資料請求</Link>
             </Button>
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-[var(--ink-strong)]"
+              className="h-12 px-6 rounded-xl border border-white/60 text-white hover:bg-white/10"
               data-cta="hero_webinar"
             >
               <Link href="#webinar">30分で分かる説明会</Link>
