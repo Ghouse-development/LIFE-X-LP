@@ -1,10 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import { Section } from './Section'
-import { Quote } from 'lucide-react'
 
 interface Testimonial {
   id: string
