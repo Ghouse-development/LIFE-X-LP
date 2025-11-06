@@ -9,7 +9,7 @@ interface ProcessStep {
   step: string
   title: string
   desc: string
-  duration: string
+  duration?: string
   deliverables?: string
   owner?: string
 }
@@ -56,27 +56,7 @@ export function Process({ data }: ProcessProps) {
                 <h3 className="font-serif text-xl font-bold text-[var(--primary)] mb-2">{step.title}</h3>
 
                 {/* Description */}
-                <p className="text-sm text-[var(--ink)] leading-relaxed mb-4 flex-1">{step.desc}</p>
-
-                {/* Details Grid */}
-                <div className="border-t border-black/5 pt-4 space-y-2 text-xs">
-                  <div className="flex items-start gap-2">
-                    <span className="text-[var(--ink-muted)] font-medium min-w-[60px]">所要:</span>
-                    <span className="text-[var(--brand)] font-medium">{step.duration}</span>
-                  </div>
-                  {step.deliverables && (
-                    <div className="flex items-start gap-2">
-                      <span className="text-[var(--ink-muted)] font-medium min-w-[60px]">成果物:</span>
-                      <span className="text-[var(--ink)]">{step.deliverables}</span>
-                    </div>
-                  )}
-                  {step.owner && (
-                    <div className="flex items-start gap-2">
-                      <span className="text-[var(--ink-muted)] font-medium min-w-[60px]">責任:</span>
-                      <span className="text-[var(--ink)]">{step.owner}</span>
-                    </div>
-                  )}
-                </div>
+                <p className="text-sm text-[var(--ink)] leading-relaxed flex-1">{step.desc}</p>
               </div>
 
               {/* Arrow connector (except last) */}

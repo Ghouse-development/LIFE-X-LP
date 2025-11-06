@@ -8,6 +8,7 @@ import { Comparison } from '@/components/fc/Comparison'
 import { FourReasons } from '@/components/fc/FourReasons'
 import { Reproducibility } from '@/components/fc/Reproducibility'
 import { ValueGrid } from '@/components/fc/ValueGrid'
+import { Pricing } from '@/components/fc/Pricing'
 import { Performance } from '@/components/fc/Performance'
 import { StandardEquipment } from '@/components/fc/StandardEquipment'
 import { TrustAndSupport } from '@/components/fc/TrustAndSupport'
@@ -123,6 +124,9 @@ export default function FCPage() {
           reasons: fcData.reasons,
         }}
       />
+
+      {/* Pricing */}
+      <Pricing />
 
       {/* Performance */}
       <Performance data={fcData.performance} />
