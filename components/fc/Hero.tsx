@@ -10,15 +10,15 @@ export function Hero() {
     <section className="relative min-h-[72vh] md:min-h-[78vh] flex items-center">
       {/* Background Image */}
       <Image
-        src="/hero/hero-01.jpg"
-        alt="上質なLDK空間のイメージ"
+        src="/cases/case-08.jpg"
+        alt="LIFE X 規格住宅の外観"
         fill
         priority
         className="object-cover"
       />
 
-      {/* Black overlay 55% for better text contrast */}
-      <div className="absolute inset-0 bg-black/55" />
+      {/* Black overlay 70% for perfect text contrast */}
+      <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 md:pt-36 w-full">
