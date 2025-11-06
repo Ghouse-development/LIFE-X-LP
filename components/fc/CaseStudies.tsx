@@ -9,7 +9,7 @@ export function CaseStudies() {
   const cases = [
     {
       image: '/fc/gaikan/gaikan-01.jpg',
-      title: 'A工務店様（栃木県）',
+      title: 'モデルケースA（関東・30坪）',
       size: '30坪',
       period: '3.5ヶ月',
       improvements: [
@@ -20,7 +20,7 @@ export function CaseStudies() {
     },
     {
       image: '/fc/gaikan/gaikan-02.jpg',
-      title: 'B工務店様（茨城県）',
+      title: 'モデルケースB（関東・33坪）',
       size: '33坪',
       period: '3.2ヶ月',
       improvements: [
@@ -31,7 +31,7 @@ export function CaseStudies() {
     },
     {
       image: '/fc/gaikan/gaikan-03.jpg',
-      title: 'C工務店様（群馬県）',
+      title: 'モデルケースC（関東・35坪）',
       size: '35坪',
       period: '4.0ヶ月',
       improvements: [
@@ -47,7 +47,7 @@ export function CaseStudies() {
       id="case-studies"
       tone="alt"
       spacing="xl"
-      title="導入事例"
+      title="モデルケース（想定）"
       subtitle="規格住宅の効率化で、営業・設計工数を削減しながら成約率を向上"
     >
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
@@ -112,6 +112,9 @@ export function CaseStudies() {
           </motion.div>
         ))}
       </div>
+      <p className="text-center text-sm text-[var(--ink-muted)] mt-8 max-w-3xl mx-auto">
+        ※本ページのモデルケースは、標準プラン・自社実績に基づく想定です。地域/仕様/運用体制により変動します。
+      </p>
     </Section>
   )
 }

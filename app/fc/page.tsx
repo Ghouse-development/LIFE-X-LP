@@ -4,6 +4,7 @@ import { Hero } from '@/components/fc/Hero'
 import { Subnav } from '@/components/fc/Subnav'
 import { FloatingCTA } from '@/components/fc/FloatingCTA'
 import { Concept } from '@/components/fc/Concept'
+import { Comparison } from '@/components/fc/Comparison'
 import { FourReasons } from '@/components/fc/FourReasons'
 import { Reproducibility } from '@/components/fc/Reproducibility'
 import { ValueGrid } from '@/components/fc/ValueGrid'
@@ -11,7 +12,7 @@ import { Performance } from '@/components/fc/Performance'
 import { StandardEquipment } from '@/components/fc/StandardEquipment'
 import { TrustAndSupport } from '@/components/fc/TrustAndSupport'
 import { Gallery } from '@/components/fc/Gallery'
-import { CaseStudies } from '@/components/fc/CaseStudies'
+import { DesignGallery } from '@/components/fc/DesignGallery'
 import { Process } from '@/components/fc/Process'
 import { SupportTable } from '@/components/fc/SupportTable'
 import { Testimonials } from '@/components/fc/Testimonials'
@@ -71,6 +72,9 @@ export default function FCPage() {
       {/* Concept */}
       <Concept />
 
+      {/* Comparison (Building Type Positioning) */}
+      <Comparison />
+
       {/* Four Reasons */}
       <FourReasons />
 
@@ -97,8 +101,8 @@ export default function FCPage() {
       {/* Gallery */}
       <Gallery data={fcData.gallery} />
 
-      {/* Case Studies */}
-      <CaseStudies />
+      {/* Design Gallery (Exterior Perspectives) */}
+      <DesignGallery />
 
       {/* Process */}
       <Process data={fcData.process} />
